@@ -2,7 +2,7 @@
 title: Loop through parameters in Bash
 author: Simone Vittori
 layout: post
-permalink: /loop-through-parameters-in-bash/
+permalink: /blog/loop-through-parameters-in-bash/
 dsq_thread_id:
   - 1959590963
 categories:

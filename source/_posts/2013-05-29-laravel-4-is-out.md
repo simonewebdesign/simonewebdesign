@@ -2,7 +2,7 @@
 title: Laravel 4 is out!
 author: Simone Vittori
 layout: post
-permalink: /laravel-4-is-out/
+permalink: /blog/laravel-4-is-out/
 dsq_thread_id:
   - 1334470166
 categories:

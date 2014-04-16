@@ -2,7 +2,7 @@
 title: How to install Sublime Text 3 on Debian
 author: Simone Vittori
 layout: post
-permalink: /how-to-install-sublime-text-3-on-debian/
+permalink: /blog/how-to-install-sublime-text-3-on-debian/
 dsq_thread_id:
   - 1518107300
 categories:

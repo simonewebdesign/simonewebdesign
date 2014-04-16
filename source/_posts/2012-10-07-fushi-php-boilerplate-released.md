@@ -2,7 +2,7 @@
 title: Fushi PHP Boilerplate Released!
 author: Simone Vittori
 layout: post
-permalink: /fushi-php-boilerplate-released/
+permalink: /blog/fushi-php-boilerplate-released/
 dsq_thread_id:
   - 875549989
 categories:

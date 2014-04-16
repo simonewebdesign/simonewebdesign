@@ -2,7 +2,7 @@
 title: Fuzzy matching with CSS3
 author: Simone Vittori
 layout: post
-permalink: /fuzzy-matching-with-css3/
+permalink: /blog/fuzzy-matching-with-css3/
 dsq_thread_id:
   - 951692722
 categories:

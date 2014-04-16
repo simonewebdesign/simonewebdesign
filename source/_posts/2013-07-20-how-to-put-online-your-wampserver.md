@@ -2,7 +2,7 @@
 title: How to put online your WampServer
 author: Simone Vittori
 layout: post
-permalink: /how-to-put-online-your-wampserver/
+permalink: /blog/how-to-put-online-your-wampserver/
 dsq_thread_id:
   - 1513101928
 categories:

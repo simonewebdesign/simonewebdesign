@@ -2,7 +2,7 @@
 title: Git cheat sheet
 author: Simone Vittori
 layout: post
-permalink: /git-cheat-sheet/
+permalink: /blog/git-cheat-sheet/
 dsq_thread_id:
   - 1117190384
 categories:

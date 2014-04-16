@@ -2,7 +2,7 @@
 title: Git FTP Push FTW!
 author: Simone Vittori
 layout: post
-permalink: /git-ftp-push-ftw/
+permalink: /blog/git-ftp-push-ftw/
 dsq_thread_id:
   - 893919358
 categories:

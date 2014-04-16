@@ -2,7 +2,7 @@
 title: How to setup OS X 10.8 for Ruby on Rails
 author: Simone Vittori
 layout: post
-permalink: /how-to-setup-osx-for-ruby-on-rails/
+permalink: /blog/how-to-setup-osx-for-ruby-on-rails/
 dsq_thread_id:
   - 1026586953
 categories:

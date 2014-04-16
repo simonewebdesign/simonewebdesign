@@ -2,7 +2,7 @@
 title: 'How to make a real-time in-browser editor with the HTML5&#8242;s contenteditable attribute'
 author: Simone Vittori
 layout: post
-permalink: /how-to-make-browser-editor-with-html5-contenteditable/
+permalink: /blog/how-to-make-browser-editor-with-html5-contenteditable/
 dsq_thread_id:
   - 1223908930
 categories:

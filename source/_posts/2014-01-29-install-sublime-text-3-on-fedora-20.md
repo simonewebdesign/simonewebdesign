@@ -2,7 +2,7 @@
 title: Install Sublime Text 3 on Fedora 20
 author: Simone Vittori
 layout: post
-permalink: /install-sublime-text-3-on-fedora-20/
+permalink: /blog/install-sublime-text-3-on-fedora-20/
 dsq_thread_id:
   - 2188121843
 categories:

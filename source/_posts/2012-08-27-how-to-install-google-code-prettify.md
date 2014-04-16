@@ -2,7 +2,7 @@
 title: How to install the Google Code Prettify plugin
 author: Simone Vittori
 layout: post
-permalink: /how-to-install-google-code-prettify/
+permalink: /blog/how-to-install-google-code-prettify/
 dsq_thread_id:
   - 860649835
 categories:

@@ -2,7 +2,7 @@
 title: How to create a web bug (aka beacon image)
 author: Simone Vittori
 layout: post
-permalink: /how-to-create-web-bug-aka-beacon-image/
+permalink: /blog/how-to-create-web-bug-aka-beacon-image/
 dsq_thread_id:
   - 860147944
 categories:

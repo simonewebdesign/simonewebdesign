@@ -2,7 +2,7 @@
 title: onclick vs addEventListener
 author: Simone Vittori
 layout: post
-permalink: /onclick-vs-addeventlistener/
+permalink: /blog/onclick-vs-addeventlistener/
 dsq_thread_id:
   - 1103745801
 categories:

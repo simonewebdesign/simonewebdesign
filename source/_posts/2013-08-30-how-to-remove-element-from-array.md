@@ -2,7 +2,7 @@
 title: How to remove an element from an array
 author: Simone Vittori
 layout: post
-permalink: /how-to-remove-element-from-array/
+permalink: /blog/how-to-remove-element-from-array/
 dsq_thread_id:
   - 1672169047
 categories:

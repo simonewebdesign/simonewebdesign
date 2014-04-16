@@ -2,7 +2,7 @@
 title: 101 Web Socket Protocol Handshake
 author: Simone Vittori
 layout: post
-permalink: /101-web-socket-protocol-handshake/
+permalink: /blog/101-web-socket-protocol-handshake/
 dsq_thread_id:
   - 980978276
 categories:

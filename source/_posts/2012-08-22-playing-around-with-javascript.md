@@ -2,7 +2,7 @@
 title: Playing around with JavaScript
 author: Simone Vittori
 layout: post
-permalink: /playing-around-with-javascript/
+permalink: /blog/playing-around-with-javascript/
 dsq_thread_id:
   - 864271737
 categories:
