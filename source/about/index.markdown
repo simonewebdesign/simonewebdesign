@@ -12,7 +12,7 @@ Simone Vittori is a web developer originally from Perugia, Italy, but now living
 
 Simonewebdesign.it is my personal web site in which I blog about web programming since 2010. I changed its face a bunch of times: initially it was a portfolio site running in Flash (!), then a one page HTML5 static site, and finally a WordPress blog, until I decided to switch to OctoPress.
 
-That's why it's so fast: because all pages are actually static HTML/CSS pages (with some JavaScript as well, of course), and it's hosted on [Heroku](https://www.heroku.com/).
+That's why it's so fast: there is no database. All pages are actually static HTML/CSS pages (with some JavaScript as well, of course), and it's hosted on [Heroku](https://www.heroku.com/).
 
 Last but not least, it's open source. All the source code is hosted on [GitHub](https://github.com/simonewebdesign/simonewebdesign), so yes, you can read it, copy it, fork it... whatever. Feel free to do anything you want, as long as you enjoy it.
 
