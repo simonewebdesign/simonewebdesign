@@ -1,0 +1,77 @@
+---
+title: How to install the Google Code Prettify plugin
+author: Simone Vittori
+layout: post
+permalink: /blog/how-to-install-google-code-prettify/
+date: 2012-08-27 00:33:16 +0000
+dsq_thread_id:
+  - 860649835
+categories:
+  - WordPress
+tags:
+  - code
+  - google
+  - install
+  - plugin
+  - prettify
+---
+
+<p>
+  If you have a WordPress blog and want to add some cool syntax highlighting for your code, you can try <a title="Google Code Prettify" href="http://code.google.com/p/google-code-prettify/" target="_blank">Google Code Prettify</a>.
+</p>
+<p>
+  WordPress plugins are usually quite simple to use, but there are some little precautions to follow. First of all:
+</p>
+
+<ul>
+  <li>
+    <a title="WP code prettify download" href="http://wordpress.org/extend/plugins/wp-code-prettify/" target="_blank">Download the Google Code Prettify plugin for WordPress</a>
+  </li>
+  <li>
+    <a title="Managing Plugins" href="http://codex.wordpress.org/Managing_Plugins#Installing_Plugins" target="_blank">Install it</a>, but DO NOT activate it.
+  </li>
+</ul>
+
+<p>
+  You shouldn&#8217;t activate it immediately, because if you do an edit while your plugin is activated, you could break it: some files could display an <em>(inactive)</em> label next to the file name, and all you can do to repair it is to delete and reinstall the whole plugin. <a title="What the heck does (inactive) mean when editing a plugin file?" href="http://wordpress.org/support/topic/what-the-heck-does-inactive-mean-when-editing-a-plugin-file" target="_blank" rel="nofollow">Read more about this problem</a>.
+</p>
+
+<p>
+  Once you enabled your plugin, you should wrap <code>&lt;pre class="prettyprint"&gt;</code> for every instance of code you have in all your articles. This can be tremendously annoying if you already have hundreds of articles in your WordPress blog, so I&#8217;ll tell you 5 quick &#8216;n&#8217; straightforward steps to get around this problem.
+</p>
+
+<ol>
+  <li>
+    Edit <strong>google_code_prettify.php</strong> and search for this line: <pre>return preg_replace_callback("/&lt;pres+.*classs*="prettyprint"&gt;(.*)&lt;/pre&gt;/siU",</pre>
+  </li>
+
+  <li>
+    Substitute the above line with the line below: <pre>return preg_replace_callback("/&lt;pre&gt;&lt;code&gt;(.*)&lt;/code&gt;&lt;/pre&gt;/siU",</pre>
+  </li>
+
+  <li>
+    Open <strong>prettify.js </strong>and search for this line: <pre>if (cs.className && cs.className.indexOf('prettyprint') &gt;= 0) {</pre>
+  </li>
+
+  <li>
+    Substitute the above line with the line below: <pre>if (true) {</pre>
+  </li>
+
+  <li>
+    Go edit your <strong>prettify.css</strong> and delete the reference about the <code>.prettyprint</code> class. Then you&#8217;ll want to add some more code to avoid the awful text overflow, that often causes layout problems. Have a look at this short <a title="Make Pre Text Wrap" href="http://css-tricks.com/snippets/css/make-pre-text-wrap/" target="_blank">article from <abbr title="Cascading Style Sheets">CSS</abbr>-Tricks</a>: you <em>need</em> that code. I&#8217;m (shamelessly) copy pasting it below: <pre>pre {
+  white-space: pre-wrap;       /* css-3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}</pre>
+  </li>
+</ol>
+
+<p>
+  And that&#8217;s all. You can now enable your plugin and see your cute and readable code. ;-)
+</p>
+
+<p>
+  However, my solution is a bit hackish. I mean, when a new plugin update will be released, you&#8217;ll lost all the edits. If you don&#8217;t want this to happen, don&#8217;t update your plugin. Or if you&#8217;re looking for a separate, cleaner solution, I&#8217;ll suggest you reading <a title="Syntax Highlighting a la StackOverflow with Google Prettify" href="http://www.codingthewheel.com/archives/syntax-highlighting-stackoverflow-google-prettify" target="_blank">this article</a>.
+</p>
