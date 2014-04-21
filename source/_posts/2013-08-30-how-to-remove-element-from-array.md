@@ -1,6 +1,5 @@
 ---
 title: How to remove an element from an array
-author: Simone Vittori
 layout: post
 permalink: /blog/how-to-remove-element-from-array/
 dsq_thread_id:

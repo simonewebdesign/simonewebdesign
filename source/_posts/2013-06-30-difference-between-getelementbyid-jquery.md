@@ -1,6 +1,5 @@
 ---
 title: The difference between document.getElementById() and jQuery()
-author: Simone Vittori
 layout: post
 permalink: /blog/difference-between-getelementbyid-jquery/
 dsq_thread_id:

@@ -1,6 +1,5 @@
 ---
 title: View latest file changes in command line using Git
-author: Simone Vittori
 layout: post
 permalink: /blog/git-show-latest-file-changes-in-command-line/
 dsq_thread_id:

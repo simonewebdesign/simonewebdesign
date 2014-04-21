@@ -1,6 +1,5 @@
 ---
 title: How to load jQuery plugins with RequireJS
-author: Simone Vittori
 layout: post
 permalink: /blog/how-to-load-jquery-plugins-with-requirejs/
 dsq_thread_id:

@@ -1,6 +1,5 @@
 ---
 title: How to set a default message in your exception
-author: Simone Vittori
 layout: post
 permalink: /blog/how-to-set-default-message-exception/
 dsq_thread_id:

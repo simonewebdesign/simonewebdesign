@@ -1,6 +1,5 @@
 ---
 title: 'Rails 4: update/synchronize views with database schema after a migration'
-author: Simone Vittori
 layout: post
 permalink: /blog/ruby-on-rails-synchronize-views-database-after-migration/
 dsq_thread_id:
