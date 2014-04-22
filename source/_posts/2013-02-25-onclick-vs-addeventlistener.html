@@ -14,9 +14,13 @@ tags:
   What&#8217;s the difference between these two lines of code?
 </p>
 
-<pre>element.onclick = function() { /* do stuff */ }</pre>
+``` javascript
+element.onclick = function() { /* do stuff */ }
+```
 
-<pre>element.addEventListener('click', function(){ /* do stuff */ }, false);</pre>
+``` javascript
+element.addEventListener('click', function(){ /* do stuff */ }, false);
+```
 
 <p>
   They apparently do the same thing: listen for the click event and execute a callback function. Nevertheless, they&#8217;re not equivalent. If you ever need to choose between the two, <a href="https://gist.github.com/simonewebdesign/4017724" target="_blank" rel="nofollow">this</a> could help you to figure out which one is the best for you.

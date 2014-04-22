@@ -45,7 +45,7 @@ tags:
   1. Basics
 </h2>
 
-<pre>
+``` bash
 # start a Git repository from scratch
 $ git init
 
@@ -53,13 +53,13 @@ $ git init
 $ git clone https://github.com/username/repository.git
 
 $ git status  # check current status
-</pre>
+```
 
 <h2>
   2. Snapshotting
 </h2>
 
-<pre>
+``` bash
 # Add files to staging area
 $ git add filename  # add a single file
 $ git add .         # add all files, but not deleted ones
@@ -70,13 +70,13 @@ $ git add --all     # add everything
 $ git stash        # add current changes to the stack
 $ git stash list   # see what's in the stack
 $ git stash apply  # bring back the saved changes
-</pre>
+```
 
 <h2>
   3. Committing
 </h2>
 
-<pre>
+``` bash
 $ git commit            # open the text editor (usually vi)
 $ git commit -a         # automatically stage modified files
 $ git commit -m "foo"   # commit with message "foo"
@@ -84,62 +84,62 @@ $ git commit -am "foo"  # both stage files and commit with message "foo"
 
 # View commits log (in a pretty way)
 $ git log --oneline --decorate --graph
-</pre>
+```
 
 <h2>
   4. Managing remotes
 </h2>
 
-<pre>
+``` bash
 $ git remote add origin https://github.com/user/repo.git
 # You can also add your GitHub username and password on the remote URL:
 $ git remote add origin https://user:password@github.com/user/repo.git
 $ git remote rm origin  # removes the `origin` remote
-</pre>
+```
 
 <h2>
   5. Pushing
 </h2>
 
-<pre>
+``` bash
 $ git push -u origin master
-# -u here tells git to remember the parameters 
+# -u here tells git to remember the parameters
 # so that next time we can simply run:
 $ git push
-</pre>
+```
 
 <h2>
   6. Branching
 </h2>
 
-<pre>
+``` bash
 $ git checkout -b new_branch
 # -b is to checkout and create a branch at the same time.
 # This is the same thing as doing:
 $ git branch new_branch
 $ git checkout new_branch
-</pre>
+```
 
 <h2>
   7. Merging
 </h2>
 
-<pre>
+``` bash
 $ git checkout master       # return to master branch
-$ git merge --no-ff foobar  # merge `master` branch with `foobar` branch 
+$ git merge --no-ff foobar  # merge `master` branch with `foobar` branch
 $ git branch -d foobar      # delete branch locally
 $ git push origin :foobar   # delete branch on the origin remote
-</pre>
+```
 
 <h2>
   8. Tagging
 </h2>
 
-<pre>
+``` bash
 $ git tag -a v1.3.37               # tag the HEAD (most recent commit)
 $ git tag -a v0.6b f49a23c         # tag the commit with SHA `f49a23c`
 $ git tag -a v4.2 -m "jelly bean"  # append a message
-</pre>
+```
 
 <hr />
 

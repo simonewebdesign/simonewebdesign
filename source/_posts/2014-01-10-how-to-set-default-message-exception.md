@@ -20,13 +20,17 @@ tags:
   Today I was thinking about a way to define custom exceptions with a predefined error message. For example, instead of doing this:
 </p>
 
-<pre>raise MyError, "Something went wrong."</pre>
+```
+raise MyError, "Something went wrong."
+```
 
 <p>
   We want to simply do:
 </p>
 
-<pre>raise MyError</pre>
+```
+raise MyError
+```
 
 <p>
   This could be useful because if we need to raise that same exception again and again, we don&#8217;t have to specify the error message every time.
@@ -48,14 +52,16 @@ tags:
   For example:
 </p>
 
-<pre>class MyError &lt; Exception
+```
+class MyError &lt; Exception
   def message
     "a predefined message"
   end
 end
 
 raise MyError
-# => MyError: a predefined message</pre>
+# => MyError: a predefined message
+```
 
 <p>
   Quick note: I&#8217;m inheriting from <code>StandardError</code>, not <code>Exception</code>, because extending the <code>Exception</code> class in Ruby is considered really bad. Please don&#8217;t inherit from it: see <a href="https://stackoverflow.com/questions/10048173/why-is-it-bad-style-to-rescue-exception-e-in-ruby" title="Why is it bad style to rescue exception in Ruby?" target="_blank">here</a> and <a href="http://www.skorks.com/2009/09/ruby-exceptions-and-exception-handling/" title="Ruby exceptions and exceptions handling" target="_blank">here</a> for the reason (in few words it&#8217;s because you may catch errors that are not meant to be catched, such as <code>SyntaxError</code>).
@@ -64,7 +70,8 @@ raise MyError
   Of course you could also create a module with your own exceptions in it:
 </p>
 
-<pre>module CustomError
+```
+module CustomError
   class AnError &lt; StandardError
     def message
       "A more specific error"
@@ -76,13 +83,15 @@ raise MyError
       "just another error"
     end
   end
-end</pre>
+end
+```
 
 <p>
   Or even a subclass of your custom error class:
 </p>
 
-<pre>module CustomError
+```
+module CustomError
   class Error &lt; StandardError
     def message
       "default error"
@@ -94,7 +103,8 @@ end</pre>
       "a more specific error"
     end
   end
-end</pre>
+end
+```
 
 <p>
   However, this is not very useful. What I find useful, though, is that you can bring shared pieces of information from the base class to the subclasses, which is <abbr title="In my opinion">IMO</abbr> very desirable in error handling.
@@ -104,7 +114,8 @@ end</pre>
   Since <code>Exception#message</code> is nothing but an alias of <code>exception.to_s</code>, we can call <code>super</code> to get the superclass' message. For example, this is what I ended up doing:
 </p>
 
-<pre>module CustomError
+```
+module CustomError
 
   class Error &lt; StandardError
     def initialize(msg=nil)
@@ -121,15 +132,17 @@ end</pre>
       super + " We also got a specific error."
     end
   end
-end</pre>
+end
+```
 
 <p>
   And here's the result:
 </p>
 
-<pre>
+```
 raise CustomError::SpecificError, "fubar"
-# => CustomError::SpecificError: Message from main class: fubar. We also got a specific error.</pre>
+# => CustomError::SpecificError: Message from main class: fubar. We also got a specific error.
+```
 
 <p>
   This demonstrates that we can potentially carry whatever information (i.e. instances of objects involved in the error) in order to better handle errors in our applications.

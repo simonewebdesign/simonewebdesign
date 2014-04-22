@@ -41,29 +41,45 @@ tags:
 
 <ol>
   <li>
-    Edit <strong>google_code_prettify.php</strong> and search for this line: <pre>return preg_replace_callback("/&lt;pres+.*classs*="prettyprint"&gt;(.*)&lt;/pre&gt;/siU",</pre>
+    Edit <strong>google_code_prettify.php</strong> and search for this line:
+``` php
+return preg_replace_callback("/&lt;pres+.*classs*="prettyprint"&gt;(.*)&lt;/pre&gt;/siU",
+```
   </li>
 
   <li>
-    Substitute the above line with the line below: <pre>return preg_replace_callback("/&lt;pre&gt;&lt;code&gt;(.*)&lt;/code&gt;&lt;/pre&gt;/siU",</pre>
+    Substitute the above line with the line below:
+``` php
+return preg_replace_callback("/&lt;pre&gt;&lt;code&gt;(.*)&lt;/code&gt;&lt;/pre&gt;/siU",
+```
   </li>
 
   <li>
-    Open <strong>prettify.js </strong>and search for this line: <pre>if (cs.className && cs.className.indexOf('prettyprint') &gt;= 0) {</pre>
+    Open <strong>prettify.js </strong>and search for this line:
+``` javascript
+if (cs.className && cs.className.indexOf('prettyprint') &gt;= 0) {
+```
   </li>
 
   <li>
-    Substitute the above line with the line below: <pre>if (true) {</pre>
+    Substitute the above line with the line below:
+``` javascript
+if (true) {
+```
   </li>
 
   <li>
-    Go edit your <strong>prettify.css</strong> and delete the reference about the <code>.prettyprint</code> class. Then you&#8217;ll want to add some more code to avoid the awful text overflow, that often causes layout problems. Have a look at this short <a title="Make Pre Text Wrap" href="http://css-tricks.com/snippets/css/make-pre-text-wrap/" target="_blank">article from <abbr title="Cascading Style Sheets">CSS</abbr>-Tricks</a>: you <em>need</em> that code. I&#8217;m (shamelessly) copy pasting it below: <pre>pre {
+    Go edit your <strong>prettify.css</strong> and delete the reference about the <code>.prettyprint</code> class. Then you&#8217;ll want to add some more code to avoid the awful text overflow, that often causes layout problems. Have a look at this short <a title="Make Pre Text Wrap" href="http://css-tricks.com/snippets/css/make-pre-text-wrap/" target="_blank">article from <abbr title="Cascading Style Sheets">CSS</abbr>-Tricks</a>: you <em>need</em> that code. I&#8217;m (shamelessly) copy pasting it below:
+
+``` css
+pre {
   white-space: pre-wrap;       /* css-3 */
   white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
   white-space: -pre-wrap;      /* Opera 4-6 */
   white-space: -o-pre-wrap;    /* Opera 7 */
   word-wrap: break-word;       /* Internet Explorer 5.5+ */
-}</pre>
+}
+```
   </li>
 </ol>
 

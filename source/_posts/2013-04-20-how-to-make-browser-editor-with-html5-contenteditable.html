@@ -56,9 +56,11 @@ tags:
   For example, you can even do this:
 </p>
 
-<pre>script {
+``` css
+script {
   display: block;
-}</pre>
+}
+```
 
 <p>
   The result? A JavaScript in-browser editor.
@@ -99,18 +101,22 @@ tags:
   This is actually very simple. You only need to match them by <abbr title="Cascading Style Sheets">CSS</abbr>, and apply <code>display: block</code> to them. For example:
 </p>
 
-<pre>style, script {
+``` css
+style, script {
   display: block;
-}</pre>
+}
+```
 
 <p>
   However I&#8217;d recommend to apply this rule only to the elements that have the <code>contenteditable</code> attribute. You can do this with:
 </p>
 
-<pre>[contenteditable] {
+``` css
+[contenteditable] {
   /* will match all elements with contenteditable attribute */
   display: block;
-}</pre>
+}
+```
 
 <h3>
   How to make it look like <em>real</em> code
@@ -120,10 +126,12 @@ tags:
   Real editors use monospace fonts. We can also make <code>&lt;script></code> and <code>&lt;style></code> behave like the <code>&lt;pre></code> tag. All we need is the following code.
 </p>
 
-<pre>style, script {
+``` css
+style, script {
 font-family: monospace;  /* monospace font */
 white-space: pre;        /* behave like &lt;pre> */
-}</pre>
+}
+```
 
 <p>
   You can even install a syntax highlighter like the <a href="https://code.google.com/p/google-code-prettify/" target="_blank" rel="nofollow">Google code prettify</a>, if you want.
@@ -137,15 +145,19 @@ white-space: pre;        /* behave like &lt;pre> */
   This one is real fun. It&#8217;s ridicolously easy to show the title directly in the browser, but pay attention because the <code>&lt;title></code> tag is inside <code>&lt;head></code>, that is hidden by default! So you must display the title <em>and</em> the head, as a block:
 </p>
 
-<pre>head, title {
+``` css
+head, title {
   display: block;
-}</pre>
+}
+```
 
 <p>
   Then just make it <code>contenteditable</code> and you&#8217;re done.
 </p>
 
-<pre>&lt;title contenteditable>The page title&lt;/title></pre>
+``` html
+<title contenteditable>The page title</title>
+```
 
 <h3>
   Executing the JavaScript in real time
@@ -159,14 +171,15 @@ white-space: pre;        /* behave like &lt;pre> */
   Well, I&#8217;m sure there are many solutions. Mine is quite straightforward: I dynamically create a new <code>&lt;script></code> element every time the user adds something new. For the sake of simplicity I&#8217;ve created this function:
 </p>
 
-<pre>function executeCode() {
+``` javascript
+function executeCode() {
   var script = document.createElement("script");
   script.innerHTML = js.innerHTML;
   js.parentNode.insertBefore(script, js);
 }
 // the code we want to execute is contained here:
 var js = document.getElementById('js');
-</pre>
+```
 
 <p>
   Why I&#8217;ve put the <code>js</code> variable outside of the function? You&#8217;ll find it out soon.
@@ -176,10 +189,11 @@ var js = document.getElementById('js');
   We need to call the <code>executeCode()</code> function during an event in order make it work properly. I think the <code>onkeyup</code> event will be perfect in this situation: it gets fired as soon as the user has finished typing.
 </p>
 
-<pre>js.onkeyup = function(event) {
+``` javascript
+js.onkeyup = function(event) {
   executeCode();
 };
-</pre>
+```
 
 <p>
   However, this approach has a flaw. What if I type, say, <code>alert('foobar')</code>? I won&#8217;t see an alert, but&#8230; 15 alerts! This because the <code>onkeyup</code> event would get fired 15 times in this case — one for each character. How can we solve this problem?
@@ -193,13 +207,14 @@ var js = document.getElementById('js');
   Here&#8217;s a full example, feel free to copy-paste and <strong>try it directly in your browser</strong>:
 </p>
 
-<pre>&lt;h1>Sample JavaScript real-time in-browser execution&lt;/h1>
+``` javascript
+<h1>Sample JavaScript real-time in-browser execution</h1>
 
-&lt;script id="js" style="display: block" contenteditable>
+<script id="js" style="display: block" contenteditable>
 alert('foo'); // edit me!
-&lt;/script>
+</script>
 
-&lt;script>
+<script>
 (function() {
 
   var timer,
@@ -224,7 +239,8 @@ alert('foo'); // edit me!
  }
 
 })();
-&lt;/script></pre>
+</script>
+```
 
 <hr />
 

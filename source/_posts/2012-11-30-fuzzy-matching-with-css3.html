@@ -17,18 +17,20 @@ tags:
   There are special cases where a simple <abbr title="Cascading Style Sheets">CSS</abbr> selector is not enough. Like yesterday, when I wanted to match all the uploaded images in my blog, regardless of the container and the content.<br /><br />Let&#8217;s see an example markup:
 </p>
 
-<pre>&lt;p>
-  &lt;a href="/blog/wp-content/uploads/2012/11/cat-eat.gif">
-    &lt;img src="/blog/wp-content/uploads/2012/11/cat-eat-300x225.gif"
+``` html
+<p>
+  <a href="/blog/wp-content/uploads/2012/11/cat-eat.gif">
+    <img src="/blog/wp-content/uploads/2012/11/cat-eat-300x225.gif"
          alt="" title="Cat Eat" width="300" height="225"
          class="alignnone size-medium wp-image-361" />
-  &lt;/a>
-  &lt;a href="/blog/wp-content/uploads/2012/11/cat-help.jpg">
-    &lt;img src="/blog/wp-content/uploads/2012/11/cat-help.jpg"
+  </a>
+  <a href="/blog/wp-content/uploads/2012/11/cat-help.jpg">
+    <img src="/blog/wp-content/uploads/2012/11/cat-help.jpg"
          alt="" title="Cat Help" width="500" height="457"
          class="aligncenter size-full wp-image-367" />
-  &lt;/a>
-&lt;/p></pre>
+  </a>
+</p>
+```
 
 <h3>
   How do we match only the images?
@@ -42,10 +44,12 @@ tags:
   Let&#8217;s examine the markup above. See, WordPress uses some classes in order to apply the correct size or alignment, and finally applies a <em>unique</em> class with a progressive number (<code>wp-image-*</code>), just in case we want to match a single element. So we could do this:
 </p>
 
-<pre>.wp-image-361,
+``` css
+.wp-image-361,
 .wp-image-367 {
-  /* some fancy <abbr title="Cascading Style Sheets">CSS</abbr> code here */
-}</pre>
+  /* some fancy CSS code here */
+}
+```
 
 <p>
   The solution above works, but it is not handy because &#8211; as you may have guessed &#8211; we should update the selector each time we upload a new image.
@@ -67,10 +71,12 @@ tags:
   In our specific case, this would do the trick:
 </p>
 
-<pre>img[class^="wp-image-"] {
+``` css
+img[class^="wp-image-"] {
   /* matches an img element whose "class" attribute value
   begins exactly with the string "wp-image-" */
-}</pre>
+}
+```
 
 <p>
   Note that I&#8217;m talking about CSS3, so if you need to support older browsers, don&#8217;t lean on it.

@@ -82,39 +82,41 @@ tags:
   app/models/child.rb
 </h5>
 
-<pre>
+```
 class Child &lt; ActiveRecord::Base
   has_many :toys
 end
-</pre>
+```
 
 <h5>
   app/models/toy.rb
 </h5>
 
-<pre>
+```
 class Toy &lt; ActiveRecord::Base
   belongs_to :child
 end
-</pre>
+```
 
 <p>
   Let's create the application and scaffold these resources:
 </p>
 
-<pre>$ rails new DemoApp &#038;&#038; cd DemoApp</pre>
+```
+$ rails new DemoApp &#038;&#038; cd DemoApp
+```
 
-<pre>
+```
 $ rails generate scaffold child name birth_date:date
 
 $ rails generate scaffold toy description price:decimal child:references
-</pre>
+```
 
 <p>
   Run the migrations:
 </p>
 
-<pre>
+```
 $ rake db:migrate
 ==  CreateChildren: migrating =================================================
 -- create_table(:children)
@@ -125,18 +127,18 @@ $ rake db:migrate
 -- create_table(:toys)
    -> 0.0028s
 ==  CreateToys: migrated (0.0029s) ============================================
-</pre>
+```
 
 <p>
   We can now start the server and check that everything went good.
 </p>
 
-<pre>
+```
 $ rails s
 => Booting WEBrick
 => Rails 4.1.0.beta1 application starting in development on http://0.0.0.0:3000
 ...
-</pre>
+```
 
 <img src="/images/1-listing-children.png" alt="listing children empty" />
 
@@ -160,15 +162,18 @@ $ rails s
   Let's generate the scaffold again, with some corrections.
 </p>
 
-<pre>$ rails g scaffold toy description:string{50} price:decimal{4,2}
+```
+$ rails g scaffold toy description:string{50} price:decimal{4,2}
       invoke  active_record
-Another migration is already named create_toys: /Users/simo/Projects/DemoApp/db/migrate/20140209145850_create_toys.rb. Use --force to remove the old migration file and replace it.</pre>
+Another migration is already named create_toys: /Users/simo/Projects/DemoApp/db/migrate/20140209145850_create_toys.rb. Use --force to remove the old migration file and replace it.
+```
 
 <p>
   Fair enough. We must destroy the entire scaffold before recreating it.
 </p>
 
-<pre>$ rails destroy scaffold toy
+```
+$ rails destroy scaffold toy
       invoke  active_record
       remove    db/migrate/20140208224426_create_toys.rb
       remove    app/models/toy.rb
@@ -179,13 +184,13 @@ $ rails generate scaffold toy description:string{50} price:decimal{4,2} child:re
       create    db/migrate/20140209145850_create_toys.rb
       create    app/models/toy.rb
       create    ...
-</pre>
+```
 
 <p>
   Ok. Let's give a quick look at the generated migration.
 </p>
 
-<pre>
+```
 class CreateToys &lt; ActiveRecord::Migration
   def change
     create_table :toys do |t|
@@ -197,25 +202,27 @@ class CreateToys &lt; ActiveRecord::Migration
     end
   end
 end
-</pre>
+```
 
 <p>
   It looks right. Let's run it!
 </p>
 
-<pre>$ rake db:migrate
+```
+$ rake db:migrate
 ==  CreateToys: migrating =====================================================
 -- create_table(:toys)
 rake aborted!
 An error has occurred, this and all later migrations canceled:
 
-SQLite3::SQLException: table "toys" already exists: CREATE TABLE "toys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(50), "price" decimal(4,2), "child_id" integer, "created_at" datetime, "updated_at" datetime) /Users/simo/.rvm/gems/ruby-2.0.0-p353/gems/sqlite3-1.3.8/lib/sqlite3/database.rb:91:in `initialize'</pre>
+SQLite3::SQLException: table "toys" already exists: CREATE TABLE "toys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(50), "price" decimal(4,2), "child_id" integer, "created_at" datetime, "updated_at" datetime) /Users/simo/.rvm/gems/ruby-2.0.0-p353/gems/sqlite3-1.3.8/lib/sqlite3/database.rb:91:in `initialize'
+```
 
 <p>
   Whoops! The table already exists. We should remove it first. Edit the migration:
 </p>
 
-<pre>
+```
 class CreateToys &lt; ActiveRecord::Migration
   def change
     # This will do the work
@@ -230,25 +237,29 @@ class CreateToys &lt; ActiveRecord::Migration
     end
   end
 end
-</pre>
+```
 
 <p>
   And migrate again:
 </p>
 
-<pre>$ rake db:migrate
+```
+$ rake db:migrate
 ==  CreateToys: migrating =====================================================
 -- drop_table(:toys)
    -> 0.0107s
 -- create_table(:toys)
    -> 0.0109s
-==  CreateToys: migrated (0.0220s) ============================================</pre>
+==  CreateToys: migrated (0.0220s) ============================================
+```
 
 <p>
   Ok, we are ready to start the server again and see what changed.
 </p>
 
-<pre>$ rails s</pre>
+```
+$ rails s
+```
 
 <p>
   That's it. This is basically the process. It's way too labourious, I know, but the truth is that we just can't efficiently automatize a process like this, because: what if we generate more migrations during the journey? We would have to delete them and recreate again the whole schema by running <code>rails generate scaffold</code>, <code>rake db:reset</code> and rerun the generate again and again... well, that sucks. At this stage we've got the point: it's better to do it manually! Rails gives us tons of helper methods to format prices and get things done, and that's definitely the path to follow.

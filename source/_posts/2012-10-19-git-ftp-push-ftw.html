@@ -37,22 +37,27 @@ tags:
   The usage is fairly simple:
 </p>
 
-<pre>$ git ftp push --user &lt;user&gt; --passwd &lt;password&gt; ftp://example.com/public</pre>
+``` bash
+$ git ftp push --user <user> --passwd <password> ftp://example.com/public
+```
 
 <p>
   And you can make it even simpler by just setting defaults in your project&#8217;s <code>.git/config</code> file:
 </p>
 
-<pre>$ git config git-ftp.user john
+``` bash
+$ git config git-ftp.user john
 $ git config git-ftp.url ftp.example.com
 $ git config git-ftp.password secr3t
-</pre>
+```
 
 <p>
   Now you can just do:
 </p>
 
-<pre>$ git ftp push</pre>
+``` bash
+$ git ftp push
+```
 
 <p>
   <em>Et voilà!</em> Your production server is up-to-date.

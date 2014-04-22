@@ -25,4 +25,6 @@ tags:
   Just run this command:
 </p>
 
-<pre>$ curl http://git.io/jkMLpw | sh</pre>
+```
+$ curl http://git.io/jkMLpw | sh
+```

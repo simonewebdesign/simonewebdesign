@@ -27,18 +27,6 @@ tags:
 
 {% gist 5325630 %}
 
-<noscript>
-  <pre>
-#!/bin/bash
-
-# loop through parameters
-for i in "$@"
-do
-echo "$i"
-done
-</pre>
-</noscript>
-
 <p>
   In the snippet above, <code>"$@"</code> represents all the parameters. The <code>echo "$i"</code> shall obviously print each argument on a separate line.
 </p>
