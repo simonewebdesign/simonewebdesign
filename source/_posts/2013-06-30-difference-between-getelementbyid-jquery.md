@@ -17,15 +17,15 @@ tags:
   Assuming we have a super simple markup like this:
 </p>
 
-```
-&lt;div id="foo">&lt;/div>
+``` html
+<div id="foo"></div>
 ```
 
 <p>
   We just want to get the reference to the element. In classic JavaScript (<a href="http://vanilla-js.com/" title="vanilla JS" target="_blank">vanilla <abbr title="JavaScript">JS</abbr></a>) we used to do:
 </p>
 
-```
+``` javascript
 var foo = document.getElementById('foo');
 ```
 
@@ -33,7 +33,7 @@ var foo = document.getElementById('foo');
   And now, in the era of modern web development, we simply do:
 </p>
 
-```
+``` javascript
 var foo = $('#foo');
 ```
 
@@ -53,7 +53,7 @@ var foo = $('#foo');
   Let&#8217;s see this difference a bit more in detail. Here we play with the console:
 </p>
 
-```
+``` javascript
 document.getElementById('foo')
 >>> div#foo
 $('#foo')
@@ -69,7 +69,7 @@ $('#foo')
   As we can see, in the first case we got the tag itself (that is, strictly speaking, an <code>HTMLDivElement</code> object). In the latter we actually don&#8217;t have a plain object, but an array of objects&#8230; including the div we want! In fact, if you call:
 </p>
 
-```
+``` javascript
 $('#foo')[0]
 >>> div#foo
 ```

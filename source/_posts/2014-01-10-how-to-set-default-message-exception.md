@@ -20,7 +20,7 @@ tags:
   Today I was thinking about a way to define custom exceptions with a predefined error message. For example, instead of doing this:
 </p>
 
-```
+``` ruby
 raise MyError, "Something went wrong."
 ```
 
@@ -28,7 +28,7 @@ raise MyError, "Something went wrong."
   We want to simply do:
 </p>
 
-```
+``` ruby
 raise MyError
 ```
 
@@ -52,7 +52,7 @@ raise MyError
   For example:
 </p>
 
-```
+``` ruby
 class MyError &lt; Exception
   def message
     "a predefined message"
@@ -70,7 +70,7 @@ raise MyError
   Of course you could also create a module with your own exceptions in it:
 </p>
 
-```
+``` ruby
 module CustomError
   class AnError &lt; StandardError
     def message
@@ -90,7 +90,7 @@ end
   Or even a subclass of your custom error class:
 </p>
 
-```
+``` ruby
 module CustomError
   class Error &lt; StandardError
     def message
@@ -114,7 +114,7 @@ end
   Since <code>Exception#message</code> is nothing but an alias of <code>exception.to_s</code>, we can call <code>super</code> to get the superclass' message. For example, this is what I ended up doing:
 </p>
 
-```
+``` ruby
 module CustomError
 
   class Error &lt; StandardError
@@ -139,7 +139,7 @@ end
   And here's the result:
 </p>
 
-```
+``` ruby
 raise CustomError::SpecificError, "fubar"
 # => CustomError::SpecificError: Message from main class: fubar. We also got a specific error.
 ```

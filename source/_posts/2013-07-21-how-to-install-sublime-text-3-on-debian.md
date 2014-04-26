@@ -36,7 +36,7 @@ tags:
   x64 version:
 </h2>
 
-```
+``` bash
 wget http://c758482.r82.cf2.rackcdn.com/sublime-text_build-3047_amd64.deb
 sudo dpkg -i sublime-text_build-3047_amd64.deb
 ```
@@ -45,7 +45,7 @@ sudo dpkg -i sublime-text_build-3047_amd64.deb
   x86 version:
 </h2>
 
-```
+``` bash
 wget http://c758482.r82.cf2.rackcdn.com/sublime-text_build-3047_i386.deb
 sudo dpkg -i sublime-text_build-3047_i386.deb
 ```

@@ -82,7 +82,7 @@ tags:
   app/models/child.rb
 </h5>
 
-```
+``` ruby
 class Child &lt; ActiveRecord::Base
   has_many :toys
 end
@@ -92,7 +92,7 @@ end
   app/models/toy.rb
 </h5>
 
-```
+``` ruby
 class Toy &lt; ActiveRecord::Base
   belongs_to :child
 end
@@ -102,7 +102,7 @@ end
   Let's create the application and scaffold these resources:
 </p>
 
-```
+``` bash
 $ rails new DemoApp &#038;&#038; cd DemoApp
 ```
 
@@ -116,7 +116,7 @@ $ rails generate scaffold toy description price:decimal child:references
   Run the migrations:
 </p>
 
-```
+``` bash
 $ rake db:migrate
 ==  CreateChildren: migrating =================================================
 -- create_table(:children)
@@ -133,7 +133,7 @@ $ rake db:migrate
   We can now start the server and check that everything went good.
 </p>
 
-```
+``` bash
 $ rails s
 => Booting WEBrick
 => Rails 4.1.0.beta1 application starting in development on http://0.0.0.0:3000
@@ -162,7 +162,7 @@ $ rails s
   Let's generate the scaffold again, with some corrections.
 </p>
 
-```
+``` bash
 $ rails g scaffold toy description:string{50} price:decimal{4,2}
       invoke  active_record
 Another migration is already named create_toys: /Users/simo/Projects/DemoApp/db/migrate/20140209145850_create_toys.rb. Use --force to remove the old migration file and replace it.
@@ -172,7 +172,7 @@ Another migration is already named create_toys: /Users/simo/Projects/DemoApp/db/
   Fair enough. We must destroy the entire scaffold before recreating it.
 </p>
 
-```
+``` bash
 $ rails destroy scaffold toy
       invoke  active_record
       remove    db/migrate/20140208224426_create_toys.rb
@@ -190,7 +190,7 @@ $ rails generate scaffold toy description:string{50} price:decimal{4,2} child:re
   Ok. Let's give a quick look at the generated migration.
 </p>
 
-```
+``` ruby
 class CreateToys &lt; ActiveRecord::Migration
   def change
     create_table :toys do |t|
@@ -208,7 +208,7 @@ end
   It looks right. Let's run it!
 </p>
 
-```
+``` bash
 $ rake db:migrate
 ==  CreateToys: migrating =====================================================
 -- create_table(:toys)
@@ -222,7 +222,7 @@ SQLite3::SQLException: table "toys" already exists: CREATE TABLE "toys" ("id" IN
   Whoops! The table already exists. We should remove it first. Edit the migration:
 </p>
 
-```
+``` ruby
 class CreateToys &lt; ActiveRecord::Migration
   def change
     # This will do the work
@@ -243,7 +243,7 @@ end
   And migrate again:
 </p>
 
-```
+``` bash
 $ rake db:migrate
 ==  CreateToys: migrating =====================================================
 -- drop_table(:toys)
@@ -257,7 +257,7 @@ $ rake db:migrate
   Ok, we are ready to start the server again and see what changed.
 </p>
 
-```
+``` bash
 $ rails s
 ```
 

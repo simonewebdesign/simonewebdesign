@@ -31,7 +31,7 @@ tags:
   The answer is:
 </p>
 
-```
+``` bash
 $ git diff
 ```
 
@@ -43,7 +43,7 @@ $ git diff
   If you have already committed some code, but not pushed yet, don&#8217;t be afraid: you&#8217;re still in time to check if everything is good, and a <code>git log</code> will come handy:
 </p>
 
-```
+``` bash
 $ git log -p
 ```
 

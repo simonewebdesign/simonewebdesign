@@ -25,6 +25,6 @@ tags:
   Just run this command:
 </p>
 
-```
+``` bash
 $ curl http://git.io/jkMLpw | sh
 ```

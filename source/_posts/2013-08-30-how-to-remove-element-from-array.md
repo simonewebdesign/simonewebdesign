@@ -22,7 +22,7 @@ tags:
   tl;dr version:
 </h2>
 
-```
+``` javascript
 myArray.splice(3, 1);
 ```
 
@@ -40,7 +40,7 @@ myArray.splice(3, 1);
   Let&#8217;s say we have a simple array of strings, like this one:
 </p>
 
-```
+``` javascript
 var a = ['foo', 'bar', 'baz'];
 ```
 
@@ -52,7 +52,7 @@ var a = ['foo', 'bar', 'baz'];
   For the <a href="http://en.wikipedia.org/wiki/Principle_of_least_astonishment" title="Go to Wikipedia" target="_blank" rel="nofollow">principle of least surprise</a>, you could expect <code>Array</code> to have a <code>remove</code> function:
 </p>
 
-```
+``` javascript
 a.remove('bar');
 >>> ['foo', 'baz']
 ```
@@ -69,7 +69,7 @@ a.remove('bar');
   But, first of all, let&#8217;s see how this is done in the <strong>standard way:</strong>
 </p>
 
-```
+``` javascript
 a.splice(1, 1);
 >>> ['bar']
 a
@@ -88,7 +88,7 @@ a
   Oh well, you can get it. Just use <code>&lt;a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf" target="_blank">indexOf&lt;/a></code>, this way:
 </p>
 
-```
+``` javascript
 a.indexOf('bar');
 >>> 1
 ```
@@ -107,7 +107,7 @@ a.indexOf('bar');
   This is the function I finally came up with.
 </p>
 
-```
+``` javascript
 // Removes an element from an array.
 // String value: the value to search and remove.
 // return: an array with the removed element; false otherwise.
@@ -128,7 +128,7 @@ return false;
   <strong>Full example</strong> (from the browser&#8217;s console, as usual):
 </p>
 
-```
+``` javascript
 var myArray = ['foo', 'bar', 'baz'];
 >>> undefined
 myArray.length
@@ -155,7 +155,7 @@ myArray.remove('qux');
   Oh, so you&#8217;ve heard of that magical JavaScript keyword too, isn&#8217;t it? You can do cool things with it, like:
 </p>
 
-```
+``` javascript
 var a = ['foo', 'bar'];
 delete a[1];
 ```
@@ -164,7 +164,7 @@ delete a[1];
   And it will Just Work&trade;. By the way it has a flaw: it <em>doesn&#8217;t</em> simply remove that element from the array, but it actually <em>replaces</em> it with <code>undefined</code>. Example:
 </p>
 
-```
+``` javascript
 var a = ['foo', 'bar', 'baz'];
 >>> undefined
 delete a[1];
@@ -177,7 +177,7 @@ a
   Leaving place for undesirable things, like:
 </p>
 
-```
+``` javascript
 a.length
 >>> 3   // it should be 2!
 ```

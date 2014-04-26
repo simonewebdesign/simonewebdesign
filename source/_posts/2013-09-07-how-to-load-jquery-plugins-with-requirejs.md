@@ -56,7 +56,7 @@ tags:
   Let&#8217;s suppose you need to include 2 jQuery plugins, <code>foo.js</code> and <code>bar.js</code>. Here&#8217;s a sample configuration:
 </p>
 
-```
+``` javascript
 requirejs.config({
   shim: {
       foo: {
@@ -74,7 +74,7 @@ requirejs.config({
   Then, later, when you need to use that <code>Foo</code> plugin, you can just <strong>define a module</strong> by doing:
 </p>
 
-```
+``` javascript
 // foo.js
 // This defines a module named 'foo'
 define(function() {
@@ -90,7 +90,7 @@ define(function() {
   And <strong>require</strong> it when you actually want to execute it:
 </p>
 
-```
+``` javascript
 require(['foo'], function(Foo) {
   // this is a callback function, and it's optional.
   // the foo module has already been required and executed.

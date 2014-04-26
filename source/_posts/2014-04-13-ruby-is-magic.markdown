@@ -13,14 +13,18 @@ You don't believe me, do you? Fair enough, but let me show you why Ruby is so aw
 
 Yes, it's true. Ruby is so simple and intuitive that you can think in English before writing some Ruby code. For example:
 
-    def speak_english
-      print "Hello, world!"
-    end
+``` ruby
+def speak_english
+  print "Hello, world!"
+end
+```
 
 The code above is a Ruby function (or method) declaration. So, when you want to run the `speak_english` function, you do it this way:
 
-    speak_english
-    Hello, world! => nil
+``` ruby
+speak_english
+Hello, world! => nil
+```
 
 You may have noticed the `nil`: what's that? It's just nothing, literally. It represents the void (emptiness, no value at all). In other languages, such as SQL (the mother tongue of databases), you can find it as `NULL`.
 
@@ -30,28 +34,32 @@ Do you know about OOP? It means Object-Oriented Programming, and it's probably t
 
 Let's make an example. Let's say you want to use the `speak_english` function 3 times. In Java, you'd do something like:
 
-    public class HelloWorld
+``` java
+public class HelloWorld
+{
+    public static void main(String[] args)
     {
-        public static void main(String[] args)
+        for (int i = 0; i < 3; i++)
         {
-            for (int i = 0; i < 3; i++)
-            {
-                speakEnglish();
-            }
-        }
-
-        public static void speakEnglish()
-        {
-            System.out.println("Hello, world!");
+            speakEnglish();
         }
     }
 
+    public static void speakEnglish()
+    {
+        System.out.println("Hello, world!");
+    }
+}
+```
+
 So much code for something so simple... in Ruby, instead, you can do this:
 
-    3.times do
-      speak_english
-    end
-    Hello, world! Hello, world! Hello, world! => 3
+``` ruby
+3.times do
+  speak_english
+end
+Hello, world! Hello, world! Hello, world! => 3
+```
 
 See? I called a function on a number! Cool, isn't it? And I used only 3 lines of code :-)
 
@@ -59,9 +67,11 @@ See? I called a function on a number! Cool, isn't it? And I used only 3 lines of
 
 I was a PHP developer when I discovered Ruby. Although I had a bit of OOP background, I was used to write PHP code in a procedural style. Procedural code looks something like:
 
-    doThis();
-    doThat();
-    doSomethingElse();
+``` javascript
+doThis();
+doThat();
+doSomethingElse();
+```
 
 There's absolutely nothing wrong with this approach, apart from the fact that it starts being cumbersome, sometimes... because it's not Object-Oriented. I'll make one last example, taken from a beautiful [StackOverflow's answer](https://stackoverflow.com/questions/1113611/what-does-ruby-have-that-python-doesnt-and-vice-versa#answer-4102608).
 
@@ -81,38 +91,50 @@ When you think about how you would do it, you'd do the following:
 
 In PHP, you'd do this:
 
-    $sentence = "backwards is sentence This";
-    $splitted = explode(" ", $sentence);
-    $reversed = array_reverse($splitted);
-    $rejoined = implode(" ", $reversed);
+``` php
+$sentence = "backwards is sentence This";
+$splitted = explode(" ", $sentence);
+$reversed = array_reverse($splitted);
+$rejoined = implode(" ", $reversed);
+```
 
 In Python:
 
-    sentence = "backwards is sentence This"
-    splitted = sentence.split()
-    reversed = reversed(splitted)
-    rejoined = " ".join(reversed);
+``` python
+sentence = "backwards is sentence This"
+splitted = sentence.split()
+reversed = reversed(splitted)
+rejoined = " ".join(reversed);
+```
 
 And Ruby:
 
-    sentence = "backwards is sentence This"
-    splitted = sentence.split
-    reversed = splitted.reverse
-    rejoined = reversed.join
+``` ruby
+sentence = "backwards is sentence This"
+splitted = sentence.split
+reversed = splitted.reverse
+rejoined = reversed.join
+```
 
 Every language required 4 lines of code. Now let's compare the one-liners.
 
 ### PHP
 
-    implode(" ", array_reverse(explode(" ", $sentence)));
+``` php
+implode(" ", array_reverse(explode(" ", $sentence)));
+```
 
 ### Python
 
-    " ".join(reversed(sentence.split()))
+``` python
+" ".join(reversed(sentence.split()))
+```
 
 ### Ruby
 
-    sentence.split.reverse.join " "
+``` ruby
+sentence.split.reverse.join " "
+```
 
 Now, can you see the beautiness of Ruby? It's just... [Magic](https://www.youtube.com/watch?v=UzH0o3X0oB0).
 
