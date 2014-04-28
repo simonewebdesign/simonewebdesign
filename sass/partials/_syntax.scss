@@ -22,11 +22,6 @@
   @include border-radius(0);
 }
 
-figure.code, .gist-file, pre {
-  @include box-shadow(rgba(#000, .06) 0 0 10px);
-  .highlight pre { @include box-shadow(none); }
-}
-
 .gist .highlight, figure.code .highlight {
   @include selection(adjust-color($base03, $lightness: 23%, $saturation: -65%), $text-shadow: $base03 0 1px);
 }
@@ -229,6 +224,7 @@ figure.code {
   }
   .highlight {
     margin-bottom: 0;
+    border-radius: 3px;
   }
 }
 
@@ -243,11 +239,6 @@ figure.code {
   @include border-top-radius(5px);
   font-family: "Helvetica Neue", Arial, "Lucida Grande", "Lucida Sans Unicode", Lucida, sans-serif;
   background: #aaaaaa image-url("code_bg.png") top repeat-x;
-  border: 1px solid #565656;
-  border-top-color: #cbcbcb;
-  border-left-color: #a5a5a5;
-  border-right-color: #a5a5a5;
-  border-bottom: 0;
 }
 
 .download-source {
