@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Ruby is Magic"
-date: 2014-04-13 19:57:26 +0100
+date: 2014-04-30 00:07:00 +0000
 comments: true
 categories: Ruby
 ---
