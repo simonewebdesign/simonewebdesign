@@ -88,6 +88,7 @@ article + article {
 }
 #content .blog-index {
   padding: { top: 0; bottom: 0; }
+  border-bottom: 1px solid $page-border-bottom;
   article { padding-top: 2em; }
   article header { background: none; padding-bottom: 0; }
   article h1 {
