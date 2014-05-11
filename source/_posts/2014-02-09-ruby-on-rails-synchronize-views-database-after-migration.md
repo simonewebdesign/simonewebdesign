@@ -262,7 +262,7 @@ $ rails s
 ```
 
 <p>
-  That's it. This is basically the process. It's way too labourious, I know, but the truth is that we just can't efficiently automatize a process like this, because: what if we generate more migrations during the journey? We would have to delete them and recreate again the whole schema by running <code>rails generate scaffold</code>, <code>rake db:reset</code> and rerun the generate again and again... well, that sucks. At this stage we've got the point: it's better to do it manually! Rails gives us tons of helper methods to format prices and get things done, and that's definitely the path to follow.
+  That's it. This is basically the process. It's way too labourious, I know, but the truth is that we just can't efficiently automate a process like this, because: what if we generate more migrations during the journey? We would have to delete them and recreate again the whole schema by running <code>rails generate scaffold</code>, <code>rake db:reset</code> and rerun the generate again and again... well, that sucks. At this stage we've got the point: it's better to do it manually! Rails gives us tons of helper methods to format prices and get things done, and that's definitely the path to follow.
 </p>
 
 <p>
