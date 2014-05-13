@@ -3,6 +3,7 @@ title: How to remove an element from an array
 layout: post
 permalink: /blog/how-to-remove-element-from-array/
 date: 2013-08-30
+comments: true
 dsq_thread_id:
 - 1672169047
 categories:

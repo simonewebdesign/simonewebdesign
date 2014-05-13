@@ -3,6 +3,7 @@ title: How to load jQuery plugins with RequireJS
 layout: post
 permalink: /blog/how-to-load-jquery-plugins-with-requirejs/
 date: 2013-09-07
+comments: true
 dsq_thread_id:
   - 1725854798
 categories:
