@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Bye bye Wordpress. Welcome Octopress!"
+date: 2014-05-13 17:55:37 +0100
+comments: true
+categories: 
+---
+
+**I did it!** I've finally migrated my blog to Octopress. It was a bit of a PITA, and it took a lot more than what I expected, but I did it.
+
+Apologies if you wasn't able to see the website yesterday; the DNS took about 11 hours to propagate, and the site was back UP just this morning. It is now hosted by Heroku and it's **faster than ever**.
+
+Prepare yourself to see lots of new stuff in the next few weeks! ;-)
