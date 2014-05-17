@@ -227,8 +227,22 @@ task :deploy do
   Rake::Task["#{deploy_default}"].execute
 end
 
+desc "Deploy to Heroku"
+task :deploy_heroku do
+  system "git add public/ -f"
+  system "git commit -m 'deploy'"
+  system "git push heroku master -f"
+  system "git reset --soft HEAD^"
+  system "git reset"
+  puts "Site deployed"
+end
+
 desc "Generate website and deploy"
 task :gen_deploy => [:integrate, :generate, :deploy] do
+end
+
+desc "Generate website and deploy to Heroku"
+task :gen_deploy_heroku => [:integrate, :generate, :deploy_heroku] do
 end
 
 desc "copy dot files for deployment"
