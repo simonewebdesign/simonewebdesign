@@ -1,7 +1,7 @@
 ---
 title: How to put online your WampServer
 layout: post
-permalink: /blog/how-to-put-online-your-wampserver/
+permalink: /blog/how-to-put-online-your-wampserver
 date: 2013-07-20
 comments: true
 dsq_thread_id:

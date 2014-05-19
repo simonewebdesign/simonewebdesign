@@ -1,7 +1,7 @@
 ---
 title: Laravel 4 is out!
 layout: post
-permalink: /blog/laravel-4-is-out/
+permalink: /blog/laravel-4-is-out
 date: 2013-05-29
 comments: true
 dsq_thread_id:
