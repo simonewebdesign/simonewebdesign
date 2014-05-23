@@ -1,7 +1,7 @@
 ---
 title: View latest file changes in command line using Git
 layout: post
-permalink: /blog/git-show-latest-file-changes-in-command-line
+permalink: /blog/git-show-latest-file-changes-in-command-line/
 date: 2013-12-03
 comments: true
 dsq_thread_id:

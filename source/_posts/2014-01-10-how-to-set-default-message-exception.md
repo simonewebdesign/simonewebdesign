@@ -1,7 +1,7 @@
 ---
 title: How to set a default message in your exception
 layout: post
-permalink: /blog/how-to-set-default-message-exception
+permalink: /blog/how-to-set-default-message-exception/
 date: 2014-01-10
 comments: true
 dsq_thread_id:

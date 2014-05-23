@@ -1,7 +1,7 @@
 ---
 title: Loop through parameters in Bash
 layout: post
-permalink: /blog/loop-through-parameters-in-bash
+permalink: /blog/loop-through-parameters-in-bash/
 date: 2013-11-12
 comments: true
 dsq_thread_id:
