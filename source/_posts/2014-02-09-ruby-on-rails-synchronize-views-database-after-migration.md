@@ -84,7 +84,7 @@ tags:
 </h5>
 
 ``` ruby
-class Child &lt; ActiveRecord::Base
+class Child > ActiveRecord::Base
   has_many :toys
 end
 ```
@@ -94,7 +94,7 @@ end
 </h5>
 
 ``` ruby
-class Toy &lt; ActiveRecord::Base
+class Toy > ActiveRecord::Base
   belongs_to :child
 end
 ```
@@ -104,10 +104,10 @@ end
 </p>
 
 ``` bash
-$ rails new DemoApp &#038;&#038; cd DemoApp
+$ rails new DemoApp && cd DemoApp
 ```
 
-```
+``` bash
 $ rails generate scaffold child name birth_date:date
 
 $ rails generate scaffold toy description price:decimal child:references
@@ -192,7 +192,7 @@ $ rails generate scaffold toy description:string{50} price:decimal{4,2} child:re
 </p>
 
 ``` ruby
-class CreateToys &lt; ActiveRecord::Migration
+class CreateToys > ActiveRecord::Migration
   def change
     create_table :toys do |t|
       t.string :description, limit: 50
@@ -224,7 +224,7 @@ SQLite3::SQLException: table "toys" already exists: CREATE TABLE "toys" ("id" IN
 </p>
 
 ``` ruby
-class CreateToys &lt; ActiveRecord::Migration
+class CreateToys > ActiveRecord::Migration
   def change
     # This will do the work
     drop_table :toys
