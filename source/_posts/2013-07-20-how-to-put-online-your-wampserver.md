@@ -71,8 +71,8 @@ C:\>ipconfig
 
 Ethernet adapter Local Area Connection:
 
-  Connection-specific <abbr title="Domain Name Server">DNS</abbr> Suffix  . :
-  <abbr title="Internet Protocol">IP</abbr> Address. . . . . . . . . . . . : 192.168.1.27
+  Connection-specific DNS Suffix  . :
+  IP Address. . . . . . . . . . . . : 192.168.1.27
   Subnet Mask . . . . . . . . . . . : 255.255.255.0
   Default Gateway . . . . . . . . . : 192.168.1.1
 ```
@@ -139,9 +139,9 @@ Listen 8080
 </p>
 
 ```
-Private <abbr title="Internet Protocol">IP</abbr>     Private Port   Type   Public <abbr title="Internet Protocol">IP</abbr>/mask   Public Port
-192.168.1.27   8081 	      TCP    0.0.0.0/0        8081
-192.168.1.27   8081 	      UDP    0.0.0.0/0        8081
+Private IP     Private Port   Type   Public IP/mask   Public Port
+192.168.1.27   8081 	        TCP    0.0.0.0/0        8081
+192.168.1.27   8081 	        UDP    0.0.0.0/0        8081
 ```
 
 <p>
