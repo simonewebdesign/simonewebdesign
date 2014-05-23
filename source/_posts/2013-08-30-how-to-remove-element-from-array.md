@@ -86,7 +86,7 @@ a
 </h4>
 
 <p>
-  Oh well, you can get it. Just use <code>&lt;a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf" target="_blank">indexOf&lt;/a></code>, this way:
+  Oh well, you can get it. Just use <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf" target="_blank">indexOf</a></code>, this way:
 </p>
 
 ``` javascript
