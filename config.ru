@@ -6,12 +6,6 @@ $root = ::File.dirname(__FILE__)
 
 class SinatraStaticServer < Sinatra::Base
 
-  # Redirect all requests without a trailing slash to the trailing slash version
-  # http://stackoverflow.com/a/11927449
-  get %r{(/.*[^\/])$} do
-    redirect "#{params[:captures].first}/"
-  end
-
   get(/.+/) do
     send_sinatra_file(request.path) {404}
   end
