@@ -1,0 +1,3 @@
+[submodule "source/demo/html5editor"]
+	path = source/demo/html5editor
+	url = https://github.com/simonewebdesign/html5editor.git
