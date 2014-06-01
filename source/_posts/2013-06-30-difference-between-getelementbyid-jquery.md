@@ -1,5 +1,6 @@
 ---
 title: The difference between document.getElementById() and jQuery()
+description: "The difference is that the jQuery object is just a wrapper around the element."
 layout: post
 permalink: /blog/difference-between-getelementbyid-jquery/
 date: 2013-06-30

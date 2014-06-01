@@ -1,5 +1,6 @@
 ---
 title: Fuzzy matching with CSS3
+description: "Learn a new awesome CSS3 trick from a special case where a simple CSS selector is not enough."
 layout: post
 permalink: /blog/fuzzy-matching-with-css3/
 date: 2012-11-30 00:56:56 +0000

@@ -1,5 +1,6 @@
 ---
 title: View latest file changes in command line using Git
+description: "To view latest file changes in Git, use git diff. Use git log -p if you want to see a patch of what changed in each commit."
 layout: post
 permalink: /blog/git-show-latest-file-changes-in-command-line/
 date: 2013-12-03

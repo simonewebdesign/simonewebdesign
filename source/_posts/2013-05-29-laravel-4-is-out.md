@@ -1,5 +1,6 @@
 ---
 title: Laravel 4 is out!
+description: "Laravel 4 was released on May 29, 2013."
 layout: post
 permalink: /blog/laravel-4-is-out/
 date: 2013-05-29

@@ -1,5 +1,6 @@
 ---
 title: Playing around with JavaScript
+description: "Have you ever played a videogame on the JavaScript console? No? Well, if you like JavaScript, you definitely should read this."
 layout: post
 permalink: /blog/playing-around-with-javascript/
 date: 2012-08-22 12:50:46 +0000

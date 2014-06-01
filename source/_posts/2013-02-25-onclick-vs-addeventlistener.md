@@ -1,5 +1,6 @@
 ---
 title: onclick vs addEventListener
+description: "JavaScript: difference between onclick and addEventListener. Onclick is just a property, while addEventListener is a function."
 layout: post
 permalink: /blog/onclick-vs-addeventlistener/
 date: 2013-02-25 21:32:43 +0000

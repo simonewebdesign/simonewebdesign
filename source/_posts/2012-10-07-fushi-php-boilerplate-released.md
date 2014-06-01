@@ -1,5 +1,6 @@
 ---
 title: Fushi PHP Boilerplate Released!
+description: "A very simple and lightweight PHP boilerplate. Source code hosted on GitHub."
 layout: post
 permalink: /blog/fushi-php-boilerplate-released/
 date: 2012-10-07 18:23:26 +0000
