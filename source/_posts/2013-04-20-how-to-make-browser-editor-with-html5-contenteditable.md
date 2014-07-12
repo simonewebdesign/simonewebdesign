@@ -1,6 +1,5 @@
 ---
 title: 'How to make a real-time in-browser editor with the HTML5&#8242;s contenteditable attribute'
-description: "Quick-start reference for GitHub. Learn Git quickly and be immediately productive with this very pragmatic Git cheat sheet!"
 layout: post
 permalink: /blog/how-to-make-browser-editor-with-html5-contenteditable/
 date: 2013-04-20
