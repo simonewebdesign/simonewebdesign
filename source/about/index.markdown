@@ -10,13 +10,13 @@ Simone Vittori is a web developer originally from Perugia, Italy, but now living
 
 ## SIMONEWEBDESIGN.IT
 
-Simonewebdesign.it is my personal web site in which I blog about web programming since 2010. I changed its face a bunch of times: initially it was a portfolio site running in Flash (!), then a one page HTML5 static site, and finally a WordPress blog, until I decided to switch to <a href="http://octopress.org/">OctoPress</a>.
+Simonewebdesign.it is my personal web site in which I blog about web programming since 2010. I changed its face a bunch of times: initially it was a portfolio site running in Flash (!), then a one page HTML5 static site, and finally a WordPress blog, until I decided to switch to [OctoPress]({% post_url 2014-05-13-bye-bye-wordpress-welcome-octopress %}). I made this change because I believe that websites have to be fast and simple. Indeed, this site has:
 
-<strong>That's why it's so fast:</strong> there is no database. All pages are actually static HTML/CSS pages, with some JavaScript as well, of course.
+<strong>No backend.</strong> there is no database. All pages are actually just HTML, CSS and JavaScript.
 
-<strong>This site has no advertising at all.</strong> I blog about web programming so that I can't forget important stuff I learn during my journey as a developer, and because I love to share my work.
+<strong>No ads.</strong> I blog about web programming so that I can't forget important stuff I learn during my journey as a developer, and because I love to share my work.
 
-<strong>Last but not least, it's open source.</strong> All the source code is hosted on [GitHub](https://github.com/simonewebdesign/simonewebdesign), so yes, you can read it, copy it, fork it... whatever. Feel free to do anything you want, as long as you enjoy it.
+<strong>Open source.</strong> All the source code is hosted on [GitHub](https://github.com/simonewebdesign/simonewebdesign), so yes, you can read it, copy it, fork it... whatever. Feel free to do anything you want, as long as you enjoy it.
 
 ## Contact
 
