@@ -1,16 +1,18 @@
 body > nav {
   position: relative;
-  background-color: $nav-bg;
-  @include background($nav-bg-front, $nav-bg-back);
+  background-color: #545656;
+  // @include background($nav-bg-front, $nav-bg-back);
   border: {
-    top: 1px solid $nav-border-top;
-    bottom: 1px solid $nav-border-bottom; }
+    top: 3px solid #424242;
+  }
   padding-top: .35em;
-  padding-bottom: .35em;
+  padding-bottom: .45em;
+  border-radius: 24px 0 24px 0;
   form {
     @include background-clip(padding-box);
     margin: 0; padding: 0;
     .search {
+      display: none;
       padding: .3em .5em 0;
       font-size: .85em;
       font-family: $sans;
@@ -48,6 +50,10 @@ body > nav {
       margin-left: .8em;
       float: right;
       li:last-child a { padding-right: 0; }
+      transition: background .2s ease-out;
+    }
+    ul.subscription a:hover {
+      color: #E15901;
     }
     ul li {
       margin: 0;
@@ -133,5 +139,18 @@ body > nav {
   ul.subscription { position: relative; top: .2em; li, a { border: 0; padding: 0; }}
   a[rel=subscribe-rss]{ @include mask-subscription-nav('rss.png'); }
   a[rel=subscribe-email]{ @include mask-subscription-nav('email.png'); }
+}
+
+.main-navigation {
+  li {
+    a {
+      color: #eee;
+      text-shadow: none;
+      &:hover {
+        color: #0181eb;
+        text-shadow: 0 -1px 0 darken(#0181eb, 10%);
+      }
+    }
+  }
 }
 

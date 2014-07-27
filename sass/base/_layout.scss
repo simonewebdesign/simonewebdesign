@@ -100,6 +100,22 @@ aside.sidebar {
   background-color: lighten($sidebar-bg, 2);
   border-top: 1px solid $sidebar-border;
   @extend .group;
+  opacity: .3;
+  -webkit-transition: opacity .2s ease-out;
+  -moz-transition: opacity .2s ease-out;
+  transition: opacity .2s ease-out;
+
+  a {
+    text-decoration: none;
+
+    // &:hover {
+    //   text-decoration: underline;
+    // }
+  }
+}
+
+aside.sidebar:hover {
+  opacity: 1;
 }
 
 .flex-content { max-width: 100%; height: auto; }
@@ -111,7 +127,7 @@ aside.sidebar {
   &.left, &.right { margin-bottom: .8em; }
 }
 
-.toggle-sidebar { &, .no-sidebar & { display: none; }}
+//.toggle-sidebar { &, .no-sidebar & { display: none; }}
 
 body.sidebar-footer {
   @media only screen and (min-width: 750px) {
