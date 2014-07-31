@@ -3,6 +3,7 @@
   border: 1px solid $pre-border !important;
 }
 .highlight .line-numbers, html .gist .gist-file .gist-syntax .highlight .line_numbers {
+  display: none;
   text-align: right;
   font-size: 13px;
   line-height: 1.45em;

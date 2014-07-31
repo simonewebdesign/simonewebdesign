@@ -20,56 +20,38 @@ tags:
 - splice
 ---
 
-<h2>
-  tl;dr version:
-</h2>
+## tl;dr version:
 
 ``` javascript
 myArray.splice(3, 1);
 ```
 
-<p>
-  The function above will remove the element at index <code>3</code>. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice" title="Go to MDN" target="_blank">See docs</a>.
-</p>
+The function above will remove the element at index <code>3</code>. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice" title="Go to MDN" target="_blank">See docs</a>.
 
-<hr />
+---
 
-<h2>
-  Detailed version:
-</h2>
+## Detailed version:
 
-<p>
-  Let&#8217;s say we have a simple array of strings, like this one:
-</p>
+Let's say we have a simple array of strings, like this one:
 
 ``` javascript
 var a = ['foo', 'bar', 'baz'];
 ```
 
-<p>
-  We just want to remove that <code>'bar'</code> element. How can we do this?
-</p>
+We just want to remove that <code>'bar'</code> element. How can we do this?
 
-<p>
-  For the <a href="http://en.wikipedia.org/wiki/Principle_of_least_astonishment" title="Go to Wikipedia" target="_blank" rel="nofollow">principle of least surprise</a>, you could expect <code>Array</code> to have a <code>remove</code> function:
-</p>
+For the <a href="http://en.wikipedia.org/wiki/Principle_of_least_astonishment" title="Go to Wikipedia" target="_blank" rel="nofollow">principle of least surprise</a>, you could expect <code>Array</code> to have a <code>remove</code> function:
 
 ``` javascript
 a.remove('bar');
 >>> ['foo', 'baz']
 ```
 
-<p>
-  The bad news? <strong>JavaScript does not have such a function.</strong>
-</p>
+The bad news? <strong>JavaScript does not have such a function.</strong>
 
-<p>
-  The good news? <strong>We can create it!</strong>
-</p>
+The good news? <strong>We can create it!</strong>
 
-<p>
-  But, first of all, let&#8217;s see how this is done in the <strong>standard way:</strong>
-</p>
+But, first of all, let's see how this is done in the <strong>standard way:</strong>
 
 ``` javascript
 a.splice(1, 1);
@@ -78,36 +60,24 @@ a
 >>> ['foo', 'baz']
 ```
 
-<p>
-  What does this <code>splice</code> function do? Simple: it just removes the element at index <code>1</code>. The first parameter is, indeed, the index, and the second is the number of elements to remove, starting from that index. This is all you need to know about <code>splice</code>. If you&#8217;re curious to see what other cool things <code>splice</code> can do, see the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice" target="_blank">MDN documentation</a>.
-</p>
+What does this <code>splice</code> function do? Simple: it just removes the element at index <code>1</code>. The first parameter is, indeed, the index, and the second is the number of elements to remove, starting from that index. This is all you need to know about <code>splice</code>. If you're curious to see what other cool things <code>splice</code> can do, see the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice" target="_blank">MDN documentation</a>.
 
-<h4>
-  But what if I don&#8217;t know the index?
-</h4>
+#### But what if I don't know the index?
 
-<p>
-  Oh well, you can get it. Just use <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf" target="_blank">indexOf</a></code>, this way:
-</p>
+Oh well, you can get it. Just use <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf" target="_blank">indexOf</a></code>, this way:
 
 ``` javascript
 a.indexOf('bar');
 >>> 1
 ```
 
-<p>
-  <small>Please note that Internet Explorer 8 and below versions doesn&#8217;t support it (you can use a <a href="https://gist.github.com/atk/1034425" target="_blank" title="An indexOf polyfill on GitHub" rel="nofollow">polyfill</a>, though).</small>
-</p>
+<small>Please note that Internet Explorer 8 and below versions don't support it (you can use a <a href="https://gist.github.com/atk/1034425" target="_blank" title="An indexOf polyfill on GitHub" rel="nofollow">polyfill</a>, though).</small>
 
-<hr />
+---
 
-<h3>
-  Extending the Array object
-</h3>
+### Extending the Array object
 
-<p>
-  This is the function I finally came up with.
-</p>
+This is the function I finally came up with.
 
 ``` javascript
 // Removes an element from an array.
@@ -122,13 +92,9 @@ return false;
 }
 ```
 
-<p>
-  I know some folks out there doesn&#8217;t feel comfortable with extending <code>Array</code>, because they say Bad Things&trade; could happen. However, I think that a <code>remove</code> function is just a lot more easy to use and remember than <code>splice</code>, and honestly I don&#8217;t see any drawbacks with this approach; especially if we protect the global <code>Array</code> object, somehow. What do you think?
-</p>
+I know some folks out there don't feel comfortable with extending <code>Array</code>, because they say Bad Things&trade; could happen. However, I think that a <code>remove</code> function is just a lot more easy to use and remember than <code>splice</code>, and honestly I don't see any drawbacks with this approach; especially if we protect the global <code>Array</code> object, somehow. What do you think?
 
-<p>
-  <strong>Full example</strong> (from the browser&#8217;s console, as usual):
-</p>
+<strong>Full example</strong> (from the browser's console, as usual):
 
 ``` javascript
 var myArray = ['foo', 'bar', 'baz'];
@@ -149,22 +115,16 @@ myArray.remove('qux');
 >>> false
 ```
 
-<h4>
-  Awesome! But&#8230; why can&#8217;t I just use the <code>delete</code> keyword?
-</h4>
+#### Awesome! But&#8230; why can't I just use the <code>delete</code> keyword?
 
-<p>
-  Oh, so you&#8217;ve heard of that magical JavaScript keyword too, isn&#8217;t it? You can do cool things with it, like:
-</p>
+Oh, so you've heard of that magical JavaScript keyword too, isn't it? You can do cool things with it, like:
 
 ``` javascript
 var a = ['foo', 'bar'];
 delete a[1];
 ```
 
-<p>
-  And it will Just Work&trade;. By the way it has a flaw: it <em>doesn&#8217;t</em> simply remove that element from the array, but it actually <em>replaces</em> it with <code>undefined</code>. Example:
-</p>
+And it will Just Work&trade;. By the way it has a flaw: it <em>doesn't</em> simply remove that element from the array, but it actually <em>replaces</em> it with <code>undefined</code>. Example:
 
 ``` javascript
 var a = ['foo', 'bar', 'baz'];
@@ -175,15 +135,11 @@ a
 >>> ["foo", undefined, "baz"]
 ```
 
-<p>
-  Leaving place for undesirable things, like:
-</p>
+Leaving place for undesirable things, like:
 
 ``` javascript
 a.length
 >>> 3   // it should be 2!
 ```
 
-<p>
-  In conclusion, if you don&#8217;t care about the drawbacks, you can use the <code>delete</code> keyword; otherwise go with the solution explained above.
-</p>
+In conclusion, if you don't care about the drawbacks, you can use the <code>delete</code> keyword; otherwise go with the solution explained above.

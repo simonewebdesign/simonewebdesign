@@ -9,9 +9,17 @@ header {
   h1 {
     display: inline-block;
     margin: 0;
+    letter-spacing: -5px;
+
     a, a:visited, a:hover {
-      color: $title_color;
       text-decoration: none;
+
+      text-shadow: 1px 2px 3px #DDdddd,
+                   0 0 0 black,
+                   -1px 1px 0 #DDdddd,
+                   1px 1px 0 white;
+
+      color: rgba(55,55,55, .6) !important;
     }
   }
 }

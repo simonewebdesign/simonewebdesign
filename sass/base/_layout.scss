@@ -26,7 +26,6 @@ $header-padding-bottom: 1.5em !default;
 }
 
 
-
 .basic-alignment {
   &.left { float: left; margin-right: 1.5em; }
   &.right { float: right; margin-left: 1.5em; }
@@ -34,6 +33,7 @@ $header-padding-bottom: 1.5em !default;
   &.left, &.right { margin-bottom: .8em; }
 }
 
+// TODO ADD CLEARFIX
 
 
 @media only screen and (min-width: 550px) {
