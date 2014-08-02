@@ -41,6 +41,7 @@ h1 {
 #{headings()}{
   @extend .heading;
   text-rendering: optimizelegibility;
+  margin-top: 1.6em;
   margin-bottom: 1em;
   font-weight: bold;
 }

@@ -69,12 +69,3 @@ a {
 html {
   background: $sidebar-bg $noise-bg;
 }
-body {
-  > div {
-    > div {
-      background: $main-bg $noise-bg;
-      border-left: 1px solid $sidebar-border;
-      border-right: 1px solid $sidebar-border;
-    }
-  }
-}

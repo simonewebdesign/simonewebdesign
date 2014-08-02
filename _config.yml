@@ -82,14 +82,6 @@ google_plus_one_size: medium
 googleplus_user: +SimoneVittori
 googleplus_hidden: false
 
-# Pinboard
-pinboard_user:
-pinboard_count: 3
-
-# Delicious
-delicious_user:
-delicious_count: 3
-
 # Disqus Comments
 disqus_short_name: simonewebdesign
 disqus_show_comment_count: true
