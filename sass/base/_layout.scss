@@ -33,7 +33,15 @@ $header-padding-bottom: 1.5em !default;
   &.left, &.right { margin-bottom: .8em; }
 }
 
-// TODO ADD CLEARFIX
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: " ";
+}
+
+.clearfix:after {
+  clear: both;
+}
 
 
 @media only screen and (min-width: 550px) {
