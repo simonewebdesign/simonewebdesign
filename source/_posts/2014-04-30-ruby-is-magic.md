@@ -104,7 +104,7 @@ In Python:
 sentence = "backwards is sentence This"
 splitted = sentence.split()
 reversed = reversed(splitted)
-rejoined = " ".join(reversed);
+rejoined = " ".join(reversed)
 ```
 
 And Ruby:
