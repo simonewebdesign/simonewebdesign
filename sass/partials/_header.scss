@@ -1,7 +1,6 @@
 header {
   margin: 3rem 0;
 
-
   .logo {
     float: left;
   }
@@ -14,6 +13,10 @@ header {
       text-decoration: none;
       color: #555;
 
+      /* 1px depth */
+      // text-shadow: 0 1px 0 white, 0 -1px #444;
+
+      /* codepen depth */
       // text-shadow: 1px 2px 3px #DDdddd,
       //              0 0 0 black,
       //              -1px 1px 0 #DDdddd,

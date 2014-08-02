@@ -15,7 +15,7 @@ $header-subtitle-font-family: $heading-font-family !default;
 .mono { font-family: $mono; }
 
 .logo h1 {
-  font-size: 2.6rem;
+  font-size: 2rem;
   @extend .heading;
   font-family: $header-title-font-family;
   font-weight: normal;
@@ -36,6 +36,7 @@ h1 {
 @media only screen and (min-width: 992px) {
   body { font-size: 1.15em; }
   h1 { font-size: 2.6em; line-height: 1.2em; }
+  pre, code, tt { font-size: 1.2em; }
 }
 
 #{headings()}{
@@ -97,7 +98,7 @@ del, s { text-decoration: line-through; }
 
 abbr, acronym { border-bottom: 1px dotted; cursor: help; }
 
-pre, code, tt { @extend .mono; font-size: 1.2em; }
+pre, code, tt { @extend .mono; }
 
 hr { margin-bottom: 0.2em; }
 
