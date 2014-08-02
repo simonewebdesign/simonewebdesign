@@ -22,7 +22,6 @@ aside.sidebar {
     }
   }
   img {
-    @extend .flex-content;
     @extend .basic-alignment;
     @include shadow-box($border: #fff .3em solid);
   }
@@ -43,6 +42,7 @@ aside.sidebar {
   a {
     color: inherit;
     @include transition(color .5s);
+    text-decoration: none;
   }
   &:hover a {
     color: $sidebar-link-color;

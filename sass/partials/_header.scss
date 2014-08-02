@@ -1,26 +1,28 @@
-body > header {
+header {
+  margin: 3rem 0;
+
+  .logo {
+    float: left;
+  }
+
   h1 {
     display: inline-block;
     margin: 0;
-    letter-spacing: -5px;
 
     a, a:visited, a:hover {
-      // color: $title_color;
       text-decoration: none;
+      color: #555;
 
-      text-shadow: 1px 2px 3px #DDdddd,
-                   0 0 0 black,
-                   -1px 1px 0 #DDdddd,
-                   1px 1px 0 white;
+      /* 1px depth */
+      // text-shadow: 0 1px 0 white, 0 -1px #444;
 
-      color: rgba(55,55,55, .6) !important;
+      /* codepen depth */
+      // text-shadow: 1px 2px 3px #DDdddd,
+      //              0 0 0 black,
+      //              -1px 1px 0 #DDdddd,
+      //              1px 1px 0 white;
+
+      // color: rgba(55,55,55, .6) !important;
     }
-  }
-  h2 {
-    margin: .2em 0 0;
-    @extend .sans;
-    font-size: 1em;
-    color: $subtitle-color;
-    font-weight: normal;
   }
 }
