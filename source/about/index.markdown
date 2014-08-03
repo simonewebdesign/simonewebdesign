@@ -8,7 +8,7 @@ footer: false
 
 Simone Vittori is a web developer originally from Perugia, Italy, but now living in London, England. He strongly believes in Open Source, and thinks that [Ruby](https://ruby-lang.org) is the best programming language ever made. He is truly passionate about his job: if he is not coding, he is probably reading, writing or speaking about it. Last but not least, he’s obsessed with bits, pixels, zombies, dinosaurs, and gems.
 
-## SIMONEWEBDESIGN.IT
+## simonewebdesign.it
 
 This is my personal web site in which I blog about web programming since 2010. I changed its face a bunch of times: initially it was a portfolio site running in Flash (!), then a one page HTML5 static site, and finally a WordPress blog, until I decided to switch to [OctoPress]({% post_url 2014-05-13-bye-bye-wordpress-welcome-octopress %}). I made this change because I believe that websites have to be fast and simple. Indeed, this site has:
 
