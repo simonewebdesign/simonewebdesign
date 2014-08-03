@@ -4,6 +4,7 @@
 #blog-archives {
   article {
     padding: 1em 0 1em;
+    margin-bottom: 0;
     position: relative;
     background: $img-border bottom left repeat-x;
     &:last-child {
@@ -12,9 +13,10 @@
     footer { padding: 0; margin: 0;}
   }
   h1 { color: $text-color; margin-bottom: .3em; }
-  h2 { display: none; }
+  h2 { display: none; margin-top: 0; padding-top: 0; }
   h1 {
     font-size: 1.5em;
+    margin-top: 0;
     a {
       @include hover-link;
       color: inherit;
