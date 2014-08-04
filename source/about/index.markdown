@@ -4,6 +4,7 @@ title: "about"
 comments: false
 sharing: false
 footer: false
+sidebar: false
 ---
 
 Simone Vittori is a web developer originally from Perugia, Italy, but now living in London, England. He strongly believes in Open Source, and thinks that [Ruby](https://ruby-lang.org) is the best programming language ever made. He is truly passionate about his job: if he is not coding, he is probably reading, writing or speaking about it. Last but not least, he’s obsessed with bits, pixels, zombies, dinosaurs, and gems.
