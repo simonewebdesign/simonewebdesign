@@ -11,8 +11,11 @@
     <div class="content">
       {{ content | expand_urls: root_url }}
     </div>
+
+{% unless page.footer == false %}
     <footer role="contentinfo">{% include footer.html %}</footer>
     {% include after_footer.html %}
+{% endunless %}
   </div>
 </body>
 </html>
