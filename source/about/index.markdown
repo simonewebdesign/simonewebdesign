@@ -24,4 +24,4 @@ This is my personal web site in which I blog about web programming since 2010. I
 Even though I happily work full time as full-stack web developer, I’m always keen on participating in new exciting projects.
 
 If you have any questions about me or my website, please feel free to [email me](mailto:hello@simonewebdesign.it?subject=Hey Simone!).<br>
-<abbr title="Instant Message">IM</abbr> or follow me on Twitter (<a href="https://twitter.com/simonewebdesign" title="simonewebdesign on Twitter" rel="nofollow">@simonewebdesign</a>).
+<abbr title="Instant Message">IM</abbr> and follow me on Twitter (<a href="https://twitter.com/simonewebdesign" title="simonewebdesign on Twitter" rel="nofollow">@simonewebdesign</a>).
