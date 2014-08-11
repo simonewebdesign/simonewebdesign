@@ -231,11 +231,11 @@ figure.code {
 
 .code-title {
   text-align: center;
-  font-size: 13px;
+  font-size: 1em;
   line-height: 2em;
   text-shadow: #cbcccc 0 1px 0;
   color: #474747;
-  font-weight: normal;
+  font-weight: bold;
   margin-bottom: 0;
   @include border-top-radius(5px);
   font-family: "Helvetica Neue", Arial, "Lucida Grande", "Lucida Sans Unicode", Lucida, sans-serif;

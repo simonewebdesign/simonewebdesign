@@ -46,9 +46,9 @@ tags:
   Let&#8217;s say we have these two models: <code>Child</code> and <code>Toy</code>.
 </p>
 
-<h5>
-  Child
-</h5>
+
+### Child
+
 
 <ul>
   <li>
@@ -59,9 +59,7 @@ tags:
   </li>
 </ul>
 
-<h5>
-  Toy
-</h5>
+### Toy
 
 <ul>
   <li>
@@ -79,21 +77,13 @@ tags:
   As you might have already guessed, I am going to tie our models with a <em>one-to-many</em> relationship: a child <code>has_many</code> toys, and a toy <code>belongs_to</code> a child.
 </p>
 
-<h5>
-  app/models/child.rb
-</h5>
-
-``` ruby
+``` ruby app/models/child.rb
 class Child > ActiveRecord::Base
   has_many :toys
 end
 ```
 
-<h5>
-  app/models/toy.rb
-</h5>
-
-``` ruby
+``` ruby app/models/toy.rb
 class Toy > ActiveRecord::Base
   belongs_to :child
 end
