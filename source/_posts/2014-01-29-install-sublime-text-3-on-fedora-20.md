@@ -32,5 +32,5 @@ tags:
 $ curl -L http://git.io/3Wr2CQ | sh
 ```
 
-<p><em><small>Update 10 March 2014: I made some improvements to the script so I generated a new link.</small></em></p>
-<p><em><small>Update 16 March 2014: The script stopped working because GitHub is now doing a redirect to another domain (see [their post](https://developer.github.com/changes/2014-04-25-user-content-security/) if you're interested). Added the `-L` flag to fix the issue.</small></em></p>
+- Update (10 March 2014): I made some improvements to the script so I generated a new link.
+- Update (16 March 2014): The script stopped working because GitHub is now doing a redirect to another domain (see [their post](https://developer.github.com/changes/2014-04-25-user-content-security/) if you're interested). Added the `-L` flag to fix the issue.
