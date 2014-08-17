@@ -144,18 +144,24 @@ function Dog(){
 ``` javascript
 var cat = new Cat;
 >>> undefined
+
 cat.name = "Kitty";
 >>> "Kitty"
+
 cat.sound = "Meeow";
 >>> "Meeow"
+
 cat.eats = ["meat", "fishbones"];
 >>> ["meat", "fishbones"]
+
 cat.eat("fishbones");
 Kitty eats some fishbones!
 >>> true
+
 cat.eat("a pair of shoes");
 Kitty can''t eat a pair of shoes!
 >>> false
+
 cat.cry();
 Kitty says: Meeow!
 >>> undefined
@@ -164,15 +170,20 @@ Kitty says: Meeow!
 ``` javascript
 var dog = new Dog();
 >>> undefined
+
 dog.name = "Doggy";
 >>> "Doggy"
+
 dog.sound = "Woof";
 >>> "Woof"<a href="/">asd</a>
+
 dog.cry();
 Doggy says: Woof!
 >>> undefined
+
 dog.speed = 60;
 >>> 60
+
 dog.run();
 Doggy is running at 60km/h!
 >>> undefined
