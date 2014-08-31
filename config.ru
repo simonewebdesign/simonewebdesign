@@ -12,6 +12,11 @@ class SinatraStaticServer < Sinatra::Base
     redirect "#{params[:captures].first}/"
   end
 
+  # Redirect /blog to /
+  get(/blog/) do
+    redirect '/'
+  end
+
   get(/.+/) do
     send_sinatra_file(request.path) {404}
   end
