@@ -6,10 +6,20 @@ $root = ::File.dirname(__FILE__)
 
 class SinatraStaticServer < Sinatra::Base
 
+  # Permanently redirect posts that start with /blog/
+  get %r{blog/(/.*[^\/])$} do
+    redirect "#{params[:captures].first}/", 301
+  end
+
   # Redirect all requests without a trailing slash to the trailing slash version
   # http://stackoverflow.com/a/11927449
   get %r{(/.*[^\/])$} do
     redirect "#{params[:captures].first}/"
+  end
+
+  # Redirect /blog to /
+  get %r{blog/?$} do
+    redirect '/'
   end
 
   get(/.+/) do
