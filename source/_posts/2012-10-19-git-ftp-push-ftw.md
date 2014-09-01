@@ -2,7 +2,7 @@
 title: Git FTP Push FTW!
 description: "Learn how to use Git with FTP. A clever technique for synchronizing your local repo with your production repo."
 layout: post
-permalink: /blog/git-ftp-push-ftw/
+permalink: /git-ftp-push-ftw/
 date: 2012-10-19 16:11:51 +0000
 comments: true
 dsq_thread_id:

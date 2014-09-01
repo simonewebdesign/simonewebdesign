@@ -2,7 +2,7 @@
 title: How to create a web bug (aka beacon image)
 description: "Tutorial: learn how to build an hidden web bug. To create a beacon image, you need to enable the Apache’s URL rewriting module (mod_rewrite)."
 layout: post
-permalink: /blog/how-to-create-web-bug-aka-beacon-image/
+permalink: /how-to-create-web-bug-aka-beacon-image/
 date: 2012-09-23 15:22:30 +0000
 comments: true
 dsq_thread_id:

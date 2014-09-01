@@ -2,7 +2,7 @@
 title: "101 Web Socket Protocol Handshake: a pragmatic guide"
 description: "Learn how to set up a basic Web Socket server by reading this practical guide. We will use Node.js and the Official W3C's WebSocket API."
 layout: post
-permalink: /blog/101-web-socket-protocol-handshake/
+permalink: /101-web-socket-protocol-handshake/
 date: 2012-12-18 17:21:54 +0000
 comments: true
 dsq_thread_id:

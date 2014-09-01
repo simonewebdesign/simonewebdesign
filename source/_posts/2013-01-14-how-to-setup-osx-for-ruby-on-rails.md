@@ -2,7 +2,7 @@
 title: How to setup OS X 10.8 for Ruby on Rails 3.2
 description: "Learn how to install Ruby 2 in your Mac OS X for a Ruby on Rails development environment. This guide is aimed at Mac OS X 10.8 Mountain Lion's users."
 layout: post
-permalink: /blog/how-to-setup-osx-for-ruby-on-rails/
+permalink: /how-to-setup-osx-for-ruby-on-rails/
 date: 2013-01-14 14:08:36 +0000
 comments: true
 dsq_thread_id:

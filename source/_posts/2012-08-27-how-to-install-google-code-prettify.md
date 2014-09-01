@@ -2,7 +2,7 @@
 title: How to install the Google Code Prettify plugin
 description: "Learn how to install the Google Code Prettify plugin for your WordPress blog. Plugins are usually quite simple to set up: just follow this simple guide."
 layout: post
-permalink: /blog/how-to-install-google-code-prettify/
+permalink: /how-to-install-google-code-prettify/
 date: 2012-08-27 00:33:16 +0000
 comments: true
 dsq_thread_id:
