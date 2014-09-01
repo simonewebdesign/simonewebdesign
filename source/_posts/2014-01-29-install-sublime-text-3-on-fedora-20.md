@@ -34,3 +34,4 @@ $ curl -L http://git.io/3Wr2CQ | sh
 
 - Update (10 March 2014): I made some improvements to the script so I generated a new link.
 - Update (16 March 2014): The script stopped working because GitHub is now doing a redirect to another domain (see [their post](https://developer.github.com/changes/2014-04-25-user-content-security/) if you're interested). Added the `-L` flag to fix the issue.
+- Update (1 September 2014): I've updated the script to install the latest build and made a new blog post, [check it out](http://simonewebdesign.it/install-sublime-text-3-on-linux/).
