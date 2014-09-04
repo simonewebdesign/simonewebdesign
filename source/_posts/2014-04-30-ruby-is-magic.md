@@ -136,6 +136,8 @@ implode(" ", array_reverse(explode(" ", $sentence)));
 sentence.split.reverse.join " "
 ```
 
-Now, can you see the beautiness of Ruby? It's just... [Magic](https://www.youtube.com/watch?v=UzH0o3X0oB0).
+Now, can you see the beauty of Ruby? It's just... *magic*.
+
+<iframe width="768" height="576" src="//www.youtube-nocookie.com/embed/NLQzSZmxJLQ" frameborder="0" allowfullscreen></iframe>
 
 I love Ruby.
