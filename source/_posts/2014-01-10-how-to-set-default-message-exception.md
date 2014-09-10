@@ -55,7 +55,7 @@ raise MyError
 </p>
 
 ``` ruby
-class MyError > Exception
+class MyError < Exception
   def message
     "a predefined message"
   end
@@ -74,13 +74,13 @@ raise MyError
 
 ``` ruby
 module CustomError
-  class AnError > StandardError
+  class AnError < StandardError
     def message
       "A more specific error"
     end
   end
 
-  class AnotherError > StandardError
+  class AnotherError < StandardError
     def message
       "just another error"
     end
@@ -94,13 +94,13 @@ end
 
 ``` ruby
 module CustomError
-  class Error > StandardError
+  class Error < StandardError
     def message
       "default error"
     end
   end
 
-  class SpecificError > Error
+  class SpecificError < Error
     def message
       "a more specific error"
     end
@@ -119,7 +119,7 @@ end
 ``` ruby
 module CustomError
 
-  class Error > StandardError
+  class Error < StandardError
     def initialize(msg=nil)
       @message = msg
     end
@@ -129,7 +129,7 @@ module CustomError
     end
   end
 
-  class SpecificError > Error
+  class SpecificError < Error
     def message
       super + " We also got a specific error."
     end
