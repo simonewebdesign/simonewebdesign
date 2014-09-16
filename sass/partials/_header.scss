@@ -1,5 +1,10 @@
-header {
-  margin: 3rem 0;
+.site-header {
+  margin-top: 3rem;
+  margin-bottom: 4.5rem;
+  padding-bottom: 1.5rem;
+  box-shadow:
+    0 1px 0 rgba(0,0,0,.02),
+    0 30px 43px -34px rgba(0,0,0,.15);
 
   .logo {
     float: left;
