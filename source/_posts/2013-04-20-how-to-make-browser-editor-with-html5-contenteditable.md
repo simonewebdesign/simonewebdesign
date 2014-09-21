@@ -257,5 +257,5 @@ alert('foo'); // edit me!
   Need inspiration?
 </h3>
 
-<a href="http://simonewebdesign.it/demo/html5editor/" target="_blank">Demo</a> |
+<a href="/demo/html5editor/" target="_blank">Demo</a> |
 <a href="https://github.com/simonewebdesign/html5editor/archive/master.zip" target="_blank" rel="nofollow">Download</a>
