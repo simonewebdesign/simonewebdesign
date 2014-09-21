@@ -129,8 +129,8 @@ style, script {
 
 ``` css
 style, script {
-font-family: monospace;  /* monospace font */
-white-space: pre;        /* behave like &lt;pre> */
+  font-family: monospace;  /* monospace font */
+  white-space: pre;        /* behave like <pre> */
 }
 ```
 
