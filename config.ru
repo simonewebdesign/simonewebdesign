@@ -18,18 +18,7 @@ class SinatraStaticServer < Sinatra::Base
   end
 
   get(/.+/) do
-
-    puts "Request: "
-    p request
-    puts "Host: "
-    puts request.host
-    puts "-------------"
-
-    if request.host == 'simo.herokuapp.com'
-      puts "redirecting..."
-      redirect 'http://www.simonewebdesign.it/'
-      puts "redirected."
-    end
+    redirect 'http://www.simonewebdesign.it/' if request.host == 'simo.herokuapp.com'
 
     send_sinatra_file(request.path) {404}
   end
