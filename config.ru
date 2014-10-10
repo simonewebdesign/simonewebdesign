@@ -18,8 +18,12 @@ class SinatraStaticServer < Sinatra::Base
   end
 
   get(/.+/) do
-    redirect 'http://www.simonewebdesign.it/' if request.host == 'simo.herokuapp.com'
+    if request.host == 'simo.herokuapp.com'
+      redirect to("http://www.simonewebdesign.it#{params[:captures].first}/"), 301
+    end
+  end
 
+  get(/.+/) do
     send_sinatra_file(request.path) {404}
   end
 
