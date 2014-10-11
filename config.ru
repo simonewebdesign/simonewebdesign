@@ -6,6 +6,10 @@ $root = ::File.dirname(__FILE__)
 
 class SinatraStaticServer < Sinatra::Base
 
+  get(/simo\.herokuapp\.com/) do
+    redirect "http://www.simonewebdesign.it#{params[:captures].first}/", 301
+  end
+
   # Redirect all requests without a trailing slash to the trailing slash version
   # http://stackoverflow.com/a/11927449
   get %r{(/.*[^\/])$} do
@@ -18,10 +22,6 @@ class SinatraStaticServer < Sinatra::Base
   end
 
   get(/.+/) do
-    if request.host == 'simo.herokuapp.com'
-      redirect to("http://www.simonewebdesign.it#{params[:captures].first}/"), 301
-    end
-
     send_sinatra_file(request.path) {404}
   end
 
