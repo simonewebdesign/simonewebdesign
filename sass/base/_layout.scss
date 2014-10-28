@@ -28,7 +28,6 @@ body {
   max-width: $max-width;
   margin: 0 auto;
   padding: 0 1rem;
-  padding-bottom: 6rem;
 }
 
 
@@ -57,7 +56,9 @@ body {
   body { -webkit-text-size-adjust: auto; }
   body > header { font-size: $header-font-size * 1.2; }
   .container {
-    padding: 0 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 6rem;
   }
 }
 
