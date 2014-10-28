@@ -4,6 +4,7 @@ description: "Learn how to install the Google Code Prettify plugin for your Word
 layout: post
 permalink: /how-to-install-google-code-prettify/
 date: 2012-08-27 00:33:16 +0000
+updated: 2014-10-28
 comments: true
 dsq_thread_id:
   - 860649835
@@ -90,5 +91,5 @@ pre {
 </p>
 
 <p>
-  However, my solution is a bit hackish. I mean, when a new plugin update will be released, you&#8217;ll lost all the edits. If you don&#8217;t want this to happen, don&#8217;t update your plugin. Or if you&#8217;re looking for a separate, cleaner solution, I&#8217;ll suggest you reading <a title="Syntax Highlighting a la StackOverflow with Google Prettify" href="http://www.codingthewheel.com/archives/syntax-highlighting-stackoverflow-google-prettify" target="_blank">this article</a>.
+  However, my solution is a bit hackish. I mean, when a new plugin update will be released, you&#8217;ll lost all the edits. If you don&#8217;t want this to happen, don&#8217;t update your plugin. Or if you&#8217;re looking for a separate, cleaner solution, I&#8217;ll suggest you reading <strike><a title="Syntax Highlighting a la StackOverflow with Google Prettify">this article</a></strike> (dead link).
 </p>
