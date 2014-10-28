@@ -1,7 +1,9 @@
 ---
 layout: post
 title: "Install Sublime Text 3 on Linux"
+description: "Install Sublime Text 3 on Fedora or other Linux distros with this shell script: curl -L git.io/sublimetext | sh"
 date: 2014-09-01 13:35:34 +0100
+updated: 2014-10-28
 comments: true
 categories: bash
 tags:
@@ -9,18 +11,25 @@ tags:
   - shell
   - text editor
   - sublime text
+  - install
 ---
 
-This script will install **the latest build of Sublime Text 3**, released on **29 August 2014** (build 3065).
+There are <a ref="external nofollow" href="http://sublime-text-unofficial-documentation.readthedocs.org/en/latest/getting_started/install.html#linux">many ways</a> of **installing Sublime Text 3 on Linux**, but if you're looking for a fast, straightforward way, I believe you are in the right place.
 
-Just run this in your shell:
+This script will install **the latest build of Sublime Text 3**, released on 29 August 2014 (build 3065).
 
-``` bash
+Open up your terminal and run this:
+
+```
 curl -L git.io/sublimetext | sh
 ```
 
-Should work on most Linux distros; if not, please let me know!
+It will install the <a href="https://sublime.wbond.net/" rel="nofollow">Package Control</a> as well, so you don't have to do it yourself.
 
-The script is <a href="https://gist.github.com/simonewebdesign/8507139" title="View it on GitHub">open source</a> and will install the <a href="https://sublime.wbond.net/" rel="nofollow">Package Control</a> as well.
+If you are interested to see the actual code behind, here we go:
+
+https://gist.github.com/simonewebdesign/8507139
+
+It should work on most Linux distros; if not, please let me know by leaving a comment below. I'm here to help.
 
 Enjoy!
