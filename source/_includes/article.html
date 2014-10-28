@@ -8,7 +8,7 @@
 
     {% unless page.meta == false %}
       <p class="meta">
-        <time>{% include post/date.html %}{{ time }}</time>
+        {% include post/date.html %}{{ time }}
       </p>
     {% endunless %}
   </header>
