@@ -1,18 +1,18 @@
 .site-header {
-  margin-top: 3rem;
-  margin-bottom: 4.5rem;
-  padding-bottom: 1.5rem;
-  box-shadow:
-    0 1px 0 rgba(0,0,0,.02),
-    0 30px 43px -34px rgba(0,0,0,.15);
 
   .logo {
-    float: left;
+    text-align: center;
+  }
+
+  .main-navigation {
+    margin: 0 auto;
+    margin-bottom: 1.5em;
+    width: 256px; // hacky
+    float: none;
+    @include pie-clearfix;
   }
 
   h1 {
-    display: inline-block;
-    margin: 0;
 
     a, a:visited, a:hover {
       text-decoration: none;
@@ -28,6 +28,47 @@
       //              1px 1px 0 white;
 
       // color: rgba(55,55,55, .6) !important;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .site-header {
+    margin-top: 3rem;
+    margin-bottom: 4.5rem;
+    padding-bottom: 1.5rem;
+    box-shadow:
+      0 1px 0 rgba(0,0,0,.02),
+      0 30px 43px -34px rgba(0,0,0,.15);
+
+    .logo {
+      float: left;
+    }
+
+    .main-navigation {
+      float: right;
+      width: auto;
+    }
+
+    h1 {
+      display: inline-block;
+      margin: 0;
+
+      a, a:visited, a:hover {
+        text-decoration: none;
+        color: #555;
+
+        /* 1px depth */
+        // text-shadow: 0 1px 0 white, 0 -1px #444;
+
+        /* codepen depth */
+        // text-shadow: 1px 2px 3px #DDdddd,
+        //              0 0 0 black,
+        //              -1px 1px 0 #DDdddd,
+        //              1px 1px 0 white;
+
+        // color: rgba(55,55,55, .6) !important;
+      }
     }
   }
 }

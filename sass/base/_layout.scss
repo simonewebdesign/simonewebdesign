@@ -27,7 +27,7 @@ body {
 .container {
   max-width: $max-width;
   margin: 0 auto;
-  padding: 0 3rem;
+  padding: 0 1rem;
   padding-bottom: 6rem;
 }
 
@@ -49,16 +49,16 @@ body {
   clear: both;
 }
 
-
 @media only screen and (min-width: 550px) {
   body > header { font-size: $header-font-size; }
-}
-@media only screen and (min-width: 750px) {
 }
 
 @media only screen and (min-width: 768px) {
   body { -webkit-text-size-adjust: auto; }
   body > header { font-size: $header-font-size * 1.2; }
+  .container {
+    padding: 0 3rem;
+  }
 }
 
 @media only screen and (min-width: 992px) {
