@@ -1,15 +1,20 @@
-article {
-  margin-bottom: 6em;
 
-  .meta time {
-    @extend .sans;
-    font-size: .9em;
-    color: #aaa;
+
+article {
+
+  .meta {
+
+    time {
+      @extend .sans;
+      font-size: .9em;
+      color: #aaa;
+    }
   }
 
   h1 {
     display: inline-block;
     margin: 0;
+    padding-bottom: .8em;
 
     a, a:visited, a:hover {
       text-decoration: none;
@@ -25,6 +30,12 @@ article {
       //              1px 1px 0 white;
 
       // color: rgba(55,55,55, .6) !important;
+    }
+  }
+
+  footer {
+    .meta {
+      margin: 1.5em 0;
     }
   }
 }

@@ -106,7 +106,13 @@ abbr, acronym { border-bottom: 1px dotted; cursor: help; }
 
 pre, code, tt { @extend .mono; }
 
-hr { margin-bottom: 0.2em; }
+hr {
+  margin: 1.5em;
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, .09);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
 
 small { font-size: .8em; }
 

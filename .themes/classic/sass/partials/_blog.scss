@@ -89,7 +89,10 @@ article + article {
 }
 #content .blog-index {
   padding: { top: 0; bottom: 0; }
-  article { padding-top: 2em; }
+  article {
+    padding-top: 2em;
+    padding-bottom: 6em;
+  }
   article header { background: none; padding-bottom: 0; }
   article h1 {
     font-size: 2.2em;
