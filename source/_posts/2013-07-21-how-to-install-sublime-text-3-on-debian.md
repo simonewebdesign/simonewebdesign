@@ -1,8 +1,10 @@
 ---
 title: How to install Sublime Text 3 on Debian
+description: "Install Sublime Text 3 beta build, the easy way. No effort at all, requires only 30 seconds."
 layout: post
 permalink: /how-to-install-sublime-text-3-on-debian/
 date: 2013-07-21
+updated: 2014-10-29
 comments: true
 dsq_thread_id:
   - 1518107300
@@ -29,28 +31,24 @@ tags:
 
 <img src="/images/Sublime_Text_Logo.png" alt="Sublime Text 3" width="200" height="200" class="basic-alignment left" />
 
-<p>
-  This little bash script installs Sublime Text 3 (build 3059 released on 17 December 2013) on your Linux machine, with no effort at all.
-</p>
+There are many ways of **installing Sublime Text 3 on Linux**, and it's super easy if you are using **Debian** (or another distribution based on it, such as **Linux Mint** or **Kali Linux**).
 
-<h2>
-  x64 version:
-</h2>
+This little shell script **installs Sublime Text 3** on your Linux machine, with no effort at all.
 
-``` bash
-wget http://c758482.r82.cf2.rackcdn.com/sublime-text_build-3047_amd64.deb
-sudo dpkg -i sublime-text_build-3047_amd64.deb
+Open up your **terminal**, then copy and paste:
+
+## x64 version
+
+```
+wget http://c758482.r82.cf2.rackcdn.com/sublime-text_build-3065_amd64.deb
+sudo dpkg -i sublime-text_build-3065_amd64.deb
 ```
 
-<h2>
-  x86 version:
-</h2>
+## i386 version
 
-``` bash
-wget http://c758482.r82.cf2.rackcdn.com/sublime-text_build-3047_i386.deb
-sudo dpkg -i sublime-text_build-3047_i386.deb
+```
+wget http://c758482.r82.cf2.rackcdn.com/sublime-text_build-3065_i386.deb
+sudo dpkg -i sublime-text_build-3065_i386.deb
 ```
 
-<p>
-  Have fun!
-</p>
+The build 3065 was released on August 29, 2014, and it's still the latest stable build at time of writing (updated on October 29, 2014). In case you're interested in other bleeding-edge versions, check out the <a rel="external nofollow" href="http://www.sublimetext.com/3">official site</a>.
