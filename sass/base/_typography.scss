@@ -23,6 +23,11 @@ $header-subtitle-font-family: $heading-font-family !default;
   margin-bottom: 0.6667em;
 }
 
+html {
+  text-rendering: optimizelegibility;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
   line-height: 1.5em;
   color: $text-color;
