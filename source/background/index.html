@@ -1,0 +1,39 @@
+---
+layout: page
+title: Background
+footer: true
+sharing: false
+---
+
+<p>Here's a list of sites I made throughout my career.</p>
+
+
+<div id="blog-archives">
+{% for entry in site.data.sites %}
+{% capture this_year %}{{ entry.year }}{% endcapture %}
+{% unless year == this_year %}
+  {% assign year = this_year %}
+  <h2>{{ entry.year }}</h2>
+{% endunless %}
+<article>
+  <h1><a rel="external nofollow" href="//{{ entry.url }}">{{ entry.title }}</a></h1>
+</article>
+{% endfor %}
+</div>
+
+<!--
+There are many others I worked on, and I probably forgot some as well. Unfortunately, some of them are not even online anymore... but I'll still list them below.
+
+www.piggy-bank.it
+www.globallongju.net
+www.chiocchiniepartners.it
+www.naturalmentenoi.com
+www.citynet.it
+www.swago.it
+www.resrestauro.com
+
+...and the very old ones!
+
+sacredunderworld.altervista.org (2005)
+fushi.altervista.org (2003)
+-->
