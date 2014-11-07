@@ -7,9 +7,12 @@ footer: false
 sidebar: false
 ---
 
-Simone Vittori is a web developer originally from [Perugia](https://en.wikipedia.org/wiki/Perugia), Italy, but now living in London, England. He strongly believes in open source, and thinks that [Ruby](https://ruby-lang.org) is the best programming language ever made. He is truly passionate about his job: if he is not coding, he is probably reading, writing or speaking about it. Last but not least, he’s obsessed with bits, pixels, zombies, dinosaurs, and gems.
-
----
+<div class="about-intro clearfix">
+  <img class="avatar" src="/images/simonewebdesign.png" />
+  <p>
+    Simone Vittori is a web developer originally from <a rel="external nofollow" href="https://en.wikipedia.org/wiki/Perugia">Perugia</a>, Italy, but now living in London, England. He strongly believes in open source, and thinks that <a rel="external nofollow" href="https://ruby-lang.org">Ruby</a> is the best programming language ever made. He is truly passionate about his job: if he is not coding, he is probably reading, writing or speaking about it. Last but not least, he’s obsessed with bits, pixels, zombies, dinosaurs, and gems.
+  </p>
+</div>
 
 <blockquote>
 

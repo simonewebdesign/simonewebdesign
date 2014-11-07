@@ -1,0 +1,50 @@
+.about-intro {
+  position: relative;
+  padding-bottom: 20px;
+
+  .avatar {
+    width: 200px;
+  }
+
+  > p {
+
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .about-intro {
+
+    .avatar, > p {
+      float: left;
+    }
+
+    .avatar {
+      width: 100px;
+
+      display: block;
+      position: absolute;
+      top: -10px;
+    }
+
+    > p {
+      padding-left: 120px;
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+
+}
+@media only screen and (min-width: 992px) {
+  .about-intro {
+    padding-bottom: 40px;
+
+    .avatar {
+      width: 200px;
+      top: -20px;
+    }
+
+    > p {
+      padding-left: 220px;
+    }
+  }
+}
