@@ -4,6 +4,7 @@ description: "Find out how to put online your local Apache Web Server. This tuto
 layout: post
 permalink: /how-to-put-online-your-wampserver/
 date: 2013-07-20
+updated: 2014-08-11
 comments: true
 dsq_thread_id:
   - 1513101928
@@ -141,8 +142,8 @@ Listen 8080
 
 ```
 Private IP     Private Port   Type   Public IP/mask   Public Port
-192.168.1.27   8081 	        TCP    0.0.0.0/0        8081
-192.168.1.27   8081 	        UDP    0.0.0.0/0        8081
+192.168.1.27   8080 	        TCP    0.0.0.0/0        8080
+192.168.1.27   8080 	        UDP    0.0.0.0/0        8080
 ```
 
 <p>
