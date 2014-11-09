@@ -26,6 +26,7 @@ $header-subtitle-font-family: $heading-font-family !default;
 html {
   text-rendering: optimizelegibility;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
