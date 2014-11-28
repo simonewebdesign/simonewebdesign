@@ -1,3 +1,6 @@
 [submodule "source/demo/html5editor"]
 	path = source/demo/html5editor
 	url = https://github.com/simonewebdesign/html5editor.git
+[submodule "source/games/pong"]
+	path = source/games/pong
+	url = https://github.com/dudeOMG/pong.git
