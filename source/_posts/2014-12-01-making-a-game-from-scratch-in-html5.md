@@ -99,7 +99,7 @@ As you can imagine, `isGameStarted` is just a boolean flag. But what's `modifier
 
 ### Ball bounce
 
-The game logic is mainly about the ball: it should be able to bounce away from the balls and the paddles. How can you implement that? It's pretty simple - have a look at the code below.
+The game logic is mainly about the ball: it should be able to bounce away from the paddles. How can you implement that? It's pretty simple - have a look at the code below.
 
 ``` javascript
   // Ball is out of the left boundary
