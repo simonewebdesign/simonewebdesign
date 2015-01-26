@@ -79,7 +79,7 @@ How do we make the ball moving across the screen? In JavaScript, we can define o
 var ball = {
   x: 0,
   y: 0,
-  speedX: 0
+  speedX: 0,
   speedY: 0
 }
 ```
