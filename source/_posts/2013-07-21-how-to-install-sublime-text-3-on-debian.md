@@ -4,7 +4,7 @@ description: "Install Sublime Text 3 beta build, the easy way. No effort at all,
 layout: post
 permalink: /how-to-install-sublime-text-3-on-debian/
 date: 2013-07-21
-updated: 2014-10-29
+updated: 2015-04-16
 comments: true
 dsq_thread_id:
   - 1518107300
@@ -40,15 +40,15 @@ Open up your **terminal**, then copy and paste:
 ## x64 version
 
 ```
-wget http://c758482.r82.cf2.rackcdn.com/sublime-text_build-3065_amd64.deb
-sudo dpkg -i sublime-text_build-3065_amd64.deb
+wget http://c758482.r82.cf2.rackcdn.com/sublime-text_build-3083_amd64.deb
+sudo dpkg -i sublime-text_build-3083.deb
 ```
 
 ## i386 version
 
 ```
-wget http://c758482.r82.cf2.rackcdn.com/sublime-text_build-3065_i386.deb
-sudo dpkg -i sublime-text_build-3065_i386.deb
+wget http://c758482.r82.cf2.rackcdn.com/sublime-text_build-3083.deb
+sudo dpkg -i sublime-text_build-3083.deb
 ```
 
-The build 3065 was released on August 29, 2014, and it's still the latest stable build at time of writing (updated on October 29, 2014). In case you're interested in other bleeding-edge versions, check out the <a rel="external nofollow" href="http://www.sublimetext.com/3">official site</a>.
+The build 3083 was released on 26 March 2015, and it's still the latest stable build at time of writing. In case you're interested in other versions, check out the <a rel="external nofollow" href="http://www.sublimetext.com/3">official site</a>.
