@@ -43,3 +43,6 @@ http://rack.github.io/
 http://intridea.github.io/grape/
 https://gitter.im/voltrb/volt
 https://gitter.im/opal/opal
+
+iwanttouse.com
+learnxinyminutes.com
