@@ -23,6 +23,11 @@ class SinatraStaticServer < Sinatra::Base
     redirect '/'
   end
 
+  # Redirect whatever matches rss to atom.xml
+  get %r{rss/?$} do
+    redirect '/atom.xml'
+  end
+
   get(/.+/) do
     send_sinatra_file(request.path) {404}
   end
