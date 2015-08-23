@@ -104,7 +104,7 @@ Ethernet adapter Local Area Connection:
   I&#8217;ll pick the last one, since it&#8217;s usually easier to do, and the first option is not always possible. So, let&#8217;s <strong>change the port</strong>: open the <code>httpd.conf</code> and find this row:
 </p>
 
-```
+``` apache
 Listen 80
 ```
 
@@ -113,7 +113,7 @@ Listen 80
 </p>
 
 ```
-Listen &lt;port number>
+Listen <port number>
 ```
 
 <p>
@@ -140,7 +140,7 @@ Listen 8080
   Usually you need to add two separate entries: one for TCP and one for UDP packets. Something like this will do the work:
 </p>
 
-```
+``` text
 Private IP     Private Port   Type   Public IP/mask   Public Port
 192.168.1.27   8080 	        TCP    0.0.0.0/0        8080
 192.168.1.27   8080 	        UDP    0.0.0.0/0        8080
@@ -158,7 +158,7 @@ Private IP     Private Port   Type   Public IP/mask   Public Port
   The last step! Open your <code>httpd.conf</code> and find this line:
 </p>
 
-```
+``` apache
 ServerName localhost:80
 ```
 
@@ -167,7 +167,7 @@ ServerName localhost:80
 </p>
 
 ```
-ServerName &lt;your private IP>:80
+ServerName <your private IP>:80
 ```
 
 <p>
@@ -182,8 +182,27 @@ ServerName 192.168.1.27:80
   <small>Just a quick note: you can jump over the step below. It can be done in an easier way by just clicking on the green <strong>WampServer tray icon</strong> and choosing &#8220;Put Online&#8221;.</small>
 </p>
 
+
 <p>
   Also find this line:
+</p>
+
+```
+#   onlineoffline tag - don't remove
+    Require local
+```
+
+<p>
+  Change it to:
+</p>
+
+```
+#   onlineoffline tag - don't remove
+    Require all granted
+```
+
+<p>
+  In older versions of Apache, the line would look like:
 </p>
 
 ```
@@ -193,7 +212,7 @@ Allow from 127.0.0.1
 ```
 
 <p>
-  Change it to:
+  And you need to change it to:
 </p>
 
 ```
@@ -205,8 +224,8 @@ Allow from all
   Restart your web server. Now just find out what&#8217;s your current public <abbr title="Internet Protocol">IP</abbr> address and try to go to:
 </p>
 
-```
-http://&lt;public IP address>:&lt;port>/
+``` text
+http://<public IP address>:<port>/
 ```
 
 <p>
