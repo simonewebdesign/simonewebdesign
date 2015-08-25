@@ -15,3 +15,8 @@ David Rosen       http://www.wolfire.com/
 Jake Archibald    http://jakearchibald.com/
 Robin Ward        http://eviltrout.com/
 Josh Pigford      http://joshpigford.com/
+
+
+## Elixir
+
+Zohaib Rauf       http://zohaib.me/
