@@ -41,14 +41,14 @@ Open up your **terminal**, then copy and paste:
 
 ```
 wget http://c758482.r82.cf2.rackcdn.com/sublime-text_build-3083_amd64.deb
-sudo dpkg -i sublime-text_build-3083.deb
+sudo dpkg -i sublime-text_build-3083_amd64.deb
 ```
 
 ## i386 version
 
 ```
 wget http://c758482.r82.cf2.rackcdn.com/sublime-text_build-3083_i386.deb
-sudo dpkg -i sublime-text_build-3083.deb
+sudo dpkg -i sublime-text_build-3083_i386.deb
 ```
 
 The build 3083 was released on 26 March 2015, and it's still the latest stable build at time of writing. In case you're interested in other versions, check out the <a rel="external nofollow" href="http://www.sublimetext.com/3">official site</a>.
