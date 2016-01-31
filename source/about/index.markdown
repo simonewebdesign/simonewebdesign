@@ -43,5 +43,5 @@ All the source code is hosted on [GitHub](https://github.com/simonewebdesign/sim
 
 Even though I work full time as a full-stack web developer, I'm always open to considering new opportunities.
 
-If you have any questions about me or my website, feel free to [email me](mailto:hello@simonewebdesign.it?subject=Hey Simone!).<br>
+If you have any questions about me or my website, feel free to [email me](mailto:hello+blog@simonewebdesign.it?subject=Hey Simone!).<br>
 <abbr title="Instant Message">IM</abbr> and follow me on Twitter (<a href="https://twitter.com/simonewebdesign" title="simonewebdesign on Twitter" rel="nofollow">@simonewebdesign</a>).
