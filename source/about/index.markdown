@@ -19,7 +19,7 @@ sidebar: false
 
 <blockquote>
 
-<p>I believe programming is art. We're all artists while we craft code, and we're all constantly in search of perfection.</p>
+<p>I believe programming is art. We're all artists while we craft code, constantly in search of perfection.</p>
 
 <p>My coding style is calm and thoughtful. I love to contemplate my code, and I enjoy reading other programmers' code.</p>
 
