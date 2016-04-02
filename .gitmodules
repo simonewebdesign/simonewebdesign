@@ -4,3 +4,6 @@
 [submodule "source/games/pong"]
 	path = source/games/pong
 	url = https://github.com/dudeOMG/pong.git
+[submodule "source/demo/elm"]
+	path = source/demo/elm
+	url = git@github.com:simonewebdesign/elm-double-folding-pattern.git
