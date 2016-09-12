@@ -1,60 +1,78 @@
 - {
     title: HomeServe Heating,
     url: www.homeserveheating.co.uk,
-    year: 2014
+    year: 2014,
+    image: homeserve-heating.png
   }
 - {
     title: Rightgas,
     url: www.rightgas.com,
-    year: 2014
+    year: 2014,
+    image: rightgas.png
   }
 - {
     title: Progetto Past,
     url: www.progettopast.eu,
-    year: 2013
+    year: 2013,
+    image: progettopast.png
   }
 - {
     title: Vaselli Marmi,
     url: www.vaselli.com,
-    year: 2013
+    year: 2013,
+    image: vaselli.png
   }
 - {
     title: Dragonfly Handicrafts,
     url: www.dragonflyhandicrafts.com,
-    year: 2013
+    year: 2013,
+    image: dragonfly-handicrafts.png
   }
 -  {
     title: Musei di Foligno,
     url: www.museifoligno.it,
-    year: 2013
+    year: 2013,
+    image: museifoligno.png
   }
 - {
     title: M48 Senigallia,
     url: www.m48senigallia.it,
-    year: 2013
+    year: 2013,
+    image: m48senigallia.png
   }
 - {
     title: Il Casale del Grillo,
     url: www.ilcasaledelgrillo.com,
-    year: 2012
+    year: 2012,
+    image: ilcasaledelgrillo.png
+  }
+- {
+    title: Giardini Thebris,
+    url: www.giardinithebris.com,
+    year: 2012,
+    image: giardinithebris.png
   }
 - {
     title: Blu Immobiliare Perugia,
     url: www.bluimmobiliareperugia.it,
-    year: 2012
+    year: 2012,
+    image: bluimmobiliareperugia.png
   }
 - {
     title: Antonio Rossi Composer,
     url: www.antoniorossicomposer.com,
-    year: 2012
+    year: 2012,
+    image: antoniorossicomposer.png
   }
 - {
     title: Pierucci Autoricambi,
     url: www.pierucciauto.it,
-    year: 2012
+    year: 2012,
+    image: tuttoperlautosrl.png
   }
-- {
-    title: Cesare Mirabella,
-    url: www.cesaremirabella.it,
-    year: 2010
-  }
+# - {
+#     title: Cesare Mirabella,
+#     url: www.cesaremirabella.it,
+#     year: 2010,
+#     image: cesaremirabella.png
+#   }

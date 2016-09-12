@@ -1,0 +1,30 @@
+.portfolio { 
+  padding: .5vw;
+  font-size: 0;
+  display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  -ms-flex-direction: column;
+  -webkit-flex-flow: row wrap; 
+  flex-flow: row wrap; 
+  display: -webkit-box;
+  display: flex;
+}
+
+.portfolio figure { 
+  -webkit-box-flex: auto;
+  -ms-flex: auto;
+  flex: auto; 
+  width: 350px; 
+  margin: .5vw;
+  display: block;
+}
+
+.portfolio figure > img { 
+  width: 100%; 
+  height: auto;
+}
+
+@media screen and (max-width: 400px) {
+  .portfolio figure { margin: 0; }
+  .portfolio { padding: 0; }
+}
