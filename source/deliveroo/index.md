@@ -15,7 +15,7 @@ sidebar: false
 
 ### Let's talk about you
 
-You are Deliveroo. You're hiring talented people exclusively. You want to show the world that you're the best. You need the best people that will bring you far more customers than you have today and take over the market.
+You are Deliveroo. You're hiring talented people exclusively. You want to show the world that you're the best. You need the best people that will bring you far more customers than you have today.
 
 #### An amazing product
 
@@ -25,7 +25,7 @@ You've been backed by the best investors already, you need to keep running. You 
 
 #### A global brand
 
-You're expanding globally — we all know what that means: big challenges to face, tough competition to beat and cultural barriers to avoid, just to name a few. This all means you got to be stronger than ever. That's why you're building a great team — you want to be the very best!
+You're expanding globally — we all know what that means: big challenges to face, tough competition and cultural barriers to avoid, just to name a few. This all means you got to be stronger than ever. That's why you're building a great team — you want to be the very best!
 
 
 <br>
