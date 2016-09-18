@@ -1,150 +1,129 @@
-- {
-    title: elm-new
-    url: https://github.com/simonewebdesign/elm-new
-    description: Generates a project scaffolding for rapid prototyping of Elm apps.
-    languages:
-      - Elm
-  }
-- {
-    title: elm-double-folding-pattern
-    url: https://github.com/simonewebdesign/elm-double-folding-pattern
-    description: A demo credit card form that uses an interesting architectural pattern for separating business logic from presentation logic.
-    languages:
-      - Elm
-  }
-- {
-    title: elm-timer
-    url: https://github.com/simonewebdesign/elm-timer
-    description:  A clock UI component written in Elm.
-    languages:
-      - Elm
-  }
-- {
-    title: elm-maru
-    url: https://github.com/simonewebdesign/elm-maru
-    description: A web application with Elixir in the backend and Elm in the frontend.
-    languages:
-      - Elixir
-      - Elm
-  }
-- {
-    title: websocket-demo
-    url: https://github.com/simonewebdesign/websocket-demo
-    description: An implementation of the official WebSocket API using Node.js.
-    languages:
-      - JavaScript
-  }
-- {
-    title: phoenix-elm-users
-    url: https://github.com/simonewebdesign/phoenix-elm-users
-    description: A classic CRUD user management application, written in Elixir and Elm.
-    languages:
-      - Elixir
-      - Elm
-  }
-- {
-    title: elm-simon
-    url: https://github.com/simonewebdesign/elm-simon
-    description: Simon memory game in Elm.
-    languages:
-      - Elm
-  }
-- {
-    title: elm-github-api
-    url: https://github.com/simonewebdesign/elm-github-api
-    description: Get user information from GitHub's API.
-    languages:
-      - Elm
-  }
-- {
-    title: elixir_pubsub
-    url: https://github.com/simonewebdesign/elixir_pubsub
-    description: Publish/Subscribe utility module.
-    languages:
-      - Elixir
-  }
-- {
-    title: npm-strap
-    url: https://github.com/simonewebdesign/npm-strap
-    description: An npm frontend project starting template, using npm itself as a build tool.
-    languages:
-      - JavaScript
-  }
-- {
-    title: frontend-env-vars
-    url: https://github.com/simonewebdesign/frontend-env-vars
-    description: Environment variables in the browser.
-    languages:
-      - Bash
-      - JavaScript
-  }
-- {
-    title: rabbitmq-amqp-demo
-    url: https://github.com/simonewebdesign/rabbitmq-amqp-demo
-    description: Elixir Client that listens for RabbitMQ messages and saves them in OrientDB.
-    languages:
-      - Elixir
-  }
-- {
-    title: expression-parser
-    url: https://github.com/simonewebdesign/expression-parser
-    description: A command-line Ruby algebraic equation tokenizer / solver.
-    languages:
-      - Ruby
-  }
-- {
-    title: Laravel-REST
-    url: https://github.com/simonewebdesign/Laravel-REST
-    description: Sample implementation of Ruby on Rails's RESTful architecture, built in PHP.
-    languages:
-      - PHP
-  }
-- {
-    title: newsletter
-    url: https://github.com/simonewebdesign/newsletter
-    description: Stand-alone RESTful application for newsletter campaign management.
-    languages:
-      - PHP
-  }
-- {
-    title: real-time-web-chat
-    url: https://github.com/simonewebdesign/real-time-web-chat
-    description: Chat server and client built with Node, Socket.io, Express and MongoDB. Hosted on OpenShift.
-    languages:
-      - JavaScript
-  }
-- {
-    title: stackoverflow-users-search
-    url: https://github.com/simonewebdesign/stackoverflow-users-search
-    description: Rails app that uses StackOverflow's API to search for users.
-    languages:
-      - Ruby
-  }
-- {
-    title: game-of-life
-    url: https://github.com/simonewebdesign/game-of-life
-    description: John Conway's Game of Life, written in DOM JavaScript.
-    languages:
-      - JavaScript
-  }
-- {
-    title: Fushi
-    url: https://github.com/simonewebdesign/Fushi
-    description: My own framework.
-    languages:
-      - PHP
-  }
-- {
-    title: todolist
-    url: https://github.com/todolist/todolist
-    description: A simple To-Do list for Android, also on Google Play.
-    languages:
-      - Java
-  }
-- {
-    title: Mt2-CMS
-    url: https://github.com/simonewebdesign/Mt2-CMS
-    description: A custom CMS engine.
-    languages:
-      - PHP
-  }
+-
+  title: elm-new
+  url: https://github.com/simonewebdesign/elm-new
+  description: Generates a project scaffolding for rapid prototyping of Elm apps.
+  languages:
+    - Elm
+-
+  title: elm-double-folding-pattern
+  url: https://github.com/simonewebdesign/elm-double-folding-pattern
+  description: A demo credit card form that uses an interesting architectural pattern for separating business logic from presentation logic.
+  languages:
+    - Elm
+-
+  title: elm-timer
+  url: https://github.com/simonewebdesign/elm-timer
+  description: A clock UI component written in Elm.
+  languages:
+    - Elm
+-
+  title: elm-maru
+  url: https://github.com/simonewebdesign/elm-maru
+  description: A web application with Elixir in the backend and Elm in the frontend.
+  languages:
+    - Elixir
+    - Elm
+-
+  title: websocket-demo
+  url: https://github.com/simonewebdesign/websocket-demo
+  description: An implementation of the official WebSocket API using Node.js.
+  languages:
+    - JavaScript
+-
+  title: phoenix-elm-users
+  url: https://github.com/simonewebdesign/phoenix-elm-users
+  description: A classic CRUD user management application, written in Elixir and Elm.
+  languages:
+    - Elixir
+    - Elm
+-
+  title: elm-simon
+  url: https://github.com/simonewebdesign/elm-simon
+  description: Simon memory game in Elm.
+  languages:
+    - Elm
+-
+  title: elm-github-api
+  url: https://github.com/simonewebdesign/elm-github-api
+  description: Get user information from GitHub's API.
+  languages:
+    - Elm
+-
+  title: elixir_pubsub
+  url: https://github.com/simonewebdesign/elixir_pubsub
+  description: Publish/Subscribe utility module.
+  languages:
+    - Elixir
+-
+  title: npm-strap
+  url: https://github.com/simonewebdesign/npm-strap
+  description: An npm frontend project starting template, using npm itself as a build tool.
+  languages:
+    - JavaScript
+-
+  title: frontend-env-vars
+  url: https://github.com/simonewebdesign/frontend-env-vars
+  description: Environment variables in the browser.
+  languages:
+    - Bash
+    - JavaScript
+-
+  title: rabbitmq-amqp-demo
+  url: https://github.com/simonewebdesign/rabbitmq-amqp-demo
+  description: Elixir Client that listens for RabbitMQ messages and saves them in OrientDB.
+  languages:
+    - Elixir
+-
+  title: expression-parser
+  url: https://github.com/simonewebdesign/expression-parser
+  description: A command-line Ruby algebraic equation tokenizer / solver.
+  languages:
+    - Ruby
+-
+  title: Laravel-REST
+  url: https://github.com/simonewebdesign/Laravel-REST
+  description: Sample implementation of Ruby on Rails's RESTful architecture, built in PHP.
+  languages:
+    - PHP
+-
+  title: newsletter
+  url: https://github.com/simonewebdesign/newsletter
+  description: Stand-alone RESTful application for newsletter campaign management.
+  languages:
+    - PHP
+-
+  title: real-time-web-chat
+  url: https://github.com/simonewebdesign/real-time-web-chat
+  description: Chat server and client built with Node, Socket.io, Express and MongoDB. Hosted on OpenShift.
+  languages:
+    - JavaScript
+-
+  title: stackoverflow-users-search
+  url: https://github.com/simonewebdesign/stackoverflow-users-search
+  description: Rails app that uses StackOverflow's API to search for users.
+  languages:
+    - Ruby
+-
+  title: game-of-life
+  url: https://github.com/simonewebdesign/game-of-life
+  description: John Conway's Game of Life, written in DOM JavaScript.
+  languages:
+    - JavaScript
+-
+  title: Fushi
+  url: https://github.com/simonewebdesign/Fushi
+  description: My own framework.
+  languages:
+    - PHP
+-
+  title: todolist
+  url: https://github.com/todolist/todolist
+  description: A simple To-Do list for Android, also on Google Play.
+  languages:
+    - Java
+-
+  title: Mt2-CMS
+  url: https://github.com/simonewebdesign/Mt2-CMS
+  description: A custom CMS engine.
+  languages:
+    - PHP
