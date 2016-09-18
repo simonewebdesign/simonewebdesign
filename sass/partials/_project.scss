@@ -1,0 +1,43 @@
+.projects {
+  @include box-sizing(border-box);
+  // background-color: rgba(255,0,0,.1);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+  .project {
+    box-sizing: inherit;
+    // background-color: rgba(0,255,0,.1);
+    width: 50%;
+    padding: 2%;
+  }
+
+    .project-title {
+      // background-color: rgba(0,0,255,.1);
+    }
+
+    .project-description {
+      // background-color: rgba(255,0,0,.1);
+      margin-bottom: .5em;
+    }
+
+    .project-languages {
+      // background-color: rgba(0,255,0,.1);
+      float: right;
+      list-style: none;
+    }
+
+      .project-languages li {
+        padding: 0 .5em;
+        float: left;
+
+        /* badge-like styling */
+        border-radius: 3px;
+        font-size: .8rem;
+        text-transform: uppercase;
+      }
+
+// .language-Elixir { border: 1px solid #4E2A8E; outline: 1px solid white; }
+// .language-JavaScript { border: 1px solid yellow; outline: 1px solid white; }

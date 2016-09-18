@@ -1,0 +1,18 @@
+---
+layout: page
+title: Open Source Projects
+comments: false
+sharing: false
+footer: false
+sidebar: false
+---
+
+<section class="projects">
+{% for proj in site.data.projects %}
+  {% capture title %} {{proj.title}} {% endcapture %}
+  {% capture url %} {{proj.url}} {% endcapture %}
+  {% capture description %} {{proj.description}} {% endcapture %}
+
+  {% include project.html %}
+{% endfor %}
+</section>

@@ -1,13 +1,13 @@
 -
   title: elm-new
   url: https://github.com/simonewebdesign/elm-new
-  description: Generates a project scaffolding for rapid prototyping of Elm apps.
+  description: CLI tool, generates a project scaffolding for rapid prototyping of Elm apps.
   languages:
     - Elm
 -
   title: elm-double-folding-pattern
   url: https://github.com/simonewebdesign/elm-double-folding-pattern
-  description: A demo credit card form that uses an interesting architectural pattern for separating business logic from presentation logic.
+  description: A demo credit card form built using an innovative architectural pattern.
   languages:
     - Elm
 -
@@ -112,7 +112,7 @@
 -
   title: Fushi
   url: https://github.com/simonewebdesign/Fushi
-  description: My own framework.
+  description: My own framework, with which I used to build snappy websites.
   languages:
     - PHP
 -
@@ -121,9 +121,9 @@
   description: A simple To-Do list for Android, also on Google Play.
   languages:
     - Java
--
-  title: Mt2-CMS
-  url: https://github.com/simonewebdesign/Mt2-CMS
-  description: A custom CMS engine.
-  languages:
-    - PHP
+# -
+#   title: Mt2-CMS
+#   url: https://github.com/simonewebdesign/Mt2-CMS
+#   description: A custom CMS engine.
+#   languages:
+#     - PHP

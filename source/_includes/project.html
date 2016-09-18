@@ -1,0 +1,17 @@
+<section class="project">
+
+  <h2 class="project-title">
+    <a href="{{ url }}">{{ title }}</a>
+  </h2>
+
+  <p class="project-description">
+    {{ description }}
+  </p>
+
+  <ul class="project-languages">
+  {% for lang in proj.languages %}
+    <li class="language-{{lang}}">{{ lang }}
+  {% endfor %}
+  </ul>
+
+</section>
