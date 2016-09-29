@@ -8,15 +8,15 @@ class SinatraStaticServer < Sinatra::Base
 
   get(/simo\.herokuapp\.com/) do
     if request.host == 'simo.herokuapp.com'
-      redirect to("http://www.simonewebdesign.it#{params[:captures].first}"), 301
+      redirect to("http://www.simonewebdesign.it#{params[:captures].first}/"), 301
     end
   end
 
   # Redirect all requests without a trailing slash to the trailing slash version
   # http://stackoverflow.com/a/11927449
-  # get %r{(/.*[^\/])$} do
-  #   redirect "#{params[:captures].first}/"
-  # end
+  get %r{(/.*[^\/])$} do
+    redirect "#{params[:captures].first}/"
+  end
 
   # Redirect /blog to /
   get %r{blog/?$} do
@@ -29,12 +29,7 @@ class SinatraStaticServer < Sinatra::Base
   end
 
   get(/.+/) do
-    # If a request ends with a forward slash, strip it away and redirect
-    if params[:captures].first.end_with? '/'
-      redirect params[:captures].first.chomp('/')
-    else
-      send_sinatra_file(request.path) {404}
-    end
+    send_sinatra_file(request.path) {404}
   end
 
   not_found do
