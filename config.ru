@@ -30,8 +30,8 @@ class SinatraStaticServer < Sinatra::Base
 
   get(/.+/) do
     # If a request ends with a forward slash, strip it away and redirect
-    if request.path != '/' && request.path.end_with?('/')
-      redirect request.path.chomp('/')
+    if params[:captures].first.end_with? '/'
+      redirect params[:captures].first.chomp('/')
     else
       send_sinatra_file(request.path) {404}
     end
