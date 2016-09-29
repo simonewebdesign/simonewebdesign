@@ -2,7 +2,7 @@
 title: How to put online your WampServer
 description: "Find out how to put online your local Apache Web Server. This tutorial is focused for Windows users that use WampServer."
 layout: post
-permalink: /how-to-put-online-your-wampserver/
+permalink: /how-to-put-online-your-wampserver
 date: 2013-07-20
 updated: 2015-08-23
 comments: true

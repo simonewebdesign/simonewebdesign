@@ -1,7 +1,7 @@
 ---
 title: How To Install Sublime Text 3 on Fedora
 layout: post
-permalink: /install-sublime-text-3-on-fedora-20/
+permalink: /install-sublime-text-3-on-fedora-20
 date: 2014-01-29
 updated: 2015-07-12
 comments: true

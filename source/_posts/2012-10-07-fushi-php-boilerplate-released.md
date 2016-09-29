@@ -2,7 +2,7 @@
 title: Fushi PHP Boilerplate Released!
 description: "A very simple and lightweight PHP boilerplate. Source code hosted on GitHub."
 layout: post
-permalink: /fushi-php-boilerplate-released/
+permalink: /fushi-php-boilerplate-released
 date: 2012-10-07 18:23:26 +0000
 comments: true
 dsq_thread_id:
