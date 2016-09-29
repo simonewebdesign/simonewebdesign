@@ -26,17 +26,18 @@ sidebar: false
 
 ## simonewebdesign.it
 
-This is my personal website in which I blog about programming since 2010. Here are some facts:
+This is my personal website in which I blog about programming since 2012. Some facts:
+
+<i class="fa fa-github"></i> github
 
 - **Made with Octopress**, a static site generator based on Jekyll.
 
 - **There is no backend nor database.** All pages are actually just HTML, CSS and JavaScript, which results in a super fast website that can't be hacked.
 
 - **No advertising either.**
-I blog about programming so that I don't forget important stuff and because I enjoy sharing my work with others.
+I write blog posts so that I don't forget important stuff and because I enjoy sharing my work with others.
 
 
 ## Let's get in touch!
 
-Find me on Twitter (<a href="https://twitter.com/simonewebdesign" title="simonewebdesign on Twitter" rel="nofollow">@simonewebdesign</a>) and [GitHub](https://github.com/simonewebdesign/). Also feel free to [email me](mailto:hello@simonewebdesign.it?subject=Hey Simone!).
-
+Find me on Twitter (<a href="https://twitter.com/simonewebdesign" title="simonewebdesign on Twitter" rel="nofollow">@simonewebdesign</a>) and [GitHub](https://github.com/simonewebdesign). Also feel free to [email me](mailto:hello@simonewebdesign.it?subject=Hey Simone!).
