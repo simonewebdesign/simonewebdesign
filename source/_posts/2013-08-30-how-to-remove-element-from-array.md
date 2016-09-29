@@ -2,7 +2,7 @@
 title: How to remove an element from an array
 description: "JavaScript: use Array.splice(). The splice() function removes items from an array, and returns the removed items."
 layout: post
-permalink: /how-to-remove-element-from-array
+permalink: /how-to-remove-element-from-array/
 date: 2013-08-30
 comments: true
 dsq_thread_id:

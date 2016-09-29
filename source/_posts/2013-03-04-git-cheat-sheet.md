@@ -2,7 +2,7 @@
 title: Git cheat sheet
 description: "Quick-start reference for GitHub. Learn Git quickly and be immediately productive with this very pragmatic Git cheat sheet!"
 layout: post
-permalink: /git-cheat-sheet
+permalink: /git-cheat-sheet/
 date: 2013-03-04 14:47:22 +0000
 comments: true
 dsq_thread_id:

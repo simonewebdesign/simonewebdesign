@@ -2,7 +2,7 @@
 title: How to set a default message in your exception
 description: "Define a custom exception with a default, predefined error message. This trick works in all Ruby applications, Ruby on Rails included."
 layout: post
-permalink: /how-to-set-default-message-exception
+permalink: /how-to-set-default-message-exception/
 date: 2014-01-10
 comments: true
 dsq_thread_id:

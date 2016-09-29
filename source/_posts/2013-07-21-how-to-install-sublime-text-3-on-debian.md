@@ -2,7 +2,7 @@
 title: How to install Sublime Text 3 on Debian
 description: "Install Sublime Text 3 beta build, the easy way. No effort at all, requires only 30 seconds."
 layout: post
-permalink: /how-to-install-sublime-text-3-on-debian
+permalink: /how-to-install-sublime-text-3-on-debian/
 date: 2013-07-21
 updated: 2015-04-16
 comments: true

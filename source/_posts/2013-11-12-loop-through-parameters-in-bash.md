@@ -2,7 +2,7 @@
 title: Loop through parameters in Bash
 description: "Iterating over the arguments in a Bash script is way simpler than you might expect: for WORD; do; echo $WORD; done"
 layout: post
-permalink: /loop-through-parameters-in-bash
+permalink: /loop-through-parameters-in-bash/
 date: 2013-11-12
 comments: true
 dsq_thread_id:
