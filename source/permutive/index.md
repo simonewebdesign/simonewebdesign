@@ -3,7 +3,7 @@ layout: page
 title: Hi, I'm Simone.
 comments: false
 sharing: false
-footer: true
+footer: false
 sidebar: false
 ---
 
@@ -66,6 +66,10 @@ I didn’t make this page lightly; I have spent some time considering whether or
 ### Portfolio
 
 Here's a selection of websites I designed that I’m pretty proud of. For most of them I created it from start to finish including client consultation, design, HTML/CSS/JS, backend development and copywriting.
+
+<div class="portfolio">{% for entry in site.data.sites %}
+<figure><img src="/images/portfolio/{{ entry.image }}" alt="{{ entry.title }}" /></figure>
+{% endfor %}</div>
 
 ### Let's talk!
 
