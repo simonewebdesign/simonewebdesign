@@ -3,11 +3,11 @@ layout: page
 title: Hi, I'm Simone.
 comments: false
 sharing: false
-footer: false
+footer: true
 sidebar: false
 ---
 
-## I'm a developer.<br>I love to make things — I love the web, code and hard challenges.<br>I think we should talk.
+## I'm a developer.<br>I love to make things — I love the web, code and a hard challenge.<br>I think we should talk.
 
 
 <br>
@@ -23,16 +23,11 @@ You are **Made by Many**. You're hiring talented people exclusively. You want to
 
 #### A great team
 
-You know perfectly that, in order to be competitive, you need someone with amazing skills, someone who really loves tough challenges. That's why 
-
-
-You've been backed by the best investors already, you need to keep running. You want someone who has the courage to fight for an idea, the will to innovate. Someone that's not afraid to show he's right.
+At **Made by Many** it's the [people who matter the most](https://madebymany.com/jobs), and that's why you attracted some great minds in your team. **Made by Many** is what happens when a bunch of **wildly talented people** get together.
 
 #### Amazing projects
 
-You've done some really impressive projects, built with the right technologies for the job: **Ruby** and **Elixir**. You want to keep producing innovative solution, and build a company culture where people love what they do.
-
-And your customers will be amazed.
+You've done some [really impressive work](https://madebymany.com/work), built with the right technologies for the job. You want to keep producing innovative solutions, and build a company culture where people love what they do.
 
 
 <br>
@@ -44,9 +39,9 @@ I've been called “restless”. I mean, I sleep at night, but thing is, there's
 
 #### What I do
 
-I work for a pretty cool company in London called MyMeds&Me. We use some rad technologies too, such as Elm and Elixir. We have an amazing team of developers, we use and admire functional programming, and we try our best to make customers happy. I'm a frontend developer here, which means I'm the one in charge of making our web products reliable, beautiful and fun to use.
+I work for a pretty cool company in London called My Meds & Me. We use rad technologies too, such as **Elixir**, **Phoenix**, **Docker** and **Kubernetes**. We have an amazing team of developers, we use and admire functional programming, and we try our best to make customers happy. I'm a full-stack developer here, which means I find myself always doing a bit of everything, ranging from back end to front end, even devops. Ultimately I'm in charge of making our web product reliable, beautiful and fun to use.
 
-I'll be honest: MyMeds&Me is a great place to work. I have creative freedom, a good work environment, talented co-workers and I'm handsomely compensated. Really, I cannot think of anything that would keep me from being here a very long time, except that I want more. Not necessarily stuff or money, but I want to learn more and get better. I want to keep the pressure up. I want to take on the toughest challenges.
+I'll be honest: My Meds & Me is a great place to work. I have creative freedom, a good work environment, talented co-workers and I'm handsomely compensated. Really, I cannot think of anything that would keep me from being here a very long time, except that I want more. Not necessarily stuff or money, but I want to learn more and get better. I want to keep the pressure up. I want to take on the toughest challenges.
 
 ---
 
@@ -55,6 +50,8 @@ I'll be honest: MyMeds&Me is a great place to work. I have creative freedom, a g
 ---
 
 I didn’t make this page lightly; I have spent some time considering whether or not to really go for this. <b>I love a challenge.</b> I love the idea of working with people that are brilliant; whom I admire and respect. I know what it means to work together to make something great. And I look forward to making **Made by Many** better by my addition. I want to learn from you and I want to teach you and I want to learn things together.
+
+After all, [you do like challenges](https://madebymany.com/about) too, don't you?
 
 <br>
 <br>
@@ -65,7 +62,12 @@ I didn’t make this page lightly; I have spent some time considering whether or
 
 </blockquote>
 
-<h1>Let's talk!</h1>
 
-**Simone Vittori**
-<a href="mailto:hireme@simonewebdesign.it" title="drop me an email!"/>hireme@simonewebdesign.it</a>
+<address style="text-align: center;">
+
+    <h1>Let's talk!</h1>
+
+    <strong>Simone Vittori</strong>
+    <a href="mailto:hireme@simonewebdesign.it" title="drop me an email!"/>hireme@simonewebdesign.it</a>
+
+</address>
