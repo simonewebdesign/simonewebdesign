@@ -10,9 +10,20 @@ sidebar: false
 <div class="about-intro clearfix">
   <img class="avatar" src="/images/simonewebdesign.png" />
   <p>
-    Simone Vittori is a software developer originally from <a rel="external nofollow" href="https://en.wikipedia.org/wiki/Perugia">Perugia</a>, Italy, but now living in London, England. He's obsessed about code: if he's not writing it, he's probably reading, speaking or dreaming about it. He enjoys coding in many different programming languages, such as Elixir, Elm, Ruby and Haskell.
+    Simone Vittori is a software developer originally from <a rel="external nofollow" href="https://en.wikipedia.org/wiki/Perugia">Perugia</a>, Italy, but now living in London, England. He's obsessed about code: if he's not writing it, he's probably reading, speaking or dreaming about it. He enjoys coding in many different programming languages, such as [Elixir](http://elixir-lang.org/), [Elm](http://elm-lang.org/), [Ruby](https://www.ruby-lang.org/) and [Haskell](https://www.haskell.org/).
   </p>
 </div>
+
+## simonewebdesign.it
+
+This is my personal website in which I blog about programming since 2012. Some facts:
+
+- **Made with Octopress**, a static site generator based on Jekyll.
+
+- **There is no backend nor database.** All pages are actually just HTML, CSS and JavaScript, which results in a super fast website that can't be hacked.
+
+- **No advertising either.**
+I write blog posts so that I don't forget important stuff and because I enjoy sharing my work with others.
 
 
 <blockquote>
@@ -22,20 +33,6 @@ sidebar: false
 
 <p>I read a lot. The more you read, the more you learn. And it makes me happy.</p>
 </blockquote>
-
-
-## simonewebdesign.it
-
-This is my personal website in which I blog about programming since 2012. Some facts:
-
-<i class="fa fa-github"></i> github
-
-- **Made with Octopress**, a static site generator based on Jekyll.
-
-- **There is no backend nor database.** All pages are actually just HTML, CSS and JavaScript, which results in a super fast website that can't be hacked.
-
-- **No advertising either.**
-I write blog posts so that I don't forget important stuff and because I enjoy sharing my work with others.
 
 
 ## Let's get in touch!
