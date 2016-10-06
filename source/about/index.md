@@ -8,17 +8,17 @@ sidebar: false
 ---
 
 <div class="about-intro clearfix">
-  <img class="avatar" src="/images/simonewebdesign.png" />
-  <p>
-    Simone Vittori is a software developer originally from <a rel="external nofollow" href="https://en.wikipedia.org/wiki/Perugia">Perugia</a>, Italy, but now living in London, England. He's obsessed about code: if he's not writing it, he's probably reading, speaking or dreaming about it. He enjoys coding in many different programming languages, such as [Elixir](http://elixir-lang.org/), [Elm](http://elm-lang.org/), [Ruby](https://www.ruby-lang.org/) and [Haskell](https://www.haskell.org/).
-  </p>
+<img class="avatar" src="/images/simonewebdesign.png" />
+<p>
+Simone Vittori is a software developer originally from <a rel="external nofollow" href="https://en.wikipedia.org/wiki/Perugia">Perugia</a>, Italy, but now living in London, England. He's obsessed about code: if he's not writing it, he's probably reading, speaking or dreaming about it. He enjoys coding in many different programming languages, such as <a rel="external nofollow" href="http://elixir-lang.org/">Elixir</a>, <a rel="external nofollow" href="http://elm-lang.org/">Elm</a>, <a rel="external nofollow" href="https://www.ruby-lang.org/">Ruby</a> and <a rel="external nofollow" href="https://www.haskell.org/">Haskell</a>.
+</p>
 </div>
 
 ## simonewebdesign.it
 
-This is my personal website in which I blog about programming since 2012. Some facts:
+This is my personal website, founded in January 2010. I started blogging in 2012. Some facts:
 
-- **Made with Octopress**, a static site generator based on Jekyll.
+- **Made with Octopress**, a static site generator based on <a rel="external nofollow" href="https://jekyllrb.com/">Jekyll</a>.
 
 - **There is no backend nor database.** All pages are actually just HTML, CSS and JavaScript, which results in a super fast website that can't be hacked.
 
@@ -33,7 +33,7 @@ I write blog posts so that I don't forget important stuff and because I enjoy sh
 
 <p>I read a lot. The more you read, the more you learn. And it makes me happy.</p>
 </blockquote>
-
+<br>
 
 ## Let's get in touch!
 

@@ -175,7 +175,7 @@ dog.name = "Doggy";
 >>> "Doggy"
 
 dog.sound = "Woof";
->>> "Woof"<a href="/">asd</a>
+>>> "Woof"
 
 dog.cry();
 Doggy says: Woof!
