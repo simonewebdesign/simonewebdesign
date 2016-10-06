@@ -25,23 +25,23 @@ body > footer {
     margin-right: 1.5em;
   }
     .social-links a {}
-      .social-links i:hover {
-        background-color: #222;
-      }
-      .social-links i:active {
-        background-color: #111;
-      }
-      .social-links i:focus {
-        background-color: #111;
-      }
       .social-links i {
         width: 1em;
         height: 1em;
         color: #f6f6f6;
-        background-color: #333;
+        background-color: #444;
         padding: .3em;
         font-size: 3.6em;
         border-radius: 4em;
         text-align: center;
+      }
+      .social-links i:hover {
+        background-color: #333;
+      }
+      .social-links i:active {
+        background-color: #222;
+      }
+      .social-links i:focus {
+        background-color: #222;
       }
       .social-links span { display: none; }
