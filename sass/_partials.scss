@@ -10,3 +10,19 @@
 @import "partials/portfolio";
 @import "partials/project";
 // TODO maybe worth rethinking at some point (just an import partials/* should be fine)
+
+.lets-talk {
+  text-align: center;
+  margin-bottom: 4rem;
+
+  h1 {
+    font-size: 2em;
+    margin: auto;
+    margin-top: 1em;
+    display: block;
+  }
+
+  strong {
+    display: block;
+  }
+}

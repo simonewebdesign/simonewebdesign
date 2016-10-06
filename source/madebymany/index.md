@@ -7,7 +7,7 @@ footer: true
 sidebar: false
 ---
 
-## I'm a developer.<br>I love to make things — I love the web, code and a hard challenge.<br>I think we should talk.
+## I'm a polyglot developer.<br><br>I love to make things — I love the web, code and hard challenges.<br><br>I think we should talk.
 
 
 <br>
@@ -23,11 +23,11 @@ You are **Made by Many**. You're hiring talented people exclusively. You want to
 
 #### A great team
 
-At **Made by Many** it's the [people who matter the most](https://madebymany.com/jobs), and that's why you attracted some great minds in your team. **Made by Many** is what happens when a bunch of **wildly talented people** get together.
+At **Made by Many** it's the [people who matter the most](https://madebymany.com/jobs), and that's why you attracted some great minds in your team. **Made by Many** is what happens when a bunch of **wildly talented people** get to work together.
 
 #### Amazing projects
 
-You've done some [really impressive work](https://madebymany.com/work), built with the right technologies for the job. You want to keep producing innovative solutions, and build a company culture where people love what they do.
+You've done some [really impressive work](https://madebymany.com/work), built with the right technologies for the job. You want to keep producing innovative solutions, and build a company culture where people love what they do. You even host the amazing [Frontend London](http://www.frontendlondon.co.uk/)!
 
 
 <br>
@@ -39,7 +39,7 @@ I've been called “restless”. I mean, I sleep at night, but thing is, there's
 
 #### What I do
 
-I work for a pretty cool company in London called My Meds & Me. We use rad technologies too, such as **Elixir**, **Phoenix**, **Docker** and **Kubernetes**. We have an amazing team of developers, we use and admire functional programming, and we try our best to make customers happy. I'm a full-stack developer here, which means I find myself always doing a bit of everything, ranging from back end to front end, even devops. Ultimately I'm in charge of making our web product reliable, beautiful and fun to use.
+I work for a pretty cool company in London called My Meds & Me. We use rad technologies too, such as **Elixir**, **Phoenix**, **Docker** and **Kubernetes**. We are a really nice bunch, we use and admire functional programming, and we try our best to make customers happy. I'm a full-stack developer here, which means I find myself always doing a bit of everything, ranging from back end to front end, even devops. Ultimately I'm in charge of making our web product reliable, beautiful and fun to use.
 
 I'll be honest: My Meds & Me is a great place to work. I have creative freedom, a good work environment, talented co-workers and I'm handsomely compensated. Really, I cannot think of anything that would keep me from being here a very long time, except that I want more. Not necessarily stuff or money, but I want to learn more and get better. I want to keep the pressure up. I want to take on the toughest challenges.
 
@@ -51,23 +51,17 @@ I'll be honest: My Meds & Me is a great place to work. I have creative freedom, 
 
 I didn’t make this page lightly; I have spent some time considering whether or not to really go for this. <b>I love a challenge.</b> I love the idea of working with people that are brilliant; whom I admire and respect. I know what it means to work together to make something great. And I look forward to making **Made by Many** better by my addition. I want to learn from you and I want to teach you and I want to learn things together.
 
-After all, [you do like challenges](https://madebymany.com/about) too, don't you?
-
+After all [you do like challenges](https://madebymany.com/about) too, don't you?
 <br>
 <br>
-
-<blockquote>I had the pleasure of having pair programming sessions with Simone, in which I could appreciate his pragmatic approach to problems and his great enthusiasm and productivity. I was impressed by his extensive knowledge of web development. I've also appreciated his friendly and genuine personality.
-    
-    <small class="basic-alignment right">Oliver Sorbi, Simone's colleague - July 29, 2013</small>
-
+<br>
+<blockquote style="display: block;">I had the pleasure of having pair programming sessions with Simone, in which I could appreciate his pragmatic approach to problems and his great enthusiasm and productivity. I was impressed by his extensive knowledge of web development. I've also appreciated his friendly and genuine personality.    
+<small style="width: 100%; text-align: right;" class="basic-alignment right">Oliver Sorbi, Simone's colleague - July 29, 2013</small>
 </blockquote>
-
-
-<address style="text-align: center;">
-
-    <h1>Let's talk!</h1>
-
-    <strong>Simone Vittori</strong>
-    <a href="mailto:hireme@simonewebdesign.it" title="drop me an email!"/>hireme@simonewebdesign.it</a>
-
-</address>
+<br>
+<br>
+<section class="lets-talk">
+# Let's talk!
+<strong>Simone Vittori</strong>
+<a href="mailto:hireme@simonewebdesign.it" title="drop me an email!"/>hireme@simonewebdesign.it</a>
+</section>
