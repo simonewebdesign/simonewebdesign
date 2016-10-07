@@ -16,7 +16,7 @@ Simone Vittori is a software developer originally from <a rel="external nofollow
 
 ## simonewebdesign.it
 
-This is my personal website, founded in January 2010. I started blogging in 2012. Some facts:
+This is my personal website, founded in 2010. Become a blog in 2012. Some facts:
 
 - **Made with Octopress**, a static site generator based on <a rel="external nofollow" href="https://jekyllrb.com/">Jekyll</a>.
 
