@@ -10,7 +10,7 @@ sidebar: false
 <div class="about-intro clearfix">
 <img class="avatar" src="/images/simonewebdesign.png" />
 <p>
-<strong>Simone Vittori</strong> is a software engineer originally from <a rel="external nofollow" href="https://en.wikipedia.org/wiki/Perugia">Perugia</a>, Italy, but now living in London, England. He's obsessed about code: if he's not writing it, he's probably reading, speaking or dreaming about it. He enjoys coding in many different programming languages, such as <a rel="external nofollow" href="http://elixir-lang.org/">Elixir</a>, <a rel="external nofollow" href="http://elm-lang.org/">Elm</a>, <a rel="external nofollow" href="https://www.ruby-lang.org/">Ruby</a> and <a rel="external nofollow" href="https://www.haskell.org/">Haskell</a>. He does <a rel="external nofollow" href="https://github.com/simonewebdesign">open source</a> too!
+<strong>Simone Vittori</strong> is a software engineer originally from <a rel="external nofollow" href="https://en.wikipedia.org/wiki/Perugia">Perugia</a>, Italy, but now living in London, England. He's obsessed about code: if he's not writing it, he's probably reading, speaking or dreaming about it. He enjoys coding in many different programming languages, such as <a rel="external nofollow" href="http://elixir-lang.org/">Elixir</a>, <a rel="external nofollow" href="http://elm-lang.org/">Elm</a>, <a rel="external nofollow" href="https://www.ruby-lang.org/">Ruby</a> and <a rel="external nofollow" href="https://www.haskell.org/">Haskell</a>.<br>He does <a rel="external nofollow" href="https://github.com/simonewebdesign">open source</a> too!
 </p>
 </div>
 
