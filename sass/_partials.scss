@@ -1,16 +1,4 @@
-@import "partials/header";
-@import "partials/navigation";
-@import "partials/blog";
-@import "partials/sharing";
-@import "partials/syntax";
-@import "partials/about";
-@import "partials/archive";
-@import "partials/sidebar";
-@import "partials/footer";
-@import "partials/portfolio";
-@import "partials/project";
-@import "partials/social-links";
-// TODO maybe worth rethinking at some point (just an import partials/* should be fine)
+@import "partials/*";
 
 .lets-talk {
   text-align: center;
