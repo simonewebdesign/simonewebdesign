@@ -80,7 +80,7 @@ google_plus_one_size: medium
 # Google Plus Profile
 # Hidden: No visible button, just add author information to search results
 googleplus_user: +SimoneVittori
-googleplus_hidden: false
+googleplus_hidden: true
 
 # Disqus Comments
 disqus_short_name: simonewebdesign
