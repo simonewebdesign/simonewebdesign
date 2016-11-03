@@ -13,35 +13,3 @@ body > footer {
   }
   p:last-child { margin-bottom: 0; }
 }
-
-.social-links {
-  list-style: none;
-  padding-left: 0;
-  margin: auto;
-  text-align: center;
-}
-  .social-links li {
-    display: inline;
-    margin-right: 1.5em;
-  }
-    .social-links a {}
-      .social-links i {
-        width: 1em;
-        height: 1em;
-        color: #f6f6f6;
-        background-color: #444;
-        padding: .3em;
-        font-size: 2.6em;
-        border-radius: 4em;
-        text-align: center;
-      }
-      .social-links i:hover {
-        background-color: #333;
-      }
-      .social-links i:active {
-        background-color: #222;
-      }
-      .social-links i:focus {
-        background-color: #222;
-      }
-      .social-links span { display: none; }
