@@ -20,7 +20,7 @@ Let's think about it: what are the usual parts of a website? I'd say that:
 
 ## But why is that?
 
-I think it's because we're used to **reivent the wheel** every day.
+I think it's because we're used to **reinvent the wheel** every day.
 
 Let's be honest here: how many times have you built a shopping cart from scratch? Or a pagination system? Or a contact form?!
 <!--
@@ -37,3 +37,5 @@ Creating your own custom HTML elements sounds great, and the good news is you ca
 What we need to do, at least for the time being.
 
 js and css and html need to be together.
+
+> Templates separate technologies, not concerns.

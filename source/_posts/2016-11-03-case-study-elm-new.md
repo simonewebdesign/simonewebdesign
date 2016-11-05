@@ -5,6 +5,7 @@ date: 2016-11-03 13:00:00 +0000
 comments: true
 categories:
   - Elm
+published: false
 ---
 
 `elm-new` is a command-line tool that automatically creates a new Elm project for you.
