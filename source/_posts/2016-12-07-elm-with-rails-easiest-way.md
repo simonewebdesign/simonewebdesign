@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Elm with Rails: the easiest way
-date: UPDATE DATE 2016-07-03 19:30:00 +0000
+title: "Elm with Rails: the easiest way"
+date: 2016-07-03 19:30:00 +0000
 comments: true
 categories:
   - Elm
