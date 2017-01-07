@@ -30,10 +30,6 @@ class SinatraStaticServer < Sinatra::Base
   end
 
   def send_sinatra_file(path, &missing_file_block)
-    if request.host == 'simo.herokuapp.com'
-      redirect to("http://www.simonewebdesign.it#{params[:captures].first}/"), 301
-    end
-
     file_path = File.join(File.dirname(__FILE__), 'public',  path)
     file_path = File.join(file_path, 'index.html') unless file_path =~ /\.[a-z]+$/i
 
