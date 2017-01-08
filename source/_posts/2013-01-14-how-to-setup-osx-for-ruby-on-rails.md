@@ -33,7 +33,7 @@ tags:
 </p>
 
 <h2>
-  Install <a href="http://mxcl.github.com/homebrew/" target="_blank" rel="nofollow">Homebrew</a>
+  Install <a href="https://mxcl.github.com/homebrew/" target="_blank" rel="nofollow">Homebrew</a>
 </h2>
 
 ``` bash

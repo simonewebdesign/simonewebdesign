@@ -19,7 +19,7 @@ tags:
 ---
 
 <p>
-  If you have a WordPress blog and want to add some cool syntax highlighting for your code, you can try <a title="Google Code Prettify" href="http://code.google.com/p/google-code-prettify/" target="_blank">Google Code Prettify</a>.
+  If you have a WordPress blog and want to add some cool syntax highlighting for your code, you can try <a title="Google Code Prettify" href="https://code.google.com/p/google-code-prettify/" target="_blank">Google Code Prettify</a>.
 </p>
 <p>
   WordPress plugins are usually quite simple to use, but there are some little precautions to follow. First of all:
@@ -27,15 +27,15 @@ tags:
 
 <ul>
   <li>
-    <a title="WP code prettify download" href="http://wordpress.org/extend/plugins/wp-code-prettify/" target="_blank">Download the Google Code Prettify plugin for WordPress</a>
+    <a title="WP code prettify download" href="https://wordpress.org/extend/plugins/wp-code-prettify/" target="_blank">Download the Google Code Prettify plugin for WordPress</a>
   </li>
   <li>
-    <a title="Managing Plugins" href="http://codex.wordpress.org/Managing_Plugins#Installing_Plugins" target="_blank">Install it</a>, but DO NOT activate it.
+    <a title="Managing Plugins" href="https://codex.wordpress.org/Managing_Plugins#Installing_Plugins" target="_blank">Install it</a>, but DO NOT activate it.
   </li>
 </ul>
 
 <p>
-  You shouldn&#8217;t activate it immediately, because if you do an edit while your plugin is activated, you could break it: some files could display an <em>(inactive)</em> label next to the file name, and all you can do to repair it is to delete and reinstall the whole plugin. <a title="What the heck does (inactive) mean when editing a plugin file?" href="http://wordpress.org/support/topic/what-the-heck-does-inactive-mean-when-editing-a-plugin-file" target="_blank" rel="nofollow">Read more about this problem</a>.
+  You shouldn&#8217;t activate it immediately, because if you do an edit while your plugin is activated, you could break it: some files could display an <em>(inactive)</em> label next to the file name, and all you can do to repair it is to delete and reinstall the whole plugin. <a title="What the heck does (inactive) mean when editing a plugin file?" href="https://wordpress.org/support/topic/what-the-heck-does-inactive-mean-when-editing-a-plugin-file" target="_blank" rel="nofollow">Read more about this problem</a>.
 </p>
 
 <p>
@@ -72,7 +72,7 @@ if (true) {
   </li>
 
   <li>
-    Go edit your <strong>prettify.css</strong> and delete the reference about the <code>.prettyprint</code> class. Then you&#8217;ll want to add some more code to avoid the awful text overflow, that often causes layout problems. Have a look at this short <a title="Make Pre Text Wrap" href="http://css-tricks.com/snippets/css/make-pre-text-wrap/" target="_blank">article from <abbr title="Cascading Style Sheets">CSS</abbr>-Tricks</a>: you <em>need</em> that code. I&#8217;m (shamelessly) copy pasting it below:
+    Go edit your <strong>prettify.css</strong> and delete the reference about the <code>.prettyprint</code> class. Then you&#8217;ll want to add some more code to avoid the awful text overflow, that often causes layout problems. Have a look at this short <a title="Make Pre Text Wrap" href="https://css-tricks.com/snippets/css/make-pre-text-wrap/" target="_blank">article from <abbr title="Cascading Style Sheets">CSS</abbr>-Tricks</a>: you <em>need</em> that code. I&#8217;m (shamelessly) copy pasting it below:
 
 ``` css
 pre {

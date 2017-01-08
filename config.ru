@@ -6,7 +6,7 @@ $root = ::File.dirname(__FILE__)
 
 class SinatraStaticServer < Sinatra::Base
   # Redirect all requests without a trailing slash to the trailing slash version
-  # http://stackoverflow.com/a/11927449
+  # https://stackoverflow.com/a/11927449
   get %r{(/.*[^\/])$} do
     redirect "#{params[:captures].first}/"
   end
@@ -38,7 +38,7 @@ class SinatraStaticServer < Sinatra::Base
         send_file(file_path)
       else
         if File.exist?(file_path.chomp('/'))
-          redirect to("http://www.simonewebdesign.it#{file_path.chomp('/')}"), 301
+          redirect to("https://www.simonewebdesign.it#{file_path.chomp('/')}"), 301
         else
           missing_file_block.call
         end
@@ -49,7 +49,7 @@ class SinatraStaticServer < Sinatra::Base
         send_file(file_path)
       else
         if File.exist?(file_path << '/')
-          redirect to("http://www.simonewebdesign.it#{file_path}/"), 301
+          redirect to("https://www.simonewebdesign.it#{file_path}/"), 301
         else
           missing_file_block.call
         end

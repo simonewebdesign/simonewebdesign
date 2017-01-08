@@ -92,7 +92,7 @@ var ws = new WebSocket("ws://localhost:1337");
 </p>
 
 <p>
-  Now let&#8217;s code some <a href="http://en.wikipedia.org/wiki/Event_%28computing%29" title="Event (computing)" target="_blank" rel="nofollow">event handlers</a>. I won&#8217;t elaborate, they&#8217;re self-descriptive:
+  Now let&#8217;s code some <a href="https://en.wikipedia.org/wiki/Event_%28computing%29" title="Event (computing)" target="_blank" rel="nofollow">event handlers</a>. I won&#8217;t elaborate, they&#8217;re self-descriptive:
 </p>
 
 ``` javascript
@@ -141,7 +141,7 @@ sendBtn.addEventListener('click', function(ev) {
 <hr />
 
 <p>
-  At this stage you should have downloaded and installed <a href="http://nodejs.org/download/" target="_blank" rel="nofollow">Node.js</a>: the procedure is slightly different for every operating system; just make sure to download the right installer.
+  At this stage you should have downloaded and installed <a href="https://nodejs.org/download/" target="_blank" rel="nofollow">Node.js</a>: the procedure is slightly different for every operating system; just make sure to download the right installer.
 </p>
 
 <p>
@@ -314,7 +314,7 @@ Server is listening on port 1337.
 </p>
 
 <p>
-  When you send a web socket request as a client, you&#8217;ll send an <a href="http://en.wikipedia.org/wiki/HTTP_header" target="_blank" rel="nofollow nofollow"><abbr title="HyperText Transfer Protocol">HTTP</abbr> header</a> like this one:
+  When you send a web socket request as a client, you&#8217;ll send an <a href="https://en.wikipedia.org/wiki/HTTP_header" target="_blank" rel="nofollow nofollow"><abbr title="HyperText Transfer Protocol">HTTP</abbr> header</a> like this one:
 </p>
 
 ```

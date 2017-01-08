@@ -344,7 +344,7 @@ I hope you enjoyed this article. Who's following my blog since the beginning wil
 
 ## Demo and source code
 
-You can [play the game here](http://www.simonewebdesign.it/games/pong/).
+You can [play the game here](https://www.simonewebdesign.it/games/pong/).
 
 The <a rel="external nofollow" href="https://github.com/dudeOMG/pong">full source code</a> is on GitHub so you can clone it, fork it and even make your own from scratch, if you feel like it's worth your time. If you are interested in the simple way, checkout the <a rel="external nofollow" href="https://github.com/dudeOMG/pong/releases/tag/v1.0">v1.0 release</a>.
 The hard way is in the master branch.

@@ -138,7 +138,7 @@ function Dog(){
 ```
 
 <p>
-  <strong>And now, let&#8217;s have fun with the console!</strong><br /> <small>If you don&#8217;t know how to open the JavaScript console in your browser, <a title="How to open the JavaScript console" href="http://webmasters.stackexchange.com/questions/8525/how-to-open-the-javascript-console-in-different-browsers" target="_blank">read here</a>.</small>
+  <strong>And now, let&#8217;s have fun with the console!</strong><br /> <small>If you don&#8217;t know how to open the JavaScript console in your browser, <a title="How to open the JavaScript console" href="https://webmasters.stackexchange.com/questions/8525/how-to-open-the-javascript-console-in-different-browsers" target="_blank">read here</a>.</small>
 </p>
 
 ``` javascript
