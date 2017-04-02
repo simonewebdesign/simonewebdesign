@@ -23,13 +23,13 @@ def my_function do
   my_list = [1, 2, 3]
 
   list
-  |> Logger.debug("before inserting: #{inspect list}")
+  |> Logger.debug("before insert: #{inspect list}")
   |> Enum.into([0])
-  |> Logger.debug("after inserting: #{inspect list}")
+  |> Logger.debug("after insert: #{inspect list}")
 end
 ```
 
-This doesn't work, for many reasons. First, we can't refer to `my_list` that way. If we do, we will always be logging `[1, 2, 3]`, because Elixir is immutable.
+This doesn't work for many reasons. First, we can't refer to `my_list` that way. If we do, we will always be logging `[1, 2, 3]`, because Elixir's data structures are immutable.
 Second, `Logger.*` functions return the `:ok` atom, which means you can't use them in a pipe—unless that is what you want to return.
 
 The solution to both issues is actually pretty straightforward: use a lambda!
@@ -39,12 +39,12 @@ A lambda is just an anonymous function. We can define it and call it right away.
 def my_function do
   [1, 2, 3]
   |> (fn list ->
-    Logger.debug("before inserting: #{inspect list}")
+    Logger.debug("before insert: #{inspect list}")
     list
   end).()
   |> Enum.into([0])
   |> (fn list ->
-    Logger.debug("after inserting: #{inspect list}")
+    Logger.debug("after insert: #{inspect list}")
     list
   end).()
 end
@@ -52,9 +52,9 @@ end
 
 If we call this function, we get:
 
-    12:34:56.789 [debug] before inserting: [1, 2, 3]
+    12:34:56.789 [debug] before insert: [1, 2, 3]
 
-    12:34:56.823 [debug] after inserting: [0, 1, 2, 3]
+    12:34:56.823 [debug] after insert: [0, 1, 2, 3]
 
 Great, exactly what we want! Except the syntax is horrible. But fear not, we can improve on it. How about we make a wrapper?
 
@@ -79,16 +79,16 @@ Let's rewrite our function once again:
 ```elixir
 def my_function do
   [1, 2, 3]
-  |> (&PipeableLogger.debug(&1, "before inserting: #{inspect &1}")).()
+  |> (&PipeableLogger.debug(&1, "before insert: #{inspect &1}")).()
   |> Enum.into([0])
-  |> (&PipeableLogger.debug(&1, "after inserting: #{inspect &1}")).()
+  |> (&PipeableLogger.debug(&1, "after insert: #{inspect &1}")).()
 end
 ```
 
-Still not pretty though, as we still needed to wrap the function in a lambda. There are at least two different cases we may want to handle:
+Still not pretty though, as we still needed to wrap the function in a lambda. If we want to build a proper `Logger` wrapper, there are at least two different cases we may want to handle:
 
-1. Logging a simple message (without inspecting any data);
-2. Logging the piped data (maybe also with some message concatenated with it).
+1. Logging a simple message (without any data);
+2. Logging the data we receive from the pipe, maybe also with a message.
 
 Here's the improved version of `PipeableLogger`:
 
@@ -115,9 +115,9 @@ Let's use it:
 ```elixir
 def my_function do
   [1, 2, 3]
-  |> PipeableLogger.debug("before inserting")
+  |> PipeableLogger.debug("before insert")
   |> Enum.into([0])
-  |> PipeableLogger.debug("after inserting")
+  |> PipeableLogger.debug("after insert")
 end
 ```
 
@@ -152,24 +152,26 @@ The assumption is that we always want to concatenate the data with the message, 
 ```elixir
 def my_function do
   [1, 2, 3]
-  |> PipeableLogger.debug("before inserting: ")
+  |> PipeableLogger.debug("before insert: ")
   |> Enum.into([0])
-  |> PipeableLogger.debug("after inserting: ")
+  |> PipeableLogger.debug("after insert: ")
 end
 ```
 
 ```elixir
 iex> my_function()
 
-12:34:56.789 [debug] before inserting: [1, 2, 3]
+12:34:56.789 [debug] before insert: [1, 2, 3]
 
-12:34:56.789 [debug] after inserting: [0, 1, 2, 3]
+12:34:56.789 [debug] after insert: [0, 1, 2, 3]
 [0, 1, 2, 3]
 ```
 
+Now we can log the data with a message, all in a pipe and without a lambda! Nice!
+
 ---
 
-To sum up, I'm not sure this has worth. To be fair I think Elixir people tend to use pipes way too much (I'm guilty as well). So I wouldn't probably use such wrapper in any project.
+Summing up, I'm not convinced a `Logger` wrapper is the right way. This kinda goes against the blog post, but to be fair I think Elixir people tend to use pipes way too much (I'm guilty as well). So I wouldn't probably wrap `Logger` in any project.
 
 It's also worth noting that `Logger` supports the concept of metadata, which basically means you can already attach any data you want. For example, if you put this in your `config.exs`:
 
@@ -190,15 +192,17 @@ iex(2)> Logger.info "Work done", my_list: inspect [1, 2, 3]
 :ok
 ```
 
-Point is, you don't need a wrapper if all you want is concatenate some data in the log message. You *do* need a wrapper though if you want to use `Logger` in a pipe.
+Point is, you don't need a wrapper if all you want is concatenate some data in the log message. You *do* need a wrapper though (or a lambda) if you want to use `Logger` in a pipe.
 
-So how about this instead? It's fine to break the pipe!
+So how about this instead?
 
 ```elixir
 def my_function do
   list = [1, 2, 3]
-  Logger.debug("before inserting: #{inspect list}")
+  Logger.debug("before insert: #{inspect list}")
   new_list = Enum.into(list, [0])
-  Logger.debug("after inserting: #{inspect new_list}")
+  Logger.debug("after insert: #{inspect new_list}")
 end
 ```
+
+**Simple is better**. It's fine to break that pipe every once in a while!
