@@ -68,4 +68,5 @@ a {
 
 html {
   background: $sidebar-bg $noise-bg;
+  overflow-x: hidden; /* make sure no one can side scroll because it's annoying */
 }
