@@ -16,7 +16,7 @@ Turns into:
 
     12:34:56.789 [info]  something happened
 
-Very nice. However, there are cases where you may want to, say, change some data structure, like update a map or a list, and then log the transition. Example:
+Very nice. However, there are cases where you may want to, say, change some data structure, like update a map or a list, and then log the transition, **without breaking the pipe**. Example:
 
 ```elixir
 def my_function do
