@@ -11,11 +11,6 @@ single: true
       {% include post/author.html %}
       {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
     </p>
-
-    {% unless page.sharing == false %}
-      {% include post/sharing.html %}
-    {% endunless %}
-
   </footer>
 </article>
 {% if site.disqus_short_name and page.comments == true %}

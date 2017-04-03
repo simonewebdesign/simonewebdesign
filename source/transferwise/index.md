@@ -2,7 +2,6 @@
 layout: page
 title: Hi, I'm Simone.
 comments: false
-sharing: false
 footer: false
 sidebar: false
 ---
@@ -55,7 +54,7 @@ I didn’t make this page lightly; I have spent some time considering whether or
 <br>
 
 <blockquote>I had the pleasure of having pair programming sessions with Simone, in which I could appreciate his pragmatic approach to problems and his great enthusiasm and productivity. I was impressed by his extensive knowledge of web development. I've also appreciated his friendly and genuine personality.
-    
+
     <small class="basic-alignment right">Oliver Sorbi, Simone's colleague - July 29, 2013</small>
 
 </blockquote>

@@ -2,7 +2,6 @@
 layout: page
 title: About Simone
 comments: false
-sharing: false
 footer: true
 sidebar: false
 ---

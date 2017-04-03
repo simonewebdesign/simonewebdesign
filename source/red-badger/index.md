@@ -2,7 +2,6 @@
 layout: page
 title: Hi, I'm Simone.
 comments: false
-sharing: false
 footer: true
 sidebar: false
 ---
@@ -31,7 +30,7 @@ You've done some [really impressive work](https://red-badger.com/our-work/), bui
 I'm passionate about building and learning new things. There's so much to learn about, such as new programming languages and design patterns, and so much to pour one’s creativity into, like apps, tools, video games. There are a million things I want to try, to do, to be better at. There is never enough time in the day, week, or year for everything; though I’m really trying.
 
 I love open source. I'm constantly pushing something on GitHub, whether it's a [new command line tool I'm working on](https://github.com/simonewebdesign/elm-new), or a [contribution to some hugely popular library like React](https://github.com/facebook/react/pull/5411).
- 
+
 #### What I do
 
 I work for a pretty cool company in London called My Meds & Me. We use rad technologies too, such as **Elixir**, **Phoenix**, **Docker** and **Kubernetes**. We are a really nice bunch, we use and admire functional programming, and we try our best to make customers happy. I'm a full-stack developer here, which means I find myself always doing a bit of everything, ranging from back end to front end, even devops. Ultimately I'm in charge of making our web product reliable, beautiful and fun to use.
@@ -48,7 +47,7 @@ I didn’t make this page lightly; I have spent some time considering whether or
 <br>
 <br>
 <br>
-<blockquote style="display: block;">I had the pleasure of having pair programming sessions with Simone, in which I could appreciate his pragmatic approach to problems and his great enthusiasm and productivity. I was impressed by his extensive knowledge of web development. I've also appreciated his friendly and genuine personality.    
+<blockquote style="display: block;">I had the pleasure of having pair programming sessions with Simone, in which I could appreciate his pragmatic approach to problems and his great enthusiasm and productivity. I was impressed by his extensive knowledge of web development. I've also appreciated his friendly and genuine personality.
 <small style="width: 100%; text-align: right;" class="basic-alignment right">Oliver Sorbi, Simone's colleague - July 29, 2013</small>
 </blockquote>
 <br>

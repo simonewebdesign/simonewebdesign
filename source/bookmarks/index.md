@@ -3,7 +3,6 @@ layout: page
 title: "bookmarks"
 date: 2014-11-09 21:22
 comments: false
-sharing: true
 footer: true
 published: false
 ---

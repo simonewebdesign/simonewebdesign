@@ -2,7 +2,6 @@
 layout: page
 title: Hi, I'm Simone.
 comments: false
-sharing: false
 footer: true
 sidebar: false
 ---
@@ -55,7 +54,7 @@ After all [you do like challenges](https://madebymany.com/about) too, don't you?
 <br>
 <br>
 <br>
-<blockquote style="display: block;">I had the pleasure of having pair programming sessions with Simone, in which I could appreciate his pragmatic approach to problems and his great enthusiasm and productivity. I was impressed by his extensive knowledge of web development. I've also appreciated his friendly and genuine personality.    
+<blockquote style="display: block;">I had the pleasure of having pair programming sessions with Simone, in which I could appreciate his pragmatic approach to problems and his great enthusiasm and productivity. I was impressed by his extensive knowledge of web development. I've also appreciated his friendly and genuine personality.
 <small style="width: 100%; text-align: right;" class="basic-alignment right">Oliver Sorbi, Simone's colleague - July 29, 2013</small>
 </blockquote>
 <br>

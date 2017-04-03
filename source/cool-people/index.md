@@ -3,7 +3,6 @@ layout: page
 title: "cool people"
 date: 2014-12-06 12:41
 comments: false
-sharing: false
 footer: true
 ---
 
