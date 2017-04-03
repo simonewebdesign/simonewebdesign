@@ -20,7 +20,7 @@ Very nice. However, there are cases where you may want to, say, change some data
 
 ```elixir
 def my_function do
-  my_list = [1, 2, 3]
+  list = [1, 2, 3]
 
   list
   |> Logger.debug("before insert: #{inspect list}")
@@ -29,7 +29,7 @@ def my_function do
 end
 ```
 
-This doesn't work for many reasons. First, we can't refer to `my_list` that way. If we do, we will always be logging `[1, 2, 3]`, because Elixir's data structures are immutable.
+This doesn't work for many reasons. First, we can't refer to `list` that way. If we do, we will always be logging `[1, 2, 3]`, because Elixir's data structures are immutable.
 Second, `Logger.*` functions return the `:ok` atom, which means you can't use them in a pipe—unless that is what you want to return.
 
 The solution to both issues is actually pretty straightforward: use a lambda!
