@@ -3,7 +3,7 @@ layout: post
 title: A Pipeable Logger
 date: 2017-04-03
 comments: true
-categories: css
+categories: elixir
 ---
 
 The Elixir Logger is pretty good. You can easily log anything with it, just call one of `debug`, `info`, `warn` or `error`. For example:
