@@ -4,6 +4,7 @@ title: Hi, I'm Simone.
 comments: false
 footer: true
 sidebar: false
+published: false
 ---
 
 ## I'm a polyglot developer.<br><br>I love to make things — I love the web, code and hard challenges.<br><br>I think we should talk.

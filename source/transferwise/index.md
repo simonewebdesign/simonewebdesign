@@ -4,6 +4,7 @@ title: Hi, I'm Simone.
 comments: false
 footer: false
 sidebar: false
+published: false
 ---
 
 ## I'm a full-stack web developer.<br>I love to make things — I love the web, design, code and things that are enjoyable to use.
