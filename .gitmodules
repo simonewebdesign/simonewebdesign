@@ -7,3 +7,6 @@
 [submodule "source/demo/elm"]
 	path = source/demo/elm
 	url = https://github.com/simonewebdesign/elm-double-folding-pattern.git
+[submodule "source/hire/me"]
+	path = source/hire/me
+	url = git@bitbucket.org:simonewebdesign/cv.git
