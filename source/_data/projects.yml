@@ -5,6 +5,12 @@
   languages:
     - Elm
 -
+  title: pong
+  url: https://github.com/dudeOMG/pong
+  description: The classic Atari game, playable in the browser.
+  languages:
+    - JavaScript
+-
   title: elm-double-folding-pattern
   url: https://github.com/simonewebdesign/elm-double-folding-pattern
   description: A demo credit card form built using an innovative architectural pattern.
