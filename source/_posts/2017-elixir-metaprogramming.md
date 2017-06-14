@@ -19,6 +19,10 @@ Introduce concepts to the reader by talking about [**homoiconicity**](https://en
 
 `Code.string_to_quoted`
 
+## Execution?
+
+
+
 ## AST to String
 
 `Macro.to_string`
