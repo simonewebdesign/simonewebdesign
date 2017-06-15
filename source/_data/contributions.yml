@@ -1,9 +1,47 @@
 -
   title: react
-  url: https://github.com/facebook/react
+  url: https://github.com/facebook/react/pull/5411
+  repo_url: https://github.com/facebook/react
+  published: true
 -
   title: elixir
-  url: https://github.com/elixir-lang/elixir
+  url: https://github.com/elixir-lang/elixir/pull/5178
+  repo_url: https://github.com/elixir-lang/elixir
+  published: true
 -
   title: bootstrap
-  url: https://github.com/twbs/bootstrap
+  url: https://github.com/twbs/bootstrap/pull/18621
+  repo_url: https://github.com/twbs/bootstrap
+  published: true
+-
+  title: html5please
+  url: https://github.com/h5bp/html5please/pull/364
+  published: true
+-
+  title: learnxinyminutes
+  url: https://github.com/adambard/learnxinyminutes-docs/pull/2181
+  published: true
+-
+  title: builtwithelm
+  url: https://github.com/elm-community/builtwithelm/pull/56
+  published: true
+-
+  title: awesome-elm
+  url: https://github.com/isRuslan/awesome-elm/pull/78/files
+  published: true
+-
+  title: elm-new
+  url: https://github.com/simonewebdesign/elm-new/pull/12
+  published: true
+-
+  title: heroku-buildpack-elixir
+  url: https://github.com/HashNuke/heroku-buildpack-elixir/pull/110/files
+  published: true
+-
+  title: hexpm
+  url: https://github.com/hexpm/hexpm/pull/507
+  published: true
+-
+  title: rust-www
+  url: https://github.com/rust-lang/rust-www/pull/838
+  published: true
