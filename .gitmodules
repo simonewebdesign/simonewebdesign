@@ -14,3 +14,7 @@
   path = source/hire/me
   url = https://simonewebdesign:ksSR7vMdPyaGNBvAjKts@bitbucket.org/simonewebdesign/cv.git
   branch = prod
+[submodule "source/games/game-of-life"]
+  path = source/games/game-of-life
+  url = https://github.com/simonewebdesign/game-of-life.git
+  branch = prod
