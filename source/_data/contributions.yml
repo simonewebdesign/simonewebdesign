@@ -7,7 +7,7 @@
   title: elixir
   url: https://github.com/elixir-lang/elixir/pull/5178
   repo_url: https://github.com/elixir-lang/elixir
-  published: true
+  published: false
 -
   title: bootstrap
   url: https://github.com/twbs/bootstrap/pull/18621
@@ -20,7 +20,7 @@
 -
   title: learnxinyminutes
   url: https://github.com/adambard/learnxinyminutes-docs/pull/2181
-  published: true
+  published: false
 -
   title: builtwithelm
   url: https://github.com/elm-community/builtwithelm/pull/56
@@ -28,20 +28,20 @@
 -
   title: awesome-elm
   url: https://github.com/isRuslan/awesome-elm/pull/78/files
-  published: true
+  published: false
 -
   title: elm-new
   url: https://github.com/simonewebdesign/elm-new/pull/12
-  published: true
+  published: false
 -
   title: heroku-buildpack-elixir
   url: https://github.com/HashNuke/heroku-buildpack-elixir/pull/110/files
-  published: true
+  published: false
 -
   title: hexpm
   url: https://github.com/hexpm/hexpm/pull/507
-  published: true
+  published: false
 -
   title: rust-www
   url: https://github.com/rust-lang/rust-www/pull/838
-  published: true
+  published: false
