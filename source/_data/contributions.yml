@@ -1,5 +1,5 @@
 -
-  title: react
+  title: facebook/react
   url: https://github.com/facebook/react/pull/5411
   repo_url: https://github.com/facebook/react
   published: true
@@ -9,12 +9,12 @@
   repo_url: https://github.com/elixir-lang/elixir
   published: false
 -
-  title: bootstrap
+  title: twbs/bootstrap
   url: https://github.com/twbs/bootstrap/pull/18621
   repo_url: https://github.com/twbs/bootstrap
   published: true
 -
-  title: html5please
+  title: h5bp/html5please
   url: https://github.com/h5bp/html5please/pull/364
   published: true
 -
@@ -22,7 +22,7 @@
   url: https://github.com/adambard/learnxinyminutes-docs/pull/2181
   published: false
 -
-  title: builtwithelm
+  title: elm-community/builtwithelm
   url: https://github.com/elm-community/builtwithelm/pull/56
   published: true
 -

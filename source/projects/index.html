@@ -1,10 +1,13 @@
 ---
 layout: page
 title: Open Source Projects
+description: "A selection of cool projects I've worked on."
 comments: false
 footer: false
 sidebar: false
 ---
+
+Here's a selection of cool projects I've worked on.
 
 <section class="projects">
 {% for proj in site.data.projects %}
@@ -16,8 +19,8 @@ sidebar: false
 {% endfor %}
 </section>
 
-<section class="contributions">
-<h1>Notable contributions on GitHub</h1>
+<h2>Notable contributions on GitHub</h2>
+<ul class="contributions">
 {% for contrib in site.data.contributions %}
   {% if contrib.published %}
     {% capture title %} {{contrib.title}} {% endcapture %}
@@ -27,4 +30,4 @@ sidebar: false
     {% include contribution.html %}
   {% endif %}
 {% endfor %}
-</section>
+</ul>
