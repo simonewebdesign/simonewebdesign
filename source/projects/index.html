@@ -15,3 +15,15 @@ sidebar: false
   {% include project.html %}
 {% endfor %}
 </section>
+
+<section class="projects">
+{% for contrib in site.data.contributions %}
+  {% if contrib.published %}
+    {% capture title %} {{contrib.title}} {% endcapture %}
+    {% capture url %} {{contrib.url}} {% endcapture %}
+    {% capture description %} {{contrib.description}} {% endcapture %}
+
+    {% include contribution.html %}
+  {% endif %}
+{% endfor %}
+</section>
