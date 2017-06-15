@@ -1,12 +1,16 @@
 [submodule "source/demo/html5editor"]
-	path = source/demo/html5editor
-	url = https://github.com/simonewebdesign/html5editor.git
+  path = source/demo/html5editor
+  url = https://github.com/simonewebdesign/html5editor.git
+  branch = prod
 [submodule "source/games/pong"]
-	path = source/games/pong
-	url = https://github.com/dudeOMG/pong.git
+  path = source/games/pong
+  url = https://github.com/dudeOMG/pong.git
+  branch = prod
 [submodule "source/demo/elm"]
-	path = source/demo/elm
-	url = https://github.com/simonewebdesign/elm-double-folding-pattern.git
+  path = source/demo/elm
+  url = https://github.com/simonewebdesign/elm-double-folding-pattern.git
+  branch = prod
 [submodule "source/hire/me"]
-	path = source/hire/me
-	url = https://simonewebdesign:ksSR7vMdPyaGNBvAjKts@bitbucket.org/simonewebdesign/cv.git
+  path = source/hire/me
+  url = https://simonewebdesign:ksSR7vMdPyaGNBvAjKts@bitbucket.org/simonewebdesign/cv.git
+  branch = prod
