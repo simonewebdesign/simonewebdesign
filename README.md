@@ -42,6 +42,20 @@ If you plan on deploying:
 - **Be careful to download and initialise all the git modules**!!!
 - You'll need to install heroku.
 
+### Getting the submodules
+
+Run: `git submodule update --init --recursive --remote`
+
+If you already have submodules and just want to update them to the latest, remove `--init` from the above command.
+
+By the way, remember that you set up a `prod` branch on each of these remotes. That's the branch that will ultimately be shipped to production. If you want to make changes, you should:
+
+1. checkout master
+2. make the changes
+3. push the changes
+4. checkout prod
+5. `git rebase origin/master`
+
 
 ## Troubleshooting
 
