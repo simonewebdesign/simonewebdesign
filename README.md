@@ -37,11 +37,6 @@ Then run:
 
 Hopefully that should be it. You should now be able to see the website on localhost:4000.
 
-If you plan on deploying:
-
-- **Be careful to download and initialise all the git modules**!!!
-- You'll need to install heroku.
-
 ### Getting the submodules
 
 Run: `git submodule update --init --recursive --remote`
@@ -55,6 +50,14 @@ By the way, remember that you set up a `prod` branch on each of these remotes. T
 3. push the changes
 4. checkout prod
 5. `git rebase origin/master`
+
+### Preparing for the first deploy
+
+- **Ensure that you have downloaded and initialised correctly all the git modules before proceeding!**
+- Install the Heroku toolbelt
+- `heroku login`
+- `git remote add heroku https://git.heroku.com/simo.git`
+- `rake gen_deploy_heroku`
 
 
 ## Troubleshooting
