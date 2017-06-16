@@ -1,8 +1,8 @@
 source "https://rubygems.org"
-ruby '2.0.0'
+ruby '2.2.7'
 
 group :development do
-  gem 'rake', '~> 10.0'
+  gem 'rake', '~> 10.4'
   gem 'jekyll', '~> 2.0'
   gem 'jekyll-page-hooks', '~> 1.2'
   gem 'jekyll-date-format', '~> 1.0'
