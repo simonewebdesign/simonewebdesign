@@ -1,47 +1,65 @@
 -
   title: facebook/react
-  url: https://github.com/facebook/react/pull/5411
+  url: https://github.com/facebook/react/pull/5411/files
   repo_url: https://github.com/facebook/react
   published: true
 -
   title: elixir
-  url: https://github.com/elixir-lang/elixir/pull/5178
+  url: https://github.com/elixir-lang/elixir/pull/6392/files
   repo_url: https://github.com/elixir-lang/elixir
   published: false
 -
   title: twbs/bootstrap
-  url: https://github.com/twbs/bootstrap/pull/18621
+  url: https://github.com/twbs/bootstrap/pull/18621/files
   repo_url: https://github.com/twbs/bootstrap
   published: true
 -
+  title: imathis/octopress
+  url: https://github.com/imathis/octopress/pull/1586/files
+  repo_url: https://github.com/imathis/octopress
+  published: true
+-
   title: h5bp/html5please
-  url: https://github.com/h5bp/html5please/pull/364
+  url: https://github.com/h5bp/html5please/pull/364/files
+  repo_url: https://github.com/h5bp/html5please
   published: true
 -
   title: learnxinyminutes
-  url: https://github.com/adambard/learnxinyminutes-docs/pull/2181
+  url: https://github.com/adambard/learnxinyminutes-docs/pull/2181/files
+  repo_url: https://github.com/adambard/learnxinyminutes-docs
   published: false
 -
   title: elm-community/builtwithelm
-  url: https://github.com/elm-community/builtwithelm/pull/56
+  url: https://github.com/elm-community/builtwithelm/pull/56/files
+  repo_url: https://github.com/elm-community/builtwithelm
   published: true
 -
   title: awesome-elm
   url: https://github.com/isRuslan/awesome-elm/pull/78/files
+  repo_url: https://github.com/isRuslan/awesome-elm/pull
   published: false
 -
   title: elm-new
-  url: https://github.com/simonewebdesign/elm-new/pull/12
+  url: https://github.com/simonewebdesign/elm-new/pull/12/files
+  repo_url: https://github.com/simonewebdesign/elm-new
   published: false
 -
   title: heroku-buildpack-elixir
   url: https://github.com/HashNuke/heroku-buildpack-elixir/pull/110/files
+  repo_url: https://github.com/HashNuke/heroku-buildpack-elixir/pull
   published: false
 -
   title: hexpm
-  url: https://github.com/hexpm/hexpm/pull/507
+  url: https://github.com/hexpm/hexpm/pull/507/files
+  repo_url: https://github.com/hexpm/hexpm
   published: false
 -
   title: rust-www
-  url: https://github.com/rust-lang/rust-www/pull/838
+  url: https://github.com/rust-lang/rust-www/pull/838/files
+  repo_url: https://github.com/rust-lang/rust-www
   published: false
+-
+  title: badges/shields
+  url: https://github.com/badges/shields/pull/1039/files
+  repo_url: https://github.com/badges/shields
+  published: true
