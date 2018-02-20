@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Don't stop learning"
-date: 2018-02-20 20:21:27 +0000
+date: 2018-02-21
 comments: true
 categories:
   - ruby
