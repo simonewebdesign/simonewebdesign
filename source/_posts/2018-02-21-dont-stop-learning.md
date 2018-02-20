@@ -94,7 +94,7 @@ Ok, don't be mean. I know that's probably shitty code, but it was my own solutio
 
 Now, when you finish a challenge successfully, you're given access to the forum, where other programmers post their own solutions in many different languages.
 
-That's where I first discovered [Ruby](https://www.ruby-lang.org/).
+That's where I first discovered [Ruby](/ruby-is-magic/).
 
 I was reading the thread about the problem I just solved, when I stumbled across this Ruby solution:
 
