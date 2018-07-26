@@ -18,4 +18,5 @@ group :development do
   gem 'therubyracer', '~> 0.12.3'
 end
 
+gem 'puma'
 gem 'sinatra', '~> 1.4.2'
