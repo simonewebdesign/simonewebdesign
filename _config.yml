@@ -30,6 +30,7 @@ root: /
 permalink: /:title/
 source: source
 destination: public
+exclude: [hire]
 plugins: plugins
 code_dir: downloads/code
 category_dir: categories
