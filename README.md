@@ -69,3 +69,8 @@ You have to redeploy from master.
 ### CSS changes work locally but not in production
 
 It must be the cache: wipe it out from cloudflare.
+
+### Pygments (code coloring) not working
+
+You may need Python 2 instead of 3. If you have it in your $PATH, the error should go away.
+See: https://philippe.bourgau.net/how-i-fixed-the-unknown-language-pygments-error-in-octopress/
