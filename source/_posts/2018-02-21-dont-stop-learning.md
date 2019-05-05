@@ -109,7 +109,7 @@ m = 0
 puts m
 ```
 
-And I was like, "holy shit, seriously? Only 8 lines of code?".
+And I was like, "wow, seriously? Only 8 lines of code?".
 
 I couldn't believe my eyes. I was staring at something marvelous; some beauty that I never came across before.
 
@@ -119,7 +119,7 @@ It was love at first sight. I started reading about this amazing language, about
 
 ---
 
-Anyway, that's just part of my story about becoming a better programmer. I'm not sure what the point is, I just felt like writing it down. But if, like me, you're one of those people that need some 'takeaway' from a story, I guess it should be this:
+Anyway, that's just part of my story about becoming a better programmer. I'm not sure what the point is, I just felt like writing it down. But if, like me, you're one of those people that need some 'takeaway' from a story, I guess it §uld be this:
 
 > Just don't stop learning, ever.
 
