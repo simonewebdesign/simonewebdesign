@@ -1,0 +1,11 @@
+<script>
+const
+    img = document.querySelector('.doge'),
+    menu = document.querySelector('.menu')
+
+img.addEventListener('mousedown', function (event) {
+    const { offsetX, offsetY } = event;
+    menu.style.top = offsetY + 'px';
+    menu.style.left = offsetX + 'px';
+});
+</script>
