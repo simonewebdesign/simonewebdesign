@@ -1,0 +1,158 @@
+---
+layout: post
+title: A pure CSS onclick context menu
+date: 2019-05-13
+comments: true
+categories:
+  - javascript
+  - css
+  - html
+---
+
+<p>Context menus are one of those very useful UI widgets that still haven't reached the HTML spec. <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/contextmenu" rel="external nofollow">There have been attempts</a>, but for now everyone tends to make its own custom implementation.</p>
+
+<p>Especially with the advent of React, the tendency is to write a custom menu component that uses JavaScript to open/close itself, perhaps by using an invisible overlay to detect clicks outside the menu and close it accordingly. This works fine in practice, however it doesn't have to be so complicated. If you need a simple <strong>dropdown menu</strong> that:</p>
+
+<ul>
+<li>Has no dependencies;
+<li>Can be triggered with a click/tap on any element;
+<li>Is fully cross-browser;
+<li>Doesn't need JavaScript!
+</ul>
+
+<p>Then look no further. It's much simpler than you think!</p>
+
+<h2>An example</h2>
+
+Try clicking this button: <button>&#9776;</button><nav class="menu">
+        <ul>
+            <li>
+                <button onclick="alert('Hello there!')">Display Greeting</button>
+            </li>
+            <li>
+                <button onclick="print()">Print This Page</button>
+            </li>
+        </ul>
+    </nav>
+
+<p>This is done in <strong>pure HTML and CSS</strong>; the JavaScript is there just to add functionality. Source code below.</p>
+
+<h3>The HTML</h3>
+
+```html
+<button>☰</button>
+<nav class="menu">
+  <ul>
+    <li>
+      <button onclick="alert('Hello there!')">
+        Display Greeting
+      </button>
+    </li>
+    <li>
+      <button onclick="print()">
+        Print This Page
+      </button>
+    </li>
+  </ul>
+</nav>
+```
+
+<h3>The CSS</h3>
+
+```css
+.menu {
+    visibility: hidden;
+}
+
+button + .menu:active,
+button:focus + .menu {
+    visibility: visible;
+}
+```
+
+<p>That's the trick: we hide the menu in CSS initially, then show it when the button gets focused <em>and</em> while we're clicking on the menu itself. This is necessary so that the click actually gets registered. That's it! <strong>No JS trickery involved.</strong></p>
+
+<p>You can attach event listeners to the menu items, e.g. using <code>onclick</code> or <code>document.addEventListener</code> and they'll work as usual.</p>
+
+<p>Obviously the menu can be opened only by elements that can receive focus, such as buttons. So what about other non-interactive elements? Can we make them focusable too? <strong>The answer is yes!</strong></p>
+
+<h2>A more complicated example</h2>
+
+<p>We want to <strong>display a context menu</strong> when clicking on the following image: <figure class="doge-demo" tabindex="-1">
+  <img class="doge" src="/images/doge.png" width="300" height="300" alt="doge meme" title="Click me to open the menu..." />
+  <figcaption>wow, this image is clickable!</figcaption>
+  <nav class="menu">
+    <ul>
+      <li>
+        <button onclick="alert('Button clicked!')">Open Image in New Tab</button>
+      </li>
+      <li>
+        <button onclick="console.log(1)">Save Image As...</button>
+      </li>
+      <li>
+        <button>Copy Image Address</button>
+      </li>
+    </ul>
+  </nav>
+</figure></p>
+
+<h3>The HTML</h3>
+
+```html
+<figure tabindex="-1">
+  <img src="/images/doge.png" />
+
+  <nav class="menu">
+    <ul>
+      <li>
+        <button>Open Image in New Tab</button>
+      </li>
+      <li>
+        <button>Save Image As...</button>
+      </li>
+      <li>
+        <button>Copy Image Address</button>
+      </li>
+    </ul>
+  </nav>
+</figure>
+```
+
+<p>The trick here was to add <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex" rel="external nofollow"><code>tabindex</code></a>. This makes the element focusable, so that it can open the menu on click. Note that if the clickable element is a <code>&lt;button&gt;</code> or other <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories#Interactive_content" rel="external nofollow">interactive content</a> (i.e. any focusable element), then you don't even need this!</ >
+
+<p>I've used a <code>&lt;figure&gt;</code>, but you can use any element you like. Just add <code>tabindex="-1"</code> to make it focusable, if it isn't already. You can place the menu anywhere you want in the HTML, as long as you're able to target it with a CSS selector. Just try not to put a button in a button as that's invalid HTML, although technically it will still work.</p>
+
+<h3>The CSS</h3>
+
+```css
+.menu {
+    visibility: hidden;
+}
+
+figure:active .menu,
+figure:focus .menu {
+    visibility: visible;
+}
+```
+
+<h3>How do I make the menu appear next to the mouse cursor?</h3>
+
+<p>You'll need JavaScript, but it's entirely up to you whether you want to do this. Alternatively you could add <code>position: absolute</code> to the menu and <strong>just make it appear below (or next to) the element you clicked</strong> — no need for JS in this case! Anyway, this did the trick for me:</p>
+
+```javascript
+const img = document.querySelector('.doge');
+const menu = document.querySelector('.menu');
+
+img.addEventListener('mousedown', ({ offsetX, offsetY }) => {
+    menu.style.top = offsetY + 'px';
+    menu.style.left = offsetX + 'px';
+});
+```
+
+<h3>What about browser support?</h3>
+
+<p>It may not work in some very old browsers, so make sure to test it in the browsers you need to support. <a href="" rel="external nofollow">This MDN page</a> has some info about what happens to the focus of a button when being clicked/tapped on different platforms. I did some tests myself and it seems to work well everywhere, including mobile browsers.</p>
+
+<p>And that's it! I hope you found this useful. If you spot any issues, please do let me know by commenting below!</p>
+
+{% include htmlsnippets/pure-css-onclick-context-menu.html %}
