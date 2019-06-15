@@ -1,0 +1,10 @@
+{
+  "name": "Simone Web Design",
+  "short_name": "SimoneWebDesign",
+  "theme_color": "#555555",
+  "background_color": "#f6f6f6",
+  "display": "minimal-ui",
+  "scope": "/",
+  "start_url": "/",
+  "description": "A blog about software development"
+}
