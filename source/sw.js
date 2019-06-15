@@ -11,8 +11,6 @@ var preLoad = function(){
       "/archives/",
       "/projects/",
       "/about/",
-      "/blog/",
-      "/blog",
       "/offline.html",
     ]);
   });
