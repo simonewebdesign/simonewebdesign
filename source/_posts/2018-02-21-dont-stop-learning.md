@@ -119,7 +119,7 @@ It was love at first sight. I started reading about this amazing language, about
 
 ---
 
-Anyway, that's just part of my story about becoming a better programmer. I'm not sure what the point is, I just felt like writing it down. But if, like me, you're one of those people that need some 'takeaway' from a story, I guess it §uld be this:
+Anyway, that's just part of my story about becoming a better programmer. I'm not sure what the point is, I just felt like writing it down. But if, like me, you're one of those people that need some 'takeaway' from a story, I guess it should be this:
 
 > Just don't stop learning, ever.
 
