@@ -1,0 +1,19 @@
+---
+layout: page
+title: Notable contributions on GitHub
+description: "A selection of open source contributions I made on GitHub."
+comments: false
+sidebar: false
+---
+
+<ul class="contributions">
+{% for contrib in site.data.contributions %}
+  {% if contrib.published %}
+    {% capture title %} {{contrib.title}} {% endcapture %}
+    {% capture url %} {{contrib.url}} {% endcapture %}
+    {% capture description %} {{contrib.description}} {% endcapture %}
+
+    {% include contribution.html %}
+  {% endif %}
+{% endfor %}
+</ul>
