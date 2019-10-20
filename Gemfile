@@ -3,7 +3,7 @@ ruby '2.6.5'
 
 group :development do
   gem 'rake', '~> 10.4'
-  gem 'jekyll', '2.3.0'
+  gem 'jekyll', '~> 2.0'
   gem 'jekyll-page-hooks', '~> 1.2'
   gem 'octopress-date-format'
   gem 'octopress-hooks'
