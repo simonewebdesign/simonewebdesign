@@ -191,3 +191,8 @@ article blockquote {
   word-wrap: break-word;
 }
 
+/* same styling as <sup> */
+.date-suffix {
+  vertical-align: super;
+  font-size: smaller;
+}
