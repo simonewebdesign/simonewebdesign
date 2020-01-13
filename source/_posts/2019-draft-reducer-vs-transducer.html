@@ -1,0 +1,25 @@
+published: false
+
+---
+
+# Reducer vs transducer: what's the difference?
+
+You might have heard of those terms, but never really understood what they actually mean.
+
+Let's start from the basics.
+
+## What is reduce?
+
+Reduce, also known as `foldl` (fold from the left), accumulate, inject, etc... is a function that takes two parameters. The first one can be any data structure (i.e. a number, an array, an object... anything really). The second one is another function that also takes two parameters. This second function is called a *reducer*.
+
+So, in terms of pseudo code:
+
+```
+const numbers = [1, 2, 3]
+
+const reduce = numbers, (a, b) => { ... }
+```
+
+Now, let's talk about this `(a, b) => { ... }` part. This is the reducer.
+
+
