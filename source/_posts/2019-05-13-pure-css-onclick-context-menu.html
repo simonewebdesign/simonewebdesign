@@ -79,7 +79,10 @@ button:focus + .menu {
 <h2>A more complicated example</h2>
 
 <p>We want to <strong>display a context menu</strong> when clicking on the following image: <figure class="doge-demo" tabindex="-1">
-  <img class="doge" src="/images/doge.png" width="300" height="300" alt="doge meme" title="Click me to open the menu..." />
+  <picture class="doge">
+    <source type="image/webp" srcset="/images/doge.webp">
+    <img src="/images/doge.png" width="300" height="300" alt="doge meme" title="Click me to open the menu..." />
+  </picture>
   <figcaption>wow, this image is clickable!</figcaption>
   <nav class="menu">
     <ul>
