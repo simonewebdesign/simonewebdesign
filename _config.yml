@@ -87,8 +87,5 @@ googleplus_hidden: true
 disqus_short_name: simonewebdesign
 disqus_show_comment_count: true
 
-# Google Analytics
-google_analytics_tracking_id: UA-34329833-1
-
 # Facebook Like
 facebook_like: false
