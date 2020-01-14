@@ -6,14 +6,14 @@
       <div class="logo" role="banner">
         <h1><a href="{{ root_url }}/">{{ site.title }}</a></h1>
       </div>
-      <nav>{% include navigation.html %}</nav>
+      <nav role="navigation">{% include navigation.html %}</nav>
     </header>
     <div class="content">
       {{ content | expand_urls: root_url }}
     </div>
 
 {% unless page.footer == false %}
-    <footer>{% include footer.html %}</footer>
+    <footer role="contentinfo">{% include footer.html %}</footer>
     {% include after_footer.html %}
 {% endunless %}
   </div>
