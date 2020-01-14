@@ -97,7 +97,7 @@ button:focus + .menu {
       </li>
     </ul>
   </nav>
-</figure></p>
+</figure>
 
 <h3>The HTML</h3>
 
@@ -121,7 +121,7 @@ button:focus + .menu {
 </figure>
 ```
 
-<p>The trick here was to add <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex" rel="external nofollow"><code>tabindex</code></a>. This makes the element focusable, so that it can open the menu on click. Note that if the clickable element is a <code>&lt;button&gt;</code> or other <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories#Interactive_content" rel="external nofollow">interactive content</a> (i.e. any focusable element), then you don't even need this!</ >
+<p>The trick here was to add <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex" rel="external nofollow"><code>tabindex</code></a>. This makes the element focusable, so that it can open the menu on click. Note that if the clickable element is a <code>&lt;button&gt;</code> or other <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories#Interactive_content" rel="external nofollow">interactive content</a> (i.e. any focusable element), then you don't even need this!</p>
 
 <p>I've used a <code>&lt;figure&gt;</code>, but you can use any element you like. Just add <code>tabindex="-1"</code> to make it focusable, if it isn't already. You can place the menu anywhere you want in the HTML, as long as you're able to target it with a CSS selector. Just try not to put a button in a button as that's invalid HTML, although technically it will still work.</p>
 
