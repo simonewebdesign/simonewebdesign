@@ -12,6 +12,7 @@ var preLoad = function(){
       "/projects/",
       "/about/",
       "/offline.html",
+      "/404.html",
     ]);
   });
 };
@@ -47,11 +48,15 @@ var addToCache = function(request){
 var returnFromCache = function(request){
   return caches.open("offline").then(function (cache) {
     return cache.match(request).then(function (matching) {
-     if(!matching || matching.status == 404) {
-       return cache.match("offline.html");
-     } else {
-       return matching;
-     }
+      if(!matching || matching.status == 404) {
+        if (navigator.onLine) {
+          return cache.match("404.html");
+        } else {
+          return cache.match("offline.html");
+        }
+      } else {
+        return matching;
+      }
     });
   });
 };
