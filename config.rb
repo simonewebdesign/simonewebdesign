@@ -11,7 +11,7 @@ http_fonts_path = "/fonts"
 css_dir = "public/stylesheets"
 
 # Local development paths
-sass_dir = "sass"
+sass_dir = "scss"
 images_dir = "source/images"
 fonts_dir = "source/fonts"
 
