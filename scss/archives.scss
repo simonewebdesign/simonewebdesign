@@ -30,10 +30,7 @@
       display: inline-block;
     }
   }
-  a.category, time {
-    @extend .sans;
-    color: #aaa;
-  }
+
   color: #aaa;
   .entry-content { display: none; }
   time {
