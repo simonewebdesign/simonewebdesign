@@ -22,6 +22,16 @@
 
   <link href="{{ root_url }}/favicon.png" rel="icon">
   <link href="{{ root_url }}/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css">
+  {% assign uri = page.url %}
+  {% case uri %}
+    {% when '/projects/index.html' %}
+  <link href="{{ root_url }}/stylesheets/projects.css" media="screen" rel="stylesheet" type="text/css">
+    {% when '/archives/index.html' %}
+  <link href="{{ root_url }}/stylesheets/archives.css" media="screen" rel="stylesheet" type="text/css">
+    {% when '/about/index.html' %}
+  <link href="{{ root_url }}/stylesheets/about.css" media="screen" rel="stylesheet" type="text/css">
+    {% else %}
+  {% endcase %}
   <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">
   {% include custom/head.html %}
 </head>

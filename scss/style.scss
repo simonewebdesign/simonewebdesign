@@ -1,0 +1,70 @@
+/* To be used just as a reference for now, as IE11 and some mobile browsers don't support this.
+:root {
+    --bg: #f6f6f6;
+    --primary: #333;
+    --border: #555;
+}
+*/
+$border-color: #555;
+
+// $blockquote: $type-border !default;
+// $sans: "PT Sans", "Helvetica Neue", Arial, sans-serif !default;
+// $serif: "PT Serif", Georgia, Times, "Times New Roman", serif;
+// $mono: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace !default;
+// $heading-font-family: "PT Serif", "Georgia", "Helvetica Neue", Arial, sans-serif !default;
+// $header-title-font-family: $heading-font-family !default;
+// $header-subtitle-font-family: $heading-font-family !default;
+
+html {
+    text-rendering: optimizelegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    background: #f6f6f6 url('/images/noise.png');
+    font-family: "PT Serif", Georgia, Times, "Times New Roman", serif;
+    color: #333;
+    border-top: 3px solid $border-color;
+}
+
+time {
+    font-family: "PT Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: 85%;
+}
+
+body > div {
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+}
+
+header a {
+    color: inherit;
+    text-decoration: none;
+}
+
+p {
+    line-height: 1.5;
+}
+
+li + li {
+    margin-top: 0.5rem;
+}
+
+@media screen and (min-width: 48rem) { /* 720p */
+    html {
+        font-size: 115%;
+    }
+}
+
+@media screen and (min-width: 100rem) { /* 1600p */
+    body > div {
+        max-width: 48rem;
+    }
+}
+
+@import "banner";
+@import "navigation";
+@import "article";
+@import "code";
