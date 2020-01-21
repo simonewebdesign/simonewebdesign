@@ -1,0 +1,16 @@
+[role="navigation"] {
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+    li {
+        display: inline-block;
+
+        + li {
+            margin-left: 1rem;
+        }
+    }
+    a {
+        color: #666;
+    }
+}
