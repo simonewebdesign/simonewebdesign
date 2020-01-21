@@ -39,6 +39,7 @@ pre {
   border: 1px solid $pre-border;
   line-height: 1.45em;
   font-size: 13px;
+  margin-top: 0;
   margin-bottom: 2.1em;
   padding: .8em 1em;
   color: $pre-color;
@@ -175,6 +176,8 @@ figure.code {
   background: none;
   padding: 0;
   border: 0;
+  margin-left: 0;
+  margin-right: 0;
   margin-bottom: 1.5em;
   pre { margin-bottom: 0; }
   figcaption {
