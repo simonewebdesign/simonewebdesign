@@ -5,8 +5,10 @@
     --border: #555;
 }
 */
+
 $border-color: #555;
 
+@import "variables";
 // $blockquote: $type-border !default;
 // $sans: "PT Sans", "Helvetica Neue", Arial, sans-serif !default;
 // $serif: "PT Serif", Georgia, Times, "Times New Roman", serif;
@@ -28,6 +30,7 @@ html {
 time {
     font-family: "PT Sans", "Helvetica Neue", Arial, sans-serif;
     font-size: 85%;
+    color: #aaa;
 }
 
 body > div {
@@ -62,6 +65,11 @@ li + li {
     body > div {
         max-width: 48rem;
     }
+}
+
+@import "compass/typography/links/link-colors";
+a {
+    @include link-colors($link-color, $hover: $link-color-hover, $focus: $link-color-hover, $visited: $link-color-visited, $active: $link-color-active);
 }
 
 @import "banner";
