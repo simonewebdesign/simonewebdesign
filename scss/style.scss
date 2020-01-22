@@ -47,6 +47,10 @@ header a {
     text-decoration: none;
 }
 
+h1 a {
+    color: inherit !important; /* important needed because pseudo-classes (:hover) have specificity of 10 */
+}
+
 p {
     line-height: 1.5;
 }
