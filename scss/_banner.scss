@@ -1,3 +1,4 @@
+// The Logo
 [role="banner"] {
     color: $border-color;
     font-weight: normal;
@@ -5,5 +6,9 @@
 
     h1 {
         font-weight: inherit;
+    }
+
+    a {
+        color: inherit;
     }
 }
