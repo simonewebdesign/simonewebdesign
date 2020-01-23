@@ -68,6 +68,14 @@ li + li {
     margin-top: 0.5rem;
 }
 
+blockquote {
+    font-style: italic;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    padding-left: 1em;
+    border-left: 4px solid rgba(170, 170, 170, 0.5);
+}
+
 @media screen and (min-width: 48rem) { /* 720p */
     html {
         font-size: 115%;
