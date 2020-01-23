@@ -1,0 +1,107 @@
+.entry-content h2 code {
+    background: rgba(0, 0, 0, 0.05);
+    padding: 0.1rem 0.2rem;
+    border-radius: 4px;
+}
+
+.entry-content .doge-demo {
+    position: relative;
+    width: 306px;
+    margin: 0 auto;
+    outline: none;
+
+    &:active,
+    &:focus {
+        .menu {
+            visibility: visible;
+        }
+    }
+
+    img {
+        margin-bottom: 0.5rem !important;
+        border: 2px solid transparent;
+        outline: 1px solid rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+
+        &:active,
+        &:focus {
+            border: 2px solid green;
+        }
+    }
+
+    figcaption {
+        text-align: center;
+        background: rgba(0, 0, 0, 0.05);
+        width: 306px;
+        margin: 0 auto;
+        margin-top: -11px;
+        margin-left: -1px;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.96);
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 14rem;
+    }
+}
+
+.entry-content button + .menu {
+    display: inline-block;
+}
+
+.entry-content .menu {
+    visibility: hidden;
+    background: white;
+    border-radius: 4px;
+    border: 1px solid #dedede;
+
+    > ul {
+        list-style: none;
+        margin: 0.4rem 0;
+
+        > li {
+            padding: 0;
+
+            > button {
+                padding: 0.2rem 0.8rem;
+                width: 100%;
+                font-size: 1rem;
+                -webkit-appearance: button;
+                -moz-appearance: button;
+                text-transform: none;
+                font-family: inherit;
+                font-size: 100%;
+                line-height: 1.15;
+                margin: 0;
+                overflow: visible;
+                border: 0;
+                text-align: left;
+                font-family: Arial, Verdana, sans-serif;
+                outline: none;
+                cursor: pointer;
+                background: transparent;
+
+                &:hover {
+                    background: rgba(0, 0, 0, 0.04);
+                }
+
+                &:active,
+                &:focus {
+                    background: rgba(0, 0, 0, 0.08);
+                }
+            }
+        }
+    }
+}
+
+.entry-content button + .menu:active {
+    visibility: visible;
+}
+
+.entry-content button:focus + .menu {
+    visibility: visible;
+}

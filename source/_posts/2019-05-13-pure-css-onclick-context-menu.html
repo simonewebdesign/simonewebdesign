@@ -8,6 +8,12 @@ categories:
   - css
   - html
 ---
+{% capture scss_file %}
+  {% include scss/2019-05-13-pure-css-onclick-context-menu.scss %}
+{% endcapture %}
+<style>
+{{ scss_file | scssify }}
+</style>
 
 <p>Context menus are one of those very useful UI widgets that still haven't reached the HTML spec. <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/contextmenu" rel="external nofollow">There have been attempts</a>, but for now everyone tends to make its own custom implementation.</p>
 
@@ -158,4 +164,6 @@ img.addEventListener('mousedown', ({ offsetX, offsetY }) => {
 
 <p>And that's it! I hope you found this useful. If you spot any issues, please do let me know by commenting below!</p>
 
-{% include htmlsnippets/pure-css-onclick-context-menu.html %}
+<script>
+{% include js/2019-05-05-pure-css-onclick-context-menu.js %}
+</script>
