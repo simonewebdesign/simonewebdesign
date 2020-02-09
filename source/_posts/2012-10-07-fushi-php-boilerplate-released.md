@@ -20,11 +20,11 @@ tags:
 </p>
 
 <p>
-  It has a lot of interesting <a href="https://github.com/simonewebdesign/Fushi#features" title="Features of Fushi PHP boilerplate" target="_blank">features</a>: it comes with a simple but powerful <a href="http://en.wikipedia.org/wiki/Template_system" title="Template System on Wikipedia" target="_blank" rel="nofollow">template system</a>, as well as a secure and <a href="http://en.wikipedia.org/wiki/Object-oriented_programming" title="Object Oriented Programming on Wikipedia" target="_blank" rel="nofollow">object-oriented</a> backend engine. It&#8217;s also studied to be user friendly and <abbr title="Search Engine Optimization">SEO</abbr> friendly. It&#8217;s based on the popular <a href="http://html5boilerplate.com/" title="HTML5 Boilerplate" target="_blank">HTML5 Boilerplate</a>.
+  It has a lot of interesting <a href="https://github.com/simonewebdesign/Fushi#features" title="Features of Fushi PHP boilerplate" target="_blank">features</a>: it comes with a simple but powerful <a href="http://en.wikipedia.org/wiki/Template_system" title="Template System on Wikipedia" target="_blank" rel="external nofollow">template system</a>, as well as a secure and <a href="http://en.wikipedia.org/wiki/Object-oriented_programming" title="Object Oriented Programming on Wikipedia" target="_blank" rel="external nofollow">object-oriented</a> backend engine. It&#8217;s also studied to be user friendly and <abbr title="Search Engine Optimization">SEO</abbr> friendly. It&#8217;s based on the popular <a href="http://html5boilerplate.com/" title="HTML5 Boilerplate" target="_blank">HTML5 Boilerplate</a>.
 </p>
 
 <p>
-  I&#8217;ve been used it for some of my projects since march 2012. I surely can&#8217;t say <a href="https://github.com/simonewebdesign/Fushi" title="Fushi PHP boilerplate on GitHub" target="_blank">Fushi</a> is versatile like <a href="http://www.smarty.net/" title="Smarty Template Engine" target="_blank" rel="nofollow">Smarty</a> or mature like <a href="http://codeigniter.com/" title="CodeIgniter - Open source PHP web application framework" target="_blank" rel="nofollow">CodeIgniter</a>; I&#8217;m not even sure on what <a href="https://en.wikipedia.org/wiki/Software_design_pattern" title="Software design pattern on Wikipedia" target="_blank" rel="nofollow">design pattern</a> it actually implements (<i>update:</i> found it: <a href="https://en.wikipedia.org/wiki/Front_Controller_pattern">Front Controller Pattern</a>). But I can say I successfully deployed some nice web applications based on <a href="https://github.com/simonewebdesign/Fushi" title="Fushi PHP boilerplate on GitHub" target="_blank">Fushi</a>, from the <a href="https://github.com/simonewebdesign/bluimmobiliareperugia.it" title="Blu Immobiliare Perugia on GitHub" target="_blank">real estate agency</a> to the <a rel="nofollow" href="https://github.com/simonewebdesign/antoniorossicomposer.com" title="Antonio Rossi Composer on GitHub" target="_blank">musician</a>&#8217;s website. This demonstrates that Fushi can be used in a large variety of projects, small and big.
+  I&#8217;ve been used it for some of my projects since march 2012. I surely can&#8217;t say <a href="https://github.com/simonewebdesign/Fushi" title="Fushi PHP boilerplate on GitHub" target="_blank">Fushi</a> is versatile like <a href="http://www.smarty.net/" title="Smarty Template Engine" target="_blank" rel="external nofollow">Smarty</a> or mature like <a href="http://codeigniter.com/" title="CodeIgniter - Open source PHP web application framework" target="_blank" rel="external nofollow">CodeIgniter</a>; I&#8217;m not even sure on what <a href="https://en.wikipedia.org/wiki/Software_design_pattern" title="Software design pattern on Wikipedia" target="_blank" rel="external nofollow">design pattern</a> it actually implements (<i>update:</i> found it: <a href="https://en.wikipedia.org/wiki/Front_Controller_pattern">Front Controller Pattern</a>). But I can say I successfully deployed some nice web applications based on <a href="https://github.com/simonewebdesign/Fushi" title="Fushi PHP boilerplate on GitHub" target="_blank">Fushi</a>, from the <a href="https://github.com/simonewebdesign/bluimmobiliareperugia.it" title="Blu Immobiliare Perugia on GitHub" target="_blank">real estate agency</a> to the <a rel="external nofollow" href="https://github.com/simonewebdesign/antoniorossicomposer.com" title="Antonio Rossi Composer on GitHub" target="_blank">musician</a>&#8217;s website. This demonstrates that Fushi can be used in a large variety of projects, small and big.
 </p>
 
 <p>
@@ -33,7 +33,7 @@ tags:
 
 <ul>
   <li>
-    <a href="https://github.com/simonewebdesign/Fushi/zipball/master" title="Download Fushi from GitHub" target="_blank" rel="nofollow">Direct Download</a> (latest stable version: v0.9.5, ~140 <abbr title="Kilobyte">KB</abbr>)
+    <a href="https://github.com/simonewebdesign/Fushi/zipball/master" title="Download Fushi from GitHub" target="_blank" rel="external nofollow">Direct Download</a> (latest stable version: v0.9.5, ~140 <abbr title="Kilobyte">KB</abbr>)
   </li>
   <li>
     <a href="https://github.com/simonewebdesign/Fushi#features" title="Features of Fushi PHP boilerplate" target="_blank">Features</a>
@@ -48,6 +48,6 @@ tags:
     <a href="https://github.com/simonewebdesign/Fushi#documentation" title="Documentation of Fushi PHP boilerplate" target="_blank">Documentation</a>
   </li>
   <li>
-    <a href="https://github.com/simonewebdesign/Fushi/commits/master/" title="Fushi Commits on GitHub" target="_blank" rel="nofollow">Changelog</a>
+    <a href="https://github.com/simonewebdesign/Fushi/commits/master/" title="Fushi Commits on GitHub" target="_blank" rel="external nofollow">Changelog</a>
   </li>
 </ul>

@@ -42,7 +42,7 @@ tags:
 </p>
 
 <p>
-  By the way, loading jQuery as a global variable is <em>not</em> really a good idea. Okay, you have <a href="http://stackoverflow.com/a/2866920/801544" target="_blank" rel="nofollow">namespaces</a>, <a href="http://api.jquery.com/jQuery.noConflict/" target="_blank" rel="nofollow">$.noConflict()</a> and <a href="http://benalman.com/news/2010/11/immediately-invoked-function-expression/" target="_blank">IIFEs</a> and whatever but &#8211; hey come on, do you really think you <em>need</em> all this stuff? We can do it better.
+  By the way, loading jQuery as a global variable is <em>not</em> really a good idea. Okay, you have <a href="http://stackoverflow.com/a/2866920/801544" target="_blank" rel="external nofollow">namespaces</a>, <a href="http://api.jquery.com/jQuery.noConflict/" target="_blank" rel="external nofollow">$.noConflict()</a> and <a href="http://benalman.com/news/2010/11/immediately-invoked-function-expression/" target="_blank">IIFEs</a> and whatever but &#8211; hey come on, do you really think you <em>need</em> all this stuff? We can do it better.
 </p>
 
 <h3>

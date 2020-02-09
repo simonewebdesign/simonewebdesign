@@ -44,7 +44,7 @@ var foo = $('#foo');
 </p>
 
 <p>
-  Well, let&#8217;s be honest: there&#8217;s not just one difference. These two <strong>functions</strong> will return a completely different <strong>object</strong>, so you can&#8217;t simply replace every <a href="https://developer.mozilla.org/en-US/docs/Web/API/document.getElementById" title="getElementById() documentation" target="_blank" rel="nofollow"><code>getElementById()</code></a> with <a href="http://api.jquery.com/jquery/" title="jQuery() documentation" target="_blank" rel="nofollow"><code>$('#foo')</code></a>. This will <em>break</em> your code.
+  Well, let&#8217;s be honest: there&#8217;s not just one difference. These two <strong>functions</strong> will return a completely different <strong>object</strong>, so you can&#8217;t simply replace every <a href="https://developer.mozilla.org/en-US/docs/Web/API/document.getElementById" title="getElementById() documentation" target="_blank" rel="external nofollow"><code>getElementById()</code></a> with <a href="http://api.jquery.com/jquery/" title="jQuery() documentation" target="_blank" rel="external nofollow"><code>$('#foo')</code></a>. This will <em>break</em> your code.
 </p>
 
 <p>

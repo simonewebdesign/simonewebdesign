@@ -25,15 +25,15 @@ tags:
 </h2>
 
 <p>
-  <a href="https://developer.apple.com/downloads/index.action" target="_blank" rel="nofollow">Download it from developer.apple.com</a> (you need an Apple ID).
+  <a href="https://developer.apple.com/downloads/index.action" target="_blank" rel="external nofollow">Download it from developer.apple.com</a> (you need an Apple ID).
 </p>
 
 <p>
-  As an alternative you can use <a href="https://github.com/kennethreitz/osx-gcc-installer" target="_blank" rel="nofollow">osx-gcc-installer</a> or install it via the Xcode <abbr title="Graphical User Interface">GUI</abbr>.
+  As an alternative you can use <a href="https://github.com/kennethreitz/osx-gcc-installer" target="_blank" rel="external nofollow">osx-gcc-installer</a> or install it via the Xcode <abbr title="Graphical User Interface">GUI</abbr>.
 </p>
 
 <h2>
-  Install <a href="https://mxcl.github.com/homebrew/" target="_blank" rel="nofollow">Homebrew</a>
+  Install <a href="https://mxcl.github.com/homebrew/" target="_blank" rel="external nofollow">Homebrew</a>
 </h2>
 
 ``` bash
@@ -41,7 +41,7 @@ $ ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
 ```
 
 <h2>
-  Install <a href="https://rvm.io/" target="_blank" rel="nofollow"><abbr title="Ruby Version Manager">RVM</abbr></a> (Ruby Version Manager)
+  Install <a href="https://rvm.io/" target="_blank" rel="external nofollow"><abbr title="Ruby Version Manager">RVM</abbr></a> (Ruby Version Manager)
 </h2> You can:
 
 <ol>
@@ -57,12 +57,12 @@ $ curl -L https://get.rvm.io | bash -s stable --ruby
 </ol>
 
 <h2>
-  Install and configure <a href="http://git-scm.com/" target="_blank" rel="nofollow">Git</a>
+  Install and configure <a href="http://git-scm.com/" target="_blank" rel="external nofollow">Git</a>
 </h2> You can:
 
 <ol>
   <li>
-    <a href="http://git-scm.com/downloads" target="_blank" rel="nofollow">Get the latest version from the official website</a>
+    <a href="http://git-scm.com/downloads" target="_blank" rel="external nofollow">Get the latest version from the official website</a>
   </li>
   <li>
     Or install it via Homebrew:

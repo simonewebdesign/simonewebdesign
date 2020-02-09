@@ -34,7 +34,7 @@ tags:
 ```
 
 <p>
-  As you can see, the <code>src</code> attribute contains a <abbr title="PHP: Hypertext Preprocessor (recursive acronym)">PHP</abbr> script. It&#8217;s easy to find (and <a href="http://www.ghostery.com/" title="Ghostery" target="_blank" rel="nofollow">block</a>) web bugs when you see that an image is served as <abbr title="PHP: Hypertext Preprocessor (recursive acronym)">PHP</abbr>.
+  As you can see, the <code>src</code> attribute contains a <abbr title="PHP: Hypertext Preprocessor (recursive acronym)">PHP</abbr> script. It&#8217;s easy to find (and <a href="http://www.ghostery.com/" title="Ghostery" target="_blank" rel="external nofollow">block</a>) web bugs when you see that an image is served as <abbr title="PHP: Hypertext Preprocessor (recursive acronym)">PHP</abbr>.
 </p>
 
 <p>

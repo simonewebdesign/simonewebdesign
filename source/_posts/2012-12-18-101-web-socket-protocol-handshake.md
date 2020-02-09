@@ -32,7 +32,7 @@ tags:
 </p>
 
 <p>
-  The <a href="http://www.websocket.org/" target="_blank">Web Socket protocol</a> is the new alternative to the very popular <a href="http://en.wikipedia.org/wiki/Http" target="_blank" rel="nofollow"><abbr title="HyperText Transfer Protocol">HTTP</abbr></a> protocol. The logic of the latter is well known: the client requests, the server responds. <a href="http://en.wikipedia.org/wiki/Request-response" target="_blank">Request, response</a>. Stop. This is what we call a <a href="http://en.wikipedia.org/wiki/Simplex_communication" target="_blank" rel="nofollow">simplex connection</a>. It worked for decades, but has severe limitations therefore it&#8217;s not ideal for rich web applications, which would work better under a persistent connection. We need to <strong>serve content in real time</strong>; that&#8217;s why the new protocol is born.
+  The <a href="http://www.websocket.org/" target="_blank">Web Socket protocol</a> is the new alternative to the very popular <a href="http://en.wikipedia.org/wiki/Http" target="_blank" rel="external nofollow"><abbr title="HyperText Transfer Protocol">HTTP</abbr></a> protocol. The logic of the latter is well known: the client requests, the server responds. <a href="http://en.wikipedia.org/wiki/Request-response" target="_blank">Request, response</a>. Stop. This is what we call a <a href="http://en.wikipedia.org/wiki/Simplex_communication" target="_blank" rel="external nofollow">simplex connection</a>. It worked for decades, but has severe limitations therefore it&#8217;s not ideal for rich web applications, which would work better under a persistent connection. We need to <strong>serve content in real time</strong>; that&#8217;s why the new protocol is born.
 </p>
 
 <p>
@@ -44,7 +44,7 @@ tags:
 </h2>
 
 <p>
-  This guide is focused on the <a href="http://dev.w3.org/html5/websockets/" title="Official W3C WebSocket API specification" target="_blank">official <abbr title="World Wide Web Consortium">W3C</abbr>&#8217;s WebSocket <abbr title="Application Programming Interface">API</abbr> specification</a> for the client part; we&#8217;ll use a <a href="https://github.com/Worlize/WebSocket-Node" title="WebSocket Client &#038; Server Implementation for Node" target="_blank">Node.js WebSocket implementation</a> as the server. If you&#8217;re curious on how <a href="http://nodejs.org" title="Node.js" target="_blank" rel="nofollow">Node.js</a> works, just check it out: there are tons of resources out there.
+  This guide is focused on the <a href="http://dev.w3.org/html5/websockets/" title="Official W3C WebSocket API specification" target="_blank">official <abbr title="World Wide Web Consortium">W3C</abbr>&#8217;s WebSocket <abbr title="Application Programming Interface">API</abbr> specification</a> for the client part; we&#8217;ll use a <a href="https://github.com/Worlize/WebSocket-Node" title="WebSocket Client &#038; Server Implementation for Node" target="_blank">Node.js WebSocket implementation</a> as the server. If you&#8217;re curious on how <a href="http://nodejs.org" title="Node.js" target="_blank" rel="external nofollow">Node.js</a> works, just check it out: there are tons of resources out there.
 </p>
 
 <p>
@@ -92,7 +92,7 @@ var ws = new WebSocket("ws://localhost:1337");
 </p>
 
 <p>
-  Now let&#8217;s code some <a href="https://en.wikipedia.org/wiki/Event_%28computing%29" title="Event (computing)" target="_blank" rel="nofollow">event handlers</a>. I won&#8217;t elaborate, they&#8217;re self-descriptive:
+  Now let&#8217;s code some <a href="https://en.wikipedia.org/wiki/Event_%28computing%29" title="Event (computing)" target="_blank" rel="external nofollow">event handlers</a>. I won&#8217;t elaborate, they&#8217;re self-descriptive:
 </p>
 
 ``` javascript
@@ -141,7 +141,7 @@ sendBtn.addEventListener('click', function(ev) {
 <hr />
 
 <p>
-  At this stage you should have downloaded and installed <a href="https://nodejs.org/download/" target="_blank" rel="nofollow">Node.js</a>: the procedure is slightly different for every operating system; just make sure to download the right installer.
+  At this stage you should have downloaded and installed <a href="https://nodejs.org/download/" target="_blank" rel="external nofollow">Node.js</a>: the procedure is slightly different for every operating system; just make sure to download the right installer.
 </p>
 
 <p>
@@ -337,7 +337,7 @@ Connection: Upgrade
 ```
 
 <p>
-  This means you just established a <a href="http://en.wikipedia.org/wiki/Full_duplex#Full-duplex" target="_blank" rel="nofollow">full-duplex</a> connection between the client and the server. If everything went as expected, the console should say something like:
+  This means you just established a <a href="http://en.wikipedia.org/wiki/Full_duplex#Full-duplex" target="_blank" rel="external nofollow">full-duplex</a> connection between the client and the server. If everything went as expected, the console should say something like:
 </p>
 
 ```

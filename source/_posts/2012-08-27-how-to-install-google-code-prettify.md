@@ -35,7 +35,7 @@ tags:
 </ul>
 
 <p>
-  You shouldn&#8217;t activate it immediately, because if you do an edit while your plugin is activated, you could break it: some files could display an <em>(inactive)</em> label next to the file name, and all you can do to repair it is to delete and reinstall the whole plugin. <a title="What the heck does (inactive) mean when editing a plugin file?" href="https://wordpress.org/support/topic/what-the-heck-does-inactive-mean-when-editing-a-plugin-file" target="_blank" rel="nofollow">Read more about this problem</a>.
+  You shouldn&#8217;t activate it immediately, because if you do an edit while your plugin is activated, you could break it: some files could display an <em>(inactive)</em> label next to the file name, and all you can do to repair it is to delete and reinstall the whole plugin. <a title="What the heck does (inactive) mean when editing a plugin file?" href="https://wordpress.org/support/topic/what-the-heck-does-inactive-mean-when-editing-a-plugin-file" target="_blank" rel="external nofollow">Read more about this problem</a>.
 </p>
 
 <p>

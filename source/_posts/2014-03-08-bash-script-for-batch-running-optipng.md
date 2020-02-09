@@ -17,11 +17,11 @@ categories: Bash
 
 <p><a href="http://optipng.sourceforge.net/" title="OptiPNG is a PNG optimizer that recompresses image files to a smaller size, without losing any information. This program also converts external formats (BMP, GIF, PNM and TIFF) to optimized PNG, and performs PNG integrity checks and corrections." target="_blank">OptiPNG</a> is a PNG optimizer tool. If you want your website to be faster, you should consider optimizing images.</p>
 
-<p>When I ran the <a href="http://developers.google.com/speed/pagespeed/insights/" title="PageSpeed Insights" target="_blank" rel="nofollow">Google PageSpeed</a> tool towards my website, I got a score of 81/100 for Desktop, 61/100 for Mobile. Pretty low, I thought. So I decided to go through the "Consider Fixing" issues, and the first one was - guess what? - <strong>optimize images</strong>.</p>
+<p>When I ran the <a href="http://developers.google.com/speed/pagespeed/insights/" title="PageSpeed Insights" target="_blank" rel="external nofollow">Google PageSpeed</a> tool towards my website, I got a score of 81/100 for Desktop, 61/100 for Mobile. Pretty low, I thought. So I decided to go through the "Consider Fixing" issues, and the first one was - guess what? - <strong>optimize images</strong>.</p>
 
 <blockquote>Properly formatting and compressing images can save many bytes of data.</blockquote>
 
-<p><img src="/images/optimize-all-the-images.png" alt="OPTIMIZE ALL THE IMAGES!" width="280" height="210" class="basic-alignment left" />The thing I did immediately next was reading the article that Google suggested: it's a nice reading on Google Developers about <a href="https://developers.google.com/speed/docs/insights/OptimizeImages" title="Optimizing images - Google Developers" target="_blank" rel="nofollow">optimizing images</a>. The first recommendation is: <strong>Use an image compressor</strong>. OptiPNG is one of them.</p>
+<p><img src="/images/optimize-all-the-images.png" alt="OPTIMIZE ALL THE IMAGES!" width="280" height="210" class="basic-alignment left" />The thing I did immediately next was reading the article that Google suggested: it's a nice reading on Google Developers about <a href="https://developers.google.com/speed/docs/insights/OptimizeImages" title="Optimizing images - Google Developers" target="_blank" rel="external nofollow">optimizing images</a>. The first recommendation is: <strong>Use an image compressor</strong>. OptiPNG is one of them.</p>
 
 <p>On the OptiPNG site I realized it works only for one image at a time, so I had the need to write a script that runs the optimizer for all images at the same time.</p>
 

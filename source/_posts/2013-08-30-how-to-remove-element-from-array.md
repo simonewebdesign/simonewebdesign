@@ -40,7 +40,7 @@ var a = ['foo', 'bar', 'baz'];
 
 We just want to remove that <code>'bar'</code> element. How can we do this?
 
-For the <a href="https://en.wikipedia.org/wiki/Principle_of_least_astonishment" title="Go to Wikipedia" target="_blank" rel="nofollow">principle of least surprise</a>, you could expect <code>Array</code> to have a <code>remove</code> function:
+For the <a href="https://en.wikipedia.org/wiki/Principle_of_least_astonishment" title="Go to Wikipedia" target="_blank" rel="external nofollow">principle of least surprise</a>, you could expect <code>Array</code> to have a <code>remove</code> function:
 
 ``` javascript
 a.remove('bar');
@@ -71,7 +71,7 @@ a.indexOf('bar');
 >>> 1
 ```
 
-<small>Please note that Internet Explorer 8 and below versions don't support it (you can use a <a href="https://gist.github.com/atk/1034425" target="_blank" title="An indexOf polyfill on GitHub" rel="nofollow">polyfill</a>, though).</small>
+<small>Please note that Internet Explorer 8 and below versions don't support it (you can use a <a href="https://gist.github.com/atk/1034425" target="_blank" title="An indexOf polyfill on GitHub" rel="external nofollow">polyfill</a>, though).</small>
 
 ---
 
