@@ -4,6 +4,7 @@ description: "Learn how to set up a basic Web Socket server by reading this prac
 layout: post
 permalink: /101-web-socket-protocol-handshake/
 date: 2012-12-18 17:21:54 +0000
+updated: 2020-02-09
 comments: true
 dsq_thread_id:
   - 980978276
@@ -32,7 +33,7 @@ tags:
 </p>
 
 <p>
-  The <a href="http://www.websocket.org/" target="_blank">Web Socket protocol</a> is the new alternative to the very popular <a href="http://en.wikipedia.org/wiki/Http" target="_blank" rel="external nofollow"><abbr title="HyperText Transfer Protocol">HTTP</abbr></a> protocol. The logic of the latter is well known: the client requests, the server responds. <a href="http://en.wikipedia.org/wiki/Request-response" target="_blank">Request, response</a>. Stop. This is what we call a <a href="http://en.wikipedia.org/wiki/Simplex_communication" target="_blank" rel="external nofollow">simplex connection</a>. It worked for decades, but has severe limitations therefore it&#8217;s not ideal for rich web applications, which would work better under a persistent connection. We need to <strong>serve content in real time</strong>; that&#8217;s why the new protocol is born.
+  The Web Socket protocol is the new alternative to the very popular <a href="http://en.wikipedia.org/wiki/Http" target="_blank" rel="external nofollow"><abbr title="HyperText Transfer Protocol">HTTP</abbr></a> protocol. The logic of the latter is well known: the client requests, the server responds. <a href="http://en.wikipedia.org/wiki/Request-response" target="_blank">Request, response</a>. Stop. This is what we call a <a href="http://en.wikipedia.org/wiki/Simplex_communication" target="_blank" rel="external nofollow">simplex connection</a>. It worked for decades, but has severe limitations therefore it&#8217;s not ideal for rich web applications, which would work better under a persistent connection. We need to <strong>serve content in real time</strong>; that&#8217;s why the new protocol is born.
 </p>
 
 <p>
