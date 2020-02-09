@@ -15,7 +15,7 @@ tags:
 ---
 
 <p>
-  <img src="/images/laravel4.png" class="basic-alignment left" /> <em><strong>Laaadies and gentlemen!</strong></em> I&#8217;m proud to announce that <a href="http://laravel.com" title="Laravel official website" target="_blank">Laravel 4</a> has been released today!
+  <img src="/images/laravel4.png" class="basic-alignment left" /> <em><strong>Laaadies and gentlemen!</strong></em> I&#8217;m proud to announce that <a href="http://laravel.com" title="Laravel official website" target="_blank" rel="external nofollow noreferrer">Laravel 4</a> has been released today!
 </p>
 
 <p>

@@ -24,7 +24,7 @@ tags:
 ```
 
 <p>
-  We just want to get the reference to the element. In classic JavaScript (<a href="http://vanilla-js.com/" title="vanilla JS" target="_blank">vanilla <abbr title="JavaScript">JS</abbr></a>) we used to do:
+  We just want to get the reference to the element. In classic JavaScript (<a href="http://vanilla-js.com/" title="vanilla JS" target="_blank" rel="external nofollow noreferrer">vanilla <abbr title="JavaScript">JS</abbr></a>) we used to do:
 </p>
 
 ``` javascript
