@@ -91,5 +91,5 @@ pre {
 </p>
 
 <p>
-  However, my solution is a bit hackish. I mean, when a new plugin update will be released, you&#8217;ll lost all the edits. If you don&#8217;t want this to happen, don&#8217;t update your plugin. Or if you&#8217;re looking for a separate, cleaner solution, I&#8217;ll suggest you reading <strike><a title="Syntax Highlighting a la StackOverflow with Google Prettify">this article</a></strike> (dead link).
+  However, my solution is a bit hackish. I mean, when a new plugin update will be released, you&#8217;ll lost all the edits. If you don&#8217;t want this to happen, don&#8217;t update your plugin. Or if you&#8217;re looking for a separate, cleaner solution, I&#8217;ll suggest you reading <del><a title="Syntax Highlighting a la StackOverflow with Google Prettify">this article</a></del> (dead link).
 </p>

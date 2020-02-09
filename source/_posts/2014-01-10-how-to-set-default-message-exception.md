@@ -4,6 +4,7 @@ description: "Define a custom exception with a default, predefined error message
 layout: post
 permalink: /how-to-set-default-message-exception/
 date: 2014-01-10
+updated: 2020-02-09
 comments: true
 dsq_thread_id:
   - 2102362575
@@ -43,7 +44,7 @@ raise MyError
 </p>
 
 <p>
-  I spent all day figuring out the best way, actually doing very bad things &#8211; I&#8217;ve even attempted to monkey-patch the Kernel module!<br />So &#8211; believe me &#8211; it&#8217;s not as simple as it appears to be. Or, at least, I thought this until I stumbled across <a href="http://ablogaboutcode.com/2011/01/03/using-custom-error-messages-for-cleaner-code/" title="Using Custom Error Messages for Cleaner Code" target="_blank">this article</a>.
+  I spent all day figuring out the best way, actually doing very bad things &#8211; I&#8217;ve even attempted to monkey-patch the Kernel module!<br />So &#8211; believe me &#8211; it&#8217;s not as simple as it appears to be. Or, at least, I thought this until I stumbled across <del><a title="Using Custom Error Messages for Cleaner Code" target="_blank">this article</a></del> (dead link).
 </p>
 
 <p>
@@ -66,7 +67,7 @@ raise MyError
 ```
 
 <p>
-  Quick note: I&#8217;m inheriting from <code>StandardError</code>, not <code>Exception</code>, because extending the <code>Exception</code> class in Ruby is considered really bad. Please don&#8217;t inherit from it: see <a href="https://stackoverflow.com/questions/10048173/why-is-it-bad-style-to-rescue-exception-e-in-ruby" title="Why is it bad style to rescue exception in Ruby?" target="_blank">here</a> and <a href="http://www.skorks.com/2009/09/ruby-exceptions-and-exception-handling/" title="Ruby exceptions and exceptions handling" target="_blank">here</a> for the reason (in few words it&#8217;s because you may catch errors that are not meant to be catched, such as <code>SyntaxError</code>).
+  Quick note: I&#8217;m inheriting from <code>StandardError</code>, not <code>Exception</code>, because extending the <code>Exception</code> class in Ruby is considered really bad. Please don&#8217;t inherit from it: see <a href="https://stackoverflow.com/questions/10048173/why-is-it-bad-style-to-rescue-exception-e-in-ruby" title="Why is it bad style to rescue exception in Ruby?" target="_blank" rel="external nofollow noreferrer">here</a> and <a href="http://www.skorks.com/2009/09/ruby-exceptions-and-exception-handling/" title="Ruby exceptions and exceptions handling" target="_blank" rel="external nofollow noreferrer">here</a> for the reason (in few words it&#8217;s because you may catch errors that are not meant to be catched, such as <code>SyntaxError</code>).
 </p>
 <p>
   Of course you could also create a module with your own exceptions in it:
