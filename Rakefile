@@ -181,7 +181,6 @@ end
 
 desc "Deploy to Heroku"
 task :deploy_heroku do
-  system "git rm --all"
   system "git add public/ -f"
   system "git commit -m 'deploy'"
   system "git push heroku master -f"
