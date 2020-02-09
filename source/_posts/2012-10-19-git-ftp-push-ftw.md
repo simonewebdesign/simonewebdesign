@@ -4,6 +4,7 @@ description: "Learn how to use Git with FTP. A clever technique for synchronizin
 layout: post
 permalink: /git-ftp-push-ftw/
 date: 2012-10-19 16:11:51 +0000
+updated: 2020-02-09
 comments: true
 dsq_thread_id:
   - 893919358
@@ -28,11 +29,11 @@ tags:
 </p>
 
 <p>
-  Well, if that&#8217;s your case you <em>really</em> should check out <a href="https://github.com/resmo/git-ftp" title="git-ftp on GitHub" target="_blank" rel="external nofollow">git-ftp</a> by <a href="https://github.com/resmo" title="René Moser's profile on GitHub" target="_blank" rel="external nofollow">René Moser</a>.
+  Well, if that&#8217;s your case you <em>really</em> should check out <a href="https://github.com/git-ftp/git-ftp" title="git-ftp on GitHub" target="_blank" rel="external nofollow">git-ftp</a> by <a href="https://github.com/resmo" title="René Moser's profile on GitHub" target="_blank" rel="external nofollow">René Moser</a>.
 </p>
 
 <p>
-  <a href="https://github.com/resmo/git-ftp" title="git-ftp on GitHub" target="_blank" rel="external nofollow">Git-ftp</a> is a straightforward way to connect to your <abbr title="File Transfer Protocol">FTP</abbr> and automagically transfer <strong>only the files that changed since the last commit</strong>.
+  <a href="https://github.com/git-ftp/git-ftp" title="git-ftp on GitHub" target="_blank" rel="external nofollow">Git-ftp</a> is a straightforward way to connect to your <abbr title="File Transfer Protocol">FTP</abbr> and automagically transfer <strong>only the files that changed since the last commit</strong>.
 </p>
 
 <p>
