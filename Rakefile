@@ -181,12 +181,13 @@ end
 
 desc "Deploy to Heroku"
 task :deploy_heroku do
+  system "git rm --all"
   system "git add public/ -f"
   system "git commit -m 'deploy'"
   system "git push heroku master -f"
-  system "git reset --soft HEAD^"
-  system "git reset"
-  puts "Site deployed"
+  system "git reset HEAD^"
+  puts "Site deployed. Now do some manual testing!"
+  system "open https://www.simonewebdesign.it/"
 end
 
 desc "Generate website and deploy"
