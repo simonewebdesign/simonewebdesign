@@ -20,7 +20,7 @@ GEM
     faraday (1.0.0)
       multipart-post (>= 1.2, < 3)
     fast-stemmer (1.0.2)
-    ffi (1.12.1)
+    ffi (1.12.2)
     fssm (0.2.10)
     haml (4.0.7)
       tilt
@@ -62,7 +62,7 @@ GEM
     mercenary (0.3.6)
     multipart-post (2.1.1)
     nio4r (2.5.2)
-    octokit (4.15.0)
+    octokit (4.16.0)
       faraday (>= 0.9)
       sawyer (~> 0.8.0, >= 0.5.3)
     octopress-date-format (3.0.3)
@@ -77,7 +77,7 @@ GEM
     pygments.rb (0.6.3)
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.2.0)
-    rack (1.6.12)
+    rack (1.6.13)
     rack-protection (1.5.5)
       rack
     rake (10.5.0)
