@@ -4,6 +4,7 @@ description: "JavaScript: difference between onclick and addEventListener. Oncli
 layout: post
 permalink: /onclick-vs-addeventlistener/
 date: 2013-02-25 21:32:43 +0000
+updated: 2020-02-09
 categories:
   - JavaScript
 tags:
@@ -36,5 +37,5 @@ element.addEventListener('click', function(){ /* do stuff */ }, false);
 </p>
 
 <p>
-  However, the <code>addEventListener()</code> function, despite it&#8217;s the standard, just <strong>doesn&#8217;t work in old browsers</strong> (Internet Explorer below version 9), and this is another big difference. If you need to support these ancient browsers, you should follow the <code>onclick</code> way. But you could also use <a href="http://jquery.com/" target="_blank" rel="external nofollow">jQuery</a> (or one of its <a href="http://www.jscripters.com/popular-jquery-alternatives/" title="Popular jQuery Alternatives" target="_blank" rel="external nofollow">alternatives</a>): it basically simplifies your work and reduces the differences between browsers, therefore can save you a lot of time.
+  However, the <code>addEventListener()</code> function, despite it&#8217;s the standard, just <strong>doesn&#8217;t work in old browsers</strong> (Internet Explorer below version 9), and this is another big difference. If you need to support these ancient browsers, you should follow the <code>onclick</code> way. But you could also use <a href="http://jquery.com/" target="_blank" rel="external nofollow">jQuery</a> (or one of its alternatives): it basically simplifies your work and reduces the differences between browsers, therefore can save you a lot of time.
 </p>
