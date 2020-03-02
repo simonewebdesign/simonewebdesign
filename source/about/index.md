@@ -29,4 +29,4 @@ Some facts:
 I write blog posts so that I don't forget stuff I learn and because I enjoy sharing my work with others.
 
 <h2 style="text-align:center">Let's get in touch!</h2>
-<p style="text-align:center">Find me on Twitter (<a href="https://twitter.com/simonewebdesign" title="simonewebdesign on Twitter" rel="external nofollow">@simonewebdesign</a>) and <a rel="external nofollow" href="https://github.com/simonewebdesign">GitHub</a>. Also feel free to <a href="mailto:hello@simonewebdesign.it?subject=Hey Simone!">email me</a>. <a download href="/public-key.txt">GPG key</a>.</p>
+<p style="text-align:center">Find me on Twitter (<a href="https://twitter.com/simonewebdesign" title="simonewebdesign on Twitter" rel="external nofollow">@simonewebdesign</a>) and <a rel="external nofollow" href="https://github.com/simonewebdesign">GitHub</a>. Also feel free to <a href="mailto:hello@simonewebdesign.it?subject=Hey Simone!">email me</a>. <a download href="/public-key.asc">GPG key</a>.</p>
