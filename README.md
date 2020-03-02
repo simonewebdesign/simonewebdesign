@@ -15,8 +15,6 @@ Octopress is [Jekyll](https://github.com/mojombo/jekyll) blogging at its finest.
 
 ## Getting started
 
-You need an old version of Ruby. To be precise, the one that's specified in .ruby-version.
-
 ### Prerequisites
 
 Download and install:
@@ -35,7 +33,7 @@ Then run:
 2. `bundle`
 3. `rake preview`
 
-Hopefully that should be it. You should now be able to see the website on localhost:4000.
+Hopefully that should be it. You should now be able to see the website on http://localhost:4000.
 
 ### Getting the submodules
 
@@ -73,4 +71,4 @@ It must be the cache: wipe it out from cloudflare.
 ### Pygments (code coloring) not working
 
 You may need Python 2 instead of 3. If you have it in your $PATH, the error should go away.
-See: https://philippe.bourgau.net/how-i-fixed-the-unknown-language-pygments-error-in-octopress/
+See: https://philippe.bourgau.net/how-i-fixed-the-unknown-language-pygments-error-in-octopress/. In your local macbook you may have it in /usr/local/bin/python and /usr/bin/python.
