@@ -1,0 +1,38 @@
+@media (prefers-color-scheme: dark) {
+    html,
+    pre,
+    p code,
+    li code {
+        background: #181a1b url('/images/noise.png') !important;
+        color: #e8e6e3;
+    }
+
+    h1,
+    .entry-title {
+        color: #c9c5be;
+    }
+
+    a {
+        @include link-colors(#7abbeb, $hover: #40acfe, $focus: #40acfe, $visited: #d683ed, $active: #6dc0fe);
+    }
+
+    [role="navigation"] a,
+    h1 a {
+        color: #c9c5be !important; /* important needed because pseudo-classes (:hover) have specificity of 10 */
+    }
+
+    pre,
+    p code,
+    li code {
+        border-color: #3a3a3a;
+    }
+
+    .highlight {
+        background-color: #0e1010;
+        border-color: #2f2f2f !important;
+    }
+
+    .highlight code {
+        background-color: #0e1010 !important;
+    }
+}
