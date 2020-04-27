@@ -12,7 +12,7 @@ categories:
 If you want to toggle between light and dark mode, it can be done with a single shell command:
 
 ```bash
-osascript -e 'tell application "System Events" to tell appearance preferences to set dark mode to not dark mode'
+osascript -e 'tell app "System Events" to tell appearance preferences to set dark mode to not dark mode'
 ```
 
 Try it and it will switch the mode immediately. No need to restart or install anything.
