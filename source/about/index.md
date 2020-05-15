@@ -12,7 +12,7 @@ sidebar: false
     <img src="/images/simonewebdesign.png" width="168" alt="simonewebdesign's avatar" />
 </picture>
 <p>
-<strong>Simone Vittori</strong> is a software engineer originally from <a rel="external nofollow" href="https://en.wikipedia.org/wiki/Perugia">Perugia</a>, Italy, but now living in London, England. He's obsessed about code: if he's not writing it, he's probably reading, speaking or dreaming about it. He enjoys coding in many different programming languages, such as <a rel="external nofollow" href="http://elixir-lang.org/">Elixir</a>, <a rel="external nofollow" href="http://elm-lang.org/">Elm</a>, <a rel="external nofollow" href="https://www.ruby-lang.org/">Ruby</a> and <a rel="external nofollow" href="https://www.rust-lang.org/">Rust</a>, just to name a few.</p>
+<strong>Simone Vittori</strong> is a software engineer originally from <a rel="external nofollow" href="https://en.wikipedia.org/wiki/Perugia">Perugia</a>, Italy, but now <s>living</s> self-isolating in London, England. He's obsessed about code: if he's not writing it, he's probably reading, speaking or dreaming about it. He enjoys coding in many different programming languages, such as <a rel="external nofollow" href="http://elixir-lang.org/">Elixir</a>, <a rel="external nofollow" href="http://elm-lang.org/">Elm</a>, <a rel="external nofollow" href="https://www.ruby-lang.org/">Ruby</a> and <a rel="external nofollow" href="https://www.rust-lang.org/">Rust</a>, just to name a few.</p>
 </div>
 
 ## simonewebdesign.it
