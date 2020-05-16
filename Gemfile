@@ -20,4 +20,4 @@ group :development do
 end
 
 gem 'puma'
-gem 'sinatra', '~> 1.4.2'
+gem 'sinatra', '~> 2.0.5'

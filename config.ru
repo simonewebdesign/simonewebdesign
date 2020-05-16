@@ -2,25 +2,25 @@ require 'bundler/setup'
 require 'sinatra/base'
 
 class SinatraStaticServer < Sinatra::Base
+  # Redirect /blog to /
+  get '/blog/?' do
+    redirect '/'
+  end
+
+  # Redirect whatever matches rss to atom.xml
+  get '/rss/?' do
+    redirect '/atom.xml'
+  end
+
   # Redirect all requests without a trailing slash to the trailing slash version
   # Except for some file extensions
   # https://stackoverflow.com/a/11927449
-  get %r{(/.*[^\/])$} do
+  get %r{(/.*[^\/])} do
     if params[:captures].first =~ /\.(gif|jpg|png|ico|js|json)$/
       return send_sinatra_file(request.path) {404}
     end
 
     redirect "#{params[:captures].first}/"
-  end
-
-  # Redirect /blog to /
-  get %r{blog/?$} do
-    redirect '/'
-  end
-
-  # Redirect whatever matches rss to atom.xml
-  get %r{rss/?$} do
-    redirect '/atom.xml'
   end
 
   get(/.+/) do
