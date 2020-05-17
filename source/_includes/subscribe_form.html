@@ -1,0 +1,11 @@
+<form name="subscribe" action="/sub" method="POST">
+    <label for="email">If you'd like to be the first to know when a new article is published, subscribe now:</label>
+    <input id="email" type="email" />
+    <button>Subscribe</button>
+</form>
+<script>
+    document.querySelector('[name="subscribe"]').addEventListener('submit', function (e) {
+        e.preventDefault()
+        fetch('/sub', { method: 'POST', body: e.currentTarget[0].value })
+    })
+</script>

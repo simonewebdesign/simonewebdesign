@@ -20,6 +20,11 @@ single: true
   </section>
 {% endif %}
 </div>
+{% unless page.subscribe_form == false %}
+{% include subscribe_form.html %}
+{% endunless %}
+
+
 {% unless page.sidebar == false %}
 <aside class="sidebar">
   {% if site.post_asides.size %}

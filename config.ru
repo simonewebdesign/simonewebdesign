@@ -16,6 +16,10 @@ class SinatraStaticServer < Sinatra::Base
     redirect '/about/', 301
   end
 
+  post '/sub' do
+    p request.body.read
+  end
+
   # Redirect all requests without a trailing slash to the trailing slash version
   # Except for some file extensions
   # https://stackoverflow.com/a/11927449

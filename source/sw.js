@@ -16,6 +16,7 @@ var preLoad = function(){
 };
 
 self.addEventListener("fetch", function(event) {
+  if (event.request.method != 'GET') return;
   event.respondWith(checkResponse(event.request).catch(function() {
     return returnFromCache(event.request);
   }));
