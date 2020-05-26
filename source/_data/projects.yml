@@ -18,7 +18,7 @@
     - Elixir
 -
   title: carts
-  url: https://github.com/simonewebdesign/lila
+  url: https://github.com/simonewebdesign/carts
   description: Some PICO-8 games.
   languages:
     - Lua
@@ -74,7 +74,7 @@
     - Elm
 -
   title: pong
-  url: https://github.com/dudeOMG/pong
+  url: https://github.com/simonewebdesign/pong
   description: The classic Atari game, playable in the browser.
   languages:
     - JavaScript
