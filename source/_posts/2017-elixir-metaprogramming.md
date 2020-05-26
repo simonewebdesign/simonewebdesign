@@ -11,6 +11,8 @@ Introduce concepts to the reader by talking about [**homoiconicity**](https://en
 
 ## File -> String -> AST -> String -> File
 
+(there should really be a circle svg drawing here)
+
 ## File to String
 
 `File.read!`
@@ -21,7 +23,7 @@ Introduce concepts to the reader by talking about [**homoiconicity**](https://en
 
 ## Execution?
 
-
+Is AST executable?
 
 ## AST to String
 
@@ -30,3 +32,7 @@ Introduce concepts to the reader by talking about [**homoiconicity**](https://en
 ## String to File
 
 `File.write!`
+
+## Conclusion
+
+This is why I love Elixir. Blah Blah blah. Link to "Ruby is Magic"
