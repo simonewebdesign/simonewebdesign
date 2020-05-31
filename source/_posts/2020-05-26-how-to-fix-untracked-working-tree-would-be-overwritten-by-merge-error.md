@@ -3,7 +3,7 @@ layout: post
 title: How to fix “Untracked working tree would be overwritten by merge” error
 date: 2020-05-26
 comments: true
-published: true
+published: false
 categories:
   - git
 ---
