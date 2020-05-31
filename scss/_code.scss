@@ -144,11 +144,18 @@ p, li {
 }
 
 .highlight {
-  pre { background: none; @include border-radius(0px); border: none; padding: 0; margin-bottom: 0; }
   margin-bottom: 1.8em;
   background: $base03;
   overflow-y: hidden;
   overflow-x: auto;
+
+  pre {
+    background: none;
+    @include border-radius(0px);
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
 }
 
 $solar-scroll-bg: rgba(#fff, .15);
@@ -176,7 +183,7 @@ figure.code {
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 1.5em;
-  pre { margin-bottom: 0; }
+
   figcaption {
     position: relative;
     @extend .code-title;
