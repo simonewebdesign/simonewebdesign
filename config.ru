@@ -9,7 +9,11 @@ class SinatraStaticServer < Sinatra::Base
 
   # Redirect whatever matches rss to atom.xml
   get '/rss/?' do
-    redirect '/atom.xml'
+    redirect '/atom.xml', 301
+  end
+
+  get '/simone-vittori/?' do
+    redirect '/about/', 301
   end
 
   # Redirect all requests without a trailing slash to the trailing slash version
