@@ -8,16 +8,22 @@
     }
 
     h1,
-    .entry-title {
+    .entry-title,
+    .blog-archives a {
         color: #c9c5be;
+    }
+
+    .entry-title a {
+        color: inherit !important;
     }
 
     a {
         @include link-colors(#7abbeb, $hover: #40acfe, $focus: #40acfe, $visited: #d683ed, $active: #6dc0fe);
     }
 
+    [role="banner"] a,
     [role="navigation"] a,
-    h1 a {
+    #blog-archives article a {
         color: #c9c5be !important; /* important needed because pseudo-classes (:hover) have specificity of 10 */
     }
 
