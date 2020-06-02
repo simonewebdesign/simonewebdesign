@@ -1,4 +1,4 @@
-// TODO: This file is shit. Burn it and rewrite from scratch
+// TODO: This file is shit. Burn it and rewrite from scratch.
 @import "compass/typography/links/hover-link";
 @import "compass/typography/links/link-colors";
 @import "variables";
@@ -40,8 +40,9 @@
     .month { text-transform: uppercase; }
   }
   p { margin-bottom: 1em; }
-  &, .entry-content { a { @include link-colors(inherit, $link-color-hover); }}
+
   a:hover { color: $link-color-hover; }
+
   @media only screen and (min-width: 550px) {
     article { margin-left: 5em; }
     h2 {

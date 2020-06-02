@@ -1,12 +1,6 @@
 .projects {
-  section {
-    + * {
-      margin-top: 3rem;
-    }
-  }
-
-  a {
-    text-decoration: none;
+  section + section {
+    margin-top: 3rem;
   }
 
   ul {
@@ -26,6 +20,10 @@
   }
 }
 
+.project a {
+  text-decoration: none;
+}
+
 @media screen and (min-width: 40em) {
   .projects {
     display: flex;
@@ -35,7 +33,7 @@
     section {
       width: 48%;
 
-      + * {
+      + section {
         margin-top: 0;
       }
     }
