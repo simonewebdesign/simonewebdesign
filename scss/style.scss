@@ -106,7 +106,9 @@ abbr[title] {
     margin: 3rem 0;
 }
 
-.blog-index .entry-title a {
+.blog-index .entry-title a,
+.blog-index .entry-title a:hover,
+.blog-index .entry-title a:visited {
     color: #555;
 }
 

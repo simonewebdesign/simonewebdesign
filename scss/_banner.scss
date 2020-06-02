@@ -9,7 +9,9 @@
         font-weight: inherit;
     }
 
-    a {
+    a,
+    a:hover,
+    a:visited {
         color: inherit;
     }
 }
