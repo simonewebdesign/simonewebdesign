@@ -4,6 +4,7 @@ title: "cool people"
 date: 2014-12-06 12:41
 comments: false
 footer: true
+published: false
 ---
 
 Chris Coyier      http://chriscoyier.net/
