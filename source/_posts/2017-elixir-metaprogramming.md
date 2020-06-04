@@ -9,6 +9,8 @@ published: false
 
 Introduce concepts to the reader by talking about [**homoiconicity**](https://en.wikipedia.org/wiki/Homoiconicity)
 
+Languages such as LISP were (and still are) popular (or gain interest) because of things like homoiconicity and recursion. This paragraph sucks, but you will rephrase it properly.
+
 ## File -> String -> AST -> String -> File
 
 (there should really be a circle svg drawing here)
