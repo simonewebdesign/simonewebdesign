@@ -11,7 +11,7 @@ categories:
 
 If you want to toggle between light and dark mode, it can be done with a single shell command:
 
-```bash
+```applescript
 osascript -e 'tell app "System Events" to tell appearance preferences to set dark mode to not dark mode'
 ```
 

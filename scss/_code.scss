@@ -6,6 +6,10 @@
 
 $mono: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
 
+.applescript {
+  white-space: pre-wrap;
+}
+
 .highlight {
   table td.code { width: 100%; }
   border: 1px solid $pre-border !important;
