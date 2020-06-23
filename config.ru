@@ -17,7 +17,13 @@ class SinatraStaticServer < Sinatra::Base
   end
 
   post '/sub' do
-    p request.body.read
+    addr = request.body.read
+    halt 400 unless addr =~ URI::MailTo::EMAIL_REGEXP
+
+    require 'redis'
+    redis = Redis.new(url: "redis://:#{ENV['REDIS_PASSWORD']}@#{ENV['REDIS_HOST']}")
+    redis.sadd "emails", addr
+    halt 200
   end
 
   # Redirect all requests without a trailing slash to the trailing slash version

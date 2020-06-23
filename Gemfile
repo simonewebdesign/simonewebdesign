@@ -21,3 +21,4 @@ end
 
 gem 'puma'
 gem 'sinatra', '~> 2.0.5'
+gem 'redis', '~> 4.2.1'
