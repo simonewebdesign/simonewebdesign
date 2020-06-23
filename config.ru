@@ -23,7 +23,17 @@ class SinatraStaticServer < Sinatra::Base
     require 'redis'
     redis = Redis.new(url: "redis://:#{ENV['REDIS_PASSWORD']}@#{ENV['REDIS_HOST']}")
     redis.sadd "emails", addr
-    halt 200
+  end
+
+  get '/unsub/?' do
+    halt 400 unless params.has_key?('email')
+    halt 400 unless params['email'] =~ URI::MailTo::EMAIL_REGEXP
+
+    require 'redis'
+    redis = Redis.new(url: "redis://:#{ENV['REDIS_PASSWORD']}@#{ENV['REDIS_HOST']}")
+    redis.srem "emails", params['email']
+
+    send_sinatra_file(request.path)
   end
 
   # Redirect all requests without a trailing slash to the trailing slash version
