@@ -27,11 +27,14 @@ class SinatraStaticServer < Sinatra::Base
 
   get '/unsub/?' do
     halt 400 unless params.has_key?('email')
-    halt 400 unless params['email'] =~ URI::MailTo::EMAIL_REGEXP
+
+    require 'CGI'
+    addr = CGI.unescape params['email']
+    halt 400 unless addr =~ URI::MailTo::EMAIL_REGEXP
 
     require 'redis'
     redis = Redis.new(url: "redis://:#{ENV['REDIS_PASSWORD']}@#{ENV['REDIS_HOST']}")
-    redis.srem "emails", params['email']
+    redis.srem "emails", addr
 
     send_sinatra_file(request.path)
   end
