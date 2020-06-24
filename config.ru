@@ -20,9 +20,10 @@ class SinatraStaticServer < Sinatra::Base
     addr = request.body.read
     halt 400 unless addr =~ URI::MailTo::EMAIL_REGEXP
 
-    require 'redis'
-    redis = Redis.new(url: "redis://:#{ENV['REDIS_PASSWORD']}@#{ENV['REDIS_HOST']}")
-    redis.sadd "emails", addr
+    statement = db.prepare "INSERT INTO users VALUES (?)"
+    statement.execute(addr)
+
+    halt 200
   end
 
   get '/unsub/?' do
@@ -32,9 +33,8 @@ class SinatraStaticServer < Sinatra::Base
     addr = CGI.unescape params['email']
     halt 400 unless addr =~ URI::MailTo::EMAIL_REGEXP
 
-    require 'redis'
-    redis = Redis.new(url: "redis://:#{ENV['REDIS_PASSWORD']}@#{ENV['REDIS_HOST']}")
-    redis.srem "emails", addr
+    statement = db.prepare "DELETE FROM users WHERE email = '?'"
+    statement.execute(addr)
 
     send_sinatra_file(request.path)
   end
@@ -86,6 +86,18 @@ class SinatraStaticServer < Sinatra::Base
     end
   end
 
+  private
+
+  def db
+    require 'mysql2'
+    Mysql2::Client.new(
+      username: ENV['DB_USERNAME'],
+      password: ENV['DB_PASSWORD'],
+      host: ENV['DB_HOST'],
+      port: ENV['DB_PORT'],
+      database: ENV['DB_NAME'],
+    )
+  end
 end
 
 run SinatraStaticServer
