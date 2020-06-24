@@ -1,9 +1,9 @@
 ---
 layout: post
 title: How to fix “Untracked working tree would be overwritten by merge” error
-date: 2020-05-26
+date: 2020-06-25
 comments: true
-published: false
+published: true
 categories:
   - git
 ---
@@ -21,8 +21,10 @@ You need the changes, but obviously you don't want to overwrite or lose any file
 
 The reason is probably because you didn't **clone** the repository. In my case, I already had some local files, so instead of running `git clone`, here's what I did:
 
-    git init
-    git remote add origin git@github.com/<username>/<reponame>.git
+``` bash
+git init
+git remote add origin git@github.com/<username>/<reponame>.git
+```
 
 If you try to `git pull origin <branch-name>`, you might get the "untracked working tree" error.
 
@@ -30,11 +32,15 @@ If you try to `git pull origin <branch-name>`, you might get the "untracked work
 
 If you have already tried pulling from the remote and it didn't work, **here's the fix**:
 
-    git branch --track <branch-name> origin/<branch-name>
+``` bash
+git branch --track <branch-name> origin/<branch-name>
+```
 
 For example, if your branch is named `master`:
 
-    git branch --track master origin/master
+``` bash
+git branch --track master origin/master
+```
 
 What this does is simply tell Git that these two branches, `master` and `origin/master`, are related to each other, and that it should keep track of the changes between them. Turns out it also fixes the error, since Git can now _see_ that nothing would be overwritten.
 
@@ -44,11 +50,15 @@ Yes! After running the command above, `git status` will indeed reveal the differ
 
 At this point you'll want to double-check that everything is the way it should be. You may also want to run:
 
-    git reset
+``` bash
+git reset
+```
 
 To get a clean state. Don't worry, this won't delete anything at all, it will simply unstage any modification that was applied automatically by Git. You can stage back the changes you care about using `git add .` — once you are happy, you can finally make a commit and run:
 
-    git push
+``` bash
+git push
+```
 
 Note there's no need to specify the origin and the branch name anymore, since the two branches (the local and the remote) are now tracked.
 
