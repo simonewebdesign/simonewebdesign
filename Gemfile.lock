@@ -63,6 +63,7 @@ GEM
     multipart-post (2.1.1)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
+    mysql2 (0.5.3)
     nio4r (2.5.2)
     octokit (4.16.0)
       faraday (>= 0.9)
@@ -88,7 +89,6 @@ GEM
       ffi (~> 1.0)
     rdiscount (2.2.0.1)
     redcarpet (3.5.0)
-    redis (4.2.1)
     ref (2.0.0)
     ruby2_keywords (0.0.2)
     rubypants (0.2.0)
@@ -123,13 +123,13 @@ DEPENDENCIES
   jekyll (~> 2.0)
   jekyll-page-hooks (~> 1.2)
   jekyll-sitemap
+  mysql2 (~> 0.5.3)
   octopress-date-format
   octopress-hooks
   puma
   rake (~> 10.4)
   rb-fsevent (~> 0.9)
   rdiscount (~> 2.0)
-  redis (~> 4.2.1)
   rubypants (~> 0.2.0)
   sass-globbing (~> 1.0.0)
   sinatra (~> 2.0.5)
