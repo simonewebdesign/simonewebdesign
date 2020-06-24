@@ -20,7 +20,7 @@ class SinatraStaticServer < Sinatra::Base
     addr = request.body.read
     halt 400 unless addr =~ URI::MailTo::EMAIL_REGEXP
 
-    statement = db.prepare "INSERT INTO users VALUES (?)"
+    statement = db.prepare "INSERT IGNORE INTO users VALUES (?)"
     statement.execute(addr)
 
     halt 200

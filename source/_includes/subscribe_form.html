@@ -1,11 +1,43 @@
 <form name="subscribe" action="/sub" method="POST">
-    <label for="email">If you'd like to be the first to know when a new article is published, subscribe now:</label>
-    <input id="email" type="email" />
+    <label for="email">Get notified about new articles</label>
+    <input id="email" type="email" required placeholder="Your email address" />
     <button>Subscribe</button>
 </form>
 <script>
-    document.querySelector('[name="subscribe"]').addEventListener('submit', function (e) {
+    var form = document.querySelector('[name="subscribe"]')
+    var submitBtn = document.querySelector('[name="subscribe"] > button')
+    var input = document.querySelector('#email')
+    input.addEventListener('keyup', function (e) { check() })
+    check()
+
+    form.addEventListener('submit', function (e) {
+        if (!form.checkValidity()) return;
         e.preventDefault()
+
+        var title = document.createElement('h1')
+        title.innerText = "Thanks!"
+
+        var par = document.createElement('p')
+        par.innerText = "You will receive an email when a new article gets published."
+
+        title.style.textAlign = 'center'
+        par.style.textAlign = 'center'
+
+        title.style.margin = '2rem 0 0 0'
+        par.style.margin = '0 0 2.5rem 0'
+
+        form.insertAdjacentElement('afterend', title)
+        title.insertAdjacentElement('afterend', par)
+        form.remove()
+
         fetch('/sub', { method: 'POST', body: e.currentTarget[0].value })
     })
+
+    function check() {
+        if (form.checkValidity()) {
+            submitBtn.disabled = false
+        } else {
+            submitBtn.disabled = true
+        }
+    }
 </script>
