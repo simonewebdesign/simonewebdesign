@@ -12,10 +12,10 @@
       {{ content | expand_urls: root_url }}
     </div>
 
-{% if page.footer && page.layout != 'post' %}
+{% unless page.footer == false %}
     <footer>{% include footer.html %}</footer>
     {% include after_footer.html %}
-{% endif %}
+{% endunless %}
   </div>
 
   <script>
