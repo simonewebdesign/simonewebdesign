@@ -33,7 +33,7 @@ class SinatraStaticServer < Sinatra::Base
     addr = CGI.unescape params['email']
     halt 400 unless addr =~ URI::MailTo::EMAIL_REGEXP
 
-    statement = db.prepare "DELETE FROM users WHERE email = '?'"
+    statement = db.prepare "DELETE FROM users WHERE email = ?"
     statement.execute(addr)
 
     send_sinatra_file(request.path)
