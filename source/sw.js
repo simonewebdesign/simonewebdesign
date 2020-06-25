@@ -10,7 +10,6 @@ var preLoad = function(){
       "/projects/",
       "/about/",
       "/offline.html",
-      "/404.html",
     ]);
   });
 };
