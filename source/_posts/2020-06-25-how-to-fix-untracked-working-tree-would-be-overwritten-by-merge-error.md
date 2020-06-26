@@ -23,7 +23,7 @@ The reason is probably because you didn't **clone** the repository. In my case, 
 
 ``` bash
 git init
-git remote add origin git@github.com/<username>/<reponame>.git
+git remote add origin git@github.com:<username>/<reponame>.git
 ```
 
 If you try to `git pull origin <branch-name>`, you might get the "untracked working tree" error.
