@@ -32,7 +32,7 @@ article {
 [name="subscribe"] label {
     display: block;
     font-size: 1.5rem;
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.9rem;
 }
 
 [name="subscribe"] input,
@@ -42,21 +42,27 @@ article {
 }
 
 [name="subscribe"] input {
+    box-sizing: border-box;
     width: 50%;
     font-size: 1rem;
-    border-width: 1px;
-    border-radius: 0.4em;
-    border-top-color: transparent;
-    border-left-color: rgba(88, 88, 88, 0.2);
-    border-right-color: rgba(88, 88, 88, 0.2);
-    border-bottom-color: rgba(88, 88, 88, 0.2);
-    box-shadow: rgba(0, 0, 0, 0.4) 0 1px 1px inset;
+    border: 2px solid #dbdfe4;
+    border-radius: 0.25em;
+    outline: none;
+
+    &:focus {
+        border-color: #268bd2;
+    }
+}
+
+[name="subscribe"] ::placeholder {
+    color: #687a86;
 }
 
 [name="subscribe"] button {
     border: 0;
-    border-radius: 0.4em;
+    border-radius: 0.25em;
     background: #268bd2;
+    border: 2px solid #268bd2;
     color: white;
 }
 
@@ -71,12 +77,19 @@ article {
 
 [name="subscribe"] button:disabled {
     box-shadow: none;
-    cursor: default;
+    cursor: not-allowed;
     background: rgba(88, 88, 88, 0.2);
+    border: 2px solid transparent;
 }
 
 @media screen and (min-width: 390px) {
     [name="subscribe"] input {
         width: auto;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    [name="subscribe"] input {
+        width: 40%;
     }
 }
