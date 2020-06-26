@@ -1,85 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Page not found - Simone Web Design</title>
-    <link href="https://fonts.googleapis.com/css?family=PT+Serif:regular" rel="stylesheet" type="text/css">
-    <style>
-      body {
-        margin: 0;
-        background-color: #17191b;
-        color: #e8e6e3;
-        font-family: "PT Serif", "Georgia", "Helvetica Neue", Arial, sans-serif;
-      }
+---
+layout: default
+---
+<style>
+  /* body {
+    margin: 0;
+    background-color: #17191b;
+    color: #e8e6e3;
+    font-family: "PT Serif", "Georgia", "Helvetica Neue", Arial, sans-serif;
+  } */
 
-      ::selection {
-        color: none;
-        background: none;
-      }
+  ::selection {
+    color: none;
+    background: none;
+  }
 
-      section {
-        width: 100vw;
-        height: 74vh;
-        font-size: 14vw;
-        letter-spacing: 0.5vw;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        align-content: center;
-        justify-content: center;
-        animation-duration: 5s;
-        animation-name: oscillate;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-      }
+  section {
+    font-size: 14vw;
+    letter-spacing: 0.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    animation-duration: 5s;
+    animation-name: oscillate;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
 
-      h1 {
-        color: #c6c4c1;
-        margin: 0;
-        letter-spacing: 2vw;
-        font-size: 5rem;
-        font-size: 50vw;
-        line-height: 68%;
-      }
+  section > h1 {
+    color: #c6c4c1;
+    margin: 0;
+    letter-spacing: 2vw;
+    font-size: 5rem;
+    font-size: 50vw;
+    line-height: 68%;
+  }
 
-      p {
-        text-align: center;
-      }
+  p {
+    text-align: center;
+  }
 
-      @media screen and (min-width: 580px) {
-        section {
-          font-size: 5rem;
-        }
+  @media screen and (min-width: 580px) {
+    section {
+      font-size: 5rem;
+    }
 
-        h1 {
-          font-size: 18rem;
-        }
-      }
+    section > h1 {
+      font-size: 18rem;
+    }
+  }
 
-      @keyframes oscillate {
-        from {
-          transform: rotate(-2.5deg);
-        }
+  @keyframes oscillate {
+    from {
+      transform: rotate(-2.5deg);
+    }
 
-        to {
-          transform: rotate(2.5deg);
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <section>
-      <div>four oh four</div>
-      <h1>404</h1>
-      <div>NOT FOUND</div>
-    </section>
-    <p>
-      The content you were looking for doesn't exist.<br />
-      Or maybe it <i≥used≤/i> to exist, just not anymore.<br />
-      Feel free to send me an email if you wish to let me know.<br />
-      Either way, you may want to <a href="/">return to the homepage</a>.<br />
-    </p>
-  </body>
-</html>
+    to {
+      transform: rotate(2.5deg);
+    }
+  }
+</style>
+
+<section>
+  <div>four oh four</div>
+  <h1>404</h1>
+  <div>NOT FOUND</div>
+</section>
+<p>
+  Sorry, it looks like you're out of luck:<br>
+  The content you are looking for doesn't exist.<br>
+  Feel free to <a href="mailto:hello@simonewebdesign.it?subject=404">email me</a> if you wish to let me know.<br><br>
+  Either way, you may want to <a href="/">return to the homepage</a>.
+</p>
