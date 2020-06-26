@@ -1,4 +1,16 @@
 -
+  title: cindy
+  url: https://github.com/simonewebdesign/cindy
+  description: CLI tool for sending newsletters based on a RSS feed.
+  languages:
+    - Go
+-
+  title: carts
+  url: https://github.com/simonewebdesign/carts
+  description: Virtual game cartridges for PICO-8 fantasy console.
+  languages:
+    - Lua
+-
   title: minitalk
   url: https://github.com/simonewebdesign/minitalk
   description: The most minimalist presentation software ever made.
@@ -17,15 +29,15 @@
   languages:
     - Elixir
 -
-  title: carts
-  url: https://github.com/simonewebdesign/carts
-  description: Some PICO-8 games.
+  title: red
+  url: https://github.com/simonewebdesign/red
+  description: Database Server and REPL inspired by Redis.
   languages:
-    - Lua
+    - Rust
 -
   title: lila
   url: https://github.com/simonewebdesign/lila
-  description: The little load balancer.
+  description: A simple load balancer written in Node.js.
   languages:
     - JavaScript
 -
