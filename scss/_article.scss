@@ -38,12 +38,12 @@ article {
 [name="subscribe"] input,
 [name="subscribe"] button {
     font-size: 1rem;
-    padding: .6rem .9rem;
+    padding: .6rem .5rem;
 }
 
 [name="subscribe"] input {
     box-sizing: border-box;
-    width: 50%;
+    width: 60%;
     font-size: 1rem;
     border: 2px solid #dbdfe4;
     border-radius: 0.25em;
@@ -82,14 +82,8 @@ article {
     border: 2px solid transparent;
 }
 
-@media screen and (min-width: 390px) {
-    [name="subscribe"] input {
-        width: auto;
-    }
-}
-
 @media screen and (min-width: 500px) {
     [name="subscribe"] input {
-        width: 40%;
+        width: 45%;
     }
 }
