@@ -21,6 +21,10 @@
         @include link-colors(#7abbeb, $hover: #40acfe, $focus: #40acfe, $visited: #d683ed, $active: #6dc0fe);
     }
 
+    [role="navigation"] {
+        background: #181a1b url('/images/noise.png');
+    }
+
     [role="banner"] a,
     [role="navigation"] a,
     #blog-archives article a {
