@@ -6,8 +6,8 @@
       <div class="logo" role="banner">
         <h1><a href="{{ root_url }}/">{{ site.title }}</a></h1>
       </div>
-      <nav role="navigation">{% include navigation.html %}</nav>
     </header>
+    <nav role="navigation">{% include navigation.html %}</nav>
     <div class="content">
       {{ content | expand_urls: root_url }}
     </div>
