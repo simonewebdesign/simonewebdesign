@@ -61,8 +61,8 @@ iex(3)> ast = quote do: IO.puts "Hello " <> name
 ```
  {% endraw %}
 
-For more context, I recommend reading the [introduction to meta-programming in Elixir](http://elixir-lang.org/getting-started/meta/quote-and-unquote.html) on Elixir's official site.
+For more context, I recommend reading the [introduction to meta-programming in Elixir](https://elixir-lang.org/getting-started/meta/quote-and-unquote.html) on Elixir's official site.
 
-In case you're interested in **parsing Elixir**, [Tokenizing and parsing in Elixir with yecc and leex](http://andrealeopardi.com/posts/tokenizing-and-parsing-in-elixir-using-leex-and-yecc/) by Andrea Leopardi is a very recommended reading.
+In case you're interested in **parsing Elixir**, [Tokenizing and parsing in Elixir with yecc and leex](https://andrealeopardi.com/posts/tokenizing-and-parsing-in-elixir-using-leex-and-yecc/) by Andrea Leopardi is a very recommended reading.
 
 Have fun with Elixir!

@@ -7,8 +7,8 @@ published: false
 ---
 
 - Went in [Santorini](https://en.wikipedia.org/wiki/Santorini), a Greek island
-- Learned [Elm](http://elm-lang.org/)
-- Learned [Elixir](http://elixir-lang.org/)
+- Learned [Elm](https://elm-lang.org/)
+- Learned [Elixir](https://elixir-lang.org/)
 - Made [elm-new](https://github.com/simonewebdesign/elm-new)
 - Participated to many Elixir, Elm and functional programming meetups
 - Published 2 blog posts
