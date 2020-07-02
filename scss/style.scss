@@ -112,6 +112,14 @@ abbr[title] {
     color: #555;
 }
 
+.blog-index .intro {
+    font-size: 0.89rem;
+    border: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 1rem;
+}
+
 @media screen and (min-width: 48rem) { /* 720p */
     html {
         font-size: 115%;

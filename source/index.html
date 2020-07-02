@@ -2,10 +2,25 @@
 layout: default
 sidebar: false
 footer: false
+introduction: true
 ---
 
 <div class="blog-index">
   {% assign index = true %}
+
+  {% unless page.introduction == false %}
+  <blockquote class="intro">
+    Hi! I’m Simone Vittori, a software developer based in London, UK.
+    I have experience in web development with a variety of programming languages,
+    such as Elixir, Elm, Ruby and Rust. I’m passionate about good software design
+    and I use this blog to write about anything programming related that I find
+    interesting. I hope you enjoy reading it! You can subscribe to the
+    <a href="/rss">feed</a>, follow me on
+    <a href="https://twitter.com/simonewebdesign" rel="external nofollow">Twitter</a> or fork me on
+    <a href="https://github.com/simonewebdesign" rel="external nofollow">GitHub</a>.
+  </blockquote>
+  {% endunless %}
+
   {% for post in site.posts limit: 7 %}
   {% assign content = post.content %}
     <article>
