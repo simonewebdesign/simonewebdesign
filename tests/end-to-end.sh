@@ -14,7 +14,7 @@ function fail {
 }
 
 function call {
-    curl "$host/$1" --silent -i $2
+    curl "$host/$1" --silent -i
 }
 
 function test {
@@ -29,7 +29,9 @@ test sw.js 'self.addEventListener("fetch"'
 
 # Submodules
 test hire/me/ "NOT FOUND"
+
 test demo/elm/ "Credit Card Checkout"
+
 test demo/html5editor/ "Hey, buddy!"
 
 test games/pong 302
@@ -57,5 +59,10 @@ test sitemap.xml 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"'
 
 # Subscribe
 test 'unsub?email=test@example' "You have been unsubscribed successfully."
+
+# Old redirects from /blog
+# The actual redirect from /blog to / happens on Cloudflare so it's fine not to test it here
+# This one tests the "redirect to slash" works correctly also for old /blog links
+test blog/playing-around-with-javascript "/blog/playing-around-with-javascript/"
 
 exit $exit_status
