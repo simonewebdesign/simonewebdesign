@@ -14,7 +14,7 @@ function fail {
 }
 
 function call {
-    curl "$host/$1" --silent
+    curl "$host/$1" --silent -i $2
 }
 
 function test {
@@ -32,11 +32,30 @@ test hire/me/ "NOT FOUND"
 test demo/elm/ "Credit Card Checkout"
 test demo/html5editor/ "Hey, buddy!"
 
+test games/pong 302
 test games/pong/ "Pong"
 test games/pong/js/main.js "The main game loop"
 
+test games/game-of-life 302
 test games/game-of-life/ "The Game of Life"
 test games/game-of-life/style.css "background:#000;"
 test games/game-of-life/game.js "THE GAME OF LIFE"
+
+# Articles
+test pure-css-onclick-context-menu 302
+test pure-css-onclick-context-menu/ "A pure CSS onclick context menu"
+test how-to-put-online-your-wampserver 302
+test how-to-put-online-your-wampserver/ "How to put online your WampServer"
+
+# RSS
+test rss 301
+test rss/ 301
+test atom.xml '<feed xmlns="http://www.w3.org/2005/Atom">'
+
+# Sitemap
+test sitemap.xml 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"'
+
+# Subscribe
+test 'unsub?email=test@example' "You have been unsubscribed successfully."
 
 exit $exit_status
