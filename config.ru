@@ -4,7 +4,7 @@ require 'sinatra/base'
 class SinatraStaticServer < Sinatra::Base
   # Redirect /blog to /
   get '/blog/?' do
-    redirect '/'
+    redirect '/', 301
   end
 
   # Redirect whatever matches rss to atom.xml
