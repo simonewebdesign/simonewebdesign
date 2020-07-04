@@ -34,20 +34,25 @@ test demo/elm/ "Credit Card Checkout"
 
 test demo/html5editor/ "Hey, buddy!"
 
-test games/pong 302
+test games/pong 301
 test games/pong/ "Pong"
 test games/pong/js/main.js "The main game loop"
 
-test games/game-of-life 302
+test games/game-of-life 301
 test games/game-of-life/ "The Game of Life"
 test games/game-of-life/style.css "background:#000;"
 test games/game-of-life/game.js "THE GAME OF LIFE"
 
 # Articles
-test pure-css-onclick-context-menu 302
+test pure-css-onclick-context-menu 301
 test pure-css-onclick-context-menu/ "A pure CSS onclick context menu"
-test how-to-put-online-your-wampserver 302
+test how-to-put-online-your-wampserver 301
 test how-to-put-online-your-wampserver/ "How to put online your WampServer"
+
+# Categories
+test categories/css/ "Category: Css"
+test categories/javascript 301
+test categories/javascript/ "Category: Javascript"
 
 # RSS
 test rss 301
@@ -61,8 +66,11 @@ test sitemap.xml 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"'
 test 'unsub?email=test@example' "You have been unsubscribed successfully."
 
 # Old redirects from /blog
-# The actual redirect from /blog to / happens on Cloudflare so it's fine not to test it here
-# This one tests the "redirect to slash" works correctly also for old /blog links
-test blog/playing-around-with-javascript "/blog/playing-around-with-javascript/"
+# The actual redirect from /blog to / happens on Cloudflare so it's fine not to test it here.
+
+# This one tests the "redirect to slash" works correctly also for old /blog links.
+# Unfortunately I have to disable it because it doesn't work consistently between localhost and prod.
+# (again because the redirect happens at cloudflare level. But it's fine in prod, and not important anyway.)
+# test blog/playing-around-with-javascript "/blog/playing-around-with-javascript/"
 
 exit $exit_status
