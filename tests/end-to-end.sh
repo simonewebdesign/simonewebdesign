@@ -28,6 +28,9 @@ function test {
 test "" "Simone Web Design"
 test stylesheets/style.css "html{text-rendering:optimizelegibility;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;background:#f6f6f6 url("
 test sw.js 'self.addEventListener("fetch"'
+test stylesheets/about.css
+test stylesheets/projects.css
+test stylesheets/archives.css
 
 # Main pages
 test archives/ "Blog Archives"
