@@ -61,29 +61,9 @@ class SinatraStaticServer < Sinatra::Base
   def send_sinatra_file(path, &missing_file_block)
     file_path = File.join(__dir__, 'public',  path)
     file_path = File.join(file_path, 'index.html') unless file_path =~ /\.[a-z]+$/i
-
-    if file_path.end_with?('/')
-      if File.exist?(file_path)
-        send_file(file_path)
-      else
-        if File.exist?(file_path.chomp('/'))
-          redirect to("https://www.simonewebdesign.it#{file_path.chomp('/')}"), 301
-        else
-          missing_file_block.call
-        end
-      end
-    else
-      # request does not end with '/'
-      if File.exist?(file_path)
-        send_file(file_path)
-      else
-        if File.exist?(file_path << '/')
-          redirect to("https://www.simonewebdesign.it#{file_path}/"), 301
-        else
-          missing_file_block.call
-        end
-      end
-    end
+    file_path = file_path.chomp('/') if file_path.end_with?('/')
+    send_file(file_path) if File.exist?(file_path)
+    missing_file_block.call
   end
 
   private
