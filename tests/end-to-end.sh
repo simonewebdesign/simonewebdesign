@@ -27,6 +27,14 @@ test "" "Simone Web Design"
 test stylesheets/style.css "html{text-rendering:optimizelegibility;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;background:#f6f6f6 url("
 test sw.js 'self.addEventListener("fetch"'
 
+# Main pages
+test archives/ "Blog Archives"
+test projects/ "Open Source Projects"
+test about/ "About Simone"
+test 404/ "NOT FOUND"
+test contribs/ "Notable Contributions on GitHub"
+test offline/ "Oh Noes, The Internet's Gone Down!"
+
 # Submodules
 test hire/me/ "NOT FOUND"
 
@@ -51,8 +59,12 @@ test how-to-put-online-your-wampserver/ "How to put online your WampServer"
 
 # Categories
 test categories/css/ "Category: Css"
+test categories/git 301
+test categories/git/ "Category: Git"
 test categories/javascript 301
 test categories/javascript/ "Category: Javascript"
+test categories/gamedev/ "Category: Gamedev"
+test categories/inspirational/ "Category: Inspirational"
 
 # RSS
 test rss 301
@@ -62,8 +74,8 @@ test atom.xml '<feed xmlns="http://www.w3.org/2005/Atom">'
 # Sitemap
 test sitemap.xml 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"'
 
-# Subscribe
-test 'unsub?email=test@example' "You have been unsubscribed successfully."
+# Subscribe (disabled because it's slow)
+# test 'unsub?email=test@example' "You have been unsubscribed successfully."
 
 # Old redirects from /blog
 # The actual redirect from /blog to / happens on Cloudflare so it's fine not to test it here.
