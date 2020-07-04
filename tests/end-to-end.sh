@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 host=$1
+exit_status=0
 
 echo "Starting end-to-end test on host: $host"
 
@@ -10,7 +11,8 @@ function ok {
 
 function fail {
     echo -e ' \033[31m✗\033[0m'
-    exit_status=1
+    # exit_status is a counter of failures
+    exit_status=$(($exit_status+1))
 }
 
 function call {
@@ -85,5 +87,12 @@ test sitemap.xml 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"'
 # Unfortunately I have to disable it because it doesn't work consistently between localhost and prod.
 # (again because the redirect happens at cloudflare level. But it's fine in prod, and not important anyway.)
 # test blog/playing-around-with-javascript "/blog/playing-around-with-javascript/"
+
+if [ $exit_status -eq 0 ]
+then
+  echo -e "\033[32mSUCCESS\033[0m"
+else
+  echo -e "\033[31m$exit_status FAILURE(S)\033[0m" >&2
+fi
 
 exit $exit_status
