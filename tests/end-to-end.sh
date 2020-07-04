@@ -79,6 +79,7 @@ test sitemap.xml 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"'
 
 # Old redirects from /blog
 # The actual redirect from /blog to / happens on Cloudflare so it's fine not to test it here.
+# There is also the redirect from http to https happening at that lavel.
 
 # This one tests the "redirect to slash" works correctly also for old /blog links.
 # Unfortunately I have to disable it because it doesn't work consistently between localhost and prod.

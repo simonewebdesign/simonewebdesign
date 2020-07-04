@@ -180,9 +180,18 @@ task :deploy_heroku do
   system "git commit -m 'deploy'"
   system "git push heroku master -f"
   system "git reset HEAD^"
-  system "tests/end-to-end.sh"
   puts "Site deployed. Now do some manual testing!"
   system "open https://www.simonewebdesign.it/"
+end
+
+# Ideally this would be ran before deploying to prod,
+# but since I want to test real production
+# I need to actually run it after deployment.
+# I would have ran it like this: bundle exec rake "smoke_test[localhost:4000]" (ugly, but works)
+# But I found it much easier to hardcode the URL. Anything else is pointless.
+desc "Smoke Test"
+task :smoke_test do
+  system "tests/end-to-end.sh https://www.simonewebdesign.it"
 end
 
 desc "Generate website and deploy"
@@ -190,7 +199,7 @@ task :gen_deploy => [:integrate, :generate, :deploy] do
 end
 
 desc "Generate website and deploy to Heroku"
-task :gen_deploy_heroku => [:integrate, :generate, :deploy_heroku] do
+task :gen_deploy_heroku => [:integrate, :generate, :deploy_heroku, :smoke_test] do
 end
 
 desc "copy dot files for deployment"
