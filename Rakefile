@@ -49,7 +49,7 @@ desc 'Watch the site and regenerate when it changes'
 task :watch do
   puts 'Starting to watch source with Jekyll and Compass.'
   system "compass compile --css-dir #{source_dir}/stylesheets"
-  jekyllPid = Process.spawn({'OCTOPRESS_ENV'=>'preview'}, 'jekyll build --watch')
+  jekyllPid = Process.spawn({ 'OCTOPRESS_ENV'=>'preview' }, 'jekyll build --watch')
   compassPid = Process.spawn('compass watch')
 
   trap('INT') {
@@ -64,7 +64,7 @@ desc 'preview the site in a web browser'
 task :preview do
   puts "Starting to watch source with Jekyll and Compass. Starting Rack on port #{server_port}"
   system "compass compile --css-dir #{source_dir}/stylesheets"
-  jekyllPid = Process.spawn({'OCTOPRESS_ENV'=>'preview'}, 'jekyll build --watch')
+  jekyllPid = Process.spawn({ 'OCTOPRESS_ENV'=>'preview' }, 'jekyll build --watch')
   compassPid = Process.spawn('compass watch')
   rackupPid = Process.spawn("rackup --port #{server_port}")
 
