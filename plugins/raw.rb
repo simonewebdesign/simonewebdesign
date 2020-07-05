@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # Author: Brandon Mathis
 # Description: Provides plugins with a method for wrapping and unwrapping input to prevent Markdown and Textile from parsing it.
 # Purpose: This is useful for preventing Markdown and Textile from being too aggressive and incorrectly parsing in-line HTML.

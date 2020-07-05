@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require './plugins/pygments_code'
 
 module BacktickCodeBlock

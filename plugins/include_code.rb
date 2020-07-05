@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # Title: Include Code Tag for Jekyll
 # Author: Brandon Mathis http://brandonmathis.com
 # Description: Import files on your filesystem into any blog post as embedded code snippets with syntax highlighting and a download link.

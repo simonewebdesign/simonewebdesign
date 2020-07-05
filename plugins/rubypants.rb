@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 #
 # = RubyPants -- SmartyPants ported to Ruby
 #
