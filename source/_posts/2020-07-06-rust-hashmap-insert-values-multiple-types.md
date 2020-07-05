@@ -1,14 +1,14 @@
 ---
 layout: post
 title: How to insert values of multiple types in Rust's HashMap
-date: 2020-05-26
+date: 2020-07-06
 comments: true
 published: false
 categories:
   - rust
 ---
 
-So we have a `HashMap`(TODO link to rust docs) and we want to add more than one value type to it.
+Say we have a <a href="https://doc.rust-lang.org/std/collections/struct.HashMap.html" rel="external nofollow">`HashMap`</a> and we want to add more than one value type to it.
 
 For example:
 
@@ -33,7 +33,7 @@ This prints:
     b: 2
 
 In the example above, the type of `map` is `HashMap<&str, &str>`. In other words, both keys and values are of type `&str`.
-What if we want the values to be of type `&str` and, say, `i32`?
+What if we want the values to be of type `&str` _and_, say, `i32`?
 
 This won't work:
 
@@ -44,7 +44,7 @@ fn main() {
     let mut map = HashMap::new();
 
     map.insert("a", "1");
-    map.insert("b", 2); {{ "LOL! <mark>OMG 123</mark>" }} // TODO find a way to highlight change? would be cool.
+    BEGINMARKmap.insert("b", 2);ENDMARK
 
     for (key, value) in &map {
         println!("{}: {}", key, value);
@@ -62,7 +62,7 @@ error[E0308]: mismatched types
                      ^ expected `&str`, found integer
 ```
 
-So how do can we insert multiple value types in a `HashMap`? We have several options, each of them with its own trade-offs.
+So how do we insert multiple value types in a `HashMap`? We have several options, each of them with its own trade-offs.
 
 ## Use an `enum`
 
