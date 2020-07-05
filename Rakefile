@@ -104,7 +104,7 @@ end
 # usage rake new_page[my-new-page] or rake new_page[my-new-page.html] or rake new_page (defaults to "new-page.markdown")
 desc "Create a new page in #{source_dir}/(filename)/index.#{new_page_ext}"
 task :new_page, :filename do |t, args|
-  args.with_defaults(:filename => 'new-page')
+  args.with_defaults(filename: 'new-page')
   page_dir = [source_dir]
   if args.filename.downcase =~ /(^.+\/)?(.+)/
     filename, dot, extension = $2.rpartition('.').reject(&:empty?)         # Get filename and extension
@@ -197,11 +197,11 @@ task :smoke_test do
 end
 
 desc 'Generate website and deploy'
-task :gen_deploy => [:integrate, :generate, :deploy] do
+task gen_deploy: [:integrate, :generate, :deploy] do
 end
 
 desc 'Generate website and deploy to Heroku'
-task :gen_deploy_heroku => [:integrate, :generate, :deploy_heroku, :smoke_test] do
+task gen_deploy_heroku: [:integrate, :generate, :deploy_heroku, :smoke_test] do
 end
 
 desc 'copy dot files for deployment'
