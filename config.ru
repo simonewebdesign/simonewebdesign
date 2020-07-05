@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'bundler/setup'
 require 'sinatra/base'
 
@@ -21,20 +22,20 @@ class SinatraStaticServer < Sinatra::Base
     addr = request.body.read
     halt 400 unless addr =~ URI::MailTo::EMAIL_REGEXP
 
-    statement = db.prepare "INSERT IGNORE INTO users VALUES (?)"
+    statement = db.prepare 'INSERT IGNORE INTO users VALUES (?)'
     statement.execute(addr)
 
     halt 200
   end
 
   get '/unsub/?' do
-    halt 400 unless params.has_key?('email')
+    halt 400 unless params.key?('email')
 
     require 'cgi'
     addr = CGI.unescape params['email']
     halt 400 unless addr =~ URI::MailTo::EMAIL_REGEXP
 
-    statement = db.prepare "DELETE FROM users WHERE email = ?"
+    statement = db.prepare 'DELETE FROM users WHERE email = ?'
     statement.execute(addr)
 
     send_sinatra_file(request.path)
@@ -45,18 +46,18 @@ class SinatraStaticServer < Sinatra::Base
   # https://stackoverflow.com/a/11927449
   get %r{(/.*[^\/])} do
     if params[:captures].first =~ /\.(gif|jpg|jpeg|png|webp|ico|js|json)$/
-      return send_sinatra_file(request.path) {404}
+      return send_sinatra_file(request.path) { 404 }
     end
 
     redirect "#{params[:captures].first}/", 301
   end
 
   get(/.+/) do
-    send_sinatra_file(request.path) {404}
+    send_sinatra_file(request.path) { 404 }
   end
 
   not_found do
-    send_file(File.join(__dir__, 'public', '404/index.html'), {:status => 404})
+    send_file(File.join(__dir__, 'public', '404/index.html'), { status: 404 })
   end
 
   # after do
@@ -68,7 +69,7 @@ class SinatraStaticServer < Sinatra::Base
   # end
 
   def send_sinatra_file(path, &missing_file_block)
-    file_path = File.join(__dir__, 'public',  path)
+    file_path = File.join(__dir__, 'public', path)
     file_path = File.join(file_path, 'index.html') unless file_path =~ /\.[a-z]+$/i
     file_path = file_path.chomp('/') if file_path.end_with?('/')
     send_file(file_path) if File.exist?(file_path)
@@ -84,7 +85,7 @@ class SinatraStaticServer < Sinatra::Base
       password: ENV['DB_PASSWORD'],
       host: ENV['DB_HOST'],
       port: ENV['DB_PORT'],
-      database: ENV['DB_NAME'],
+      database: ENV['DB_NAME']
     )
   end
 end
