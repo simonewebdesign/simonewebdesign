@@ -19,7 +19,7 @@
 #
 # You can use relative pathnames, to include files outside of the source directory.
 # This might be useful if you want to have a page for a project's README without having
-# to duplicated the contents
+# to duplicate the contents
 #
 #
 

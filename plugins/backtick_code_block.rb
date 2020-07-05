@@ -20,7 +20,7 @@ module BacktickCodeBlock
         @caption = "<figcaption><span>#{$2}</span><a href='#{$3}'>#{$4 || 'link'}</a></figcaption>"
       elsif @options =~ LangCaption
         @lang = $1
-        @caption = "<figcaption><span>#{$2}</span></figcaption>"
+        @caption = $2 ? "<figcaption><span>#{$2}</span></figcaption>" : ''
       end
 
       if str.match(/\A( {4}|\t)/)
