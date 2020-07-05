@@ -4,7 +4,7 @@ require 'json'
 class ConfigTag < Liquid::Tag
   def initialize(tag_name, options, tokens)
     super
-    options = options.split(' ').map {|i| i.strip }
+    options = options.split(' ').map { |i| i.strip }
     @key = options.slice!(0)
     @tag = nil
     @classname = nil
