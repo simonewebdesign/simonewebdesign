@@ -19,7 +19,7 @@ client = Mysql2::Client.new(
 # statement.execute('delete.this@example.com')
 
 ### PRINT ALL DATA
-result = client.query "SELECT * FROM users"
+result = client.query 'SELECT * FROM users'
 result.each do |row|
-  puts row["email"]
+  puts row['email']
 end

@@ -251,7 +251,7 @@ class RubyPants < String
     in_pre = false
 
     # Here is the result stored in.
-    result = ""
+    result = ''
 
     # This is a cheat, used to get some context for one-character
     # tokens that consist of just a quote char. What we do is remember
@@ -263,7 +263,7 @@ class RubyPants < String
       if token.first == :tag
         result << token[1]
         if token[1] =~ %r!<(/?)(?:pre|code|kbd|script|math)[\s>]!
-          in_pre = ($1 != "/")  # Opening or closing tag?
+          in_pre = ($1 != '/')  # Opening or closing tag?
         end
       else
         t = token[1]
@@ -294,16 +294,16 @@ class RubyPants < String
             if t == "'"
               # Special case: single-character ' token
               if prev_token_last_char =~ /\S/
-                t = "&#8217;"
+                t = '&#8217;'
               else
-                t = "&#8216;"
+                t = '&#8216;'
               end
             elsif t == '"'
               # Special case: single-character " token
               if prev_token_last_char =~ /\S/
-                t = "&#8221;"
+                t = '&#8221;'
               else
-                t = "&#8220;"
+                t = '&#8220;'
               end
             else
               # Normal case:
@@ -382,14 +382,14 @@ class RubyPants < String
   # translated into HTML curly quote entities.
   #
   def educate_backticks(str)
-    str.gsub("``", '&#8220;').gsub("''", '&#8221;')
+    str.gsub('``', '&#8220;').gsub("''", '&#8221;')
   end
 
   # Return the string, with "<tt>`backticks'</tt>"-style single quotes
   # translated into HTML curly quote entities.
   #
   def educate_single_backticks(str)
-    str.gsub("`", '&#8216;').gsub("'", '&#8217;')
+    str.gsub('`', '&#8216;').gsub("'", '&#8217;')
   end
 
   # Return the string, with "educated" curly quote HTML entities.
@@ -475,7 +475,7 @@ class RubyPants < String
 
     prev_end = 0
     scan(tag_soup) {
-      tokens << [:text, $1]  if $1 != ""
+      tokens << [:text, $1]  if $1 != ''
       tokens << [:tag, $2]
 
       prev_end = $~.end(0)

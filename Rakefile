@@ -1,32 +1,32 @@
 # frozen_string_literal: true
-require "rubygems"
-require "bundler/setup"
-require "stringex"
+require 'rubygems'
+require 'bundler/setup'
+require 'stringex'
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
-ssh_user       = "user@domain.com"
-ssh_port       = "22"
-document_root  = "~/website.com/"
+ssh_user       = 'user@domain.com'
+ssh_port       = '22'
+document_root  = '~/website.com/'
 rsync_delete   = false
-rsync_args     = ""  # Any extra arguments to pass to rsync
-deploy_default = "rsync"
+rsync_args     = ''  # Any extra arguments to pass to rsync
+deploy_default = 'rsync'
 
 # This will be configured for you when you run config_deploy
-deploy_branch  = "gh-pages"
+deploy_branch  = 'gh-pages'
 
 ## -- Misc Configs -- ##
 
-public_dir      = "public"    # compiled site directory
-source_dir      = "source"    # source file directory
+public_dir      = 'public'    # compiled site directory
+source_dir      = 'source'    # source file directory
 blog_index_dir  = 'source'    # directory for your blog's index page (if you put your index in source/blog/index.html, set this to 'source/blog')
-deploy_dir      = "_deploy"   # deploy directory (for Github pages deployment)
-stash_dir       = "_stash"    # directory to stash posts for speedy generation
-posts_dir       = "_posts"    # directory for blog files
-themes_dir      = ".themes"   # directory for blog files
-new_post_ext    = "md"  # default new post file extension when using the new_post task
-new_page_ext    = "md"  # default new page file extension when using the new_page task
-server_port     = "4000"      # port for preview server eg. localhost:4000
+deploy_dir      = '_deploy'   # deploy directory (for Github pages deployment)
+stash_dir       = '_stash'    # directory to stash posts for speedy generation
+posts_dir       = '_posts'    # directory for blog files
+themes_dir      = '.themes'   # directory for blog files
+new_post_ext    = 'md'  # default new post file extension when using the new_post task
+new_page_ext    = 'md'  # default new page file extension when using the new_page task
+server_port     = '4000'      # port for preview server eg. localhost:4000
 
 if (/cygwin|mswin|mingw|bccwin|wince|emx/ =~ RUBY_PLATFORM) != nil
   puts '## Set the codepage to 65001 for Windows machines'
@@ -37,21 +37,21 @@ end
 # Working with Jekyll #
 #######################
 
-desc "Generate jekyll site"
+desc 'Generate jekyll site'
 task :generate do
-  puts "## Generating Site with Jekyll"
+  puts '## Generating Site with Jekyll'
   system "compass compile --css-dir #{source_dir}/stylesheets"
-  system "jekyll build --trace"
+  system 'jekyll build --trace'
 end
 
-desc "Watch the site and regenerate when it changes"
+desc 'Watch the site and regenerate when it changes'
 task :watch do
-  puts "Starting to watch source with Jekyll and Compass."
+  puts 'Starting to watch source with Jekyll and Compass.'
   system "compass compile --css-dir #{source_dir}/stylesheets"
-  jekyllPid = Process.spawn({"OCTOPRESS_ENV"=>"preview"}, "jekyll build --watch")
-  compassPid = Process.spawn("compass watch")
+  jekyllPid = Process.spawn({'OCTOPRESS_ENV'=>'preview'}, 'jekyll build --watch')
+  compassPid = Process.spawn('compass watch')
 
-  trap("INT") {
+  trap('INT') {
     [jekyllPid, compassPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
     exit 0
   }
@@ -59,15 +59,15 @@ task :watch do
   [jekyllPid, compassPid].each { |pid| Process.wait(pid) }
 end
 
-desc "preview the site in a web browser"
+desc 'preview the site in a web browser'
 task :preview do
   puts "Starting to watch source with Jekyll and Compass. Starting Rack on port #{server_port}"
   system "compass compile --css-dir #{source_dir}/stylesheets"
-  jekyllPid = Process.spawn({"OCTOPRESS_ENV"=>"preview"}, "jekyll build --watch")
-  compassPid = Process.spawn("compass watch")
+  jekyllPid = Process.spawn({'OCTOPRESS_ENV'=>'preview'}, 'jekyll build --watch')
+  compassPid = Process.spawn('compass watch')
   rackupPid = Process.spawn("rackup --port #{server_port}")
 
-  trap("INT") {
+  trap('INT') {
     [jekyllPid, compassPid, rackupPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
     exit 0
   }
@@ -81,22 +81,22 @@ task :new_post, :title do |t, args|
   if args.title
     title = args.title
   else
-    title = get_stdin("Enter a title for your post: ")
+    title = get_stdin('Enter a title for your post: ')
   end
   mkdir_p "#{source_dir}/#{posts_dir}"
   filename = "#{source_dir}/#{posts_dir}/#{Time.now.strftime('%Y-%m-%d')}-#{title.to_url}.#{new_post_ext}"
   if File.exist?(filename)
-    abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
+    abort('rake aborted!') if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
   puts "Creating new post: #{filename}"
   open(filename, 'w') do |post|
-    post.puts "---"
-    post.puts "layout: post"
+    post.puts '---'
+    post.puts 'layout: post'
     post.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
     post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M:%S %z')}"
-    post.puts "comments: true"
-    post.puts "categories: "
-    post.puts "---"
+    post.puts 'comments: true'
+    post.puts 'categories: '
+    post.puts '---'
   end
 end
 
@@ -111,7 +111,7 @@ task :new_page, :filename do |t, args|
     page_dir.concat($1.downcase.sub(/^\//, '').split('/')) unless $1.nil?  # Add path to page_dir Array
     if extension.nil?
       page_dir << filename
-      filename = "index"
+      filename = 'index'
     end
     extension ||= new_page_ext
     page_dir = page_dir.map! { |d| d = d.to_url }.join('/')                # Sanitize path
@@ -120,17 +120,17 @@ task :new_page, :filename do |t, args|
     mkdir_p page_dir
     file = "#{page_dir}/#{filename}.#{extension}"
     if File.exist?(file)
-      abort("rake aborted!") if ask("#{file} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
+      abort('rake aborted!') if ask("#{file} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
     end
     puts "Creating new page: #{file}"
     open(file, 'w') do |page|
-      page.puts "---"
-      page.puts "layout: page"
+      page.puts '---'
+      page.puts 'layout: page'
       page.puts "title: \"#{title}\""
       page.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
-      page.puts "comments: true"
-      page.puts "footer: true"
-      page.puts "---"
+      page.puts 'comments: true'
+      page.puts 'footer: true'
+      page.puts '---'
     end
   else
     puts "Syntax error: #{args.filename} contains unsupported characters"
@@ -138,7 +138,7 @@ task :new_page, :filename do |t, args|
 end
 
 # usage rake isolate[my-post]
-desc "Move all other posts than the one currently being worked on to a temporary stash location (stash) so regenerating the site happens much more quickly."
+desc 'Move all other posts than the one currently being worked on to a temporary stash location (stash) so regenerating the site happens much more quickly.'
 task :isolate, :filename do |t, args|
   stash_dir = "#{source_dir}/#{stash_dir}"
   FileUtils.mkdir(stash_dir) unless File.exist?(stash_dir)
@@ -147,14 +147,14 @@ task :isolate, :filename do |t, args|
   end
 end
 
-desc "Move all stashed posts back into the posts directory, ready for site generation."
+desc 'Move all stashed posts back into the posts directory, ready for site generation.'
 task :integrate do
   FileUtils.mv Dir.glob("#{source_dir}/#{stash_dir}/*.*"), "#{source_dir}/#{posts_dir}/"
 end
 
-desc "Clean out caches: .pygments-cache, .gist-cache, .sass-cache"
+desc 'Clean out caches: .pygments-cache, .gist-cache, .sass-cache'
 task :clean do
-  rm_rf [".pygments-cache/**", ".gist-cache/**", ".sass-cache/**", "source/stylesheets/**"]
+  rm_rf ['.pygments-cache/**', '.gist-cache/**', '.sass-cache/**', 'source/stylesheets/**']
 end
 
 
@@ -162,12 +162,12 @@ end
 # Deploying  #
 ##############
 
-desc "Default deploy task"
+desc 'Default deploy task'
 task :deploy do
   # Check if preview posts exist, which should not be published
-  if File.exists?(".preview-mode")
-    puts "## Found posts in preview mode, regenerating files ..."
-    File.delete(".preview-mode")
+  if File.exists?('.preview-mode')
+    puts '## Found posts in preview mode, regenerating files ...'
+    File.delete('.preview-mode')
     Rake::Task[:generate].execute
   end
 
@@ -175,14 +175,14 @@ task :deploy do
   Rake::Task["#{deploy_default}"].execute
 end
 
-desc "Deploy to Heroku"
+desc 'Deploy to Heroku'
 task :deploy_heroku do
-  system "git add public/ -f"
+  system 'git add public/ -f'
   system "git commit -m 'deploy'"
-  system "git push heroku master -f"
-  system "git reset HEAD^"
-  puts "Site deployed. Now do some manual testing!"
-  system "open https://www.simonewebdesign.it/"
+  system 'git push heroku master -f'
+  system 'git reset HEAD^'
+  puts 'Site deployed. Now do some manual testing!'
+  system 'open https://www.simonewebdesign.it/'
 end
 
 # Ideally this would be ran before deploying to prod,
@@ -190,49 +190,49 @@ end
 # I need to actually run it after deployment.
 # I would have ran it like this: bundle exec rake "smoke_test[localhost:4000]" (ugly, but works)
 # But I found it much easier to hardcode the URL. Anything else is pointless.
-desc "Smoke Test"
+desc 'Smoke Test'
 task :smoke_test do
-  system "tests/end-to-end.sh https://www.simonewebdesign.it"
+  system 'tests/end-to-end.sh https://www.simonewebdesign.it'
 end
 
-desc "Generate website and deploy"
+desc 'Generate website and deploy'
 task :gen_deploy => [:integrate, :generate, :deploy] do
 end
 
-desc "Generate website and deploy to Heroku"
+desc 'Generate website and deploy to Heroku'
 task :gen_deploy_heroku => [:integrate, :generate, :deploy_heroku, :smoke_test] do
 end
 
-desc "copy dot files for deployment"
+desc 'copy dot files for deployment'
 task :copydot, :source, :dest do |t, args|
-  FileList["#{args.source}/**/.*"].exclude("**/.", "**/..", "**/.DS_Store", "**/._*").each do |file|
+  FileList["#{args.source}/**/.*"].exclude('**/.', '**/..', '**/.DS_Store', '**/._*').each do |file|
     cp_r file, file.gsub(/#{args.source}/, "#{args.dest}") unless File.directory?(file)
   end
 end
 
-desc "Deploy website via rsync"
+desc 'Deploy website via rsync'
 task :rsync do
-  exclude = ""
+  exclude = ''
   if File.exists?('./rsync-exclude')
     exclude = "--exclude-from '#{File.expand_path('./rsync-exclude')}'"
   end
-  puts "## Deploying website via Rsync"
+  puts '## Deploying website via Rsync'
   ok_failed system("rsync -avze 'ssh -p #{ssh_port}' #{exclude} #{rsync_args} #{"--delete" unless rsync_delete == false} #{public_dir}/ #{ssh_user}:#{document_root}")
 end
 
-desc "deploy public directory to github pages"
+desc 'deploy public directory to github pages'
 multitask :push do
-  puts "## Deploying branch to Github Pages "
-  puts "## Pulling any updates from Github Pages "
+  puts '## Deploying branch to Github Pages '
+  puts '## Pulling any updates from Github Pages '
   cd "#{deploy_dir}" do
-    Bundler.with_clean_env { system "git pull" }
+    Bundler.with_clean_env { system 'git pull' }
   end
   (Dir["#{deploy_dir}/*"]).each { |f| rm_rf(f) }
   Rake::Task[:copydot].invoke(public_dir, deploy_dir)
   puts "\n## Copying #{public_dir} to #{deploy_dir}"
   cp_r "#{public_dir}/.", deploy_dir
   cd "#{deploy_dir}" do
-    system "git add -A"
+    system 'git add -A'
     message = "Site updated at #{Time.now.utc}"
     puts "\n## Committing: #{message}"
     system "git commit -m \"#{message}\""
@@ -242,14 +242,14 @@ multitask :push do
   end
 end
 
-desc "Update configurations to support publishing to root or sub directory"
+desc 'Update configurations to support publishing to root or sub directory'
 task :set_root_dir, :dir do |t, args|
-  puts ">>> !! Please provide a directory, eg. rake config_dir[publishing/subdirectory]" unless args.dir
+  puts '>>> !! Please provide a directory, eg. rake config_dir[publishing/subdirectory]' unless args.dir
   if args.dir
-    if args.dir == "/"
-      dir = ""
+    if args.dir == '/'
+      dir = ''
     else
-      dir = "/" + args.dir.sub(/(\/*)(.+)/, "\\2").sub(/\/$/, '');
+      dir = '/' + args.dir.sub(/(\/*)(.+)/, '\\2').sub(/\/$/, '');
     end
     rakefile = IO.read(__FILE__)
     rakefile.sub!(/public_dir(\s*)=(\s*)(["'])[\w\-\/]*["']/, "public_dir\\1=\\2\\3public#{dir}\\3")
@@ -277,15 +277,15 @@ task :set_root_dir, :dir do |t, args|
   end
 end
 
-desc "Set up _deploy folder and deploy branch for Github Pages deployment"
+desc 'Set up _deploy folder and deploy branch for Github Pages deployment'
 task :setup_github_pages, :repo do |t, args|
   if args.repo
     repo_url = args.repo
   else
-    puts "Enter the read/write url for your repository"
+    puts 'Enter the read/write url for your repository'
     puts "(For example, 'git@github.com:your_username/your_username.github.io.git)"
     puts "           or 'https://github.com/your_username/your_username.github.io')"
-    repo_url = get_stdin("Repository url: ")
+    repo_url = get_stdin('Repository url: ')
   end
   protocol = (repo_url.match(/(^git)@/).nil?) ? 'https' : 'git'
   if protocol == 'git'
@@ -297,15 +297,15 @@ task :setup_github_pages, :repo do |t, args|
   project = (branch == 'gh-pages') ? repo_url.match(/\/([^\.]+)/)[1] : ''
   unless (`git remote -v` =~ /origin.+?octopress(?:\.git)?/).nil?
     # If octopress is still the origin remote (from cloning) rename it to octopress
-    system "git remote rename origin octopress"
+    system 'git remote rename origin octopress'
     if branch == 'master'
       # If this is a user/organization pages repository, add the correct origin remote
       # and checkout the source branch for committing changes to the blog source.
       system "git remote add origin #{repo_url}"
       puts "Added remote #{repo_url} as origin"
-      system "git config branch.master.remote origin"
-      puts "Set origin as default remote"
-      system "git branch -m master source"
+      system 'git config branch.master.remote origin'
+      puts 'Set origin as default remote'
+      system 'git branch -m master source'
       puts "Master branch renamed to 'source' for committing your blog source files"
     else
       unless !public_dir.match("#{project}").nil?
@@ -321,15 +321,15 @@ task :setup_github_pages, :repo do |t, args|
   rm_rf deploy_dir
   mkdir deploy_dir
   cd "#{deploy_dir}" do
-    system "git init"
+    system 'git init'
     system "echo 'My Octopress Page is coming soon &hellip;' > index.html"
-    system "git add ."
-    system "git commit -m \"Octopress init\""
-    system "git branch -m gh-pages" unless branch == 'master'
+    system 'git add .'
+    system 'git commit -m "Octopress init"'
+    system 'git branch -m gh-pages' unless branch == 'master'
     system "git remote add origin #{repo_url}"
     rakefile = IO.read(__FILE__)
     rakefile.sub!(/deploy_branch(\s*)=(\s*)(["'])[\w-]*["']/, "deploy_branch\\1=\\2\\3#{branch}\\3")
-    rakefile.sub!(/deploy_default(\s*)=(\s*)(["'])[\w-]*["']/, "deploy_default\\1=\\2\\3push\\3")
+    rakefile.sub!(/deploy_default(\s*)=(\s*)(["'])[\w-]*["']/, 'deploy_default\\1=\\2\\3push\\3')
     File.open(__FILE__, 'w') do |f|
       f.write rakefile
     end
@@ -339,9 +339,9 @@ end
 
 def ok_failed(condition)
   if (condition)
-    puts "OK"
+    puts 'OK'
   else
-    puts "FAILED"
+    puts 'FAILED'
   end
 end
 
@@ -369,7 +369,7 @@ def blog_url(user, project)
   url
 end
 
-desc "list tasks"
+desc 'list tasks'
 task :list do
   puts "Tasks: #{(Rake::Task.tasks - [Rake::Task[:list]]).join(', ')}"
   puts "(type rake -T for more detail)\n\n"

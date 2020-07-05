@@ -29,7 +29,7 @@ module BacktickCodeBlock
         code = HighlightCode::tableize_code(str.gsub('<','&lt;').gsub('>','&gt;'))
         "<figure class='code'>#{@caption}#{code}</figure>"
       else
-        if @lang.include? "-raw"
+        if @lang.include? '-raw'
           raw = "``` #{@options.sub('-raw', '')}\n"
           raw += str
           raw += "\n```\n"

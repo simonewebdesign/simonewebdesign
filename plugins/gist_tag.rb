@@ -17,7 +17,7 @@ module Jekyll
       super
       @text           = text
       @cache_disabled = false
-      @cache_folder   = File.expand_path "../.gist-cache", __dir__
+      @cache_folder   = File.expand_path '../.gist-cache', __dir__
       FileUtils.mkdir_p @cache_folder
     end
 
@@ -25,10 +25,10 @@ module Jekyll
       if parts = @text.match(/([a-zA-Z\d]*) (.*)/)
         gist, file = parts[1].strip, parts[2].strip
       else
-        gist, file = @text.strip, ""
+        gist, file = @text.strip, ''
       end
       if gist.empty?
-        ""
+        ''
       else
         script_url = script_url_for gist, file
         code       = get_cached_gist(gist, file) || get_gist_from_web(gist, file)
@@ -56,7 +56,7 @@ module Jekyll
 
     def cache(gist, file, data)
       cache_file = get_cache_file_for gist, file
-      File.open(cache_file, "w") do |io|
+      File.open(cache_file, 'w') do |io|
         io.write data
       end
     end

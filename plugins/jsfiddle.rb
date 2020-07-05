@@ -32,7 +32,7 @@ module Jekyll
       if @fiddle
         "<iframe style=\"width: #{@width}; height: #{@height}\" frameborder=\"0\" seamless=\"seamless\" src=\"http://jsfiddle.net/#{@fiddle}/embedded/#{@sequence}/#{@skin}/\"></iframe>"
       else
-        "Error processing input, expected syntax: {% jsfiddle shorttag [tabs] [skin] [height] [width] %}"
+        'Error processing input, expected syntax: {% jsfiddle shorttag [tabs] [skin] [height] [width] %}'
       end
     end
   end

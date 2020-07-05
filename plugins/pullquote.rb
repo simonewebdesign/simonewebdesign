@@ -27,7 +27,7 @@ module Jekyll
 
   class PullquoteTag < Liquid::Block
     def initialize(tag_name, markup, tokens)
-      @align = (markup =~ /left/i) ? "left" : "right"
+      @align = (markup =~ /left/i) ? 'left' : 'right'
       super
     end
 
@@ -37,7 +37,7 @@ module Jekyll
         @quote = RubyPants.new($1).to_html
         "<span class='pullquote-#{@align}' data-pullquote='#{@quote}'>#{output.gsub(/\{"\s*|\s*"\}/, '')}</span>"
       else
-        return "Surround your pullquote like this {\" text to be quoted \"}"
+        return 'Surround your pullquote like this {" text to be quoted "}'
       end
     end
   end

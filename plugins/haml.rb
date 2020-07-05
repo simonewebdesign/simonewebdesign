@@ -10,7 +10,7 @@ module Jekyll
     end
 
     def output_ext(ext)
-      ".html"
+      '.html'
     end
 
     def convert(content)
@@ -18,7 +18,7 @@ module Jekyll
         engine = Haml::Engine.new(content)
         engine.render
       rescue StandardError => e
-          puts "!!! HAML Error: " + e.message
+          puts '!!! HAML Error: ' + e.message
       end
     end
   end

@@ -41,9 +41,9 @@ module Jekyll
         @videos.each do |v|
           video << "<source src='#{v}' #{types[File.extname(v)]}>"
         end
-        video += "</video>"
+        video += '</video>'
       else
-        "Error processing input, expected syntax: {% video url/to/video [url/to/video] [url/to/video] [width height] [url/to/poster] %}"
+        'Error processing input, expected syntax: {% video url/to/video [url/to/video] [url/to/video] [width height] [url/to/poster] %}'
       end
     end
 

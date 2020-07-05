@@ -3,17 +3,17 @@ class String
   def titlecase
     small_words = %w(a an and as at but by en for if in of on or the to v v. via vs vs.)
 
-    x = split(" ").map do |word|
+    x = split(' ').map do |word|
       # note: word could contain non-word characters!
       # downcase all small_words, capitalize the rest
-      small_words.include?(word.gsub(/\W/, "").downcase) ? word.downcase! : word.smart_capitalize!
+      small_words.include?(word.gsub(/\W/, '').downcase) ? word.downcase! : word.smart_capitalize!
       word
     end
     # capitalize first and last words
     x.first.to_s.smart_capitalize!
     x.last.to_s.smart_capitalize!
     # small words are capitalized after colon, period, exclamation mark, question mark
-    x.join(" ").gsub(/(:|\.|!|\?)\s?(\W*#{small_words.join("|")}\W*)\s/) { "#{$1} #{$2.smart_capitalize} " }
+    x.join(' ').gsub(/(:|\.|!|\?)\s?(\W*#{small_words.join("|")}\W*)\s/) { "#{$1} #{$2.smart_capitalize} " }
   end
 
   def titlecase!
