@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # Title: Render Partial Tag for Jekyll
 # Author: Brandon Mathis http://brandonmathis.com
 # Description: Import files on your filesystem into any blog post and render them inline.

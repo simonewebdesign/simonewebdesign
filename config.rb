@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'sass-globbing'
 
 # Require any additional compass plugins here.

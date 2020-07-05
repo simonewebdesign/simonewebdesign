@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # Title: jsFiddle tag for Jekyll
 # Author: Brian Arnold (@brianarn)
 # Description:

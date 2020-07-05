@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'pygments'
 require 'fileutils'
 require 'digest/md5'

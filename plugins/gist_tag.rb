@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # A Liquid tag for Jekyll sites that allows embedding Gists and showing code for non-JavaScript enabled browsers and readers.
 # by: Brandon Tilly
 # Source URL: https://gist.github.com/1027674

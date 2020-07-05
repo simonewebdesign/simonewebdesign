@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 #
 # Author: Brandon Mathis
 # A full rewrite based on the work of: Josediaz Gonzalez - https://github.com/josegonzalez/josediazgonzalez.com/blob/master/_plugins/blockquote.rb

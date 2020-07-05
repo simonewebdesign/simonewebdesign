@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 #custom filters for Octopress
 require './plugins/backtick_code_block'
 require 'octopress-hooks'

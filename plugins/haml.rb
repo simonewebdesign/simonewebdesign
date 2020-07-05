@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module Jekyll
   require 'haml'
   class HamlConverter < Converter

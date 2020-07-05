@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # Title: Simple Image tag for Jekyll
 # Authors: Brandon Mathis http://brandonmathis.com
 #          Felix Schäfer, Frederic Hemberger
