@@ -28,9 +28,9 @@ function test {
 test "" "Simone Web Design"
 test stylesheets/style.css "html{text-rendering:optimizelegibility;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;background:#f6f6f6 url("
 test sw.js 'self.addEventListener("fetch"'
-test stylesheets/about.css
-test stylesheets/projects.css
-test stylesheets/archives.css
+test stylesheets/about.css ".about-intro picture{float:left;"
+test stylesheets/projects.css ".projects section+section{margin-top:"
+test stylesheets/archives.css "#archive #content>div,#archive #content>div>article{padding-top:0}"
 
 # Main pages
 test archives/ "Blog Archives"
