@@ -10,35 +10,35 @@ require './plugins/raw'
 module OctopressFilters
   def self.pre_filter(page)
     if page.ext.match('html|textile|markdown|md|haml|slim|xml')
-      input = BacktickCodeBlock::render_code_block(page.content)
+      input = BacktickCodeBlock.render_code_block(page.content)
       page.content = input.gsub /(<figure.+?>.+?<\/figure>)/m do
-        TemplateWrapper::safe_wrap($1)
+        TemplateWrapper.safe_wrap($1)
       end
     end
   end
   def self.post_filter(page)
     if page.ext.match('html|textile|markdown|md|haml|slim|xml')
-      page.output = TemplateWrapper::unwrap(page.output)
+      page.output = TemplateWrapper.unwrap(page.output)
     end
   end
 
   class PageFilters < Octopress::Hooks::Page
     def pre_render(page)
-      OctopressFilters::pre_filter(page)
+      OctopressFilters.pre_filter(page)
     end
 
     def post_render(page)
-      OctopressFilters::post_filter(page)
+      OctopressFilters.post_filter(page)
     end
   end
 
   class PostFilters < Octopress::Hooks::Post
     def pre_render(post)
-      OctopressFilters::pre_filter(post)
+      OctopressFilters.pre_filter(post)
     end
 
     def post_render(post)
-      OctopressFilters::post_filter(post)
+      OctopressFilters.post_filter(post)
     end
   end
 end
