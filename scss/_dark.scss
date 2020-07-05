@@ -21,12 +21,12 @@
         @include link-colors(#7abbeb, $hover: #40acfe, $focus: #40acfe, $visited: #d683ed, $active: #6dc0fe);
     }
 
-    [role="navigation"] {
+    header + nav {
         background: #181a1b url('/images/noise.png');
     }
 
     [role="banner"] a,
-    [role="navigation"] a,
+    header + nav a,
     #blog-archives article a {
         color: #c9c5be !important; /* important needed because pseudo-classes (:hover) have specificity of 10 */
     }
