@@ -2,6 +2,7 @@
 layout: post
 title: Inserting values of multiple types in Rust's HashMap
 date: 2020-07-06
+updated: 2020-07-07
 comments: true
 published: true
 categories:
@@ -210,6 +211,10 @@ It feels much simpler! And the output is naturally the same:
 
 ## Conclusion
 
-Rust is very strict when it comes to polymorphic types. As you've seen, there are ways to achieve it, but they don't feel as straightforward as with other dynamic languages such as Ruby or Python. But sometimes it's useful to make one step back and look at the actual problem we're trying to solve. Once I did that, I realized that I didn't necessarily have to limit myself to a single data structure, so I went for the last option.
+Rust is very strict when it comes to polymorphic types. As you've seen, there are ways to achieve it, but they don't feel as straightforward as with other dynamic languages such as Ruby or Python. Sometimes though it's useful to make one step back and look at the actual problem we're trying to solve. Once I did that, I realized that I didn't necessarily have to limit myself to a single data structure, so I went for the last option.
 
-I'm still a beginner with Rust, so I might have missed on a better solution. <a href="https://doc.rust-lang.org/book/ch17-02-trait-objects.html" rel="external nofollow">Trait Objects</a> could be one: I've experimented with them, but it wasn't quite was I was looking for. If you have any suggestions or know of other possible solutions, feel free to comment below!
+I'm still a beginner with Rust, so I might have missed on a better solution. <a href="https://doc.rust-lang.org/book/ch17-02-trait-objects.html" rel="external nofollow">Trait Objects</a> could be one: I've experimented with them, but they weren't quite was I was looking for. If you have any suggestions or know of other possible solutions, feel free to comment below!
+
+---
+
+**Update**: <a href="https://twitter.com/alilleybrinker/status/1280185393258926088" rel="external nofollow">@alilleybrinker</a> on Twitter pointed out two caveats to be aware of. One is about the meaning of the `'static` _bound_: when used on a generic type, any references inside the type must live as long as `'static`. However, by adding `'static` we are also effectively saying that the values inside the `Box` won't contain references. The other caveat is that, when using `dyn Display`, the original types are erased, so the available methods are only those known from the `Display` trait.
