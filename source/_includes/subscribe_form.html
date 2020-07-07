@@ -1,18 +1,23 @@
 <form name="subscribe" action="/sub" method="POST">
     <label for="email">Get notified about new articles</label>
-    <input id="email" type="email" required placeholder="Your email address..." />
+    <input id="email" name="email" type="email" required placeholder="Your email address..." />
     <button>Subscribe</button>
 </form>
 <script>
     var form = document.querySelector('[name="subscribe"]')
-    var submitBtn = document.querySelector('[name="subscribe"] > button')
+    var btn = document.querySelector('[name="subscribe"] > button')
     var input = document.querySelector('#email')
-    input.addEventListener('keyup', function (e) { check() })
-    check()
+
+    input.addEventListener('change', function (e) {
+        btn.disabled = !form.checkValidity()
+    })
+    btn.disabled = !form.checkValidity()
 
     form.addEventListener('submit', function (e) {
         if (!form.checkValidity()) return;
         e.preventDefault()
+
+        fetch('/sub', { method: 'POST', body: e.currentTarget[0].value })
 
         var title = document.createElement('h1')
         title.innerText = "Thanks!"
@@ -29,15 +34,5 @@
         form.insertAdjacentElement('afterend', title)
         title.insertAdjacentElement('afterend', par)
         form.remove()
-
-        fetch('/sub', { method: 'POST', body: e.currentTarget[0].value })
     })
-
-    function check() {
-        if (form.checkValidity()) {
-            submitBtn.disabled = false
-        } else {
-            submitBtn.disabled = true
-        }
-    }
 </script>

@@ -52,6 +52,7 @@ h2 code {
     border: 2px solid #dbdfe4;
     border-radius: 0.25em;
     outline: none;
+    background-clip: padding-box; // For iOS, it should hopefully remove that pesky inner shadow
 
     &:focus {
         border-color: #268bd2;
@@ -81,7 +82,6 @@ h2 code {
 
 [name="subscribe"] button:disabled {
     box-shadow: none;
-    cursor: not-allowed;
     background: rgba(88, 88, 88, 0.2);
     border: 2px solid transparent;
 }

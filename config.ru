@@ -2,6 +2,7 @@
 
 require 'bundler/setup'
 require 'sinatra/base'
+require 'cgi'
 
 class SinatraStaticServer < Sinatra::Base
   # Redirect /blog to /
@@ -20,18 +21,18 @@ class SinatraStaticServer < Sinatra::Base
 
   post '/sub' do
     addr = request.body.read
+    addr = CGI.unescape addr
     halt 400 unless addr =~ URI::MailTo::EMAIL_REGEXP
 
     statement = db.prepare 'INSERT IGNORE INTO users VALUES (?)'
     statement.execute(addr)
 
-    halt 200
+    send_sinatra_file(request.path)
   end
 
   get '/unsub/?' do
     halt 400 unless params.key?('email')
 
-    require 'cgi'
     addr = CGI.unescape params['email']
     halt 400 unless addr =~ URI::MailTo::EMAIL_REGEXP
 
