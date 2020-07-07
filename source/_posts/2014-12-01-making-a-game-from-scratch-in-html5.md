@@ -3,7 +3,7 @@ layout: post
 title: "Making a game from scratch in HTML5"
 date: 2014-12-01 17:06:53 +0100
 comments: true
-categories: 
+categories:
  - html5
  - gamedev
  - javascript
@@ -102,29 +102,29 @@ As you can imagine, `isGameStarted` is just a boolean flag. But what's `modifier
 The game logic is mainly about the ball: it should be able to bounce away from the paddles. How can you implement that? It's pretty simple - have a look at the code below.
 
 ``` javascript
-  // Ball is out of the left boundary
-  if (ball.x <= 0) {
-    // Player 2 wins!
-    p2.score++;
-    reset(); // reset the game to the initial state
-  }
+// Ball is out of the left boundary
+if (ball.x <= 0) {
+  // Player 2 wins!
+  p2.score++;
+  reset(); // reset the game to the initial state
+}
 
-  // Ball is out of the right boundary
-  if (ball.x >= canvas.width - ball.size) {
-    // Player 1 wins!
-    p1.score++;
-    reset();
-  }
+// Ball is out of the right boundary
+if (ball.x >= canvas.width - ball.size) {
+  // Player 1 wins!
+  p1.score++;
+  reset();
+}
 
-  // Ball is colliding with the top
-  if (ball.y <= 0) {
-    ball.speedY = Math.abs(ball.speedY);
-  }
+// Ball is colliding with the top
+if (ball.y <= 0) {
+  ball.speedY = Math.abs(ball.speedY);
+}
 
-  // Ball is colliding with the bottom
-  if (ball.y + ball.size >= canvas.height) {
-    ball.speedY = Math.abs(ball.speedY) * -1; // inverted
-  }
+// Ball is colliding with the bottom
+if (ball.y + ball.size >= canvas.height) {
+  ball.speedY = Math.abs(ball.speedY) * -1; // inverted
+}
 ```
 
 Can you see what's going on in the code? Basically, if the ball goes beyond the canvas' left or right boundaries, all we do is **increment the score and reset the game**. If the ball touches the top or the bottom instead, we **invert its speed on the Y axis**. If you think about it, it's all you need to make something reflect over a surface. So, in other words, if the speed is negative we make it positive, and viceversa.
@@ -151,7 +151,7 @@ if (
   // Ensure the speed on the X axis is positive
   ball.speedX = Math.abs(ball.speedX);
 
-  // Give the ball a bit of randomness by 
+  // Give the ball a bit of randomness by
   // increasing/decreasing its speed on the Y axis
   ball.speedY = randomize();
 }
@@ -218,7 +218,6 @@ Here's the `render()` function, in all its glory:
 
 ``` javascript
 var render = function () {
-
   ctx.fillStyle = "#0F0"; // green
 
   // P1
@@ -259,7 +258,6 @@ We need to reset the game every time a player scores. The logic is very simple, 
 ``` javascript
 // Reset the game
 var reset = function () {
-
   isGameStarted = false;
 
   ball.x = (canvas.width - ball.size) / 2;
@@ -318,7 +316,7 @@ var ball = {
 
   /*
   * The formula:
-  * 
+  *
   *  R = 2(V · N) * N - V
   *
   * V: velocity vector
@@ -356,7 +354,7 @@ Have fun!
 {% comment %}
 ## Conclusion
 
-Let's face it: building a game from scratch is not easy. HTML5 APIs in my humble opinion are good, but 
+Let's face it: building a game from scratch is not easy. HTML5 APIs in my humble opinion are good, but
 
 There are many other concepts I'm not going to talk about, because I don't want to. Not only it would take a big amount of time, but what I'd say wouldn't be great because I don't yet have a good understanding of all the mechanics. By the way, I hope I have been helpful, at least to some degree.
 
