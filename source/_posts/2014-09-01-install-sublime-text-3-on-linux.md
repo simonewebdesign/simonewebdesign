@@ -3,7 +3,7 @@ layout: post
 title: "Install Sublime Text 3 on Linux"
 description: "Install Sublime Text 3 on Fedora or other Linux distros with this shell script: curl -L git.io/sublimetext | sh"
 date: 2014-09-01 13:35:34 +0100
-updated: 2016-07-30
+updated: 2020-07-07
 comments: true
 categories: bash
 tags:
@@ -33,3 +33,5 @@ https://gist.github.com/simonewebdesign/8507139
 It should work on most Linux distros; if not, please let me know by leaving a comment below. I'm here to help.
 
 Enjoy!
+
+**Update**: When I wrote this script, my motivation was that there was no easy way to install Sublime Text on Linux. However, nowadays there is an official repository providing builds for all the major Linux package managers: <a href="https://www.sublimetext.com/docs/3/linux_repositories.html" rel="external nofollow">see here</a>.
