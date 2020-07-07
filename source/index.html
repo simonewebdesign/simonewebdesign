@@ -21,7 +21,7 @@ introduction: true
   </blockquote>
   {% endunless %}
 
-  {% for post in site.posts limit: 7 %}
+  {% for post in site.posts limit: 4 %}
   {% assign content = post.content %}
     <article>
       {% include article.html %}
