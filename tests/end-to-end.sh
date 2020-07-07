@@ -91,6 +91,13 @@ test sitemap.xml 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"'
 # (again because the redirect happens at cloudflare level. But it's fine in prod, and not important anyway.)
 # test blog/playing-around-with-javascript "/blog/playing-around-with-javascript/"
 
+# More legacy redirects - ideally those should all redirect to the blog archives page
+test posts 301
+test posts/ 301
+test posts/7 301
+test posts/7/ 301
+
+
 if [ $exit_status -eq 0 ]
 then
   echo -e "\033[32mSUCCESS\033[0m"

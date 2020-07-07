@@ -10,6 +10,14 @@ class SinatraStaticServer < Sinatra::Base
     redirect '/', 301
   end
 
+  # Redirects /posts, posts/, posts/n, posts/n/ to home page
+  # This is for legacy reasons, because those pages are
+  # still indexed by Google to date, and ideally the bot
+  # should never see a 404.
+  get '/posts/?:pagenum?/?' do
+    redirect '/archives/', 301
+  end
+
   # Redirect whatever matches rss to atom.xml
   get '/rss/?' do
     redirect '/atom.xml', 301
