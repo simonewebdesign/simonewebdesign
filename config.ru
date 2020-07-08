@@ -39,7 +39,7 @@ class SinatraStaticServer < Sinatra::Base
   end
 
   get '/unsub/?' do
-    halt 400 unless params.key?('email')
+    redirect "/", 301 unless params.key?('email')
 
     addr = CGI.unescape params['email']
     halt 400 unless addr =~ URI::MailTo::EMAIL_REGEXP

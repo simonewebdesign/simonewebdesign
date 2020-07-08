@@ -79,7 +79,11 @@ test atom.xml '<feed xmlns="http://www.w3.org/2005/Atom">'
 # Sitemap
 test sitemap.xml 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"'
 
-# Subscribe (disabled because it's slow)
+# Subscribe
+# without the email param it should redirect to the home page
+test unsub 301
+test unsub/ 301
+# (disabled because it's slow)
 # test 'unsub?email=test@example' "You have been unsubscribed successfully."
 
 # Old redirects from /blog
