@@ -10,7 +10,6 @@ dsq_thread_id:
   - 1518107300
 categories:
   - Bash
-  - Web
 tags:
   - bash
   - deb

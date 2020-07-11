@@ -8,8 +8,6 @@ updated: 2014-10-28
 comments: true
 dsq_thread_id:
   - 860649835
-categories:
-  - WordPress
 tags:
   - code
   - google

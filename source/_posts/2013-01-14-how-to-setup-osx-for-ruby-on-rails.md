@@ -8,7 +8,7 @@ comments: true
 dsq_thread_id:
   - 1026586953
 categories:
-  - Rails
+  - Ruby
 tags:
   - install
   - mountain lion

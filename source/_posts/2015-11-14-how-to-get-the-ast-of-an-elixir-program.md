@@ -5,7 +5,6 @@ date: 2015-11-14 19:43:10 +0000
 comments: true
 categories:
   - Elixir
-  - AST
 ---
 
 Getting the **AST** (Abstract Syntax Tree) representation of an **Elixir** source is pretty simple.

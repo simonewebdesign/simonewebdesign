@@ -3,7 +3,7 @@ layout: post
 title: "Getting started with rbenv"
 date: 2014-07-14 11:10:14 +0100
 comments: true
-categories: ruby
+categories: Ruby
 ---
 
 If you are struggling to get rbenv working on your machine, then I believe you landed in the right place: here I'm sharing some gotchas I had while setting up rbenv on Mac OS X 10.9.3.

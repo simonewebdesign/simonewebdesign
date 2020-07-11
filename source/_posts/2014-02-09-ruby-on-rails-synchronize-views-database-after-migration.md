@@ -7,7 +7,7 @@ comments: true
 dsq_thread_id:
   - 2243561731
 categories:
-  - Rails
+  - Ruby
 tags:
   - activerecord
   - changes

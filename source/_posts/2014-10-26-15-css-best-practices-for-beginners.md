@@ -3,12 +3,12 @@ layout: post
 title: "15 CSS Best Practices for Beginners"
 date: 2014-10-26 18:36:24 +0000
 comments: true
-categories: css
+categories: CSS
 published: false
 ---
 
 # Code styling, conventions and best practices for beginners
-- or - 
+- or -
 # 15 CSS Best practices for beginners
 
 

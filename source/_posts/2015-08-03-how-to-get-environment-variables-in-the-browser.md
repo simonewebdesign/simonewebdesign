@@ -3,7 +3,7 @@ layout: post
 title: "How To Get Environment Variables in the Browser"
 date: 2015-08-03 12:00:00 +0100
 comments: true
-categories: Bash, Browser, Frontend, Tooling
+categories: Bash
 ---
 
 ## Preface: Why?

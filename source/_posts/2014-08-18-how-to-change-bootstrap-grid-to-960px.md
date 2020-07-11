@@ -4,7 +4,7 @@ title: "How to change Bootstrap grid to 960px"
 date: 2014-08-18 21:13:06 +0100
 updated: 2014-10-28
 comments: true
-categories: css
+categories: CSS
 ---
 
 Many people think that changing `.container`'s width to `960px` is sufficient; well, it's not quite true.

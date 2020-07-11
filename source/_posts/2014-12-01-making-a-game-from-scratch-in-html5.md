@@ -3,10 +3,7 @@ layout: post
 title: "Making a game from scratch in HTML5"
 date: 2014-12-01 17:06:53 +0100
 comments: true
-categories:
- - html5
- - gamedev
- - javascript
+categories: JavaScript
 ---
 
 > "Pong is one of the earliest arcade video games; it is a tennis sports game featuring simple two-dimensional graphics." - Wikipedia

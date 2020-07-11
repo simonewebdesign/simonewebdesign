@@ -4,9 +4,7 @@ title: "Don't stop learning"
 date: 2018-02-21
 comments: true
 categories:
-  - ruby
-  - java
-  - inspirational
+  - Ruby
 ---
 
 Back in the days, when I got serious about becoming a "real programmer", I decided I wanted to learn Java.

@@ -3,7 +3,7 @@ layout: post
 title: "Writing CSS for your fellow programmer friends"
 date: 2014-08-26 20:05:12 +0100
 comments: true
-categories: css
+categories: CSS
 published: false
 ---
 

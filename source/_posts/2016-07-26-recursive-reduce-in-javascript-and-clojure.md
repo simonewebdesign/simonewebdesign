@@ -5,8 +5,6 @@ date: 2016-07-26 13:00:00 +0000
 comments: true
 categories:
   - JavaScript
-  - Clojure
-  - Katas
 ---
 
 Another fun kata:
@@ -105,8 +103,8 @@ have this time. It might be still empty, but we don't care yet. We just
 return it at the very end.
 
 Now, you might have noticed a bug: what happens if the item is good, but also
-has children? ... Yes, that item will be discarded! I did it on purpose 
-by the way. When I made this function, the original array of items never 
+has children? ... Yes, that item will be discarded! I did it on purpose
+by the way. When I made this function, the original array of items never
 had any good item *with* children. Only good items, or items with children.
 The algorithm is reflecting this, so it's technically not a bug.
 

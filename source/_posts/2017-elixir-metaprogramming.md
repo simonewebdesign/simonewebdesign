@@ -3,7 +3,7 @@ layout: post
 title: Metaprogramming in Elixir
 date: FIXME@@@@@@2017-04-03
 comments: true
-categories: elixir
+categories: Elixir
 published: false
 ---
 

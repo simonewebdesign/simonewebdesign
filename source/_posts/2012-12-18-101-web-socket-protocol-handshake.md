@@ -9,7 +9,7 @@ comments: true
 dsq_thread_id:
   - 980978276
 categories:
-  - WebSockets
+  - JavaScript
 tags:
   - guide
   - handshake

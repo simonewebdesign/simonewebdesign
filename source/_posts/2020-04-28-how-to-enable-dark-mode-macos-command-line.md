@@ -4,9 +4,7 @@ title: How to enable Dark Mode on macOS with the command line
 date: 2020-04-28
 comments: true
 categories:
-  - bash
-  - script
-  - shell
+  - Bash
 ---
 
 If you want to toggle between light and dark mode, it can be done with a single shell command:
