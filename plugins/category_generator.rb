@@ -44,12 +44,24 @@ module Jekyll
       self.data['category']    = category
       # Set the title for this page.
       title_prefix             = site.config['category_title_prefix'] || 'Category: '
-      self.data['title']       = "#{title_prefix}#{category}"
+
+      proper_category =
+        case category
+        when "javascript"
+          "JavaScript"
+        when "css"
+          "CSS"
+        when "php"
+          "PHP"
+        else
+          category
+        end
+
+      self.data['title']       = "#{title_prefix}#{proper_category}"
       # Set the meta-description for this page.
       meta_description_prefix  = site.config['category_meta_description_prefix'] || 'Category: '
-      self.data['description'] = "#{meta_description_prefix}#{category}"
+      self.data['description'] = "#{meta_description_prefix}#{proper_category}"
     end
-
   end
 
   # The CategoryFeed class creates an Atom feed for the specified category.

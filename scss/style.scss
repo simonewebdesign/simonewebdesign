@@ -121,6 +121,10 @@ abbr[title] {
     text-align: justify;
 }
 
+.blog-index article + article {
+    margin-top: 6rem;
+}
+
 @media screen and (min-width: 48rem) { /* 720p */
     html {
         font-size: 115%;
