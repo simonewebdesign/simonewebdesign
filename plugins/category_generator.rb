@@ -112,20 +112,6 @@ module Jekyll
         self.categories.keys.each do |category|
           self.write_category_index(File.join(dir, category.to_url), category)
         end
-
-      # Throw an exception if the layout couldn't be found.
-      else
-        raise <<-ERR
-
-
-===============================================
- Error for category_generator.rb plugin
------------------------------------------------
- No 'category_index.html' in source/_layouts/
- Perhaps you haven't installed a theme yet.
-===============================================
-
-ERR
       end
     end
 
