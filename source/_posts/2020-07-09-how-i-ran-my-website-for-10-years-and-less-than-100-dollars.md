@@ -13,7 +13,7 @@ I never had to pay a single penny.
 
 ### Hosting
 
-Heroku is amazing, free plugins, hours etc.
+Heroku is amazing, free plugins, hours etc. Talk about limitations.
 
 ### DNS
 
