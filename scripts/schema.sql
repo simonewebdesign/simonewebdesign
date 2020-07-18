@@ -2,6 +2,7 @@
 
 CREATE TABLE `users` (
   `email` varchar(320) CHARACTER SET utf8 NOT NULL,
+  `timestamp` timestamp NOT NULL,
   UNIQUE KEY `email` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
 
@@ -15,3 +16,6 @@ CREATE TABLE `requests` (
     `timestamp` timestamp NOT NULL,
     PRIMARY KEY (id)
 )
+
+alter table users
+add `timestamp` timestamp NOT NULL;
