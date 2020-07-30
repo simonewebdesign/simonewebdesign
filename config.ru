@@ -32,7 +32,7 @@ class SinatraStaticServer < Sinatra::Base
     addr = CGI.unescape addr
     halt 400 unless addr =~ URI::MailTo::EMAIL_REGEXP
 
-    statement = db.prepare 'INSERT IGNORE INTO users VALUES (?)'
+    statement = db.prepare 'INSERT IGNORE INTO users (email) VALUES (?)'
     statement.execute(addr)
 
     send_sinatra_file(request.path)
