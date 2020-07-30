@@ -1,7 +1,8 @@
 <form name="subscribe" action="/sub" method="POST">
-    <label for="email">Get notified about new articles</label>
-    <input id="email" name="email" type="email" placeholder="Your email address..." />
+    <label for="email">Did you like this read? Consider subscribing to get notified<br /> when a new one gets published:</label>
+    <input id="email" name="email" type="email" placeholder="you@email.com" />
     <button>Subscribe</button>
+    <small>Your email is stored securely and you can unsubscribe at any time.</small>
 </form>
 <script>
     var form = document.querySelector('[name="subscribe"]')
@@ -16,6 +17,10 @@
     form.addEventListener('submit', function (e) {
         if (!form.checkValidity()) return;
         e.preventDefault()
+
+        if (!('fetch' in window)) {
+            form.submit()
+        }
 
         fetch('/sub', { method: 'POST', body: e.currentTarget[0].value })
 
