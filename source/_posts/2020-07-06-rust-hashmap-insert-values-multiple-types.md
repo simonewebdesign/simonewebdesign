@@ -11,6 +11,8 @@ I was building a generic data store with Rust and I needed to implement a hetero
 
 Rust is a statically typed language and, due to the memory safety guarantees we are given, all values of some type must have a known, fixed size at compile time, therefore we are not allowed to create a collection of multiple types. However, <a href="https://doc.rust-lang.org/reference/dynamically-sized-types.html" rel="external nofollow">dynamically sized types</a> also exist, and in this article I'll show how to use them.
 
+<!--more-->
+
 Say we have a <a href="https://doc.rust-lang.org/std/collections/struct.HashMap.html" rel="external nofollow">`HashMap`</a> and we want to add more than one value type to it.
 
 For example:

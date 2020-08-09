@@ -17,6 +17,8 @@ You have tried `git pull`, but you're getting this error:
 
 You need the changes, but obviously you don't want to overwrite or lose any files. Don't worry, the fix is actually straightforward!
 
+<!--more-->
+
 ## Why am I seeing this error?
 
 The reason is probably because you didn't **clone** the repository. In my case, I already had some local files, so instead of running `git clone`, here's what I did:
