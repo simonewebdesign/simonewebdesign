@@ -30,7 +30,7 @@ class SinatraStaticServer < Sinatra::Base
   post '/sub' do
     halt 400 unless params['email'] =~ URI::MailTo::EMAIL_REGEXP
 
-    statement = db.prepare 'INSERT IGNORE INTO users (email, ref) VALUES (?)'
+    statement = db.prepare 'INSERT IGNORE INTO users (email, ref) VALUES (?, ?)'
     statement.execute(params['email'], request.env['HTTP_REFERER'])
 
     send_sinatra_file(request.path)
