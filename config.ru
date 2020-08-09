@@ -2,7 +2,6 @@
 
 require 'bundler/setup'
 require 'sinatra/base'
-require 'cgi'
 
 class SinatraStaticServer < Sinatra::Base
   # Redirect /blog to /
@@ -39,11 +38,10 @@ class SinatraStaticServer < Sinatra::Base
   get '/unsub/?' do
     redirect "/", 301 unless params.key?('email')
 
-    addr = CGI.unescape params['email']
-    halt 400 unless addr =~ URI::MailTo::EMAIL_REGEXP
+    halt 400 unless params['email'] =~ URI::MailTo::EMAIL_REGEXP
 
     statement = db.prepare 'DELETE FROM users WHERE email = ?'
-    statement.execute(addr)
+    statement.execute(params['email'])
 
     send_sinatra_file(request.path)
   end
