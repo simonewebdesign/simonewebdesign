@@ -28,12 +28,10 @@ class SinatraStaticServer < Sinatra::Base
   end
 
   post '/sub' do
-    addr = request.body.read
-    addr = CGI.unescape addr
-    halt 400 unless addr =~ URI::MailTo::EMAIL_REGEXP
+    halt 400 unless params['email'] =~ URI::MailTo::EMAIL_REGEXP
 
-    statement = db.prepare 'INSERT IGNORE INTO users (email) VALUES (?)'
-    statement.execute(addr)
+    statement = db.prepare 'INSERT IGNORE INTO users (email, ref) VALUES (?)'
+    statement.execute(params['email'], request.env['HTTP_REFERER'])
 
     send_sinatra_file(request.path)
   end

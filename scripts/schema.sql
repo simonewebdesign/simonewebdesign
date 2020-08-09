@@ -19,3 +19,6 @@ CREATE TABLE `requests` (
 
 alter table users
 add `timestamp` timestamp NOT NULL;
+
+alter table users
+add ref varchar(600);
