@@ -29,8 +29,10 @@ class SinatraStaticServer < Sinatra::Base
   post '/sub' do
     halt 400 unless params['email'] =~ URI::MailTo::EMAIL_REGEXP
 
-    statement = db.prepare 'INSERT IGNORE INTO users (email, ref) VALUES (?, ?)'
-    statement.execute(params['email'], request.env['HTTP_REFERER'])
+    Thread.new do
+      statement = db.prepare 'INSERT IGNORE INTO users (email, ref) VALUES (?, ?)'
+      statement.execute(params['email'], request.env['HTTP_REFERER'])
+    end
 
     send_sinatra_file(request.path)
   end
@@ -40,8 +42,10 @@ class SinatraStaticServer < Sinatra::Base
 
     halt 400 unless params['email'] =~ URI::MailTo::EMAIL_REGEXP
 
-    statement = db.prepare 'DELETE FROM users WHERE email = ?'
-    statement.execute(params['email'])
+    Thread.new do
+      statement = db.prepare 'DELETE FROM users WHERE email = ?'
+      statement.execute(params['email'])
+    end
 
     send_sinatra_file(request.path)
   end
