@@ -112,9 +112,9 @@ Subject: #{subject}
 #{body}
 END_OF_MESSAGE
     require 'net/smtp'
-    smtp = Net::SMTP.new ENV['CINDY_SMTP_SERVER'], ENV['CINDY_SMTP_PORT']
+    smtp = Net::SMTP.new ENV['SIMO_SMTP_SERVER'], ENV['SIMO_SMTP_PORT']
     smtp.enable_starttls
-    smtp.start('simonewebdesign.it', ENV['CINDY_AUTH_USERNAME'], ENV['CINDY_AUTH_PASSWORD'], :login) do |sm|
+    smtp.start('simonewebdesign.it', ENV['SIMO_AUTH_USERNAME'], ENV['SIMO_AUTH_PASSWORD'], :login) do |sm|
       from_addr = 'site@simonewebdesign.it'
       to_addr = 'hello@simonewebdesign.it'
 
