@@ -22,6 +22,11 @@ class SinatraStaticServer < Sinatra::Base
     redirect '/atom.xml', 301
   end
 
+  # Redirect whatever matches feed to atom.xml
+  get '/feed/?' do
+    redirect '/atom.xml', 301
+  end
+
   get '/simone-vittori/?' do
     redirect '/about/', 301
   end
