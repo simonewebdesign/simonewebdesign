@@ -1,8 +1,8 @@
 <form name="subscribe" action="/sub" method="POST">
-    <label for="email">Did you like this read? Subscribe to get notified of a future article.</label>
+    <label for="email">Get notified of new articles via email</label>
     <input id="email" name="email" type="email" placeholder="your@email.com" />
     <button>Subscribe</button>
-    <small>Your email is stored securely and I hate spam too,<br>so don't worry—you can unsubscribe at any time.</small>
+    <!-- <small>I won't send you spam, ever.</small> -->
 </form>
 <script>
     var form = document.querySelector('[name="subscribe"]')
@@ -36,11 +36,9 @@
         var par = document.createElement('p')
         par.innerText = "You will receive an email when a new article gets published."
 
-        title.style.textAlign = 'center'
-        par.style.textAlign = 'center'
-
-        title.style.margin = '3rem 0 1.2rem 0'
-        par.style.margin = '0 0 3.75rem 0'
+        title.style.textAlign = par.style.textAlign = 'center'
+        title.style.margin = '5.5rem 0 1.2rem 0'
+        par.style.margin = '0 0 7.2rem 0'
 
         form.insertAdjacentElement('afterend', title)
         title.insertAdjacentElement('afterend', par)
