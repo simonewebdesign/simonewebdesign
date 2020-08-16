@@ -27,11 +27,14 @@ class SinatraStaticServer < Sinatra::Base
   end
 
   post '/sub' do
-    halt 400 unless params['email'] =~ URI::MailTo::EMAIL_REGEXP
+    new_email = params['email']
+    halt 400 unless new_email =~ URI::MailTo::EMAIL_REGEXP
 
     Thread.new do
       statement = db.prepare 'INSERT IGNORE INTO users (email, ref) VALUES (?, ?)'
-      statement.execute(params['email'], request.env['HTTP_REFERER'])
+      statement.execute(new_email, request.env['HTTP_REFERER'])
+
+      send_mail_to_yourself("[swd] New sub: #{new_email}", "")
     end
 
     send_sinatra_file(request.path)
@@ -40,11 +43,14 @@ class SinatraStaticServer < Sinatra::Base
   get '/unsub/?' do
     redirect "/", 301 unless params.key?('email')
 
-    halt 400 unless params['email'] =~ URI::MailTo::EMAIL_REGEXP
+    email = params['email']
+    halt 400 unless email =~ URI::MailTo::EMAIL_REGEXP
 
     Thread.new do
       statement = db.prepare 'DELETE FROM users WHERE email = ?'
-      statement.execute(params['email'])
+      statement.execute(email)
+
+      send_mail_to_yourself("[swd] Unsub: #{email}", "")
     end
 
     send_sinatra_file(request.path)
@@ -71,6 +77,7 @@ class SinatraStaticServer < Sinatra::Base
 
   # after do
   #   # This is a good place to track all requests, but keep in mind it IS blocking.
+  #   # You can use threads to do the heavy stuff in background, however.
   #   Thread.new do
   #     statement = db.prepare "INSERT IGNORE INTO requests (path, status_code) VALUES (?, ?)"
   #     statement.execute(request.path.lstrip, response.status)
@@ -96,6 +103,23 @@ class SinatraStaticServer < Sinatra::Base
       port: ENV['DB_PORT'],
       database: ENV['DB_NAME']
     )
+  end
+
+  def send_mail_to_yourself(subject, body)
+    msgstr = <<-END_OF_MESSAGE
+    Subject: #{subject}
+
+    #{body}
+    END_OF_MESSAGE
+    require 'net/smtp'
+    smtp = Net::SMTP.new ENV['CINDY_SMTP_SERVER'], ENV['CINDY_SMTP_PORT']
+    smtp.enable_starttls
+    smtp.start('simonewebdesign.it', ENV['CINDY_AUTH_USERNAME'], ENV['CINDY_AUTH_PASSWORD'], :login) do |sm|
+      from_addr = 'hello+from@simonewebdesign.it'
+      to_addr = 'hello+to@simonewebdesign.it'
+
+      sm.send_message msgstr, from_addr, to_addr
+    end
   end
 end
 
