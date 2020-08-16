@@ -34,7 +34,7 @@ class SinatraStaticServer < Sinatra::Base
       statement = db.prepare 'INSERT IGNORE INTO users (email, ref) VALUES (?, ?)'
       statement.execute(new_email, request.env['HTTP_REFERER'])
 
-      send_mail_to_yourself("[swd] New sub: #{new_email}", "")
+      send_mail_to_yourself("[swd] New sub: #{new_email}", "Ref: #{request.env['HTTP_REFERER']}")
     end
 
     send_sinatra_file(request.path)
@@ -50,7 +50,7 @@ class SinatraStaticServer < Sinatra::Base
       statement = db.prepare 'DELETE FROM users WHERE email = ?'
       statement.execute(email)
 
-      send_mail_to_yourself("[swd] Unsub: #{email}", "")
+      send_mail_to_yourself("[swd] Unsub: #{email}", "Test body")
     end
 
     send_sinatra_file(request.path)
@@ -106,17 +106,17 @@ class SinatraStaticServer < Sinatra::Base
   end
 
   def send_mail_to_yourself(subject, body)
-    msgstr = <<-END_OF_MESSAGE
-    Subject: #{subject}
+    msgstr = <<END_OF_MESSAGE
+Subject: #{subject}
 
-    #{body}
-    END_OF_MESSAGE
+#{body}
+END_OF_MESSAGE
     require 'net/smtp'
     smtp = Net::SMTP.new ENV['CINDY_SMTP_SERVER'], ENV['CINDY_SMTP_PORT']
     smtp.enable_starttls
     smtp.start('simonewebdesign.it', ENV['CINDY_AUTH_USERNAME'], ENV['CINDY_AUTH_PASSWORD'], :login) do |sm|
-      from_addr = 'hello+from@simonewebdesign.it'
-      to_addr = 'hello+to@simonewebdesign.it'
+      from_addr = 'site@simonewebdesign.it'
+      to_addr = 'hello@simonewebdesign.it'
 
       sm.send_message msgstr, from_addr, to_addr
     end
