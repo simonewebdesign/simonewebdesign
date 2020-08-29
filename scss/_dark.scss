@@ -33,7 +33,9 @@
 
     pre,
     p code,
-    li code {
+    li code,
+    header + nav,
+    div.category-index article + article h1 {
         border-color: #3a3a3a;
     }
 
