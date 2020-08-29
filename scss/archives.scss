@@ -85,3 +85,16 @@
 article+article {
   margin-top: 0;
 }
+
+.categories-list {
+  list-style: none;
+  font-family: 'Courier New', Courier, monospace;
+  padding-left: 0.5rem;
+  margin-bottom: 2rem;
+  display: inline-block;
+
+
+  li {
+    display: inline;
+  }
+}
