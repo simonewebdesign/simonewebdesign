@@ -3,6 +3,9 @@ layout: post
 title: Blending together two lists in Elm and Swift
 date: 2016-07-03 19:30:00 +0000
 comments: true
+categories:
+  - Elm
+  - Swift
 ---
 
 Here's a fun kata:

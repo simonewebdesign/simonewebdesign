@@ -5,6 +5,7 @@ date: 2016-07-26 13:00:00 +0000
 comments: true
 categories:
   - JavaScript
+  - Clojure
 ---
 
 Another fun kata:

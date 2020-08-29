@@ -5,6 +5,7 @@ date: 2020-07-06
 updated: 2020-07-07
 comments: true
 published: true
+categories: Rust
 ---
 
 I was building a generic data store with Rust and I needed to implement a heterogeneous collection of keys and values. Essentially what I needed was a dictionary, but with values of dynamic type, like both strings and integers at the same time.
