@@ -1,4 +1,11 @@
 // TODO: This file is shit. Burn it and rewrite from scratch.
+// You could try using categories.scss in place of this shit.
+// In fact I rewrote that categories.scss exactly for this reason,
+// it might be a very good idea to just throw this shit away
+// and share categories.scss between the layouts.
+// You probably don't even need hacks if you think about it:
+// try to include the <link> tag in both layouts, or even better,
+// use a single layout, named archives or something, that uses the categories.scss.
 @import "compass/typography/links/hover-link";
 @import "compass/typography/links/link-colors";
 @import "variables";
