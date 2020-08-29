@@ -49,7 +49,7 @@ recent_posts: 10       # Posts in the sidebar Recent Posts section
 excerpt_link: "Read on &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
 excerpt_separator: "<!--more-->"
 
-category_title_prefix: "Articles on "
+category_title_prefix: "Articles about "
 
 titlecase: true       # Converts page and post titles to titlecase
 
