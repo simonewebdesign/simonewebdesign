@@ -63,13 +63,13 @@ test how-to-put-online-your-wampserver 301
 test how-to-put-online-your-wampserver/ "How to put online your WampServer"
 
 # Categories
-test categories/css/ "Articles on CSS"
+test categories/css/ "Articles about CSS"
 test categories/git 301
-test categories/git/ "Articles on Git"
+test categories/git/ "Articles about Git"
 test categories/javascript 301
-test categories/javascript/ "Articles on JavaScript"
-# test categories/gamedev/ "Articles on Gamedev" # Game Development
-# test categories/inspirational/ "Articles on Inspirational"
+test categories/javascript/ "Articles about JavaScript"
+# test categories/gamedev/ "Articles about Gamedev" # Game Development
+# test categories/inspirational/ "Articles about Inspirational"
 
 # RSS
 test rss 301
