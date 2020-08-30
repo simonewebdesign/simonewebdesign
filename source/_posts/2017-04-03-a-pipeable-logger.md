@@ -1,6 +1,7 @@
 ---
 layout: post
 title: A Pipeable Logger
+description: Journey through finding the perfect way of logging a value between pipes in Elixir.
 date: 2017-04-03
 comments: true
 categories: Elixir

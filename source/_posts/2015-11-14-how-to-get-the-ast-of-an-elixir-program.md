@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "How to get the AST of an Elixir program"
+description: Getting the Abstract Syntax Tree representation of your program is pretty simple in Elixir.
 date: 2015-11-14 19:43:10 +0000
 comments: true
 categories:

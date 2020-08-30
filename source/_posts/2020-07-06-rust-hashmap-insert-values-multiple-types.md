@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Inserting values of multiple types in Rust's HashMap
+description: How to build a heterogeneous collection in Rust, using values of different types.
 date: 2020-07-06
 updated: 2020-07-07
 comments: true
@@ -8,7 +9,7 @@ published: true
 categories: Rust
 ---
 
-I was building a generic data store with Rust and I needed to implement a heterogeneous collection of keys and values. Essentially what I needed was a dictionary, but with values of dynamic type, like both strings and integers at the same time.
+I was building a generic data store with Rust and I needed to implement a **heterogeneous collection** of keys and values. Essentially what I needed was a dictionary, but with values of dynamic type, like both strings and integers at the same time.
 
 Rust is a statically typed language and, due to the memory safety guarantees we are given, all values of some type must have a known, fixed size at compile time, therefore we are not allowed to create a collection of multiple types. However, <a href="https://doc.rust-lang.org/reference/dynamically-sized-types.html" rel="external nofollow">dynamically sized types</a> also exist, and in this article I'll show how to use them.
 

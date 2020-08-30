@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Don't stop learning"
+description: "Just don't stop learning, ever. Keep on practicing, and you too will discover beautiful things."
 date: 2018-02-21
 comments: true
 categories:

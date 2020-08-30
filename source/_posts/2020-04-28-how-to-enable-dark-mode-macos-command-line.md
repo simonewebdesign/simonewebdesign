@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How to enable Dark Mode on macOS with the command line
+description: "The easiest way, it works right away: no need to restart or install anything."
 date: 2020-04-28
 comments: true
 categories:

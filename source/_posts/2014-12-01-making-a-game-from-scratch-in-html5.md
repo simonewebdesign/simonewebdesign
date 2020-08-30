@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Making a game from scratch in HTML5"
+description: How to build Pong using plain JS and the HTML5 Canvas. No game engine.
 date: 2014-12-01 17:06:53 +0100
 comments: true
 categories: JavaScript
