@@ -33,7 +33,12 @@ class SinatraStaticServer < Sinatra::Base
 
   post '/sub' do
     new_email = params['email']
-    halt 400 unless new_email =~ URI::MailTo::EMAIL_REGEXP
+    unless new_email =~ URI::MailTo::EMAIL_REGEXP
+      Thread.new do
+        send_mail_to_yourself("[swd] /sub 400 (invalid email)", new_email)
+      end
+      halt 400
+    end
 
     Thread.new do
       statement = db.prepare 'INSERT IGNORE INTO users (email, ref) VALUES (?, ?)'
@@ -49,7 +54,12 @@ class SinatraStaticServer < Sinatra::Base
     redirect "/", 301 unless params.key?('email')
 
     email = params['email']
-    halt 400 unless email =~ URI::MailTo::EMAIL_REGEXP
+    unless email =~ URI::MailTo::EMAIL_REGEXP
+      Thread.new do
+        send_mail_to_yourself("[swd] /unsub 400 (invalid email)", email)
+      end
+      halt 400
+    end
 
     Thread.new do
       statement = db.prepare 'DELETE FROM users WHERE email = ?'
@@ -78,6 +88,18 @@ class SinatraStaticServer < Sinatra::Base
 
   not_found do
     send_file(File.join(__dir__, 'public', '404/index.html'), { status: 404 })
+  end
+
+  error 405..530 do
+    Thread.new do
+      send_mail_to_yourself("[swd] #{response.status} Error", env['sinatra.error'])
+    end
+  end
+
+  error do
+    Thread.new do
+      send_mail_to_yourself("[swd][error] Check the logs!", "heroku addons:open -a simo papertrail or https://my.papertrailapp.com/systems/simo/events")
+    end
   end
 
   # after do
