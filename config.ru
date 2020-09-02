@@ -90,18 +90,6 @@ class SinatraStaticServer < Sinatra::Base
     send_file(File.join(__dir__, 'public', '404/index.html'), { status: 404 })
   end
 
-  error 405..530 do
-    Thread.new do
-      send_mail_to_yourself("[swd] #{response.status} Error", env['sinatra.error'])
-    end
-  end
-
-  error do
-    Thread.new do
-      send_mail_to_yourself("[swd][error] Check the logs!", "heroku addons:open -a simo papertrail or https://my.papertrailapp.com/systems/simo/events")
-    end
-  end
-
   # after do
   #   # This is a good place to track all requests, but keep in mind it IS blocking.
   #   # You can use threads to do the heavy stuff in background, however.
