@@ -72,7 +72,3 @@ github_user: simonewebdesign
 github_repo_count: 5
 github_show_profile_link: true
 github_skip_forks: true
-
-# Disqus Comments
-disqus_short_name: simonewebdesign
-disqus_show_comment_count: true

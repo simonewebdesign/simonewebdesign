@@ -17,12 +17,6 @@ single: true
 {% unless page.subscribe_form == false %}
 {% include subscribe_form.html %}
 {% endunless %}
-
-{% if site.disqus_short_name and page.comments == true %}
-  <section>
-    <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
-  </section>
-{% endif %}
 </div>
 
 {% unless page.sidebar == false %}
