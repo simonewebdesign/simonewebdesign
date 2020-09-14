@@ -96,6 +96,10 @@ h2 code {
     border: 2px solid transparent;
 }
 
+#disqus_thread {
+    min-height: 1px;
+}
+
 @media screen and (min-width: 500px) {
     [name="subscribe"] input {
         width: 28%;

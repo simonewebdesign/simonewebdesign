@@ -5,12 +5,19 @@
 var disqus_config = function () {
 this.page.url = 'https://www.simonewebdesign.it/';
 this.page.identifier = '{{ site.url }}{{ page.url }}';
-};(function() {
-var d = document, s = d.createElement('script');
-s.src = 'https://simonewebdesign.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
+};
+var disqusObserver = new IntersectionObserver(function(entries) {
+    if(entries[0].isIntersecting) {
+(function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://simonewebdesign.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+        disqusObserver.disconnect();
+    }
+});
+disqusObserver.observe(document.querySelector('#disqus_thread'));
 </script>
 <noscript>Please enable JavaScript to view the comments.</noscript>
 {% endif %}
