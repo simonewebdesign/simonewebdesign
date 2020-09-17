@@ -8,13 +8,13 @@ this.page.identifier = '{{ site.url }}{{ page.url }}';
 };
 var disqusObserver = new IntersectionObserver(function(entries) {
     if(entries[0].isIntersecting) {
-(function() {
+    (function() {
+        disqusObserver.disconnect();
         var d = document, s = d.createElement('script');
         s.src = 'https://simonewebdesign.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
         })();
-        disqusObserver.disconnect();
     }
 });
 disqusObserver.observe(document.querySelector('#disqus_thread'));
