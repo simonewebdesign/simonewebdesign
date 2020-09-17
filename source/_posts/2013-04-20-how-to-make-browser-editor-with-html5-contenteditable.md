@@ -50,7 +50,7 @@ tags:
 </blockquote>
 
 <p>
-  <img src="/images/cat2.jpg" alt="Cat with eyes shining bright" width="200" height="200" class="basic-alignment right" /></a> This just made my eyes shine brighter than ever. I think there&#8217;s <em>a lot</em> of potential here: do you imagine how many things you could realize with the <code>contenteditable</code> attribute?
+  <img src="/images/cat2.jpg" alt="Cat with eyes shining bright" width="200" height="200" class="basic-alignment right"> This just made my eyes shine brighter than ever. I think there&#8217;s <em>a lot</em> of potential here: do you imagine how many things you could realize with the <code>contenteditable</code> attribute?
 </p>
 
 <p>
