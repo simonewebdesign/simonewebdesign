@@ -91,15 +91,6 @@ class SinatraStaticServer < Sinatra::Base
     send_file(File.join(__dir__, 'public', '404/index.html'), { status: 404 })
   end
 
-  # after do
-  #   # This is a good place to track all requests, but keep in mind it IS blocking.
-  #   # You can use threads to do the heavy stuff in background, however.
-  #   Thread.new do
-  #     statement = db.prepare "INSERT IGNORE INTO requests (path, status_code) VALUES (?, ?)"
-  #     statement.execute(request.path.lstrip, response.status)
-  #   end
-  # end
-
   def send_sinatra_file(path, &missing_file_block)
     file_path = File.join(__dir__, 'public', path)
     file_path = File.join(file_path, 'index.html') unless file_path =~ /\.[a-z]+$/i
