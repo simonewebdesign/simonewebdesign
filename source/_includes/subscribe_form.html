@@ -1,8 +1,8 @@
 <form name="subscribe" action="/sub" method="POST">
-    <label for="email">Get notified of new articles via email</label>
-    <input id="email" name="email" type="email" placeholder="your@email.com" />
-    <button>Subscribe</button>
-    <small>No spam, just one email when an article gets published—I don't write very often!</small>
+    <label for="email">Get the latest articles in your inbox</label>
+    <input id="email" name="email" type="email" placeholder="your@email.com" required>
+    <button>Submit</button>
+    <!-- <small></small> -->
 </form>
 <script>
     var form = document.querySelector('[name="subscribe"]')
@@ -30,8 +30,8 @@
             body: "email="+encodeURIComponent(e.currentTarget[0].value)
         })
 
-        var title = document.createElement('h1')
-        title.innerText = "Thanks!"
+        var title = document.createElement('h2')
+        title.innerText = "Thank you!"
 
         var par = document.createElement('p')
         par.innerText = "You will receive an email when a new article gets published."

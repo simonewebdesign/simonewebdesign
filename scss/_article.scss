@@ -39,6 +39,7 @@ h2 code {
     display: block;
     // font-size: 1.5rem;
     margin-bottom: 1rem;
+    font-weight: bold;
 }
 
 [name="subscribe"] input,
@@ -75,11 +76,11 @@ h2 code {
     padding-right: 1rem;
 }
 
-[name="subscribe"] small {
-    display: block;
-    opacity: 0.8;
-    margin-top: 1rem;
-}
+// [name="subscribe"] small {
+//     display: block;
+//     opacity: 0.8;
+//     margin-top: 1rem;
+// }
 
 [name="subscribe"] button:active {
     box-shadow: inset 0 3px 6px darken(#268bd2, 15%);
