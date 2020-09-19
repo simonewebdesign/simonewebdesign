@@ -75,7 +75,7 @@ class SinatraStaticServer < Sinatra::Base
   # Except for some file extensions
   # https://stackoverflow.com/a/11927449
   get %r{(/.*[^\/])} do
-    if params[:captures].first =~ /\.(gif|jpg|jpeg|png|webp|ico|js|json)$/
+    if params[:captures].first =~ /\.(mp4|gif|jpg|jpeg|png|webp|ico|js|json)$/
       return send_sinatra_file(request.path) { 404 }
     end
 
@@ -120,7 +120,7 @@ class SinatraStaticServer < Sinatra::Base
     )
   end
 
-  def send_mail_to_yourself(subject, body)
+  def send_mail_to_yourself(subject, body = '')
     msgstr = <<END_OF_MESSAGE
 Subject: #{subject}
 
