@@ -35,7 +35,7 @@ class SinatraStaticServer < Sinatra::Base
     new_email = params['email']
     unless new_email =~ URI::MailTo::EMAIL_REGEXP
       Thread.new do
-        send_mail_to_yourself("[swd] /sub 400 (invalid email)", new_email)
+        send_mail_to_yourself("[swd] /sub 400 (invalid email=#{new_email})")
       end
       halt 400
     end
@@ -44,7 +44,7 @@ class SinatraStaticServer < Sinatra::Base
       statement = db.prepare 'INSERT IGNORE INTO users (email, ref) VALUES (?, ?)'
       statement.execute(new_email, request.env['HTTP_REFERER'])
 
-      send_mail_to_yourself("[swd] New sub: #{new_email}", "Ref: #{request.env['HTTP_REFERER']}")
+      send_mail_to_yourself("[swd] New sub (email=#{new_email})", "Ref: #{request.env['HTTP_REFERER']}")
     end
 
     send_sinatra_file(request.path)
@@ -56,7 +56,7 @@ class SinatraStaticServer < Sinatra::Base
     email = params['email']
     unless email =~ URI::MailTo::EMAIL_REGEXP
       Thread.new do
-        send_mail_to_yourself("[swd] /unsub 400 (invalid email)", email)
+        send_mail_to_yourself("[swd] /unsub 400 (invalid email=#{email})")
       end
       halt 400
     end
@@ -65,7 +65,8 @@ class SinatraStaticServer < Sinatra::Base
       statement = db.prepare 'DELETE FROM users WHERE email = ?'
       statement.execute(email)
 
-      send_mail_to_yourself("[swd] Unsub: #{email}", "Test body")
+      # TODO: log referrer from unsub email as query param
+      send_mail_to_yourself("[swd] Unsub (email=#{email})")
     end
 
     send_sinatra_file(request.path)
