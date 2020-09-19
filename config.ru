@@ -76,7 +76,7 @@ class SinatraStaticServer < Sinatra::Base
   # Except for some file extensions
   # https://stackoverflow.com/a/11927449
   get %r{(/.*[^\/])} do
-    if params[:captures].first =~ /\.(mp4|gif|jpg|jpeg|png|webp|ico|js|json)$/
+    if params[:captures].first =~ /\.(mp4|gif|jpg|jpeg|png|webp|ico|css|js|json|xml|asc|txt|otf|eot|svg|ttf|html|htm|php|cgi)$/
       return send_sinatra_file(request.path) { 404 }
     end
 
