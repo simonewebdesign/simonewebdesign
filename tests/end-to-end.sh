@@ -102,6 +102,9 @@ test posts/ 301
 test posts/7 301
 test posts/7/ 301
 
+# Miscellaneous assets
+test videos/omg-cat.mp4 200 &>/dev/null
+
 
 if [ $exit_status -eq 0 ]
 then

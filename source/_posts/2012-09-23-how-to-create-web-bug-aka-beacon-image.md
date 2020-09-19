@@ -68,7 +68,10 @@ User agent: $useragent";
 ```
 
 <p>
-  <img src="/images/cat-surprised.gif" alt="a surprised cat" width="300" height="208" class="basic-alignment left" />
+  <video width="300" height="208" autoplay loop muted="muted" poster="/images/omg-cat.jpg" class="basic-alignment left">
+    <source type="video/mp4"
+        src="/videos/omg-cat.mp4">
+  </video>
   And now try to navigate through an image, let&#8217;s say <code>cat.gif</code>. You&#8217;ll go to <em>http://yoursite.com/path/to/cat.gif</em> and you&#8217;ll expect to see a cat. Instead, you&#8217;ll see something like this:
 </p>
 
