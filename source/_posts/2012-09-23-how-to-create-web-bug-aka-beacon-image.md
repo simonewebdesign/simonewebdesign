@@ -1,9 +1,10 @@
 ---
 title: How to create a web bug (aka beacon image)
-description: "Tutorial: learn how to build an hidden web bug. To create a beacon image, you need to enable the Apache’s URL rewriting module (mod_rewrite)."
+description: "Tutorial: learn how to build a hidden web bug. To create a beacon image, you need to enable the Apache’s URL rewriting module (mod_rewrite)."
 layout: post
 permalink: /how-to-create-web-bug-aka-beacon-image/
 date: 2012-09-23 15:22:30 +0000
+updated: 2020-09-19
 comments: true
 dsq_thread_id:
   - 860147944
@@ -42,7 +43,7 @@ tags:
 </p>
 
 <p>
-  In order to create an <strong>hidden web bug</strong>, you need to enable the Apache&#8217;s <abbr title="Uniform Resource Locator">URL</abbr> rewriting module (mod_rewrite). Create a new <code>.htaccess</code> file and put the following code in it:
+  In order to create a <strong>hidden web bug</strong>, you need to enable the Apache&#8217;s <abbr title="Uniform Resource Locator">URL</abbr> rewriting module (mod_rewrite). Create a new <code>.htaccess</code> file and put the following code in it:
 </p>
 
 ``` apache
@@ -58,8 +59,8 @@ RewriteRule ^(.*).(png|jpg|gif)$ script.php
 <?php
 $fullpath  = $_SERVER['REQUEST_URI'];
 $filename  = basename($fullpath);
-$ip        = $_SERVER["REMOTE_ADDR"];
-$useragent = $_SERVER["HTTP_USER_AGENT"];
+$ip        = $_SERVER['REMOTE_ADDR'];
+$useragent = $_SERVER['HTTP_USER_AGENT'];
 
 echo "Path: $fullpath;<br>
 File: $filename;<br>
@@ -69,8 +70,7 @@ User agent: $useragent";
 
 <p>
   <video width="300" height="208" autoplay loop muted="muted" poster="/images/omg-cat.jpg" class="basic-alignment left">
-    <source type="video/mp4"
-        src="/videos/omg-cat.mp4">
+    <source type="video/mp4" src="/videos/omg-cat.mp4">
   </video>
   And now try to navigate through an image, let&#8217;s say <code>cat.gif</code>. You&#8217;ll go to <em>http://yoursite.com/path/to/cat.gif</em> and you&#8217;ll expect to see a cat. Instead, you&#8217;ll see something like this:
 </p>
