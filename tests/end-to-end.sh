@@ -31,6 +31,7 @@ test sw.js 'self.addEventListener("fetch"'
 test stylesheets/about.css ".about-intro picture{float:left;"
 test stylesheets/projects.css ".projects section+section{margin-top:"
 test stylesheets/archives.css "#archive #content>div,#archive #content>div>article{padding-top:0}"
+test stylesheets/atom.css "feed{"
 
 # Main pages
 test archives/ "Blog Archives"

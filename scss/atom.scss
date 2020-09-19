@@ -1,0 +1,58 @@
+feed {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    background: #f6f6f6 url('/images/noise.png');
+    font-family: "PT Serif", Georgia, Times, "Times New Roman", serif;
+    color: #333;
+    border-top: 3px solid #555;
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+id,
+author,
+feed > updated {
+    display: none;
+}
+
+feed > title {
+    font-size: 3rem;
+
+    &:after {
+        display: block;
+        content: 'The latest 20 articles';
+        font-size: 1.5rem;
+        color: #888;
+        margin-bottom: 3rem;
+    }
+}
+
+entry {
+    display: block;
+
+    title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #555;
+    }
+
+    updated {
+        color: #aaa;
+        display: block;
+        margin: 1rem 0;
+
+        &:before {
+            content: 'Publish date: '
+        }
+    }
+
+    + entry {
+        margin-top: 2rem;
+    }
+}
+
+content {
+    font-family: monospace, monospace;
+    font-size: .66rem;
+}
