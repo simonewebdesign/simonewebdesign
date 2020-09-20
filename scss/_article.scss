@@ -91,12 +91,6 @@ h2 code {
     cursor: pointer;
 }
 
-[name="subscribe"] button:disabled {
-    box-shadow: none;
-    background: rgba(88, 88, 88, 0.2);
-    border: 2px solid transparent;
-}
-
 #disqus_thread {
     min-height: 1px;
 }

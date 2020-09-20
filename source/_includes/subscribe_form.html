@@ -9,11 +9,6 @@
     var btn = document.querySelector('[name="subscribe"] > button')
     var input = document.querySelector('#email')
 
-    input.addEventListener('change', function (e) {
-        btn.disabled = !form.checkValidity()
-    })
-    btn.disabled = !form.checkValidity()
-
     form.addEventListener('submit', function (e) {
         if (!form.checkValidity()) return;
         e.preventDefault()
