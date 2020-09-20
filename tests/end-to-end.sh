@@ -85,8 +85,7 @@ test sitemap.xml 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"'
 # without the email param it should redirect to the home page
 test unsub 301
 test unsub/ 301
-# (disabled because it's slow)
-# test 'unsub?email=test@example' "You have been unsubscribed successfully."
+test 'unsub?email=test@example' "You have been unsubscribed successfully."
 
 # Old redirects from /blog
 # The actual redirect from /blog to / happens on Cloudflare so it's fine not to test it here.
