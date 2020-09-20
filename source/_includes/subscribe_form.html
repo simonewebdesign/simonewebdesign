@@ -13,15 +13,11 @@
         if (!form.checkValidity()) return;
         e.preventDefault()
 
-        if (!('fetch' in window)) {
-            form.submit()
-        }
+        if (!('fetch' in window)) form.submit()
 
         fetch('/sub', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            },
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
             body: "email="+encodeURIComponent(e.currentTarget[0].value)
         })
 
