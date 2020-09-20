@@ -69,6 +69,14 @@ test categories/git 301
 test categories/git/ "Articles about Git"
 test categories/javascript 301
 test categories/javascript/ "Articles about JavaScript"
+test categories/ruby/ "Articles about Ruby"
+test categories/bash/ "Articles about Bash"
+test categories/elixir/ "Articles about Elixir"
+test categories/swift/ "Articles about Swift"
+test categories/php/ "Articles about PHP"
+test categories/elm/ "Articles about Elm"
+test categories/clojure/ "Articles about Clojure"
+test categories/rust/ "Articles about Rust"
 # test categories/gamedev/ "Articles about Gamedev" # Game Development
 # test categories/inspirational/ "Articles about Inspirational"
 
