@@ -5,14 +5,14 @@ layout: null
 <?xml-stylesheet type="text/css" media="screen" href="/stylesheets/atom.css"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[{{ site.title | cdata_escape }}]]></title>
+  <title>{{ site.title }}</title>
   <link href="{{ site.url }}/atom.xml" rel="self"/>
   <link href="{{ site.url }}/"/>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>{{ site.url }}/</id>
   <author>
-    <name><![CDATA[{{ site.author | strip_html }}]]></name>
-    {% if site.email %}<email><![CDATA[{{ site.email }}]]></email>{% endif %}
+    <name>{{ site.author }}</name>
+    {% if site.email %}<email>{{ site.email }}</email>{% endif %}
   </author>
 
   {% for post in site.posts limit: 20 %}

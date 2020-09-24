@@ -19,7 +19,7 @@ date_format: "ordinal"
 subscribe_rss: https://feeds.feedburner.com/simonewebdesign
 subscribe_email:
 # RSS feeds can list your email address if you like
-email:
+email: hello@simonewebdesign.it
 
 # ----------------------- #
 #    Jekyll & Plugins     #
