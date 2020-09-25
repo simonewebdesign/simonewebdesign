@@ -22,5 +22,5 @@ group :development do
 end
 
 gem 'puma'
-gem 'sinatra', '~> 2.0.5'
+gem 'sinatra'
 gem 'mysql2', '~> 0.5.3'

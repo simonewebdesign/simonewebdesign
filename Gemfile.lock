@@ -81,7 +81,7 @@ GEM
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.2.0)
     rack (2.2.3)
-    rack-protection (2.0.8.1)
+    rack-protection (2.1.0)
       rack
     rake (10.5.0)
     rb-fsevent (0.10.4)
@@ -99,10 +99,10 @@ GEM
     sawyer (0.8.2)
       addressable (>= 2.3.5)
       faraday (> 0.8, < 2.0)
-    sinatra (2.0.8.1)
+    sinatra (2.1.0)
       mustermann (~> 1.0)
-      rack (~> 2.0)
-      rack-protection (= 2.0.8.1)
+      rack (~> 2.2)
+      rack-protection (= 2.1.0)
       tilt (~> 2.0)
     stringex (1.4.0)
     therubyracer (0.12.3)
@@ -132,7 +132,7 @@ DEPENDENCIES
   rdiscount (~> 2.0)
   rubypants (~> 0.2.0)
   sass-globbing (~> 1.0.0)
-  sinatra (~> 2.0.5)
+  sinatra
   stringex (~> 1.4.0)
   therubyracer (~> 0.12.3)
 
