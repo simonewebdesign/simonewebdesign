@@ -8,7 +8,7 @@ introduction: true
 <div class="blog-index">
   {% assign index = true %}
 
-  {% unless page.introduction == false %}
+  {% if page.introduction %}
   <blockquote class="intro">
     Hi—I’m Simone Vittori, a software developer based in London, UK.
     I have experience in web development with a variety of programming languages,
@@ -19,7 +19,7 @@ introduction: true
     <a href="https://twitter.com/simonewebdesign" rel="external nofollow">Twitter</a> or fork me on
     <a href="https://github.com/simonewebdesign" rel="external nofollow">GitHub</a>.
   </blockquote>
-  {% endunless %}
+  {% endif %}
 
   {% for post in site.posts limit: 4 %}
   {% assign content = post.content %}
