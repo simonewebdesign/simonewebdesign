@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 ruby '2.7.2'
 
 group :development do
-  gem 'rake', '~> 10.4'
+  gem 'rake', '~> 13.0'
   gem 'jekyll', '~> 2.0'
   gem 'jekyll-page-hooks', '~> 1.2'
   gem 'octopress-date-format'
