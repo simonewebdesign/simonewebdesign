@@ -14,7 +14,7 @@ group :development do
   gem 'RedCloth', '~> 4.2.9'
   gem 'haml', '~> 4.0'
   gem 'compass', '~> 0.12.2'
-  gem 'sass-globbing', '~> 1.0.0'
+  gem 'sass-globbing', '~> 1.1'
   gem 'rubypants', '~> 0.2.0'
   gem 'rb-fsevent', '~> 0.10'
   gem 'stringex', '~> 2.8'
