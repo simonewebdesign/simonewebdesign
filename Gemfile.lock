@@ -94,7 +94,7 @@ GEM
     rubypants (0.2.0)
     safe_yaml (1.0.5)
     sass (3.2.19)
-    sass-globbing (1.0.0)
+    sass-globbing (1.1.5)
       sass (>= 3.1)
     sawyer (0.8.2)
       addressable (>= 2.3.5)
@@ -118,7 +118,7 @@ PLATFORMS
 
 DEPENDENCIES
   RedCloth (~> 4.2.9)
-  compass (~> 0.12.2)
+  compass (~> 0.12)
   haml (~> 4.0)
   jekyll (~> 2.0)
   jekyll-page-hooks (~> 1.2)
@@ -131,7 +131,7 @@ DEPENDENCIES
   rb-fsevent (~> 0.10)
   rdiscount (~> 2.0)
   rubypants (~> 0.2.0)
-  sass-globbing (~> 1.0.0)
+  sass-globbing (~> 1.1)
   sinatra
   stringex (~> 2.8)
   therubyracer (~> 0.12.3)
