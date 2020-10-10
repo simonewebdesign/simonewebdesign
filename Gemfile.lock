@@ -22,8 +22,6 @@ GEM
     fast-stemmer (1.0.2)
     ffi (1.13.1)
     fssm (0.2.10)
-    haml (4.0.7)
-      tilt
     jekyll (2.5.3)
       classifier-reborn (~> 2.0)
       colorator (~> 0.1)
@@ -118,8 +116,7 @@ PLATFORMS
 
 DEPENDENCIES
   RedCloth (~> 4.2.9)
-  compass (~> 0.12)
-  haml (~> 4.0)
+  compass (~> 0.12.2)
   jekyll (~> 2.0)
   jekyll-page-hooks (~> 1.2)
   jekyll-sitemap
