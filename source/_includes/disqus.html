@@ -1,15 +1,15 @@
 {% comment %} Load script if disquss comments are enabled and `page.comments` is either empty (index) or set to true {% endcomment %}
 {% if page.comments != false %}
-<div id="disqus_thread" aria-live="polite"></div>
+<!-- htmlmin:ignore --><div id="disqus_thread" aria-live="polite"></div><!-- htmlmin:ignore -->
 <script>
 var disqus_config = function () {
 this.page.url = 'https://www.simonewebdesign.it/';
 this.page.identifier = '{{ site.url }}{{ page.url }}';
 };
-var disqusObserver = new IntersectionObserver(function(entries) {
+var o = new IntersectionObserver(function(entries) {
     if(entries[0].isIntersecting) {
     (function() {
-        disqusObserver.disconnect();
+        o.disconnect();
         var d = document, s = d.createElement('script');
         s.src = 'https://simonewebdesign.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
@@ -17,7 +17,7 @@ var disqusObserver = new IntersectionObserver(function(entries) {
         })();
     }
 });
-disqusObserver.observe(document.querySelector('#disqus_thread'));
+o.observe(document.querySelector('#disqus_thread'));
 </script>
 <noscript>Please enable JavaScript to view the comments.</noscript>
 {% endif %}
