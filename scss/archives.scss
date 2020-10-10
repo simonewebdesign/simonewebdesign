@@ -90,11 +90,21 @@ article+article {
   list-style: none;
   font-family: 'Courier New', Courier, monospace;
   padding-left: 0.5rem;
+  margin-top: 0;
   margin-bottom: 2rem;
   display: inline-block;
 
-
   li {
-    display: inline;
+    display: inline-block;
+  }
+
+  li + li {
+    padding-left: 0.58rem;
+  }
+
+  @media screen and (min-width: 100rem) { /* 1600p */
+    li + li {
+      padding-left: 1rem;
+    }
   }
 }
