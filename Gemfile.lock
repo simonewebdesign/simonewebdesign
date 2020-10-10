@@ -104,7 +104,7 @@ GEM
       rack (~> 2.2)
       rack-protection (= 2.1.0)
       tilt (~> 2.0)
-    stringex (1.4.0)
+    stringex (2.8.5)
     therubyracer (0.12.3)
       libv8 (~> 3.16.14.15)
       ref
@@ -128,16 +128,16 @@ DEPENDENCIES
   octopress-hooks
   puma
   rake (~> 10.4)
-  rb-fsevent (~> 0.9)
+  rb-fsevent (~> 0.10)
   rdiscount (~> 2.0)
   rubypants (~> 0.2.0)
   sass-globbing (~> 1.0.0)
   sinatra
-  stringex (~> 1.4.0)
+  stringex (~> 2.8)
   therubyracer (~> 0.12.3)
 
 RUBY VERSION
-   ruby 2.7.1p83
+   ruby 2.7.2p137
 
 BUNDLED WITH
    2.1.4
