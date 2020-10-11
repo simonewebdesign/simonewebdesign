@@ -102,7 +102,7 @@ article+article {
     padding-left: 0.58rem;
   }
 
-  @media screen and (min-width: 100rem) { /* 1600p */
+  @media (min-width: 100rem) { /* 1600p */
     li + li {
       padding-left: 1rem;
     }

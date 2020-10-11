@@ -124,13 +124,13 @@ abbr[title] {
     margin-top: 6rem;
 }
 
-@media screen and (min-width: 48rem) { /* 720p */
+@media (min-width: 48rem) { /* 720p */
     html {
         font-size: 115%;
     }
 }
 
-@media screen and (min-width: 100rem) { /* 1600p */
+@media (min-width: 100rem) { /* 1600p */
     body > div {
         max-width: 48rem;
     }

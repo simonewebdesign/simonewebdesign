@@ -24,7 +24,7 @@
   text-decoration: none;
 }
 
-@media screen and (min-width: 40em) {
+@media (min-width: 40em) {
   .projects {
     display: flex;
     flex-flow: wrap;
