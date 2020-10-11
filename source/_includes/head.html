@@ -10,14 +10,14 @@
   {% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' }}{% endif %}{% endcapture %}
   <link rel="canonical" href="{{ canonical }}">
   <link rel="manifest" href="/manifest.json">
-  <link href="{{ root_url }}/favicon.png" rel="icon">
-  <link href="{{ root_url }}/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css">
+  <link rel="icon" href="{{ root_url }}/favicon.png">
+  <link rel="stylesheet" href="{{ root_url }}/stylesheets/style.css" media="screen">
   {% assign uri = page.url | remove:'index.html' | strip_slash %}
   {% if uri == '/projects' or uri == '/archives' or uri == '/about' %}
-  <link href="{{ root_url }}/stylesheets{{ uri }}.css" media="screen" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="{{ root_url }}/stylesheets{{ uri }}.css" media="screen">
   {% endif %}
   {% if uri ~= '/categories' %}
-  <link href="{{ root_url }}/stylesheets/categories.css" media="screen" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="{{ root_url }}/stylesheets/categories.css" media="screen">
   {% endif %}
-  <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">
+  <link rel="alternate" href="{{ site.subscribe_rss }}" title="{{site.title}}" type="application/atom+xml">
 </head>
