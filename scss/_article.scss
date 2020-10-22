@@ -25,6 +25,8 @@ h2 code {
 
 #disqus_thread {
     min-height: 1px;
+    max-width: 870px;
+    margin: 0 auto;
 }
 
 @import "subscribe_form";

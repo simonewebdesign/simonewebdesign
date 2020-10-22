@@ -5,24 +5,21 @@ footer: false
 sidebar: false
 ---
 
-<div id="blog-archives">
+<ul class="categories-list">
+  <li><a href="/categories/javascript/">JS</a>
+  <li><a href="/categories/ruby/">Ruby</a>
+  <li><a href="/categories/bash/">Bash</a>
+  <li><a href="/categories/git/">Git</a>
+  <li><a href="/categories/css/">CSS</a>
+  <li><a href="/categories/elixir/">Elixir</a>
+  <li><a href="/categories/swift/">Swift</a>
+  <li><a href="/categories/php/">PHP</a>
+  <li><a href="/categories/elm/">Elm</a>
+  <li><a href="/categories/clojure/">Clojure</a>
+  <li><a href="/categories/rust/">Rust</a>
+</ul>
 
-<div>
-  <p style="display:inline-block">Filter by category:</p>
-  <ul class="categories-list">
-    <li><a href="/categories/javascript/">JS</a>
-    <li><a href="/categories/ruby/">Ruby</a>
-    <li><a href="/categories/bash/">Bash</a>
-    <li><a href="/categories/git/">Git</a>
-    <li><a href="/categories/css/">CSS</a>
-    <li><a href="/categories/elixir/">Elixir</a>
-    <li><a href="/categories/swift/">Swift</a>
-    <li><a href="/categories/php/">PHP</a>
-    <li><a href="/categories/elm/">Elm</a>
-    <li><a href="/categories/clojure/">Clojure</a>
-    <li><a href="/categories/rust/">Rust</a>
-  </ul>
-</div>
+<div id="blog-archives">
 
 {% for post in site.posts reverse %}
 {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}

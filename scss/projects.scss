@@ -24,6 +24,11 @@
   text-decoration: none;
 }
 
+.project a,
+.project-description {
+  font-size: 84%;
+}
+
 @media (min-width: 40em) {
   .projects {
     display: flex;

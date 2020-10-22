@@ -92,19 +92,27 @@ article+article {
   padding-left: 0.5rem;
   margin-top: 0;
   margin-bottom: 2rem;
-  display: inline-block;
+
+  @media (min-width: 640px) {
+    width: 110%;
+
+    li + li {
+      // padding-left: 0.58rem;
+      padding-left: 5rem;
+    }
+  }
+
+  &:before {
+    content: 'Filter by category: ';
+    font-family: "PT Serif", Georgia, Times, "Times New Roman", serif;
+    color: #aaa;
+  }
 
   li {
     display: inline-block;
   }
 
   li + li {
-    padding-left: 0.58rem;
-  }
-
-  @media (min-width: 100rem) { /* 1600p */
-    li + li {
-      padding-left: 1rem;
-    }
+    padding-left: 0.3rem;
   }
 }

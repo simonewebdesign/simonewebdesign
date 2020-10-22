@@ -25,4 +25,9 @@ header + nav {
         color: #666;
         text-decoration: none;
     }
+
+    @media (min-width: 960px) {
+        width: 870px;
+        margin: 0 auto;
+    }
 }

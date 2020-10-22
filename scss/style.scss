@@ -33,8 +33,8 @@ time,
     color: #aaa;
 }
 
-body > div {
-    max-width: 768px;
+main {
+    max-width: 65ch;
     margin: 0 auto;
 }
 
@@ -116,7 +116,7 @@ abbr[title] {
     border: 0;
     margin-left: 0;
     margin-right: 0;
-    padding: 1rem;
+    padding: .9rem;
     text-align: justify;
 }
 
@@ -124,15 +124,33 @@ abbr[title] {
     margin-top: 6rem;
 }
 
-@media (min-width: 48rem) { /* 720p */
-    html {
-        font-size: 115%;
+@media (min-width: 640px) {
+    .entry-title {
+        width: 115%;
+        transform: translateX(-6.5%);
     }
 }
 
-@media (min-width: 100rem) { /* 1600p */
-    body > div {
-        max-width: 48rem;
+@media (min-width: 48rem) {
+    html {
+        font-size: 115%;
+    }
+
+    .entry-title {
+        width: 125%;
+        transform: translateX(-10%);
+    }
+}
+
+@media (min-width: 60rem) {
+    html {
+        font-size: 125%;
+    }
+}
+
+@media (min-width: 100rem) {
+    html {
+        font-size: 150%;
     }
 }
 
