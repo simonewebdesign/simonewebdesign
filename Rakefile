@@ -75,6 +75,8 @@ task :preview do
     exit 0
   }
 
+  `open http://localhost:#{server_port}`
+
   [jekyllPid, compassPid, rackupPid].each { |pid| Process.wait(pid) }
 end
 
