@@ -21,15 +21,15 @@ function call {
 
 function test {
     echo -n "Test $host/$1"
-    if [[ "$(call $1)" =~ "$2" ]]; then ok; else fail; fi
+    if [[ "$(call $1)" =~ $2 ]]; then ok; else fail; fi
 }
 
 # Home page and core assets
 test "" "Simone Web Design"
-test stylesheets/style.css "html{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;background:#f6f6f6 url("
-test sw.js 'self.addEventListener("install"'
+test stylesheets/style.css "html\{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;background:#f6f6f6 url\("
+test sw.js 'self.addEventListener\("install"'
 test stylesheets/about.css ".about-intro picture{float:left;"
-test stylesheets/projects.css ".projects section+section{margin-top:"
+test stylesheets/projects.css ".projects section\+section{margin-top:"
 test stylesheets/archives.css "#archive #content>div,#archive #content>div>article{padding-top:0}"
 test stylesheets/atom.css "feed{"
 
