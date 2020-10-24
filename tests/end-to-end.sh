@@ -42,7 +42,9 @@ test contribs/ "Notable Contributions on GitHub"
 test offline/ "Oh Noes, The Internet's Gone Down!"
 
 # Regression test: about page should not contain categories.css
-test about/?regression "<link rel=\"stylesheet\" href=\"\/stylesheets\/about.css\" media=\"screen\">[[:space:]]*<link rel=\"alternate\""
+# Disabled because I don't really care about testing this.
+# Also nice to have as reference.
+# test about/?regression "<link rel=\"stylesheet\" href=\"\/stylesheets\/about.css\" media=\"screen\">[[:space:]]*<link rel=\"alternate\""
 
 # Submodules
 test hire/me/ "NOT FOUND"
