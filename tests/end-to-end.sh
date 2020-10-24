@@ -41,6 +41,9 @@ test 404/ "NOT FOUND"
 test contribs/ "Notable Contributions on GitHub"
 test offline/ "Oh Noes, The Internet's Gone Down!"
 
+# Regression test: about page should not contain categories.css
+test about/?regression "<link rel=\"stylesheet\" href=\"\/stylesheets\/about.css\" media=\"screen\">[[:space:]]*<link rel=\"alternate\""
+
 # Submodules
 test hire/me/ "NOT FOUND"
 
