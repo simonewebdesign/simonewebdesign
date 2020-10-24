@@ -13,11 +13,14 @@
   <link rel="icon" href="{{ root_url }}/favicon.png">
   <link rel="stylesheet" href="{{ root_url }}/stylesheets/style.css" media="screen">
   {% assign uri = page.url | remove:'index.html' | strip_slash %}
+
   {% if uri == '/projects' or uri == '/archives' or uri == '/about' %}
   <link rel="stylesheet" href="{{ root_url }}/stylesheets{{ uri }}.css" media="screen">
   {% endif %}
-  {% if uri ~= '/categories' %}
+
+  {% if uri contains '/categories' %}
   <link rel="stylesheet" href="{{ root_url }}/stylesheets/categories.css" media="screen">
   {% endif %}
+
   <link rel="alternate" href="{{ site.subscribe_rss }}" title="{{site.title}}" type="application/atom+xml">
 </head>
