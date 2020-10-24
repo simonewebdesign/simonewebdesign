@@ -9,6 +9,7 @@
 @import "compass/typography/links/hover-link";
 @import "compass/typography/links/link-colors";
 @import "variables";
+@import "categories-list";
 
 #archive {
   #content > div { &, > article { padding-top: 0; } }
@@ -84,35 +85,4 @@
 }
 article+article {
   margin-top: 0;
-}
-
-.categories-list {
-  list-style: none;
-  font-family: 'Courier New', Courier, monospace;
-  padding-left: 0.5rem;
-  margin-top: 0;
-  margin-bottom: 2rem;
-
-  @media (min-width: 640px) {
-    width: 110%;
-
-    li + li {
-      // padding-left: 0.58rem;
-      padding-left: 5rem;
-    }
-  }
-
-  &:before {
-    content: 'Filter by category: ';
-    font-family: "PT Serif", Georgia, Times, "Times New Roman", serif;
-    color: #aaa;
-  }
-
-  li {
-    display: inline-block;
-  }
-
-  li + li {
-    padding-left: 0.3rem;
-  }
 }

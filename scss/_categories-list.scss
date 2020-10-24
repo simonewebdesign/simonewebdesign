@@ -1,0 +1,14 @@
+.categories-list {
+    list-style: none;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    padding-left: 0;
+
+    li {
+      display: inline-block;
+    }
+
+    li + li {
+      padding-left: 0.5rem;
+    }
+}
