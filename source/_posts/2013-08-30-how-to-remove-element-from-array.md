@@ -4,6 +4,7 @@ description: "JavaScript: use Array.splice(). The splice() function removes item
 layout: post
 permalink: /how-to-remove-element-from-array/
 date: 2013-08-30
+updated: 2020-10-25
 comments: true
 dsq_thread_id:
 - 1672169047
@@ -20,17 +21,21 @@ tags:
 - splice
 ---
 
-## tl;dr version:
+## <abbr title="too long; didn't read">tl;dr</abbr>:
 
 ``` javascript
-myArray.splice(3, 1);
+const myArray = ['a', 'b', 'c', 'd'];
+
+myArray.splice(3, 1); // ['d']
+
+console.log(myArray); // ['a', 'b', 'c']
 ```
 
-The function above will remove the element at index <code>3</code>. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice" title="Go to MDN" target="_blank">See docs</a>.
+`myArray.splice(3, 1)` removes the element at index <code>3</code>. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice" title="Go to MDN" target="_blank">See docs</a>.
 
 ---
 
-## Detailed version:
+## Explanation:
 
 Let's say we have a simple array of strings, like this one:
 
