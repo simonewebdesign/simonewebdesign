@@ -122,7 +122,7 @@ myArray.remove('qux');
 
 #### Awesome! But&#8230; why can't I just use the <code>delete</code> keyword?
 
-Oh, so you've heard of that magical JavaScript keyword too, isn't it? You can do cool things with it, like:
+Oh, so you've heard of that magical JavaScript keyword too, haven't you? You can do cool things with it, like:
 
 ``` javascript
 var a = ['foo', 'bar'];
