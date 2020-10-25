@@ -124,6 +124,10 @@ abbr[title] {
     margin-top: 6rem;
 }
 
+.entry-content {
+    margin: 0 8px;
+}
+
 @media (min-width: 640px) {
     .entry-title {
         width: 115%;
@@ -139,12 +143,6 @@ abbr[title] {
     .entry-title {
         width: 125%;
         transform: translateX(-10%);
-    }
-}
-
-@media (min-width: 60rem) {
-    html {
-        font-size: 125%;
     }
 }
 
