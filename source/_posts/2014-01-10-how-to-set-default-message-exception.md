@@ -19,7 +19,7 @@ tags:
   - raise
 ---
 
-<p>
+<p class="big-letter">
   Today I was thinking about a way to define custom exceptions with a predefined error message. For example, instead of doing this:
 </p>
 

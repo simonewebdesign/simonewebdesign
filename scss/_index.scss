@@ -1,0 +1,20 @@
+.blog-index {
+    .entry-title a,
+    .entry-title a:hover,
+    .entry-title a:visited {
+        color: #555;
+    }
+
+    .intro {
+        font-size: 0.89rem;
+        border: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding: .9rem;
+        text-align: justify;
+    }
+
+    article + article {
+        margin-top: 6rem;
+    }
+}

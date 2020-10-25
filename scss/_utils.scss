@@ -1,0 +1,18 @@
+.basic-alignment {
+    margin-top: 0.5rem;
+
+    &.left {
+        float: left;
+        margin-right: 0.5rem;
+    }
+
+    &.right {
+        float: right;
+        margin-left: 0.5rem;
+    }
+}
+
+.link-btn {
+    padding: .8rem 1rem;
+    margin: 3rem 0;
+}

@@ -23,10 +23,22 @@ h2 code {
     display: block;
 }
 
+.entry-content {
+    margin: 2rem 8px 3rem 8px;
+}
+
 #disqus_thread {
     min-height: 1px;
     max-width: 870px;
     margin: 0 auto;
+}
+
+.big-letter::first-letter {
+    font-size: 3.3em;
+    float: left;
+    padding-top: 7px;
+    margin-right: 7px;
+    opacity: .9;
 }
 
 @import "subscribe_form";

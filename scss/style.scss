@@ -86,48 +86,6 @@ abbr[title] {
     border-bottom: 1px dotted #aaa;
 }
 
-.basic-alignment {
-    margin-top: 0.5rem;
-
-    &.left {
-        float: left;
-        margin-right: 0.5rem;
-    }
-
-    &.right {
-        float: right;
-        margin-left: 0.5rem;
-    }
-}
-
-.link-btn {
-    padding: .8rem 1rem;
-    margin: 3rem 0;
-}
-
-.blog-index .entry-title a,
-.blog-index .entry-title a:hover,
-.blog-index .entry-title a:visited {
-    color: #555;
-}
-
-.blog-index .intro {
-    font-size: 0.89rem;
-    border: 0;
-    margin-left: 0;
-    margin-right: 0;
-    padding: .9rem;
-    text-align: justify;
-}
-
-.blog-index article + article {
-    margin-top: 6rem;
-}
-
-.entry-content {
-    margin: 0 8px;
-}
-
 @media (min-width: 640px) {
     .entry-title {
         width: 115%;
@@ -157,8 +115,10 @@ a {
     @include link-colors($link-color, $hover: $link-color-hover, $focus: $link-color-hover, $visited: $link-color-visited, $active: $link-color-active);
 }
 
+@import "utils";
 @import "banner";
 @import "navigation";
+@import "index";
 @import "article";
 @import "code";
 @import "footer";
