@@ -5,7 +5,7 @@ date: 2014-04-30 00:07:00 +0000
 comments: true
 categories: Ruby
 ---
-<p class="big-letter">Have you ever heard about <a href="https://ruby-lang.org/" rel="external nofollow">Ruby</a>? It's my favourite programming language. It was invented in Japan, which is probably the most amazing country in the world, and I think no language can beat Ruby when it comes to magic. Yes: Ruby is Magic.</p>
+<p>Have you ever heard about <a href="https://ruby-lang.org/" rel="external nofollow">Ruby</a>? It's my favourite programming language. It was invented in Japan, which is probably the most amazing country in the world, and I think no language can beat Ruby when it comes to magic. Yes: Ruby is Magic.</p>
 
 You don't believe me, do you? Fair enough, but let me show you why Ruby is so awesome.
 

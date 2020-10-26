@@ -8,7 +8,7 @@ categories:
   - Ruby
 ---
 
-<p class="big-letter">Back in the days, when I got serious about becoming a "real programmer", I decided I wanted to learn Java.</p>
+<p>Back in the days, when I got serious about becoming a "real programmer", I decided I wanted to learn Java.</p>
 
 I didn't know anything about OOP, Design Patterns, Single Responsibility... all I knew was some PHP, Visual Basic, and database design stuff. That was it.
 

@@ -9,7 +9,7 @@ categories: JavaScript
 
 > "Pong is one of the earliest arcade video games; it is a tennis sports game featuring simple two-dimensional graphics." - Wikipedia
 
-<p class="big-letter">Have you ever dreamed of building a game in JavaScript? I did, and I also managed to make my first one. Of course I also wrote some tips and gotchas to help you complete this nice challenge.</p>
+<p>Have you ever dreamed of building a game in JavaScript? I did, and I also managed to make my first one. Of course I also wrote some tips and gotchas to help you complete this nice challenge.</p>
 
 
 ## How to make Pong in HTML5 canvas

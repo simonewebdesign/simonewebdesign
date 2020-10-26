@@ -15,7 +15,7 @@ tags:
   - web design
 ---
 
-<p class="big-letter">
+<p>
   There are special cases where a simple <abbr title="Cascading Style Sheets">CSS</abbr> selector is not enough. Like yesterday, when I wanted to match all the uploaded images in my blog, regardless of the container and the content.<br><br>Let&#8217;s see an example markup:
 </p>
 

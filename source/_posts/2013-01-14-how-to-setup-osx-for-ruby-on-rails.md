@@ -16,7 +16,7 @@ tags:
   - setup
 ---
 
-<p class="big-letter">
+<p>
   Looks like <em>almost</em> every Rails developer is using <abbr title="Operating System">OS</abbr> X as development environment, so in this brief walkthrough I&#8217;ll explain you how to prepare your machine for <strong>Ruby on Rails</strong> development: nothing more, nothing less. I assume you are already running Mac <abbr title="Operating System">OS</abbr> X 10.8 Mountain Lion.
 </p>
 

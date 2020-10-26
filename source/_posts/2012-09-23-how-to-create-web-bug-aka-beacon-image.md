@@ -22,7 +22,7 @@ tags:
   - web
 ---
 
-<p class="big-letter">
+<p>
   Have you ever wondered why some web pages include a 1&#215;1 <abbr title="Graphics Interchange Format">GIF</abbr> image? Well, they&#8217;re called <strong>web bugs</strong>, and they <strong>track you</strong>.
 </p>
 

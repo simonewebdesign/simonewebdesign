@@ -15,7 +15,7 @@ tags:
   - programming
 ---
 
-<p class="big-letter">
+<p>
   Have you ever played a videogame on the JavaScript console? No? Well, keep reading!
 </p>
 
