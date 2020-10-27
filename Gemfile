@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 source 'https://rubygems.org'
-ruby '2.7.2'
+ruby File.read(File.join(__dir__, '.ruby-version')).strip
 
 group :development do
   gem 'rake', '~> 13.0'
