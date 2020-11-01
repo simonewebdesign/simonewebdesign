@@ -174,7 +174,7 @@ $solar-scroll-thumb: rgba(#fff, .2);
   text-align: left;
 }
 figure.code {
-  font-size: 84.7825%; // because my ocd wanted it to be exactly 15.6px
+  font-size: 84.7825% !important; // because my ocd wanted it to be exactly 15.6px
   background: none;
   padding: 0;
   border: 0;
