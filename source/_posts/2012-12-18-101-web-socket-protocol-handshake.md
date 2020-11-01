@@ -315,7 +315,7 @@ Server is listening on port 1337.
 </p>
 
 <p>
-  When you send a web socket request as a client, you&#8217;ll send an <a href="https://en.wikipedia.org/wiki/HTTP_header" target="_blank" rel="nofollow nofollow"><abbr title="HyperText Transfer Protocol">HTTP</abbr> header</a> like this one:
+  When you send a web socket request as a client, you&#8217;ll send an <a href="https://en.wikipedia.org/wiki/HTTP_header" target="_blank" rel="external nofollow"><abbr title="HyperText Transfer Protocol">HTTP</abbr> header</a> like this one:
 </p>
 
 ```

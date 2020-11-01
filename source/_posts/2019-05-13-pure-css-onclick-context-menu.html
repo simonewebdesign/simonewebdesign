@@ -3,6 +3,7 @@ layout: post
 title: A pure CSS onclick context menu
 description: How to build a context menu using pure HTML and CSS, no JS, cross-browser.
 date: 2019-05-13
+updated: 2020-11-01
 comments: true
 categories:
   - JavaScript
@@ -158,9 +159,32 @@ img.addEventListener('mousedown', ({ offsetX, offsetY }) => {
 });
 ```
 
+<h3>I want the menu to close when I click the button again!</h3>
+
+<p>If that's the case, you'll probably be better off using the old <a href="https://css-tricks.com/the-checkbox-hack/" rel="external nofollow">checkbox hack</a>.</p>
+
+<h3>A note about accessibility</h3>
+
+<p>Accessibility isn't the main focus of this article, but an important topic nonetheless. Menu items <strong>should be navigatable with a keyboard</strong>: this requires JS, but it's not hard to achieve. The <abbr title="World Wide Web Consortium">W3C</abbr> has done a lot of work around accessibility and there's plenty of examples you can refer to on their site: for instance, I think the <a href="https://www.w3.org/TR/2017/NOTE-wai-aria-practices-1.1-20171214/examples/menu-button/menu-button-links.html" rel="external nofollow">menu button example</a> is particularly relevant.</p>
+
 <h3>What about browser support?</h3>
 
 <p>It may not work in some very old browsers, so make sure to test it in the browsers you need to support. <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#Clicking_and_focus" rel="external nofollow">This MDN page</a> has some info about what happens to the focus of a button when being clicked/tapped on different platforms. I did some tests myself and it seems to work well everywhere, including mobile browsers.</p>
+
+<p><b>Update:</b> there's an issue specifically with Safari and Firefox, on both iOS and macOS: the button won't focus. No worries though, we can focus it programmatically via JS — for example:</p>
+
+```javascript
+const button = document.querySelector('button');
+
+button.addEventListener('click', event => {
+  if (
+    /apple/i.test(navigator.vendor) ||
+    /Mac.*Firefox/.test(navigator.userAgent)
+  ) {
+    event.target.focus();
+  }
+});
+```
 
 <p>And that's it! I hope you found this useful. If you spot any issues, please do let me know by commenting below!</p>
 
