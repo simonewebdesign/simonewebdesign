@@ -174,16 +174,16 @@ img.addEventListener('mousedown', ({ offsetX, offsetY }) => {
 <p><b>Update:</b> there's an issue specifically with Safari and Firefox, on both iOS and macOS: the button won't focus. No worries though, we can focus it programmatically via JS — for example:</p>
 
 ```javascript
-const button = document.querySelector('button');
+if (
+  /apple/i.test(navigator.vendor) ||
+  /Mac.*Firefox/.test(navigator.userAgent)
+) {
+  const button = document.querySelector('button');
 
-button.addEventListener('click', event => {
-  if (
-    /apple/i.test(navigator.vendor) ||
-    /Mac.*Firefox/.test(navigator.userAgent)
-  ) {
+  button.addEventListener('click', event => {
     event.target.focus();
-  }
-});
+  });
+}
 ```
 
 <p>And that's it! I hope you found this useful. If you spot any issues, please do let me know by commenting below!</p>

@@ -7,11 +7,11 @@ img.addEventListener('mousedown', function (event) {
     menu.style.left = offsetX + 'px';
 });
 
-document.querySelector('h2 + button').addEventListener('click', function (event) {
-    if (
-        /apple/i.test(navigator.vendor) ||
-        /Mac.*Firefox/.test(navigator.userAgent)
-    ) {
+if (
+    /apple/i.test(navigator.vendor) ||
+    /Mac.*Firefox/.test(navigator.userAgent)
+) {
+    document.querySelector('h2 + button').addEventListener('click', function (event) {
         event.target.focus();
-    }
-});
+    });
+}
