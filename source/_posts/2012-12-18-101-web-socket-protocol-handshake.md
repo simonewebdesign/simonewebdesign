@@ -33,7 +33,7 @@ tags:
 </p>
 
 <p>
-  The Web Socket protocol is the new alternative to the very popular <a href="http://en.wikipedia.org/wiki/Http" target="_blank" rel="external nofollow"><abbr title="HyperText Transfer Protocol">HTTP</abbr></a> protocol. The logic of the latter is well known: the client requests, the server responds. <a href="http://en.wikipedia.org/wiki/Request-response" target="_blank">Request, response</a>. Stop. This is what we call a <a href="http://en.wikipedia.org/wiki/Simplex_communication" target="_blank" rel="external nofollow">simplex connection</a>. It worked for decades, but has severe limitations therefore it&#8217;s not ideal for rich web applications, which would work better under a persistent connection. We need to <strong>serve content in real time</strong>; that&#8217;s why the new protocol is born.
+  The Web Socket protocol is the new alternative to the very popular <a href="http://en.wikipedia.org/wiki/Http" rel="external"><abbr title="HyperText Transfer Protocol">HTTP</abbr></a> protocol. The logic of the latter is well known: the client requests, the server responds. <a href="http://en.wikipedia.org/wiki/Request-response">Request, response</a>. Stop. This is what we call a <a href="http://en.wikipedia.org/wiki/Simplex_communication" rel="external">simplex connection</a>. It worked for decades, but has severe limitations therefore it&#8217;s not ideal for rich web applications, which would work better under a persistent connection. We need to <strong>serve content in real time</strong>; that&#8217;s why the new protocol is born.
 </p>
 
 <p>
@@ -45,7 +45,7 @@ tags:
 </h2>
 
 <p>
-  This guide is focused on the <a href="http://dev.w3.org/html5/websockets/" title="Official W3C WebSocket API specification" target="_blank">official <abbr title="World Wide Web Consortium">W3C</abbr>&#8217;s WebSocket <abbr title="Application Programming Interface">API</abbr> specification</a> for the client part; we&#8217;ll use a <a href="https://github.com/Worlize/WebSocket-Node" title="WebSocket Client &#038; Server Implementation for Node" target="_blank">Node.js WebSocket implementation</a> as the server. If you&#8217;re curious on how <a href="http://nodejs.org" title="Node.js" target="_blank" rel="external nofollow">Node.js</a> works, just check it out: there are tons of resources out there.
+  This guide is focused on the <a href="http://dev.w3.org/html5/websockets/" title="Official W3C WebSocket API specification">official <abbr title="World Wide Web Consortium">W3C</abbr>&#8217;s WebSocket <abbr title="Application Programming Interface">API</abbr> specification</a> for the client part; we&#8217;ll use a <a href="https://github.com/Worlize/WebSocket-Node" title="WebSocket Client &#038; Server Implementation for Node">Node.js WebSocket implementation</a> as the server. If you&#8217;re curious on how <a href="http://nodejs.org" title="Node.js" rel="external">Node.js</a> works, just check it out: there are tons of resources out there.
 </p>
 
 <p>
@@ -93,7 +93,7 @@ var ws = new WebSocket("ws://localhost:1337");
 </p>
 
 <p>
-  Now let&#8217;s code some <a href="https://en.wikipedia.org/wiki/Event_%28computing%29" title="Event (computing)" target="_blank" rel="external nofollow">event handlers</a>. I won&#8217;t elaborate, they&#8217;re self-descriptive:
+  Now let&#8217;s code some <a href="https://en.wikipedia.org/wiki/Event_%28computing%29" title="Event (computing)" rel="external">event handlers</a>. I won&#8217;t elaborate, they&#8217;re self-descriptive:
 </p>
 
 ``` javascript
@@ -142,11 +142,11 @@ sendBtn.addEventListener('click', function(ev) {
 <hr />
 
 <p>
-  At this stage you should have downloaded and installed <a href="https://nodejs.org/download/" target="_blank" rel="external nofollow">Node.js</a>: the procedure is slightly different for every operating system; just make sure to download the right installer.
+  At this stage you should have downloaded and installed <a href="https://nodejs.org/download/" rel="external">Node.js</a>: the procedure is slightly different for every operating system; just make sure to download the right installer.
 </p>
 
 <p>
-  Node comes with <a href="https://npmjs.org/" title="Node Packaged Modules" target="_blank">npm</a>, the official package manager, that makes the <a href="https://github.com/Worlize/WebSocket-Node" target="_blank">WebSocket-Node</a> package installation ridiculously easy:
+  Node comes with <a href="https://npmjs.org/" title="Node Packaged Modules">npm</a>, the official package manager, that makes the <a href="https://github.com/Worlize/WebSocket-Node">WebSocket-Node</a> package installation ridiculously easy:
 </p>
 
 ``` javascript
@@ -315,7 +315,7 @@ Server is listening on port 1337.
 </p>
 
 <p>
-  When you send a web socket request as a client, you&#8217;ll send an <a href="https://en.wikipedia.org/wiki/HTTP_header" target="_blank" rel="external nofollow"><abbr title="HyperText Transfer Protocol">HTTP</abbr> header</a> like this one:
+  When you send a web socket request as a client, you&#8217;ll send an <a href="https://en.wikipedia.org/wiki/HTTP_header" rel="external"><abbr title="HyperText Transfer Protocol">HTTP</abbr> header</a> like this one:
 </p>
 
 ```
@@ -338,7 +338,7 @@ Connection: Upgrade
 ```
 
 <p>
-  This means you just established a <a href="http://en.wikipedia.org/wiki/Full_duplex#Full-duplex" target="_blank" rel="external nofollow">full-duplex</a> connection between the client and the server. If everything went as expected, the console should say something like:
+  This means you just established a <a href="http://en.wikipedia.org/wiki/Full_duplex#Full-duplex" rel="external">full-duplex</a> connection between the client and the server. If everything went as expected, the console should say something like:
 </p>
 
 ```
@@ -352,7 +352,7 @@ Connection accepted from origin: http://localhost
 <hr />
 
 <p>
-  I hope you enjoyed following this guide. You can read the full source code of this tutorial on GitHub, or download it directly. The demo also comes with a file for <a href="https://github.com/simonewebdesign/websocket-demo/blob/master/test-browser-support.html" title="Test your browser support for WebSocket API" target="_blank">testing your actual browser support</a> for the WebSocket <abbr title="Application Programming Interface">API</abbr>.
+  I hope you enjoyed following this guide. You can read the full source code of this tutorial on GitHub, or download it directly. The demo also comes with a file for <a href="https://github.com/simonewebdesign/websocket-demo/blob/master/test-browser-support.html" title="Test your browser support for WebSocket API">testing your actual browser support</a> for the WebSocket <abbr title="Application Programming Interface">API</abbr>.
 </p>
 
 <ul>
@@ -360,6 +360,6 @@ Connection accepted from origin: http://localhost
     <a href="https://github.com/simonewebdesign/websocket-demo/archive/master.zip">Direct Download</a>
   </li>
   <li>
-    <a href="https://github.com/simonewebdesign/websocket-demo" target="_blank">View full source code on GitHub</a>
+    <a href="https://github.com/simonewebdesign/websocket-demo">View full source code on GitHub</a>
   </li>
 </ul>

@@ -26,7 +26,7 @@ tags:
 ---
 
 <p>
-  <a href="http://requirejs.org/" title="Go to the official website" target="_blank" rel="external nofollow noreferrer">RequireJS</a> is a useful <strong>script loader library</strong>. Even if your site/app isn&#8217;t super big, it&#8217;s usually a good idea to use RequireJS: it makes your code <em>maintainable</em>.
+  <a href="https://requirejs.org/" title="Go to the official website" rel="external">RequireJS</a> is a useful <strong>script loader library</strong>. Even if your site/app isn&#8217;t super big, it&#8217;s usually a good idea to use RequireJS: it makes your code <em>maintainable</em>.
 </p>
 
 <h3>
@@ -34,7 +34,7 @@ tags:
 </h3>
 
 <p>
-  Often we need to <strong>include external plugins that depend on <a href="http://jquery.com/" title="Go to jQuery site" target="_blank" rel="external nofollow noreferrer">jQuery</a></strong>. Those plugins usually do expect to find a global jQuery (<code>$</code>) object, and then they just <em>extend</em> it.
+  Often we need to <strong>include external plugins that depend on <a href="https://jquery.com/" title="Go to jQuery site" rel="external">jQuery</a></strong>. Those plugins usually do expect to find a global jQuery (<code>$</code>) object, and then they just <em>extend</em> it.
 </p>
 
 <p>
@@ -42,7 +42,7 @@ tags:
 </p>
 
 <p>
-  By the way, loading jQuery as a global variable is <em>not</em> really a good idea. Okay, you have <a href="http://stackoverflow.com/a/2866920/801544" target="_blank" rel="external nofollow">namespaces</a>, <a href="http://api.jquery.com/jQuery.noConflict/" target="_blank" rel="external nofollow">$.noConflict()</a> and <a href="http://benalman.com/news/2010/11/immediately-invoked-function-expression/" target="_blank" rel="external nofollow noreferrer">IIFEs</a> and whatever but &#8211; hey come on, do you really think you <em>need</em> all this stuff? We can do it better.
+  By the way, loading jQuery as a global variable is <em>not</em> really a good idea. Okay, you have <a href="http://stackoverflow.com/a/2866920/801544" rel="external">namespaces</a>, <a href="http://api.jquery.com/jQuery.noConflict/" rel="external">$.noConflict()</a> and <a href="http://benalman.com/news/2010/11/immediately-invoked-function-expression/" rel="external">IIFEs</a> and whatever but &#8211; hey come on, do you really think you <em>need</em> all this stuff? We can do it better.
 </p>
 
 <h3>
@@ -50,7 +50,7 @@ tags:
 </h3>
 
 <p>
-  <a href="http://requirejs.org/docs/jquery.html" title="How to use RequireJS with jQuery" target="_blank" rel="external nofollow noreferrer">Use RequireJS with jQuery</a> to manage dependencies. More specifically, you can use the <a href="http://requirejs.org/docs/api.html#config-shim" target="_blank" rel="external nofollow noreferrer">shim config</a> to <strong>specify dependencies for jQuery plugins</strong> that are not <a href="http://requirejs.org/docs/whyamd.html" target="_blank" title="Why AMD?" rel="external nofollow noreferrer">AMD modules</a>.
+  <a href="https://requirejs.org/docs/jquery.html" title="How to use RequireJS with jQuery" rel="external">Use RequireJS with jQuery</a> to manage dependencies. More specifically, you can use the <a href="https://requirejs.org/docs/api.html#config-shim" rel="external">shim config</a> to <strong>specify dependencies for jQuery plugins</strong> that are not <a href="https://requirejs.org/docs/whyamd.html" title="Why AMD?" rel="external">AMD modules</a>.
 </p>
 
 <p>
@@ -104,5 +104,5 @@ require(['foo'], function(Foo) {
 </p>
 
 <p>
-  Want to see a <strong>working example</strong>? Check out the <a href="https://github.com/requirejs/example-jquery-shim" title="Go to GitHub" target="_blank" rel="external nofollow noreferrer">official one</a>.
+  Want to see a <strong>working example</strong>? Check out the <a href="https://github.com/requirejs/example-jquery-shim" title="Go to GitHub" rel="external">official one</a>.
 </p>

@@ -11,11 +11,11 @@ categories: Rust
 
 I was building a generic data store with Rust and I needed to implement a **heterogeneous collection** of keys and values. Essentially what I needed was a dictionary, but with values of dynamic type, like both strings and integers at the same time.
 
-Rust is a statically typed language and, due to the memory safety guarantees we are given, all values of some type must have a known, fixed size at compile time, therefore we are not allowed to create a collection of multiple types. However, <a href="https://doc.rust-lang.org/reference/dynamically-sized-types.html" rel="external nofollow">dynamically sized types</a> also exist, and in this article I'll show how to use them.
+Rust is a statically typed language and, due to the memory safety guarantees we are given, all values of some type must have a known, fixed size at compile time, therefore we are not allowed to create a collection of multiple types. However, <a href="https://doc.rust-lang.org/reference/dynamically-sized-types.html" rel="external">dynamically sized types</a> also exist, and in this article I'll show how to use them.
 
 <!--more-->
 
-Say we have a <a href="https://doc.rust-lang.org/std/collections/struct.HashMap.html" rel="external nofollow">`HashMap`</a> and we want to add more than one value type to it.
+Say we have a <a href="https://doc.rust-lang.org/std/collections/struct.HashMap.html" rel="external">`HashMap`</a> and we want to add more than one value type to it.
 
 For example:
 
@@ -75,7 +75,7 @@ So how do we **insert multiple value types** in a `HashMap`? We have several opt
 
 ## Option #1: Use an `enum`
 
-We can define our own <a href="https://doc.rust-lang.org/std/keyword.enum.html" rel="external nofollow">`enum`</a> to model our value type, and insert that into the hashmap:
+We can define our own <a href="https://doc.rust-lang.org/std/keyword.enum.html" rel="external">`enum`</a> to model our value type, and insert that into the hashmap:
 
 ```rust
 use std::collections::HashMap;
@@ -105,11 +105,11 @@ a: Str("1")
 b: Int(2)
 ```
 
-This is similar to a <a href="https://doc.rust-lang.org/reference/items/unions.html" rel="external nofollow">union type</a>. By inserting values of type `Value::*`, we are effectively saying that the map can accept types that are either string, integer, or any other composite type we wish to add.
+This is similar to a <a href="https://doc.rust-lang.org/reference/items/unions.html" rel="external">union type</a>. By inserting values of type `Value::*`, we are effectively saying that the map can accept types that are either string, integer, or any other composite type we wish to add.
 
 ## Option #2: Use a `Box`
 
-We can wrap our types in the <a href="https://doc.rust-lang.org/std/boxed/struct.Box.html" rel="external nofollow" title="std::boxed::Box">`Box`</a> struct:
+We can wrap our types in the <a href="https://doc.rust-lang.org/std/boxed/struct.Box.html" rel="external" title="std::boxed::Box">`Box`</a> struct:
 
 ```rust
 use std::collections::HashMap;
@@ -174,11 +174,11 @@ error[E0277]: the size for values of type `(dyn std::fmt::Display + 'static)` ca
     = note: required by `std::collections::HashMap
 ```
 
-This error may be confusing at first, but it actually makes sense. <a href="https://doc.rust-lang.org/book/" rel="external nofollow">The Rust Programming Language book</a> explains this very well in the <a href="https://doc.rust-lang.org/book/ch19-04-advanced-types.html" rel="external nofollow">Advanced Types</a> chapter:
+This error may be confusing at first, but it actually makes sense. <a href="https://doc.rust-lang.org/book/" rel="external">The Rust Programming Language book</a> explains this very well in the <a href="https://doc.rust-lang.org/book/ch19-04-advanced-types.html" rel="external">Advanced Types</a> chapter:
 
 > “Rust needs to know how much memory to allocate for any value of a particular type, and all values of a type must use the same amount of memory.”
 
-The `Box<T>` type is a <a href="https://doc.rust-lang.org/reference/types/pointer.html" rel="external nofollow">_pointer type_</a>. It lets us allocate data on the heap rather than the stack, and keeps a reference to the data in the stack in the form of a pointer, which is of fixed size.
+The `Box<T>` type is a <a href="https://doc.rust-lang.org/reference/types/pointer.html" rel="external">_pointer type_</a>. It lets us allocate data on the heap rather than the stack, and keeps a reference to the data in the stack in the form of a pointer, which is of fixed size.
 
 ## (Not an) Option #3: Use separate maps for each type
 
@@ -215,8 +215,8 @@ It feels much simpler! And the output is naturally the same:
 
 Rust is very strict when it comes to polymorphic types. As you've seen, there are ways to achieve it, but they don't feel as straightforward as with other dynamic languages such as Ruby or Python. Sometimes though it's useful to make one step back and look at the actual problem we're trying to solve. Once I did that, I realized that I didn't necessarily have to limit myself to a single data structure, so I went for the last option.
 
-I'm still a beginner with Rust, so I might have missed on a better solution. <a href="https://doc.rust-lang.org/book/ch17-02-trait-objects.html" rel="external nofollow">Trait Objects</a> could be one: I've experimented with them, but they weren't quite was I was looking for. If you have any suggestions or know of other possible solutions, feel free to comment below!
+I'm still a beginner with Rust, so I might have missed on a better solution. <a href="https://doc.rust-lang.org/book/ch17-02-trait-objects.html" rel="external">Trait Objects</a> could be one: I've experimented with them, but they weren't quite was I was looking for. If you have any suggestions or know of other possible solutions, feel free to comment below!
 
 ---
 
-**Update**: <a href="https://twitter.com/alilleybrinker/status/1280185393258926088" rel="external nofollow">@alilleybrinker</a> on Twitter pointed out two caveats to be aware of. One is about the meaning of the `'static` _bound_: when used on a generic type, any references inside the type must live as long as `'static`. However, by adding `'static` we are also effectively saying that the values inside the `Box` won't contain references. The other caveat is that, when using `dyn Display`, the original types are erased, so the available methods are only those known from the `Display` trait.
+**Update**: <a href="https://twitter.com/alilleybrinker/status/1280185393258926088" rel="external">@alilleybrinker</a> on Twitter pointed out two caveats to be aware of. One is about the meaning of the `'static` _bound_: when used on a generic type, any references inside the type must live as long as `'static`. However, by adding `'static` we are also effectively saying that the values inside the `Box` won't contain references. The other caveat is that, when using `dyn Display`, the original types are erased, so the available methods are only those known from the `Display` trait.

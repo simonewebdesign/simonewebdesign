@@ -66,7 +66,7 @@ tags:
 </p>
 
 <p>
-  The official <a href="http://www.w3.org/TR/css3-selectors/" title="W3C Selectors Level 3 specification" target="_blank" rel="external nofollow"><abbr title="World Wide Web Consortium">W3C</abbr> Selectors Level 3 specification</a> offers a freaky <a href="http://www.w3.org/TR/css3-selectors/#selectors" title="CSS3 Selectors" target="_blank" rel="external nofollow">set of selectors</a>, for the joy of the craziest web designers!
+  The official <a href="http://www.w3.org/TR/css3-selectors/" title="W3C Selectors Level 3 specification" rel="external"><abbr title="World Wide Web Consortium">W3C</abbr> Selectors Level 3 specification</a> offers a freaky <a href="http://www.w3.org/TR/css3-selectors/#selectors" title="CSS3 Selectors" rel="external">set of selectors</a>, for the joy of the craziest web designers!
 </p>
 
 <p>
@@ -89,5 +89,5 @@ img[class^="wp-image-"] {
 </h3>
 
 <p>
-  The <a href="http://www.w3.org/TR/css3-selectors/#selectors" title="CSS3 Selectors" target="_blank" rel="external nofollow">table of selectors</a> presents a whole bunch of possibilities, even though the usefulness isn&#8217;t always evident. But I&#8217;m sure you can find an example for every selector listed there. So, whether you are a <abbr title="Cascading Style Sheets">CSS</abbr> wizard or not, my final advice is: <strong>go create cool stuff</strong>, because practice makes perfect.
+  The <a href="http://www.w3.org/TR/css3-selectors/#selectors" title="CSS3 Selectors" rel="external">table of selectors</a> presents a whole bunch of possibilities, even though the usefulness isn&#8217;t always evident. But I&#8217;m sure you can find an example for every selector listed there. So, whether you are a <abbr title="Cascading Style Sheets">CSS</abbr> wizard or not, my final advice is: <strong>go create cool stuff</strong>, because practice makes perfect.
 </p>

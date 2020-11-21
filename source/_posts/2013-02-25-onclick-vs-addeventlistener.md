@@ -25,7 +25,7 @@ element.addEventListener('click', function(){ /* do stuff */ }, false);
 ```
 
 <p>
-  They apparently do the same thing: listen for the click event and execute a callback function. Nevertheless, they&#8217;re not equivalent. If you ever need to choose between the two, <a href="https://gist.github.com/simonewebdesign/4017724" target="_blank" rel="external nofollow">this</a> could help you to figure out which one is the best for you.
+  They apparently do the same thing: listen for the click event and execute a callback function. Nevertheless, they&#8217;re not equivalent. If you ever need to choose between the two, <a href="https://gist.github.com/simonewebdesign/4017724" rel="external">this</a> could help you to figure out which one is the best for you.
 </p>
 
 <p>
@@ -37,5 +37,5 @@ element.addEventListener('click', function(){ /* do stuff */ }, false);
 </p>
 
 <p>
-  However, the <code>addEventListener()</code> function, despite it&#8217;s the standard, just <strong>doesn&#8217;t work in old browsers</strong> (Internet Explorer below version 9), and this is another big difference. If you need to support these ancient browsers, you should follow the <code>onclick</code> way. But you could also use <a href="http://jquery.com/" target="_blank" rel="external nofollow">jQuery</a> (or one of its alternatives): it basically simplifies your work and reduces the differences between browsers, therefore can save you a lot of time.
+  However, the <code>addEventListener()</code> function, despite it&#8217;s the standard, just <strong>doesn&#8217;t work in old browsers</strong> (Internet Explorer below version 9), and this is another big difference. If you need to support these ancient browsers, you should follow the <code>onclick</code> way. But you could also use <a href="http://jquery.com/" rel="external">jQuery</a> (or one of its alternatives): it basically simplifies your work and reduces the differences between browsers, therefore can save you a lot of time.
 </p>

@@ -31,7 +31,7 @@ myArray.splice(3, 1); // ['d']
 console.log(myArray); // ['a', 'b', 'c']
 ```
 
-`myArray.splice(3, 1)` removes the element at index <code>3</code>. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice" title="Go to MDN" target="_blank">See docs</a>.
+`myArray.splice(3, 1)` removes the element at index <code>3</code>. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice" title="Go to MDN">See docs</a>.
 
 ---
 
@@ -45,7 +45,7 @@ var a = ['foo', 'bar', 'baz'];
 
 We just want to remove that <code>'bar'</code> element. How can we do this?
 
-For the <a href="https://en.wikipedia.org/wiki/Principle_of_least_astonishment" title="Go to Wikipedia" target="_blank" rel="external nofollow">principle of least surprise</a>, you could expect <code>Array</code> to have a <code>remove</code> function:
+For the <a href="https://en.wikipedia.org/wiki/Principle_of_least_astonishment" title="Go to Wikipedia" rel="external">principle of least surprise</a>, you could expect <code>Array</code> to have a <code>remove</code> function:
 
 ``` javascript
 a.remove('bar');
@@ -65,18 +65,18 @@ a
 >>> ['foo', 'baz']
 ```
 
-What does this <code>splice</code> function do? Simple: it just removes the element at index <code>1</code>. The first parameter is, indeed, the index, and the second is the number of elements to remove, starting from that index. This is all you need to know about <code>splice</code>. If you're curious to see what other cool things <code>splice</code> can do, see the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice" target="_blank">MDN documentation</a>.
+What does this <code>splice</code> function do? Simple: it just removes the element at index <code>1</code>. The first parameter is, indeed, the index, and the second is the number of elements to remove, starting from that index. This is all you need to know about <code>splice</code>. If you're curious to see what other cool things <code>splice</code> can do, see the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice">MDN documentation</a>.
 
 #### But what if I don't know the index?
 
-Oh well, you can get it. Just use <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf" target="_blank">indexOf</a></code>, this way:
+Oh well, you can get it. Just use <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf">indexOf</a></code>, this way:
 
 ``` javascript
 a.indexOf('bar');
 >>> 1
 ```
 
-<small>Please note that Internet Explorer 8 and below versions don't support it (you can use a <a href="https://gist.github.com/atk/1034425" target="_blank" title="An indexOf polyfill on GitHub" rel="external nofollow">polyfill</a>, though).</small>
+<small>Please note that Internet Explorer 8 and below versions don't support it (you can use a <a href="https://gist.github.com/atk/1034425" title="An indexOf polyfill on GitHub" rel="external">polyfill</a>, though).</small>
 
 ---
 

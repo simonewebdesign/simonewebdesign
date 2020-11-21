@@ -14,7 +14,7 @@ tags:
   - install
 ---
 
-There are <a ref="external nofollow" href="http://sublime-text-unofficial-documentation.readthedocs.org/en/latest/getting_started/install.html#linux">many ways</a> of **installing Sublime Text 3 on Linux**, but if you're looking for a fast, straightforward way, I believe you are in the right place.
+There are <a ref="external" href="http://sublime-text-unofficial-documentation.readthedocs.org/en/latest/getting_started/install.html#linux">many ways</a> of **installing Sublime Text 3 on Linux**, but if you're looking for a fast, straightforward way, I believe you are in the right place.
 
 This script will install **the latest build of Sublime Text 3**.
 
@@ -24,7 +24,7 @@ Open your terminal and run:
 curl -L git.io/sublimetext | sh
 ```
 
-It will install the <a href="https://sublime.wbond.net/" rel="external nofollow">Package Control</a> as well, so you don't have to do it yourself.
+It will install the <a href="https://sublime.wbond.net/" rel="external">Package Control</a> as well, so you don't have to do it yourself.
 
 If you are interested to see the actual code behind, here we go:
 
@@ -34,4 +34,4 @@ It should work on most Linux distros; if not, please let me know by leaving a co
 
 Enjoy!
 
-**Update**: When I wrote this script, my motivation was that there was no easy way to install Sublime Text on Linux. However, nowadays there is an official repository providing builds for all the major Linux package managers: <a href="https://www.sublimetext.com/docs/3/linux_repositories.html" rel="external nofollow">see here</a>.
+**Update**: When I wrote this script, my motivation was that there was no easy way to install Sublime Text on Linux. However, nowadays there is an official repository providing builds for all the major Linux package managers: <a href="https://www.sublimetext.com/docs/3/linux_repositories.html" rel="external">see here</a>.

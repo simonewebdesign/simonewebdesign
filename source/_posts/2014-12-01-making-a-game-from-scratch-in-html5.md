@@ -14,7 +14,7 @@ categories: JavaScript
 
 ## How to make Pong in HTML5 canvas
 
-Pong, at it's core, is an extremely simple game. That's why it's a good one to begin with if you have just started learning game design basics. Of course you could start with <a href="//www.gamefromscratch.com/post/2013/08/01/Just-starting-out-what-games-should-I-make.aspx" rel="external nofollow">many other games</a>, but if you are looking for something relatively simple to build, Pong really is one of the simplest games ever made.
+Pong, at it's core, is an extremely simple game. That's why it's a good one to begin with if you have just started learning game design basics. Of course you could start with <a href="//www.gamefromscratch.com/post/2013/08/01/Just-starting-out-what-games-should-I-make.aspx" rel="external">many other games</a>, but if you are looking for something relatively simple to build, Pong really is one of the simplest games ever made.
 
 <abbr title="As far as I know">AFAIK</abbr>, there are at least two ways of doing it: I personally call them the *"simple way"* and the *"hard way"*. I did both, but first let's explore the simple one.
 
@@ -53,7 +53,7 @@ update.js
 
 ### The main loop
 
-The main loop is at the core of our game. Maybe it's hard to believe, but virtually every single videogame in the world lives and dies <a href="//designoidgames.com/2013/01/game-programming-basics-time/" rel="external nofollow">within a loop</a>.
+The main loop is at the core of our game. Maybe it's hard to believe, but virtually every single videogame in the world lives and dies <a href="//designoidgames.com/2013/01/game-programming-basics-time/" rel="external">within a loop</a>.
 
 Implementing a game loop is a lot simpler than you think, but it's not the focus of this tutorial. The resource I highly recommend for getting started is [How to make a simple HTML5 Canvas game](http://www.lostdecadegames.com/how-to-make-a-simple-html5-canvas-game/), by Matt Hackett. All my work is actually based on his tutorial. Read it, and you'll get a basic understanding of the fundamentals of game development.
 
@@ -92,7 +92,7 @@ if (isGameStarted) {
 }
 ```
 
-As you can imagine, `isGameStarted` is just a boolean flag. But what's `modifier`? Well, it's the **delta time** of our game loop. Put simply, the <a href="//en.wikipedia.org/wiki/Delta_timing" rel="external nofollow">delta time</a> is the time elapsed between a frame and another. This is very useful because we can use it to calculate how fast the ball should move. Without it, the game would just lag all the time.
+As you can imagine, `isGameStarted` is just a boolean flag. But what's `modifier`? Well, it's the **delta time** of our game loop. Put simply, the <a href="//en.wikipedia.org/wiki/Delta_timing" rel="external">delta time</a> is the time elapsed between a frame and another. This is very useful because we can use it to calculate how fast the ball should move. Without it, the game would just lag all the time.
 
 
 ### Ball bounce
@@ -132,7 +132,7 @@ Can you see what's going on in the code? Basically, if the ball goes beyond the 
 
 What should happen when the ball touches one of the paddles? Fundamentally the same thing explained above: it should bounce away, reflecting on the paddle's surface (and to do this we invert the Y speed). But how do we actually check if they are **colliding**?
 
-The most common kind of collision detection is called **AABB - Axis-Aligned Bounding Boxes**. You can find plenty of resources around the Web explaining how this technique works, so I won't talk about it (have a quick search for *"AABB collision detection"*, or just keep reading). As <a href="http://en.wikipedia.org/wiki/Linus_Torvalds" rel="external nofollow">Linus Torvalds</a> once said,
+The most common kind of collision detection is called **AABB - Axis-Aligned Bounding Boxes**. You can find plenty of resources around the Web explaining how this technique works, so I won't talk about it (have a quick search for *"AABB collision detection"*, or just keep reading). As <a href="http://en.wikipedia.org/wiki/Linus_Torvalds" rel="external">Linus Torvalds</a> once said,
 
 > “Talk is cheap. Show me the code.”
 
@@ -273,16 +273,16 @@ This is the main logic of Pong. However, it's not perfect, and it could be impro
 
 ## The "hard way"
 
-In a *proper* Pong game, you can usually control where the ball goes. It could have a steeper or shallower angle of reflection, based on where the ball landed. Should it land on one of the edges of the paddle, the collision should be inelastic. In case it lands exactly on the middle of the paddle, the collision should be <a href="http://hyperphysics.phy-astr.gsu.edu/hbase/elacol.html" rel="external nofollow">totally elastic</a>.
+In a *proper* Pong game, you can usually control where the ball goes. It could have a steeper or shallower angle of reflection, based on where the ball landed. Should it land on one of the edges of the paddle, the collision should be inelastic. In case it lands exactly on the middle of the paddle, the collision should be <a href="http://hyperphysics.phy-astr.gsu.edu/hbase/elacol.html" rel="external">totally elastic</a>.
 
 In order to implement physics rules in a game, you should have an understanding of basic vector math, trigonometry and - of course - physics. But don't fear, you don't have to know everything: just the basics. I personally didn't know much about physics, but I learned it by reading about it.
 
 Here are some useful resources on the Web:
 
-- Math lessons: <a href="//www.mathsisfun.com/" rel="external nofollow">www.mathsisfun.com</a>
-- Physics lessons: <a href="//www.physicsclassroom.com/" rel="external nofollow">www.physicsclassroom.com</a>
-- Vector math cheatsheet: <a href="//higherorderfun.com/blog/2012/06/03/math-for-game-programmers-05-vector-cheat-sheet/" rel="external nofollow">higherorderfun.com/blog/2012/06/03/math-for-game-programmers-05-vector-cheat-sheet/</a>
-- Linear algebra for game developers: <a href="//blog.wolfire.com/2009/07/linear-algebra-for-game-developers-part-1/" rel="external nofollow">blog.wolfire.com/2009/07/linear-algebra-for-game-developers-part-1/</a>
+- Math lessons: <a href="//www.mathsisfun.com/" rel="external">www.mathsisfun.com</a>
+- Physics lessons: <a href="//www.physicsclassroom.com/" rel="external">www.physicsclassroom.com</a>
+- Vector math cheatsheet: <a href="//higherorderfun.com/blog/2012/06/03/math-for-game-programmers-05-vector-cheat-sheet/" rel="external">higherorderfun.com/blog/2012/06/03/math-for-game-programmers-05-vector-cheat-sheet/</a>
+- Linear algebra for game developers: <a href="//blog.wolfire.com/2009/07/linear-algebra-for-game-developers-part-1/" rel="external">blog.wolfire.com/2009/07/linear-algebra-for-game-developers-part-1/</a>
 
 Let's explore together the potential of 2D vectors.
 
@@ -300,7 +300,7 @@ var ball = {
 
 Four values at the price of two attributes! And this is a lot better now, not only because we are using less attributes, but because we can use vector math. Believe me, vectors simplify your game a lot.
 
-You may have noticed that I didn't use `speed`, but I used `velocity` instead. The reason is that `speed` is a *scalar* quantity, while `velocity` is a *vector* quantity. Put simply, `speed` is an information that's *contained* in `velocity`! You may want to <a rel="external nofollow" href="//www.physicsclassroom.com/class/1DKin/Lesson-1/Speed-and-Velocity">read about it</a>, albeit not directly related to programming.
+You may have noticed that I didn't use `speed`, but I used `velocity` instead. The reason is that `speed` is a *scalar* quantity, while `velocity` is a *vector* quantity. Put simply, `speed` is an information that's *contained* in `velocity`! You may want to <a rel="external" href="//www.physicsclassroom.com/class/1DKin/Lesson-1/Speed-and-Velocity">read about it</a>, albeit not directly related to programming.
 
 
 ### A proper ball reflection
@@ -330,19 +330,19 @@ var ball = {
 
 ```
 
-This is how I've implemented it by using a vector library I found on the Web (find the <a rel="external nofollow" href="https://github.com/dudeOMG/pong/blob/master/js/vector2.js">source code on GitHub</a>). Given a paddle's normal, it will reflect any vector, but you have to make sure the paddle's normal is a unit vector (in other words, it's *normalized*).
+This is how I've implemented it by using a vector library I found on the Web (find the <a rel="external" href="https://github.com/dudeOMG/pong/blob/master/js/vector2.js">source code on GitHub</a>). Given a paddle's normal, it will reflect any vector, but you have to make sure the paddle's normal is a unit vector (in other words, it's *normalized*).
 
 
 ## Conclusion
 
-I hope you enjoyed this article. Who's following my blog since the beginning will probably remember [my first blog post](/playing-around-with-javascript/). It was more than 2 years ago, and at that time I was really excited by the idea to build a game with JavaScript. I finally did it, and it has been fun indeed! However, I learned a big lesson: although it was fun, it wasn't really worth reinventing the wheel. So, if you got through all this tutorial, first of all congratulations! Secondly, consider using a game engine. Thirdly, maybe consider *not* using JavaScript... just use whatever you feel comfortable with. For instance, if you like the Ruby language (I do!) you could use <a rel="external nofollow" href="//opalrb.org/">Opal</a>, a Ruby to JavaScript compiler.
+I hope you enjoyed this article. Who's following my blog since the beginning will probably remember [my first blog post](/playing-around-with-javascript/). It was more than 2 years ago, and at that time I was really excited by the idea to build a game with JavaScript. I finally did it, and it has been fun indeed! However, I learned a big lesson: although it was fun, it wasn't really worth reinventing the wheel. So, if you got through all this tutorial, first of all congratulations! Secondly, consider using a game engine. Thirdly, maybe consider *not* using JavaScript... just use whatever you feel comfortable with. For instance, if you like the Ruby language (I do!) you could use <a rel="external" href="//opalrb.org/">Opal</a>, a Ruby to JavaScript compiler.
 
 
 ## Demo and source code
 
 You can [play the game here](/games/pong/).
 
-The <a rel="external nofollow" href="https://github.com/dudeOMG/pong">full source code</a> is on GitHub so you can clone it, fork it and even make your own from scratch, if you feel like it's worth your time. If you are interested in the simple way, checkout the <a rel="external nofollow" href="https://github.com/dudeOMG/pong/releases/tag/v1.0">v1.0 release</a>.
+The <a rel="external" href="https://github.com/dudeOMG/pong">full source code</a> is on GitHub so you can clone it, fork it and even make your own from scratch, if you feel like it's worth your time. If you are interested in the simple way, checkout the <a rel="external" href="https://github.com/dudeOMG/pong/releases/tag/v1.0">v1.0 release</a>.
 The hard way is in the master branch.
 
 As always, if you have any thoughts or questions, feel free to leave a comment below.

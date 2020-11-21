@@ -19,12 +19,12 @@ tags:
   - sublime text
 ---
 
-**The following script is obsolete. Find the latest Sublime Text builds for Linux <a href="https://www.sublimetext.com/docs/3/linux_repositories.html" rel="external nofollow">here</a>.**
+**The following script is obsolete. Find the latest Sublime Text builds for Linux <a href="https://www.sublimetext.com/docs/3/linux_repositories.html" rel="external">here</a>.**
 
 ---
 
 <p>
-  Here&#8217;s a simple script to install the latest stable build of <strong>Sublime Text 3</strong> in <strong>Fedora</strong>.<br /> Should work on other <strong>Linux</strong> distros too. See the <a href="https://gist.github.com/simonewebdesign/8507139" title="Install Sublime Text 3 on Fedora 20" target="_blank" rel="external nofollow noreferrer">full gist on GitHub</a>.
+  Here&#8217;s a simple script to install the latest stable build of <strong>Sublime Text 3</strong> in <strong>Fedora</strong>.<br /> Should work on other <strong>Linux</strong> distros too. See the <a href="https://gist.github.com/simonewebdesign/8507139" title="Install Sublime Text 3 on Fedora 20" rel="external">full gist on GitHub</a>.
 </p>
 
 <p>It will install the Package Control as well!</p>
@@ -38,7 +38,7 @@ $ curl -L git.io/sublimetext | sh
 ```
 
 - Update (10 March 2014): I made some improvements to the script so I generated a new link.
-- Update (16 March 2014): The script stopped working because GitHub is now doing a redirect to another domain (see <a href="https://developer.github.com/changes/2014-04-25-user-content-security/" rel="external nofollow">their post</a> if you're interested). Added the `-L` flag to fix the issue.
-- Update (1 September 2014): I've updated the script to install the latest build and made a new blog post, <a href="/install-sublime-text-3-on-linux/" rel="external nofollow">check it out</a>.
+- Update (16 March 2014): The script stopped working because GitHub is now doing a redirect to another domain (see <a href="https://developer.github.com/changes/2014-04-25-user-content-security/" rel="external">their post</a> if you're interested). Added the `-L` flag to fix the issue.
+- Update (1 September 2014): I've updated the script to install the latest build and made a new blog post, <a href="/install-sublime-text-3-on-linux/" rel="external">check it out</a>.
 - Update (12 July 2015): Updated the script again to work with the latest version of Fedora.
-- Final update (7 July 2020): I meant to update this ages ago, but Sublime Text now officially provides builds for all common Linux distros. Here's the <a href="https://www.sublimetext.com/docs/3/linux_repositories.html#dnf" rel="external nofollow">dnf package</a> for Fedora.
+- Final update (7 July 2020): I meant to update this ages ago, but Sublime Text now officially provides builds for all common Linux distros. Here's the <a href="https://www.sublimetext.com/docs/3/linux_repositories.html#dnf" rel="external">dnf package</a> for Fedora.

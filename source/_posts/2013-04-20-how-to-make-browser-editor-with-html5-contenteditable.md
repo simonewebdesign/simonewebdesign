@@ -20,7 +20,7 @@ tags:
 ---
 
 <p>
-  Lots of fun here. Some days ago I just read <a href="http://html5doctor.com/the-contenteditable-attribute/#comment-21228" target="_blank" rel="external nofollow">a very cool comment</a> on <a href="http://html5doctor.com/" target="_blank" rel="external nofollow">html5doctor</a>:
+  Lots of fun here. Some days ago I just read <a href="http://html5doctor.com/the-contenteditable-attribute/#comment-21228" rel="external">a very cool comment</a> on <a href="http://html5doctor.com/" rel="external">html5doctor</a>:
 </p>
 
 <blockquote>
@@ -135,7 +135,7 @@ style, script {
 ```
 
 <p>
-  You can even install a syntax highlighter like the <a href="https://code.google.com/p/google-code-prettify/" target="_blank" rel="external nofollow">Google code prettify</a>, if you want.
+  You can even install a syntax highlighter like the <a href="https://code.google.com/p/google-code-prettify/" rel="external">Google code prettify</a>, if you want.
 </p>
 
 <h3>
@@ -201,7 +201,7 @@ js.onkeyup = function(event) {
 </p>
 
 <p>
-  Again, there can be many solutions. I chose to use <a href="https://developer.mozilla.org/en-US/docs/DOM/window.setTimeout" target="_blank" rel="external nofollow"><code>window.setTimeout()</code></a>. My implementation is fairly simple: I just tell the browser to wait 2000 milliseconds (2 seconds) before executing the new code, <em>but if</em> the user modifies the code in the meanwhile, <strong> I reset the timer</strong>. This is the key to prevent the code getting executed more than once.
+  Again, there can be many solutions. I chose to use <a href="https://developer.mozilla.org/en-US/docs/DOM/window.setTimeout" rel="external"><code>window.setTimeout()</code></a>. My implementation is fairly simple: I just tell the browser to wait 2000 milliseconds (2 seconds) before executing the new code, <em>but if</em> the user modifies the code in the meanwhile, <strong> I reset the timer</strong>. This is the key to prevent the code getting executed more than once.
 </p>
 
 <p>
@@ -257,5 +257,5 @@ alert('foo'); // edit me!
   Need inspiration?
 </h3>
 
-<a href="/demo/html5editor/" target="_blank">Demo</a> |
-<a href="https://github.com/simonewebdesign/html5editor/archive/master.zip" target="_blank" rel="external nofollow">Download</a>
+<a href="/demo/html5editor/">Demo</a> |
+<a href="https://github.com/simonewebdesign/html5editor/archive/master.zip" rel="external">Download</a>

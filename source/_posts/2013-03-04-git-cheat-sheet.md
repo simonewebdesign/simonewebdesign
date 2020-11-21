@@ -161,6 +161,6 @@ $ git tag -a v4.2 -m "jelly bean"  # append a message
     <em>Update april 23: just made some &#8220;refactoring&#8221; and added <code>git stash</code>.</em>
   </li>
   <li>
-    <em>Update dec 3: I&#8217;ve updated the &#8220;merging&#8221; section with the command for deleting the remote branch as well. I&#8217;ve also added the <code>--no-ff</code> option, that disables fast-forwarding (reason explained <a href="http://nvie.com/posts/a-successful-git-branching-model/" title="A successful Git branching model" target="_blank">here</a>).</em>
+    <em>Update dec 3: I&#8217;ve updated the &#8220;merging&#8221; section with the command for deleting the remote branch as well. I&#8217;ve also added the <code>--no-ff</code> option, that disables fast-forwarding (reason explained <a href="http://nvie.com/posts/a-successful-git-branching-model/" title="A successful Git branching model">here</a>).</em>
   </li>
 </ul>

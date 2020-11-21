@@ -21,7 +21,7 @@ tags:
 ---
 
 <p>
-  <a href="http://git-scm.com/" title="Git official website" target="_blank">Git</a> is a wonderful tool that makes possible having your local repo and your <a href="https://github.com/" title="GitHub" target="_blank" rel="external nofollow">GitHub</a> repo <strong>always perfectly synchronized</strong>. This is cool and all, but — what about the production server?
+  <a href="http://git-scm.com/" title="Git official website">Git</a> is a wonderful tool that makes possible having your local repo and your <a href="https://github.com/" title="GitHub" rel="external">GitHub</a> repo <strong>always perfectly synchronized</strong>. This is cool and all, but — what about the production server?
 </p>
 
 <p>
@@ -29,11 +29,11 @@ tags:
 </p>
 
 <p>
-  Well, if that&#8217;s your case you <em>really</em> should check out <a href="https://github.com/git-ftp/git-ftp" title="git-ftp on GitHub" target="_blank" rel="external nofollow">git-ftp</a> by <a href="https://github.com/resmo" title="René Moser's profile on GitHub" target="_blank" rel="external nofollow">René Moser</a>.
+  Well, if that&#8217;s your case you <em>really</em> should check out <a href="https://github.com/git-ftp/git-ftp" title="git-ftp on GitHub" rel="external">git-ftp</a> by <a href="https://github.com/resmo" title="René Moser's profile on GitHub" rel="external">René Moser</a>.
 </p>
 
 <p>
-  <a href="https://github.com/git-ftp/git-ftp" title="git-ftp on GitHub" target="_blank" rel="external nofollow">Git-ftp</a> is a straightforward way to connect to your <abbr title="File Transfer Protocol">FTP</abbr> and automagically transfer <strong>only the files that changed since the last commit</strong>.
+  <a href="https://github.com/git-ftp/git-ftp" title="git-ftp on GitHub" rel="external">Git-ftp</a> is a straightforward way to connect to your <abbr title="File Transfer Protocol">FTP</abbr> and automagically transfer <strong>only the files that changed since the last commit</strong>.
 </p>
 
 <p>

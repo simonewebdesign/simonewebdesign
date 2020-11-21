@@ -27,7 +27,7 @@ tags:
 </p>
 
 <p>
-  The beacon images (better known as <a href="https://en.wikipedia.org/wiki/Web_bug" title="Web bug on Wikipedia" target="_blank">web bugs</a>) are basically just hidden scripts behind images. They can easily be spotted because they usually don&#8217;t end with a common image format, like <abbr title="Graphics Interchange Format">gif</abbr>, <abbr title="Joint Photographic Experts Group">jpeg</abbr> or <abbr title="Portable Network Graphics">png</abbr>.<br />An example of web beacon could be this:
+  The beacon images (better known as <a href="https://en.wikipedia.org/wiki/Web_bug" title="Web bug on Wikipedia">web bugs</a>) are basically just hidden scripts behind images. They can easily be spotted because they usually don&#8217;t end with a common image format, like <abbr title="Graphics Interchange Format">gif</abbr>, <abbr title="Joint Photographic Experts Group">jpeg</abbr> or <abbr title="Portable Network Graphics">png</abbr>.<br />An example of web beacon could be this:
 </p>
 
 ``` html
@@ -35,7 +35,7 @@ tags:
 ```
 
 <p>
-  As you can see, the <code>src</code> attribute contains a <abbr title="PHP: Hypertext Preprocessor (recursive acronym)">PHP</abbr> script. It&#8217;s easy to find (and <a href="http://www.ghostery.com/" title="Ghostery" target="_blank" rel="external nofollow">block</a>) web bugs when you see that an image is served as <abbr title="PHP: Hypertext Preprocessor (recursive acronym)">PHP</abbr>.
+  As you can see, the <code>src</code> attribute contains a <abbr title="PHP: Hypertext Preprocessor (recursive acronym)">PHP</abbr> script. It&#8217;s easy to find (and <a href="http://www.ghostery.com/" title="Ghostery" rel="external">block</a>) web bugs when you see that an image is served as <abbr title="PHP: Hypertext Preprocessor (recursive acronym)">PHP</abbr>.
 </p>
 
 <p>
