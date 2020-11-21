@@ -38,7 +38,3 @@ git config --file ~/Work/.gitconfig user.email john@example.work
 ```
 
 This is great, because we can now have **completely separate configurations**, each living in their own separate folder, and the right configuration will be applied depending on the location. Awesome!
-
----
-
-I hope you found this useful. If you run into trouble, feel free to leave me a comment and I’ll try to help. [Remember, git is your friend](https://hades.github.io/2010/01/git-your-friend-not-foe/).
