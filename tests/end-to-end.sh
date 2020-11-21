@@ -26,7 +26,7 @@ function test {
 
 # Home page and core assets
 test "" "Simone Web Design"
-test stylesheets/style.css "html\{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;background:#f6f6f6 url\("
+test stylesheets/style.css "html\{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;background:#f6f6f6"
 test sw.js 'self.addEventListener\("install"'
 test stylesheets/about.css ".about-intro picture{float:left;"
 test stylesheets/projects.css ".projects section\+section{margin-top:"
