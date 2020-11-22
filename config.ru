@@ -18,12 +18,7 @@ class SinatraStaticServer < Sinatra::Base
   end
 
   # Redirect whatever matches rss to atom.xml
-  get '/rss/?' do
-    redirect '/atom.xml', 301
-  end
-
-  # Redirect whatever matches feed to atom.xml
-  get '/feed/?' do
+  get '/(rss|feed)/?' do
     redirect '/atom.xml', 301
   end
 
