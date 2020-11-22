@@ -96,8 +96,8 @@ test sitemap.xml 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"'
 
 # Subscribe
 # without the email param it should redirect to the home page
-test unsub 301
-test unsub/ 301
+# test unsub 301
+# test unsub/ 301
 # Disabled because it sends me an actual email!
 # test 'unsub?email=test@example' "You have been unsubscribed successfully."
 

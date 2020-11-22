@@ -62,7 +62,6 @@ GEM
     multipart-post (2.1.1)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
-    mysql2 (0.5.3)
     nio4r (2.5.4)
     octokit (4.19.0)
       faraday (>= 0.9)
@@ -121,7 +120,6 @@ DEPENDENCIES
   jekyll (~> 2.0)
   jekyll-page-hooks (~> 1.2)
   jekyll-sitemap
-  mysql2
   octopress-date-format
   octopress-hooks
   puma

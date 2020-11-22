@@ -22,4 +22,4 @@ end
 
 gem 'puma'
 gem 'sinatra'
-gem 'mysql2'
+# gem 'mysql2'
