@@ -1,5 +1,5 @@
 ---
-title: 'How to make a real-time in-browser editor with the HTML5&#8242;s contenteditable attribute'
+title: 'How to make a real-time in-browser editor with HTML5&#8242;s contenteditable'
 layout: post
 permalink: /how-to-make-browser-editor-with-html5-contenteditable/
 date: 2013-04-20
