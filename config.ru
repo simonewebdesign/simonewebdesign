@@ -26,46 +26,46 @@ class SinatraStaticServer < Sinatra::Base
     redirect '/about/', 301
   end
 
-  # post '/sub' do
-  #   new_email = params['email']
-  #   unless new_email =~ URI::MailTo::EMAIL_REGEXP
-  #     Thread.new do
-  #       send_mail_to_yourself("[swd] /sub 400 (invalid email=#{new_email})")
-  #     end
-  #     halt 400
-  #   end
+  post '/sub' do
+    new_email = params['email']
+    unless new_email =~ URI::MailTo::EMAIL_REGEXP
+      Thread.new do
+        send_mail_to_yourself("[swd] /sub 400 (invalid email=#{new_email})")
+      end
+      halt 400
+    end
 
-  #   Thread.new do
-  #     statement = db.prepare 'INSERT IGNORE INTO users (email, ref) VALUES (?, ?)'
-  #     statement.execute(new_email, request.env['HTTP_REFERER'])
+    Thread.new do
+      statement = db.prepare 'INSERT IGNORE INTO users (email, ref) VALUES (?, ?)'
+      statement.execute(new_email, request.env['HTTP_REFERER'])
 
-  #     send_mail_to_yourself("[swd] New sub (email=#{new_email})", "Ref: #{request.env['HTTP_REFERER']}")
-  #   end
+      send_mail_to_yourself("[swd] New sub (email=#{new_email})", "Ref: #{request.env['HTTP_REFERER']}")
+    end
 
-  #   send_sinatra_file(request.path)
-  # end
+    send_sinatra_file(request.path)
+  end
 
-  # get '/unsub/?' do
-  #   redirect "/", 301 unless params.key?('email')
+  get '/unsub/?' do
+    redirect "/", 301 unless params.key?('email')
 
-  #   email = params['email']
-  #   unless email =~ URI::MailTo::EMAIL_REGEXP
-  #     Thread.new do
-  #       send_mail_to_yourself("[swd] /unsub 400 (invalid email=#{email})")
-  #     end
-  #     halt 400
-  #   end
+    email = params['email']
+    unless email =~ URI::MailTo::EMAIL_REGEXP
+      Thread.new do
+        send_mail_to_yourself("[swd] /unsub 400 (invalid email=#{email})")
+      end
+      halt 400
+    end
 
-  #   Thread.new do
-  #     statement = db.prepare 'DELETE FROM users WHERE email = ?'
-  #     statement.execute(email)
+    Thread.new do
+      statement = db.prepare 'DELETE FROM users WHERE email = ?'
+      statement.execute(email)
 
-  #     # TODO: log referrer from unsub email as query param
-  #     send_mail_to_yourself("[swd] Unsub (email=#{email})")
-  #   end
+      # TODO: log referrer from unsub email as query param
+      send_mail_to_yourself("[swd] Unsub (email=#{email})")
+    end
 
-  #   send_sinatra_file(request.path)
-  # end
+    send_sinatra_file(request.path)
+  end
 
   # Redirect all requests without a trailing slash to the trailing slash version
   # Except for some file extensions
@@ -94,35 +94,35 @@ class SinatraStaticServer < Sinatra::Base
     missing_file_block.call
   end
 
-#   private
+  private
 
-#   def db
-#     require 'mysql2'
-#     Mysql2::Client.new(
-#       username: ENV['DB_USERNAME'],
-#       password: ENV['DB_PASSWORD'],
-#       host: ENV['DB_HOST'],
-#       port: ENV['DB_PORT'],
-#       database: ENV['DB_NAME']
-#     )
-#   end
+  def db
+    require 'mysql2'
+    Mysql2::Client.new(
+      username: ENV['DB_USERNAME'],
+      password: ENV['DB_PASSWORD'],
+      host: ENV['DB_HOST'],
+      port: ENV['DB_PORT'],
+      database: ENV['DB_NAME']
+    )
+  end
 
-#   def send_mail_to_yourself(subject, body = '')
-#     msgstr = <<END_OF_MESSAGE
-# Subject: #{subject}
+  def send_mail_to_yourself(subject, body = '')
+    msgstr = <<END_OF_MESSAGE
+Subject: #{subject}
 
-# #{body}
-# END_OF_MESSAGE
-#     require 'net/smtp'
-#     smtp = Net::SMTP.new ENV['SIMO_SMTP_SERVER'], ENV['SIMO_SMTP_PORT']
-#     smtp.enable_starttls
-#     smtp.start('simonewebdesign.it', ENV['SIMO_AUTH_USERNAME'], ENV['SIMO_AUTH_PASSWORD'], :login) do |sm|
-#       from_addr = 'site@simonewebdesign.it'
-#       to_addr = 'hello@simonewebdesign.it'
+#{body}
+END_OF_MESSAGE
+    require 'net/smtp'
+    smtp = Net::SMTP.new ENV['SIMO_SMTP_SERVER'], ENV['SIMO_SMTP_PORT']
+    smtp.enable_starttls
+    smtp.start('simonewebdesign.it', ENV['SIMO_AUTH_USERNAME'], ENV['SIMO_AUTH_PASSWORD'], :login) do |sm|
+      from_addr = 'site@simonewebdesign.it'
+      to_addr = 'hello@simonewebdesign.it'
 
-#       sm.send_message msgstr, from_addr, to_addr
-#     end
-#   end
+      sm.send_message msgstr, from_addr, to_addr
+    end
+  end
 end
 
 run SinatraStaticServer
