@@ -31,7 +31,8 @@ Then run:
 
 1. `gem install bundler --no-ri --no-doc`
 2. `bundle`
-3. `bundle exec rake preview`
+3. `npm install`
+4. `bundle exec rake preview`
 
 Hopefully that should be it. You should now be able to see the website on http://localhost:4000.
 
