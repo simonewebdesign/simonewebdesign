@@ -27,6 +27,7 @@ posts_dir       = '_posts'    # directory for blog files
 themes_dir      = '.themes'   # directory for blog files
 new_post_ext    = 'md'  # default new post file extension when using the new_post task
 new_page_ext    = 'md'  # default new page file extension when using the new_page task
+server_host     = '0.0.0.0'   # default would be localhost, but 0.0.0.0 to test on mobile device
 server_port     = '4000'      # port for preview server eg. localhost:4000
 
 if (/cygwin|mswin|mingw|bccwin|wince|emx/ =~ RUBY_PLATFORM) != nil
@@ -68,14 +69,14 @@ task :preview do
   system "compass compile --css-dir #{source_dir}/stylesheets"
   jekyllPid = Process.spawn({ 'OCTOPRESS_ENV'=>'preview' }, 'jekyll build --watch')
   compassPid = Process.spawn('compass watch')
-  rackupPid = Process.spawn("rackup --port #{server_port}")
+  rackupPid = Process.spawn("rackup --host #{server_host} --port #{server_port}")
 
   trap('INT') {
     [jekyllPid, compassPid, rackupPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
     exit 0
   }
 
-  `open http://localhost:#{server_port}`
+  `open http://#{server_host}:#{server_port}`
 
   [jekyllPid, compassPid, rackupPid].each { |pid| Process.wait(pid) }
 end
