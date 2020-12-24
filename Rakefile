@@ -185,7 +185,7 @@ desc 'Deploy to Heroku'
 task :deploy_heroku do
   system 'git add public/ -f'
   system "git commit -m 'deploy'"
-  system 'git push heroku master -f'
+  system 'git push heroku main -f'
   system 'git reset HEAD^'
   puts 'Site deployed. Now do some manual testing!'
   system 'open https://www.simonewebdesign.it/'
@@ -299,20 +299,20 @@ task :setup_github_pages, :repo do |t, args|
   else
     user = repo_url.match(/github\.com\/([^\/]+)/)[1]
   end
-  branch = (repo_url.match(/\/[\w-]+\.github\.(?:io|com)/).nil?) ? 'gh-pages' : 'master'
+  branch = (repo_url.match(/\/[\w-]+\.github\.(?:io|com)/).nil?) ? 'gh-pages' : 'main'
   project = (branch == 'gh-pages') ? repo_url.match(/\/([^\.]+)/)[1] : ''
   unless (`git remote -v` =~ /origin.+?octopress(?:\.git)?/).nil?
     # If octopress is still the origin remote (from cloning) rename it to octopress
     system 'git remote rename origin octopress'
-    if branch == 'master'
+    if branch == 'main'
       # If this is a user/organization pages repository, add the correct origin remote
       # and checkout the source branch for committing changes to the blog source.
       system "git remote add origin #{repo_url}"
       puts "Added remote #{repo_url} as origin"
-      system 'git config branch.master.remote origin'
+      system 'git config branch.main.remote origin'
       puts 'Set origin as default remote'
-      system 'git branch -m master source'
-      puts "Master branch renamed to 'source' for committing your blog source files"
+      system 'git branch -m main source'
+      puts "Main branch renamed to 'source' for committing your blog source files"
     else
       unless !public_dir.match("#{project}").nil?
         system "rake set_root_dir[#{project}]"
@@ -331,7 +331,7 @@ task :setup_github_pages, :repo do |t, args|
     system "echo 'My Octopress Page is coming soon &hellip;' > index.html"
     system 'git add .'
     system 'git commit -m "Octopress init"'
-    system 'git branch -m gh-pages' unless branch == 'master'
+    system 'git branch -m gh-pages' unless branch == 'main'
     system "git remote add origin #{repo_url}"
     rakefile = IO.read(__FILE__)
     rakefile.sub!(/deploy_branch(\s*)=(\s*)(["'])[\w-]*["']/, "deploy_branch\\1=\\2\\3#{branch}\\3")

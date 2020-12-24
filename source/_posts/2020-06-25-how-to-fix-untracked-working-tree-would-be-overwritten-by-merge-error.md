@@ -39,13 +39,13 @@ If you have already tried pulling from the remote and it didn't work, **here's t
 git branch --track <branch-name> origin/<branch-name>
 ```
 
-For example, if your branch is named `master`:
+For example, if your branch is named `main`:
 
 ``` bash
-git branch --track master origin/master
+git branch --track main origin/main
 ```
 
-What this does is simply tell Git that these two branches, `master` and `origin/master`, are related to each other, and that it should keep track of the changes between them. Turns out it also fixes the error, since Git can now _see_ that nothing would be overwritten.
+What this does is simply tell Git that these two branches, `main` and `origin/main`, are related to each other, and that it should keep track of the changes between them. Turns out it also fixes the error, since Git can now _see_ that nothing would be overwritten.
 
 ## Wait — that's it?
 

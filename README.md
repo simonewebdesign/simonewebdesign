@@ -44,11 +44,11 @@ If you already have submodules and just want to update them to the latest, remov
 
 By the way, remember that you set up a `prod` branch on each of these remotes. That's the branch that will ultimately be shipped to production. If you want to make changes, you should:
 
-1. checkout master
+1. checkout main
 2. make the changes
 3. push the changes
 4. checkout prod
-5. `git rebase origin/master`
+5. `git rebase origin/main`
 
 ### Preparing for the first deploy
 
@@ -63,7 +63,7 @@ By the way, remember that you set up a `prod` branch on each of these remotes. T
 
 ### Website down after deploy
 
-You have to redeploy from master.
+You have to redeploy from `main`.
 
 ### CSS changes work locally but not in production
 
