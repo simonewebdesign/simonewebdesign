@@ -49,10 +49,6 @@
     }
 }
 
-.entry-content button + .menu {
-    display: inline-block;
-}
-
 .entry-content .menu {
     visibility: hidden;
     background: white;
@@ -98,10 +94,25 @@
     }
 }
 
+.entry-content h2 + button {
+    // font-size: 2rem;
+    padding: 0 .6rem;
+}
+
+.entry-content button + .menu {
+    display: inline-block;
+    position: absolute;
+}
+
 .entry-content button + .menu:active {
     visibility: visible;
 }
 
 .entry-content button:focus + .menu {
     visibility: visible;
+}
+
+/* TODO temporary. Remember to also remove tabindex=-1 from post.html */
+article {
+    outline: none;
 }

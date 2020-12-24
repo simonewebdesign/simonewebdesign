@@ -3,7 +3,7 @@ layout: post
 title: A pure CSS onclick context menu
 description: How to build a context menu using pure HTML and CSS, no JS, cross-browser.
 date: 2019-05-13
-updated: 2020-11-01
+updated: 2020-12-24
 comments: true
 categories:
   - JavaScript
@@ -13,7 +13,7 @@ categories:
 <p>
   Context menus are one of those very useful UI widgets that still haven't reached the HTML spec.
   <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/contextmenu" rel="external">There have been attempts</a>,
-  but for now everyone tends to make its own custom implementation.
+  but for now everyone tends to make their own custom implementation.
 </p>
 
 <p>Especially with the advent of React, the tendency is to write a custom menu component that uses JavaScript to open/close itself, perhaps by using an invisible overlay to detect clicks outside the menu and close it accordingly. This works fine in practice, however it doesn't have to be so complicated. If you need a simple <strong>dropdown menu</strong> that:</p>
@@ -31,7 +31,7 @@ categories:
 
 <h2>An example</h2>
 
-Try clicking this button: <button>&#9776;</button><nav class="menu">
+Try clicking this button: <button>⋮</button><nav class="menu">
         <ul>
             <li>
                 <button onclick="alert('Hello there!')">Display Greeting</button>
@@ -47,7 +47,7 @@ Try clicking this button: <button>&#9776;</button><nav class="menu">
 <h3>The HTML</h3>
 
 ```html
-<button>☰</button>
+<button>⋮</button>
 <nav class="menu">
   <ul>
     <li>
@@ -81,7 +81,7 @@ button:focus + .menu {
 
 <p>You can attach event listeners to the menu items, e.g. using <code>onclick</code> or <code>document.addEventListener</code> and they'll work as usual.</p>
 
-<p>Obviously the menu can be opened only by elements that can receive focus, such as buttons. So what about other non-interactive elements? Can we make them focusable too? <strong>The answer is yes!</strong></p>
+<p>Naturally the menu can be opened only by elements that can receive focus, such as buttons. So what about other non-interactive elements? Can we make them focusable too? <strong>The answer is yes!</strong></p>
 
 <h2>A more complicated example</h2>
 
@@ -169,9 +169,9 @@ img.addEventListener('mousedown', ({ offsetX, offsetY }) => {
 
 <h3>What about browser support?</h3>
 
-<p>It may not work in some very old browsers, so make sure to test it in the browsers you need to support. <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#Clicking_and_focus" rel="external">This MDN page</a> has some info about what happens to the focus of a button when being clicked/tapped on different platforms. I did some tests myself and it seems to work well everywhere, including mobile browsers.</p>
+<p>It may not work in some very old browsers, so make sure to test it in the browsers you need to support. <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#Clicking_and_focus" rel="external">This MDN page</a> has some info about what happens to the focus of a button when being clicked/tapped on different platforms. I did some tests myself and it seems to work well everywhere, including IE and mobile browsers.</p>
 
-<p><b>Update:</b> there's an issue specifically with Safari and Firefox, on both iOS and macOS: the button won't focus. No worries though, we can focus it programmatically via JS — for example:</p>
+<p><b>Update:</b> this blog post became very popular and a few folks reached out to me about an issue, specifically with Safari and Firefox, on both iOS and macOS: the button won't focus. No worries though, it only affects buttons; other tags will work just fine. You may consider using <code>&lt;span tabindex=0&gt;</code> — the semantic meaning is lost entirely here, so if you really want to use a button, you can always focus it programmatically via JS, but <em>only</em> on Apple devices — for example:</p>
 
 ```javascript
 if (
@@ -186,7 +186,11 @@ if (
 }
 ```
 
-<p>And that's it! I hope you found this useful. If you spot any issues, please do let me know by commenting below!</p>
+<p>Another issue you may find specific to Apple is that the menu won't close when tapping outside of it. There's an easy fix: simply add <code>tabindex="-1"</code> to the container or the body tag.</p>
+
+<hr>
+
+<p>And that's it! I hope you found this useful. If you spot any issues, please do let me know!</p>
 
 <script>
 {% include js/2019-05-05-pure-css-onclick-context-menu.js %}
