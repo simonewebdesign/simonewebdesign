@@ -111,8 +111,3 @@
 .entry-content button:focus + .menu {
     visibility: visible;
 }
-
-/* TODO temporary. Remember to also remove tabindex=-1 from post.html */
-article {
-    outline: none;
-}

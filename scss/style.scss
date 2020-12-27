@@ -115,6 +115,11 @@ a {
     @include link-colors($link-color, $hover: $link-color-hover, $focus: $link-color-hover, $visited: $link-color-visited, $active: $link-color-active);
 }
 
+/* TODO temporary. Remember to also remove tabindex=-1 from post.html */
+article {
+    outline: none;
+}
+
 @import "utils";
 @import "banner";
 @import "navigation";
