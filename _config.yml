@@ -4,9 +4,9 @@
 
 url: https://www.simonewebdesign.it
 title: Simone Web Design
-subtitle:
+# subtitle:
 author: Simone Vittori
-simple_search:
+# simple_search:
 description: 'Blog about software development. Tips and tricks on JavaScript, Ruby, Elixir, Elm, and more. Simone Vittori is the author.'
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
@@ -17,21 +17,21 @@ date_format: "ordinal"
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
 subscribe_rss: https://feeds.feedburner.com/simonewebdesign
-subscribe_email:
+# subscribe_email:
 # RSS feeds can list your email address if you like
-email: hello@simonewebdesign.it
+# email: hello@simonewebdesign.it
 
 # ----------------------- #
 #    Jekyll & Plugins     #
 # ----------------------- #
 
 # If publishing to a subdirectory as in https://site.com/project set 'root: /project'
-root: /
+root_url: /
 permalink: /:title/
 source: source
 destination: public
 exclude: [hire]
-plugins: plugins
+plugins_dir: plugins
 code_dir: downloads/code
 category_dir: categories
 markdown: rdiscount
@@ -40,7 +40,7 @@ rdiscount:
     - autolink
     - footnotes
     - smart
-highlighter: pygments # default python pygments have been replaced by pygments.rb
+# highlighter: pygments # default python pygments have been replaced by pygments.rb, then rouge
 
 # paginate: 5          # Posts per page on the blog index
 # paginate_path: "posts/:num"  # Directory base for pagination URLs eg. /posts/2/
@@ -55,7 +55,7 @@ titlecase: true       # Converts page and post titles to titlecase
 
 # list each of the sidebar modules you want to include, in the order you want them to appear.
 # To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like 'custom/asides/custom_aside_name.html'
-default_asides: []
+# default_asides: []
 
 # Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below
 # and add an array with the asides you want to use.
@@ -68,7 +68,7 @@ default_asides: []
 # ----------------------- #
 
 # Github repositories
-github_user: simonewebdesign
-github_repo_count: 5
-github_show_profile_link: true
-github_skip_forks: true
+# github_user: simonewebdesign
+# github_repo_count: 5
+# github_show_profile_link: true
+# github_skip_forks: true

@@ -21,7 +21,7 @@
 # - category_title_prefix: The string used before the category name in the page title (default is
 #                          'Category: ').
 
-require 'stringex'
+# require 'stringex'
 
 module Jekyll
 
@@ -122,7 +122,7 @@ module Jekyll
       if self.layouts.key? 'category_index'
         dir = self.config['category_dir'] || 'categories'
         self.categories.keys.each do |category|
-          self.write_category_index(File.join(dir, category.to_url), category)
+          self.write_category_index(File.join(dir, MyHelper.hyphenize(category)), category)
         end
       end
     end
@@ -164,7 +164,7 @@ module Jekyll
     #
     def category_link(category)
       dir = @context.registers[:site].config['category_dir']
-      "<a class='category' href='/#{dir}/#{category.to_url}/'>#{category}</a>"
+      "<a class='category' href='/#{dir}/#{MyHelper.hyphenize(category)}/'>#{category}</a>"
     end
 
     # Outputs the post.date as formatted html, with hooks for CSS styling.
@@ -181,4 +181,18 @@ module Jekyll
 
   end
 
+end
+
+
+module MyHelper
+  # Taken from https://www.rubydoc.info/gems/active_component/String:hyphenize
+  def self.hyphenize(arg)
+    arg.
+    gsub(/::/, '/').
+    gsub(/([A-Z]+)([A-Z][a-z])/,'\1_\2').
+    gsub(/([a-z\d])([A-Z])/,'\1_\2').
+    tr("_", "-").
+    tr(" ", "-").
+    downcase
+  end
 end
