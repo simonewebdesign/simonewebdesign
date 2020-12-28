@@ -31,7 +31,7 @@ categories:
 
 <h2>An example</h2>
 
-Try clicking this button: <button>⋮</button><nav class="menu">
+Try clicking this button: <button>☰</button><nav class="menu">
         <ul>
             <li>
                 <button onclick="alert('Hello there!')">Display Greeting</button>
@@ -46,8 +46,9 @@ Try clicking this button: <button>⋮</button><nav class="menu">
 
 <h3>The HTML</h3>
 
-```html
-<button>⋮</button>
+{% highlight html %}
+{% raw %}
+<button>☰</button>
 <nav class="menu">
   <ul>
     <li>
@@ -62,11 +63,12 @@ Try clicking this button: <button>⋮</button><nav class="menu">
     </li>
   </ul>
 </nav>
-```
+{% endraw %}
+{% endhighlight %}
 
 <h3>The CSS</h3>
 
-```css
+{% highlight css %}
 .menu {
     visibility: hidden;
 }
@@ -75,7 +77,7 @@ button + .menu:active,
 button:focus + .menu {
     visibility: visible;
 }
-```
+{% endhighlight %}
 
 <p>That's the trick: we hide the menu in CSS initially, then show it when the button gets focused <em>and</em> while we're clicking on the menu itself. This is necessary so that the click actually gets registered. That's it! <strong>No JS trickery involved.</strong></p>
 
@@ -108,7 +110,8 @@ button:focus + .menu {
 
 <h3>The HTML</h3>
 
-```html
+{% highlight html %}
+{% raw %}
 <figure tabindex="-1">
   <img src="/images/doge.png" />
 
@@ -126,7 +129,8 @@ button:focus + .menu {
     </ul>
   </nav>
 </figure>
-```
+{% endraw %}
+{% endhighlight %}
 
 <p>The trick here was to add <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex" rel="external"><code>tabindex</code></a>. This makes the element focusable, so that it can open the menu on click. Note that if the clickable element is a <code>&lt;button&gt;</code> or other <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories#Interactive_content" rel="external">interactive content</a> (i.e. any focusable element), then you don't even need this!</p>
 
@@ -134,7 +138,7 @@ button:focus + .menu {
 
 <h3>The CSS</h3>
 
-```css
+{% highlight css %}
 .menu {
     visibility: hidden;
 }
@@ -143,13 +147,13 @@ figure:active .menu,
 figure:focus .menu {
     visibility: visible;
 }
-```
+{% endhighlight %}
 
 <h3>How do I make the menu appear next to the mouse cursor?</h3>
 
 <p>You'll need JavaScript, but it's entirely up to you whether you want to do this. Alternatively you could add <code>position: absolute</code> to the menu and <strong>just make it appear below (or next to) the element you clicked</strong> — no need for JS in this case! Anyway, this did the trick for me:</p>
 
-```javascript
+{% highlight javascript %}
 const img = document.querySelector('.doge');
 const menu = document.querySelector('.menu');
 
@@ -157,7 +161,7 @@ img.addEventListener('mousedown', ({ offsetX, offsetY }) => {
     menu.style.top = offsetY + 'px';
     menu.style.left = offsetX + 'px';
 });
-```
+{% endhighlight %}
 
 <h3>I want the menu to close when I click the button again!</h3>
 
@@ -173,7 +177,7 @@ img.addEventListener('mousedown', ({ offsetX, offsetY }) => {
 
 <p><b>Update:</b> this blog post became very popular and a few folks reached out to me about an issue, specifically with Safari and Firefox, on both iOS and macOS: the button won't focus. No worries though, it only affects buttons; other tags will work just fine. You may consider using <code>&lt;span tabindex=0&gt;</code> — the semantic meaning is lost entirely here, so if you really want to use a button, you can always focus it programmatically via JS, but <em>only</em> on Apple devices — for example:</p>
 
-```javascript
+{% highlight javascript %}
 if (
   /apple/i.test(navigator.vendor) ||
   /Mac.*Firefox/.test(navigator.userAgent)
@@ -184,7 +188,7 @@ if (
     event.target.focus();
   });
 }
-```
+{% endhighlight %}
 
 <p>Another issue you may find specific to Apple is that the menu won't close when tapping outside of it. There's an easy fix: simply add <code>tabindex="-1"</code> to the container or the body tag.</p>
 

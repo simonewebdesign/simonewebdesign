@@ -34,7 +34,7 @@ tags:
 </p>
 
 ``` bash
-$ curl -L git.io/sublimetext | sh
+curl -L git.io/sublimetext | sh
 ```
 
 - Update (10 March 2014): I made some improvements to the script so I generated a new link.

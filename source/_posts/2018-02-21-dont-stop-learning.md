@@ -22,11 +22,12 @@ One day I went to this website, projecteuler.net, which is basically a way to pr
 
 It was years ago, but I remember I solved the first couple exercises pretty easily. The third one was a bit harder. Here's the original text:
 
-> A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
+<blockquote>
+  <p>A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.</p>
+  <p>Find the largest palindrome made from the product of two 3-digit numbers.</p>
+</blockquote>
 
-> Find the largest palindrome made from the product of two 3-digit numbers.
-
-<small>Source: https://projecteuler.net/problem=4</small>
+<small>Source: [https://projecteuler.net/problem=4](https://projecteuler.net/problem=4)</small>
 
 I spent a few hours on it before coming up with this:
 
@@ -120,6 +121,7 @@ It was love at first sight. I started reading about this amazing language, about
 
 Anyway, that's just part of my story about becoming a better programmer. I'm not sure what the point is, I just felt like writing it down. But if, like me, you're one of those people that need some 'takeaway' from a story, I guess it should be this:
 
-> Just don't stop learning, ever.
-
-> Keep on learning and practicing, and you too will discover beautiful things.
+<blockquote>
+  <p>Just don't stop learning, ever.</p>
+  <p>Keep on learning and practicing, and you too will discover beautiful things.</p>
+</blockquote>

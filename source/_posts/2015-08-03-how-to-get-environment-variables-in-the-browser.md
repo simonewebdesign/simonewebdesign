@@ -29,7 +29,8 @@ The solution is pretty simple: you just need to **generate a file that contains 
 
 For such a trivial task you could be tempted to use your language of choice, e.g. in JavaScript (Node.js) you have access to `process.env.SOME_VAR`. In Python you would probably do `os.getenv('SOME_VAR')` and in Ruby you'd use `ENV['SOME_VAR']`—but what about some old-school shell scripting? The script could be as simple as:
 
-``` bash bin/env.sh
+``` bash
+# bin/env.sh
 echo "env = {"
 echo "  USER: '$USER',"
 echo "  HOSTNAME: '$HOSTNAME'"
@@ -38,17 +39,18 @@ echo "}"
 
 That, when executed, will become:
 
-``` javascript env.js
+``` javascript
+// env.js
 env = {
-  USER: 'simone',
+  USER: 'yourname',
   HOSTNAME: 'ubuntu'
 }
 ```
 
-And the script to execute is:
+And the script to execute on the shell is:
 
 ``` bash
-$ ./bin/env.sh > env.js
+./bin/env.sh > env.js
 ```
 
 Pretty straightforward, isn't it?
@@ -56,8 +58,7 @@ Pretty straightforward, isn't it?
 
 ### Test it:
 
-{% highlight html %}
-{% raw %}
+``` html
 <!DOCTYPE html>
 <html>
 <head>
@@ -66,12 +67,11 @@ Pretty straightforward, isn't it?
 <body>
   <script src="env.js"></script>
   <script>
-    console.log(env.USER +'@'+ env.HOSTNAME); // "simone@ubuntu"
+    console.log(env.USER, env.HOSTNAME);
   </script>
 </body>
 </html>
-{% endraw %}
-{% endhighlight %}
+```
 
 One downside to this approach is that you have to "make a build" every time you change the variables. If you know any workarounds or better solutions, please let me know!
 

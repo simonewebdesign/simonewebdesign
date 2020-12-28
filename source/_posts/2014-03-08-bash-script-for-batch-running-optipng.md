@@ -9,7 +9,9 @@ categories: Bash
 
 <h3>Optimize all your images with a single command:</h3>
 
-<pre id="optipng_script">$ find . -name '*.png' | xargs optipng -nc -nb -o7 -full</pre>
+``` bash
+find . -name '*.png' | xargs optipng -nc -nb -o7 -full
+```
 
 <hr>
 
@@ -27,4 +29,4 @@ categories: Bash
 
 <p>Luckily enough, after a bit of search, I found a blog post titled <a href="http://www.justpowered.de/blog/shellbatch/optimize-all-png-images-recursively.html" title="Optimize all PNG images recursively">Optimize all PNG images recursively</a>, which finally solved my problem. All the credits belong to that blog.</p>
 
-<p>After running <a href="#optipng_script">the script</a> I got a score of 86/100 for Desktop (before was 81), and 68/100 for Mobile (before was 61), <strong>all without loss of quality</strong>. Definitely worth a try!</p>
+<p>After running the script I got a score of 86/100 for Desktop (before was 81), and 68/100 for Mobile (before was 61), <strong>all without loss of quality</strong>. Definitely worth a try!</p>

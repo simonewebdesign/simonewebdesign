@@ -41,7 +41,7 @@ tags:
 </p>
 
 ``` bash
-$ git ftp push --user <user> --passwd <password> ftp://example.com/public
+git ftp push --user <user> --passwd <password> ftp://example.com/public
 ```
 
 <p>
@@ -49,9 +49,9 @@ $ git ftp push --user <user> --passwd <password> ftp://example.com/public
 </p>
 
 ``` bash
-$ git config git-ftp.user john
-$ git config git-ftp.url ftp.example.com
-$ git config git-ftp.password secr3t
+git config git-ftp.user john
+git config git-ftp.url ftp.example.com
+git config git-ftp.password secr3t
 ```
 
 <p>
@@ -59,7 +59,7 @@ $ git config git-ftp.password secr3t
 </p>
 
 ``` bash
-$ git ftp push
+git ftp push
 ```
 
 <p>

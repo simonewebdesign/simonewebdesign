@@ -138,6 +138,4 @@ sentence.split.reverse.join " "
 
 Now, can you see the beauty of Ruby? It's just... *magic*.
 
-<div class="fluidMedia">
-  <iframe src="//www.youtube-nocookie.com/embed/NLQzSZmxJLQ" frameborder="0" allowfullscreen></iframe>
-</div>
+<iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/NLQzSZmxJLQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

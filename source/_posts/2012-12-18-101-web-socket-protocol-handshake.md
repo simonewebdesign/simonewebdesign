@@ -318,7 +318,7 @@ Server is listening on port 1337.
   When you send a web socket request as a client, you&#8217;ll send an <a href="https://en.wikipedia.org/wiki/HTTP_header" rel="external"><abbr title="HyperText Transfer Protocol">HTTP</abbr> header</a> like this one:
 </p>
 
-```
+``` yaml
 GET / HTTP/1.1
 Host: localhost:1337
 User-Agent: Mozilla/5.0 [...]
@@ -330,7 +330,7 @@ Upgrade: websocket
   And the server will respond something like:
 </p>
 
-```
+``` yaml
 HTTP/1.1 101 Switching Protocols
 Upgrade: websocket
 Connection: Upgrade
@@ -341,7 +341,7 @@ Connection: Upgrade
   This means you just established a <a href="http://en.wikipedia.org/wiki/Full_duplex#Full-duplex" rel="external">full-duplex</a> connection between the client and the server. If everything went as expected, the console should say something like:
 </p>
 
-```
+``` yaml
 Connection accepted from origin: http://localhost
 ```
 

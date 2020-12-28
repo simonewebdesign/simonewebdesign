@@ -28,7 +28,7 @@ It will install the <a href="https://sublime.wbond.net/" rel="external">Package 
 
 If you are interested to see the actual code behind, here we go:
 
-https://gist.github.com/simonewebdesign/8507139
+[https://gist.github.com/simonewebdesign/8507139](https://gist.github.com/simonewebdesign/8507139)
 
 It should work on most Linux distros; if not, please let me know by leaving a comment below. I'm here to help.
 

@@ -77,13 +77,15 @@ tags:
   As you might have already guessed, I am going to tie our models with a <em>one-to-many</em> relationship: a child <code>has_many</code> toys, and a toy <code>belongs_to</code> a child.
 </p>
 
-``` ruby app/models/child.rb
+``` ruby
+# app/models/child.rb
 class Child > ActiveRecord::Base
   has_many :toys
 end
 ```
 
-``` ruby app/models/toy.rb
+``` ruby
+# app/models/toy.rb
 class Toy > ActiveRecord::Base
   belongs_to :child
 end

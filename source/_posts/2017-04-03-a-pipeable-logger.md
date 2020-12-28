@@ -9,7 +9,7 @@ categories: Elixir
 
 The Elixir Logger is pretty good. You can easily log anything with it, just call one of `debug`, `info`, `warn` or `error`. For example:
 
-```elixir
+``` elixir
 Logger.info("something happened")
 ```
 
@@ -19,7 +19,7 @@ Turns into:
 
 Very nice. However, there are cases where you may want to, say, change some data structure, like update a map or a list, and then log the transition, **without breaking the pipe**. Example:
 
-```elixir
+``` elixir
 def my_function do
   list = [1, 2, 3]
 
@@ -36,7 +36,7 @@ Second, `Logger.*` functions return the `:ok` atom, which means you can't use th
 The solution to both issues is actually pretty straightforward: use a lambda!
 A lambda is just an anonymous function. We can define it and call it right away. So the code above becomes:
 
-```elixir
+``` elixir
 def my_function do
   [1, 2, 3]
   |> (fn list ->
@@ -59,7 +59,7 @@ If we call this function, we get:
 
 Great, exactly what we want! Except the syntax is horrible. But fear not, we can improve on it. How about we make a wrapper?
 
-```elixir
+``` elixir
 defmodule PipeableLogger do
   require Logger
 
@@ -71,13 +71,12 @@ defmodule PipeableLogger do
   # def warn, do: ...
   # def error, do: ...
   # def info, do: ...
-
 end
 ```
 
 Let's rewrite our function once again:
 
-```elixir
+``` elixir
 def my_function do
   [1, 2, 3]
   |> (&PipeableLogger.debug(&1, "before insert: #{inspect &1}")).()
@@ -93,7 +92,7 @@ Still not pretty though, as we still needed to wrap the function in a lambda. If
 
 Here's the improved version of `PipeableLogger`:
 
-```elixir
+``` elixir
 defmodule PipeableLogger do
   require Logger
 
@@ -107,13 +106,12 @@ defmodule PipeableLogger do
   # def warn, do: ...
   # def error, do: ...
   # def info, do: ...
-
 end
 ```
 
 Let's use it:
 
-```elixir
+``` elixir
 def my_function do
   [1, 2, 3]
   |> PipeableLogger.debug("before insert")
@@ -126,7 +124,7 @@ Much, much simpler! The only problem now is, we're logging just a message. What 
 
 Here's the final version I came up with:
 
-```elixir
+``` elixir
 defmodule PipeableLogger do
   require Logger
 
@@ -144,13 +142,12 @@ defmodule PipeableLogger do
   # def warn, do: ...
   # def error, do: ...
   # def info, do: ...
-
 end
 ```
 
 The assumption is that we always want to concatenate the data with the message, which is fair enough I think. Let's see it in action:
 
-```elixir
+``` elixir
 def my_function do
   [1, 2, 3]
   |> PipeableLogger.debug("before insert: ")
@@ -159,7 +156,7 @@ def my_function do
 end
 ```
 
-```elixir
+``` elixir
 iex> my_function()
 
 12:34:56.789 [debug] before insert: [1, 2, 3]
@@ -176,14 +173,14 @@ Summing up, I'm not convinced a `Logger` wrapper is the right way. This kinda go
 
 It's also worth noting that `Logger` supports the concept of metadata, which basically means you can already attach any data you want. For example, if you put this in your `config.exs`:
 
-```
+``` elixir
 config :logger, :console,
   metadata: [:my_list]
 ```
 
 You can then call `Logger` like this:
 
-```
+``` elixir
 iex(1)> require Logger
 Logger
 
@@ -197,7 +194,7 @@ Point is, you don't need a wrapper if all you want is concatenate some data in t
 
 So how about this instead?
 
-```elixir
+``` elixir
 def my_function do
   list = [1, 2, 3]
   Logger.debug("before insert: #{inspect list}")

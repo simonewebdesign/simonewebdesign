@@ -72,18 +72,19 @@ Here it is:
 
 ``` javascript
 function goodOnes(items) {
-    return R.reduce(theGoodOne, [], items);
+  return R.reduce(theGoodOne, [], items);
 
-    function theGoodOne(acc, item) {
-        if (item.good) {
-            return acc.concat(item.id);
-        } else if (item.children && item.children.length > 0) {
-            return R.reduce(theGoodOne, acc, item.children);
-        }
-        return acc;
+  function theGoodOne(acc, item) {
+    if (item.good) {
+      return acc.concat(item.id);
+    } else if (item.children && item.children.length > 0) {
+      return R.reduce(theGoodOne, acc, item.children);
     }
+    return acc;
+  }
 }
 ```
+
 
 As a side note, you don't really have to use Ramda.js.
 `Array.prototype.reduce` does the same, although in a less elegant way.

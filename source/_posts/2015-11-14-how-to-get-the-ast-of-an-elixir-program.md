@@ -12,13 +12,12 @@ Getting the **AST** (Abstract Syntax Tree) representation of an **Elixir** sourc
 
 Let's say we want to get the **AST of this file**:
 
-``` elixir lib/hello.ex
+``` elixir
+# lib/hello.ex
 defmodule Hello do
-
   def hi(name) do
     IO.puts "Hello " <> name
   end
-
 end
 ```
 

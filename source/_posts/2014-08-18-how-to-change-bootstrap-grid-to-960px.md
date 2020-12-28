@@ -72,7 +72,7 @@ If you are using CSS you can use the online build customizer. However I recommen
 
 ### 3 simple steps
 
-1. Go to: http://getbootstrap.com/customize/
+1. Go to: [http://getbootstrap.com/customize/](http://getbootstrap.com/customize/)
 2. Customize the [Grid system's variables](http://getbootstrap.com/customize/#grid-system);
 3. Download your custom version of Bootstrap.
 

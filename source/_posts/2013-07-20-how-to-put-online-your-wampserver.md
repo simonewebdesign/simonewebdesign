@@ -112,7 +112,7 @@ Listen 80
   replace it with:
 </p>
 
-```
+``` apache
 Listen <port number>
 ```
 
@@ -120,7 +120,7 @@ Listen <port number>
   for example:
 </p>
 
-```
+``` apache
 Listen 8080
 ```
 
@@ -140,10 +140,10 @@ Listen 8080
   Usually you need to add two separate entries: one for TCP and one for UDP packets. Something like this will do the work:
 </p>
 
-``` text
+```
 Private IP     Private Port   Type   Public IP/mask   Public Port
-192.168.1.27   8080 	        TCP    0.0.0.0/0        8080
-192.168.1.27   8080 	        UDP    0.0.0.0/0        8080
+192.168.1.27   8080 	      TCP    0.0.0.0/0        8080
+192.168.1.27   8080 	      UDP    0.0.0.0/0        8080
 ```
 
 <p>
@@ -166,7 +166,7 @@ ServerName localhost:80
   Change it to:
 </p>
 
-```
+``` apache
 ServerName <your private IP>:80
 ```
 
@@ -174,7 +174,7 @@ ServerName <your private IP>:80
   Example:
 </p>
 
-```
+``` apache
 ServerName 192.168.1.27:80
 ```
 
@@ -187,7 +187,7 @@ ServerName 192.168.1.27:80
   Also find this line:
 </p>
 
-```
+``` apache
 #   onlineoffline tag - don't remove
     Require local
 ```
@@ -196,7 +196,7 @@ ServerName 192.168.1.27:80
   Change it to:
 </p>
 
-```
+``` apache
 #   onlineoffline tag - don't remove
     Require all granted
 ```
@@ -205,7 +205,7 @@ ServerName 192.168.1.27:80
   In older versions of Apache, the line would look like:
 </p>
 
-```
+``` apache
 Order Deny,Allow
 Deny from all
 Allow from 127.0.0.1
@@ -215,7 +215,7 @@ Allow from 127.0.0.1
   And you need to change it to:
 </p>
 
-```
+``` apache
 Order Allow,Deny
 Allow from all
 ```
@@ -224,7 +224,7 @@ Allow from all
   Restart your web server. Now just find out what&#8217;s your current public <abbr title="Internet Protocol">IP</abbr> address and try to go to:
 </p>
 
-``` text
+```
 http://<public IP address>:<port>/
 ```
 

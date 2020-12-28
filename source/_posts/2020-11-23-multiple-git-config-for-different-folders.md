@@ -19,7 +19,7 @@ I like the idea of having two folders, each containing _many_ git repositories: 
 
 The first step is to **create a file** in your home directory, named `.gitconfig`. You probably have it already, and that’s fine. Just **open it and paste this**:
 
-```python ~/.gitconfig
+```python
 [includeIf "gitdir:~/Work/"]
   path = ~/Work/.gitconfig
 [includeIf "gitdir:~/Projects/"]
@@ -33,7 +33,7 @@ It’s pretty self-explanatory, right? We’re essentially saying:
 
 Note you don’t even need to create these files — just use `git config` to write in them. For example, to use your work email on all work-related repos, you might do:
 
-```ruby
+``` bash
 git config --file ~/Work/.gitconfig user.email john@example.work
 ```
 
@@ -49,7 +49,7 @@ You’ll likely want to avoid repeating yourself and share the common bits of co
 
 If that's the case, just keep those in the global config. You can do so by using the `--global` flag, for example:
 
-```python
+``` bash
 git config --global alias.st status
 ```
 

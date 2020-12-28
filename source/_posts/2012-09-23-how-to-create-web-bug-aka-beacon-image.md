@@ -75,7 +75,7 @@ User agent: $useragent";
   And now try to navigate through an image, let&#8217;s say <code>cat.gif</code>. You&#8217;ll go to <em>http://yoursite.com/path/to/cat.gif</em> and you&#8217;ll expect to see a cat. Instead, you&#8217;ll see something like this:
 </p>
 
-```
+```yaml
 Path: /path/to/cat.gif;
 File: cat.gif;
 IP address: 127.0.0.1;
