@@ -10,7 +10,7 @@ group :development do
   # gem 'octopress-date-format'
   gem 'octopress-hooks'
   gem 'jekyll-sitemap', '~> 1.4'
-  gem 'rdiscount', '~> 2.0'
+  # gem 'rdiscount', '~> 2.0'
   gem 'RedCloth', '~> 4.2.9'
   gem 'compass', '~> 1.0'
   gem 'sass-globbing', '~> 1.1'
@@ -18,6 +18,7 @@ group :development do
   gem 'rb-fsevent', '~> 0.10'
   gem 'stringex', '~> 2.8'
   gem 'therubyracer', '~> 0.12.3'
+  gem "kramdown-parser-gfm"
 end
 
 gem 'puma'

@@ -51,6 +51,8 @@ GEM
       listen (~> 3.0)
     kramdown (2.3.0)
       rexml
+    kramdown-parser-gfm (1.1.0)
+      kramdown (~> 2.0)
     libv8 (3.16.14.19)
     liquid (4.0.3)
     listen (3.3.3)
@@ -76,7 +78,6 @@ GEM
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    rdiscount (2.2.0.2)
     ref (2.0.0)
     rexml (3.2.4)
     rouge (3.26.0)
@@ -106,12 +107,12 @@ DEPENDENCIES
   jekyll (~> 3.9)
   jekyll-page-hooks (~> 1.2)
   jekyll-sitemap (~> 1.4)
+  kramdown-parser-gfm
   mysql2
   octopress-hooks
   puma
   rake (~> 13.0)
   rb-fsevent (~> 0.10)
-  rdiscount (~> 2.0)
   rubypants (~> 0.2.0)
   sass-globbing (~> 1.1)
   sinatra
