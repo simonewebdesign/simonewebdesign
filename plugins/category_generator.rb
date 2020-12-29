@@ -122,7 +122,7 @@ module Jekyll
       if self.layouts.key? 'category_index'
         dir = self.config['category_dir'] || 'categories'
         self.categories.keys.each do |category|
-          self.write_category_index(File.join(dir, MyHelper.hyphenize(category)), category)
+          self.write_category_index(File.join(dir, CategoryHelper.url(category)), category)
         end
       end
     end
@@ -164,7 +164,7 @@ module Jekyll
     #
     def category_link(category)
       dir = @context.registers[:site].config['category_dir']
-      "<a class='category' href='/#{dir}/#{MyHelper.hyphenize(category)}/'>#{category}</a>"
+      "<a class='category' href='/#{dir}/#{CategoryHelper.url(category)}/'>#{category}</a>"
     end
 
     # Outputs the post.date as formatted html, with hooks for CSS styling.
@@ -184,7 +184,12 @@ module Jekyll
 end
 
 
-module MyHelper
+module CategoryHelper
+  def self.url(category)
+    return "javascript" if category == "JavaScript"
+    self.hyphenize(category)
+  end
+
   # Taken from https://www.rubydoc.info/gems/active_component/String:hyphenize
   def self.hyphenize(arg)
     arg.
