@@ -33,6 +33,7 @@ destination: public
 exclude: [hire]
 plugins_dir: plugins
 plugins:
+  - jekyll-gist
   - jekyll-sitemap
 # code_dir: downloads/code
 category_dir: categories
