@@ -3,7 +3,6 @@ layout: page
 title: Hi, I'm Simone.
 comments: false
 footer: false
-sidebar: false
 published: false
 ---
 

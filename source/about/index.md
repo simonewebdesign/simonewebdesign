@@ -3,7 +3,6 @@ layout: page
 title: About Simone
 comments: false
 footer: true
-sidebar: false
 ---
 
 <div class="about-intro">
