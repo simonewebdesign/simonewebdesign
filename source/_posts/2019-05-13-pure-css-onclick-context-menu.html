@@ -175,7 +175,7 @@ img.addEventListener('mousedown', ({ offsetX, offsetY }) => {
 
 <p>It may not work in some very old browsers, so make sure to test it in the browsers you need to support. <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#Clicking_and_focus" rel="external">This MDN page</a> has some info about what happens to the focus of a button when being clicked/tapped on different platforms. I did some tests myself and it seems to work well everywhere, including IE and mobile browsers.</p>
 
-<p><b>Update:</b> this blog post became very popular and a few folks reached out to me about an issue, specifically with Safari and Firefox, on both iOS and macOS: the button won't focus. No worries though, it only affects buttons; other tags will work just fine. You may consider using <code>&lt;span tabindex=0&gt;</code> — the semantic meaning is lost entirely here, so if you really want to use a button, you can always focus it programmatically via JS, but <em>only</em> on Apple devices — for example:</p>
+<p><b>Update:</b> this blog post received a lot of attention and a few folks reached out to me about an issue, specifically with Safari and Firefox, on both iOS and macOS: the button won't focus. No worries though, it only affects buttons; other tags will work just fine. You may consider using <code>&lt;span tabindex=0&gt;</code> — the semantic meaning is lost entirely here, so if you really want to use a button, you can always focus it programmatically via JS, but <em>only</em> on Apple devices — for example:</p>
 
 {% highlight javascript %}
 if (

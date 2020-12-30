@@ -139,7 +139,7 @@ error[E0308]: mismatched types
 Luckily we can fix this by explicitly declaring the type of our map:
 
 ```rust
-    let mut map: HashMap<&str, Box<dyn Display + 'static>> = HashMap::new();
+let mut map: HashMap<&str, Box<dyn Display + 'static>> = HashMap::new();
 ```
 
 This works because we are actually storing instances of `Box`, not primitive types; `dyn Display` means the type of the _trait object_ `Display`. In this case, `Display` happens to be a common trait between `&str` and `i32`.
@@ -162,7 +162,7 @@ fn main() {
 
 You may wonder what would happen if we were to use the type `dyn Display` without the `Box` wrapper. If we try that, we'd get this nasty error:
 
-```rust
+```
 error[E0277]: the size for values of type `(dyn std::fmt::Display + 'static)` cannot be known at compilation time
    --> src/main.rs
 
@@ -207,8 +207,8 @@ fn main() {
 It feels much simpler! And the output is naturally the same:
 
 ```rust
-    a: 1
-    b: 2
+a: 1
+b: 2
 ```
 
 ## Conclusion

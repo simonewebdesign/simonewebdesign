@@ -12,7 +12,6 @@ $mono: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
 
 .highlight {
   table td.code { width: 100%; }
-  border: 1px solid $pre-border !important;
 }
 
 .highlight .line-numbers {
@@ -47,7 +46,6 @@ pre {
 }
 
 h3.filename {
-  @extend .code-title;
   + pre { @include border-top-radius(0); }
 }
 
@@ -172,45 +170,4 @@ $solar-scroll-thumb: rgba(#fff, .2);
   @extend .pre-code;
   background: #000;
   text-align: left;
-}
-figure.code {
-  font-size: 84.7825% !important; // because my ocd wanted it to be exactly 15.6px
-  background: none;
-  padding: 0;
-  border: 0;
-  margin-left: 0;
-  margin-right: 0;
-  margin-bottom: 1.5em;
-
-  figcaption {
-    position: relative;
-    @extend .code-title;
-    a { @extend .download-source; }
-  }
-  .highlight {
-    margin-bottom: 0;
-    border-radius: 3px;
-  }
-}
-
-.code-title {
-  text-align: center;
-  font-size: 1em;
-  line-height: 2em;
-  text-shadow: #cbcccc 0 1px 0;
-  color: #474747;
-  font-weight: bold;
-  margin-bottom: 0;
-  @include border-top-radius(5px);
-  font-family: "Helvetica Neue", Arial, "Lucida Grande", "Lucida Sans Unicode", Lucida, sans-serif;
-  background: #aaa image-url("code_bg.png") top repeat-x;
-}
-
-.download-source {
-  position: absolute; right: .8em;
-  @include hover-link;
-  color: #666 !important;
-  z-index: 1;
-  text-shadow: #cbcccc 0 1px 0;
-  padding-left: 3em;
 }
