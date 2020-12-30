@@ -39,7 +39,6 @@ test projects/ "Open Source Projects"
 test about/ "About Simone"
 test 404/ "NOT FOUND"
 test contribs/ "Notable Contributions on GitHub"
-test offline/ "Oh Noes, The Internet's Gone Down!"
 
 # Regression test: about page should not contain categories.css
 # Disabled because I don't really care about testing this.
