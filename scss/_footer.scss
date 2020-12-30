@@ -18,6 +18,11 @@ main + footer {
     }
 }
 
+.footer-social {
+    max-width: 720px;
+    margin: 3rem auto 0 auto;
+}
+
 @media (min-width: 48rem) { /* 720p */
     svg {
         padding: 0 1.5rem;

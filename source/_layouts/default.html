@@ -14,7 +14,10 @@
   </main>
 
 {% unless page.footer == false %}
-  <footer>{% include footer.html %}</footer>
+  <footer>
+    {% include disqus.html %}
+    {% include footer.html %}
+  </footer>
 {% endunless %}
 
   <script>
