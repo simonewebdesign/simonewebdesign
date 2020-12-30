@@ -59,6 +59,7 @@ GEM
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
     libv8 (3.16.14.19)
+    libv8 (3.16.14.19-x86_64-linux)
     liquid (4.0.3)
     listen (3.3.3)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -112,6 +113,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-20
+  x86_64-linux
 
 DEPENDENCIES
   RedCloth (~> 4.2.9)
