@@ -1,9 +1,17 @@
 {% capture date %}{{ page.date }}{{ post.date }}{% endcapture %}
-{% capture date_formatted %}{{ page.date_html }}{{ post.date_html }}{% endcapture %}
+{% capture date_formatted %}
+  <time>
+    {{ date | date_to_string: site.date_format }}
+  </time>
+{% endcapture %}
 {% capture has_date %}{{ date | size }}{% endcapture %}
 
 {% capture updated %}{{ page.updated }}{{ post.updated }}{% endcapture %}
-{% capture updated_formatted %}{{ page.date_updated_html }}{{ post.date_updated_html }}{% endcapture %}
+{% capture updated_formatted %}
+  <time>
+    {{ updated | date_to_string: site.date_format }}
+  </time>
+{% endcapture %}
 {% capture was_updated %}{{ updated | size }}{% endcapture %}
 
 {% if has_date != '0' %}
