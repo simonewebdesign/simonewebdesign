@@ -1,32 +1,9 @@
-# ----------------------- #
-#      Main Configs       #
-# ----------------------- #
-
 url: https://www.simonewebdesign.it
 title: Simone Web Design
-# subtitle:
 author: Simone Vittori
-# simple_search:
 description: 'Blog about software development. Tips and tricks on JavaScript, Ruby, Elixir, Elm, and more. Simone Vittori is the author.'
-
-# Default date format is "ordinal" (resulting in "July 22nd 2007")
-# You can customize the format as defined in
-# https://www.ruby-doc.org/core-1.9.2/Time.html#method-i-strftime
-# Additionally, %o will give you the ordinal representation of the day
-date_format: "ordinal"
-
-# RSS / Email (optional) subscription links (change if using something like Feedburner)
+date_format: ordinal
 subscribe_rss: https://feeds.feedburner.com/simonewebdesign
-# subscribe_email:
-# RSS feeds can list your email address if you like
-# email: hello@simonewebdesign.it
-
-# ----------------------- #
-#    Jekyll & Plugins     #
-# ----------------------- #
-
-# If publishing to a subdirectory as in https://site.com/project set 'root: /project'
-# root_url: /
 permalink: /:title/
 source: source
 destination: public
@@ -35,17 +12,8 @@ plugins_dir: plugins
 plugins:
   - jekyll-gist
   - jekyll-sitemap
-# code_dir: downloads/code
 category_dir: categories
-# markdown: rdiscount
-# rdiscount:
-#   extensions:
-#     - autolink
-#     - footnotes
-#     - smart
-# highlighter: pygments # default python pygments have been replaced by pygments.rb, then rouge
-
-# paginate: 5          # Posts per page on the blog index
+homepage_posts: 5 # Posts per page on the blog index
 # paginate_path: "posts/:num"  # Directory base for pagination URLs eg. /posts/2/
 
 # recent_posts: 10       # Posts in the sidebar Recent Posts section
