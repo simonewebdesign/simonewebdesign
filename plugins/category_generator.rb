@@ -12,10 +12,6 @@
 #
 # A generator that creates category pages for jekyll sites.
 #
-# Included filters :
-# - category_links:      Outputs the list of categories as comma-separated <a> links.
-# - date_to_html_string: Outputs the post.date as formatted html, with hooks for CSS styling.
-#
 # Available _config.yml settings :
 # - category_dir:          The subfolder to build category pages in (default is 'categories').
 # - category_title_prefix: The string used before the category name in the page title (default is
@@ -135,46 +131,6 @@ module Jekyll
 
     def generate(site)
       site.write_category_indexes
-    end
-
-  end
-
-
-  # Adds some extra filters used during the category creation process.
-  module Filters
-
-    # Outputs a list of categories as comma-separated <a> links. This is used
-    # to output the category list for each post on a category page.
-    #
-    #  +categories+ is the list of categories to format.
-    #
-    # Returns string
-    #
-    def category_links(categories)
-      categories.sort.map { |c| category_link c }.join(', ')
-    end
-
-    # Outputs a single category as an <a> link.
-    #
-    #  +category+ is a category string to format as an <a> link
-    #
-    # Returns string
-    #
-    def category_link(category)
-      dir = @context.registers[:site].config['category_dir']
-      "<a class='category' href='/#{dir}/#{CategoryHelper.url(category)}/'>#{category}</a>"
-    end
-
-    # Outputs the post.date as formatted html, with hooks for CSS styling.
-    #
-    #  +date+ is the date object to format as HTML.
-    #
-    # Returns string
-    def date_to_html_string(date)
-      result = '<span class="month">' + date.strftime('%b').upcase + '</span> '
-      result << date.strftime('<span class="day">%d</span> ')
-      result << date.strftime('<span class="year">%Y</span> ')
-      result
     end
 
   end

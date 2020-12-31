@@ -24,7 +24,7 @@ introduction: true
   </blockquote>
   {% endif %}
 
-  {% for post in site.posts limit: 5 %}
+  {% for post in site.posts limit: site.homepage_posts %}
   {% assign content = post.content %}
     <article>
       {% include article.html %}
