@@ -5,11 +5,9 @@ ruby File.read(File.join(__dir__, '.ruby-version')).strip
 
 group :development do
   gem 'rake', '~> 13.0'
-  gem 'jekyll', '~> 3.9'
+  gem 'jekyll', '~> 4.2'
   gem 'jekyll-page-hooks', '~> 1.2'
-  # gem 'octopress-date-format'
   gem 'octopress-hooks'
-  # gem 'rdiscount', '~> 2.0'
   gem 'RedCloth', '~> 4.2.9'
   gem 'compass', '~> 1.0'
   gem 'sass-globbing', '~> 1.1'
@@ -17,7 +15,6 @@ group :development do
   gem 'rb-fsevent', '~> 0.10'
   gem 'stringex', '~> 2.8'
   gem 'therubyracer', '~> 0.12.3'
-  gem "kramdown-parser-gfm"
 end
 
 group :plugins do
