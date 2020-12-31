@@ -4,18 +4,18 @@ source 'https://rubygems.org'
 ruby File.read(File.join(__dir__, '.ruby-version')).strip
 
 group :development do
-  gem 'rake', '~> 13.0'
-  gem 'jekyll', '~> 4.2'
   gem 'compass', '~> 1.0'
+  gem 'jekyll', '~> 4.2'
+  gem 'rake', '~> 13.0'
   gem 'sass-globbing', '~> 1.1'
-  gem 'therubyracer', '~> 0.12.3'
 end
 
 group :plugins do
-  gem 'jekyll-sitemap', '~> 1.4'
   gem 'jekyll-gist', '~> 1.5'
+  gem 'jekyll-sitemap', '~> 1.4'
 end
 
+# only these will get bundled in production
+gem 'mysql2'
 gem 'puma'
 gem 'sinatra'
-gem 'mysql2'
