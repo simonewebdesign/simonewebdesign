@@ -103,7 +103,6 @@ GEM
       rack (~> 2.2)
       rack-protection (= 2.1.0)
       tilt (~> 2.0)
-    stringex (2.8.5)
     terminal-table (2.0.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
     therubyracer (0.12.3)
@@ -126,7 +125,6 @@ DEPENDENCIES
   rake (~> 13.0)
   sass-globbing (~> 1.1)
   sinatra
-  stringex (~> 2.8)
   therubyracer (~> 0.12.3)
 
 RUBY VERSION

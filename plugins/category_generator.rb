@@ -21,8 +21,6 @@
 # - category_title_prefix: The string used before the category name in the page title (default is
 #                          'Category: ').
 
-# require 'stringex'
-
 module Jekyll
 
   # The CategoryIndex class creates a single category page for the specified category.
