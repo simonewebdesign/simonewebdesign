@@ -6,8 +6,6 @@ ruby File.read(File.join(__dir__, '.ruby-version')).strip
 group :development do
   gem 'rake', '~> 13.0'
   gem 'jekyll', '~> 4.2'
-  gem 'jekyll-page-hooks', '~> 1.2'
-  gem 'octopress-hooks'
   gem 'RedCloth', '~> 4.2.9'
   gem 'compass', '~> 1.0'
   gem 'sass-globbing', '~> 1.1'
