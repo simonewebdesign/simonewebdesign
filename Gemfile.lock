@@ -124,7 +124,6 @@ DEPENDENCIES
   mysql2
   puma
   rake (~> 13.0)
-  rb-fsevent (~> 0.10)
   sass-globbing (~> 1.1)
   sinatra
   stringex (~> 2.8)
