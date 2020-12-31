@@ -14,6 +14,7 @@ tags:
   - framework
   - fushi
   - release
+article_cta: false
 ---
 <p>
   <img src="https://raw.github.com/simonewebdesign/Fushi/master/public/img/fushi-logo-t2.png" alt="Fushi PHP Boilerplate logo" width="295" height="138" class="basic-alignment left" /><em>Hooray!</em> I just released the version 0.8 of my very own <abbr title="PHP: Hypertext Preprocessor (recursive acronym)">PHP</abbr> framework / boilerplate.

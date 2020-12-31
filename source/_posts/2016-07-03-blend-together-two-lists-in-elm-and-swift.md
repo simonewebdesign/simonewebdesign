@@ -6,6 +6,7 @@ comments: true
 categories:
   - Elm
   - Swift
+article_cta: false
 ---
 
 Here's a fun kata:

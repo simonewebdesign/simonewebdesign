@@ -7,6 +7,7 @@ comments: true
 published: true
 categories:
   - Git
+article_cta: false
 ---
 
 Let's say you have two Git repositories: one on GitHub, and one on your computer.<br>They contain **identical** (or very similar) files, and what you want to do is "synchronize" them (i.e. make them look exactly the same). Maybe all you need is to download a few missing files from GitHub to your computer, or simply push some changes from your machine to GitHub.

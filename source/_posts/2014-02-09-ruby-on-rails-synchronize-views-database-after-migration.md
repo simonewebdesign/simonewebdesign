@@ -18,6 +18,7 @@ tags:
   - schema
   - synchronize
   - view
+article_cta: false
 ---
 
 <p>

@@ -17,6 +17,7 @@ tags:
   - html5
   - in-browser
   - real-time
+article_cta: false
 ---
 
 <p>

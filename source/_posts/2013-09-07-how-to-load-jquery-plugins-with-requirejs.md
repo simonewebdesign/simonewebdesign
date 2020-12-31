@@ -23,6 +23,7 @@ tags:
   - plugins
   - require
   - requirejs
+article_cta: false
 ---
 
 <p>

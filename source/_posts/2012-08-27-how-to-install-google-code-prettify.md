@@ -14,6 +14,7 @@ tags:
   - install
   - plugin
   - prettify
+article_cta: false
 ---
 
 <p>

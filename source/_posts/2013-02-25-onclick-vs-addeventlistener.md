@@ -10,6 +10,7 @@ categories:
 tags:
   - addEventListener
   - onclick
+article_cta: false
 ---
 
 <p>

@@ -14,6 +14,7 @@ tags:
   - mountain lion
   - os x 10.8
   - setup
+article_cta: false
 ---
 
 <p>
