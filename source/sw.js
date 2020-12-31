@@ -9,7 +9,6 @@ var preLoad = function(){
       "/archives/",
       "/projects/",
       "/about/",
-      "/offline/",
       "/404/",
     ]);
   });
@@ -49,8 +48,6 @@ var returnFromCache = function(request){
       if(!matching || matching.status == 404) {
         if (navigator.onLine) {
           return cache.match("404/");
-        } else {
-          return cache.match("offline/");
         }
       } else {
         return matching;
