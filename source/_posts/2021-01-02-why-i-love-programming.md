@@ -4,20 +4,10 @@ title: Why I Love Programming
 description: A short essay about computer programming. Why do you program?
 date: 2021-01-02
 comments: true
-# categories: JavaScript
 published: false
 ---
 
 > Think a little about why you enjoy what you enjoy.
-
-<!--
-For me, it's not just one thing. Rather, I find many aspects of programming to be
-
-I'm one of those very lucky folks who love what they do. I started programming back in high school; first as a hobby, then it became a profession. Nowadays I still enjoy coding, even in my spare time.
-
-I've been asking myself these questions, and I think t
-
--->
 
 Why do you program? What do you like about it? I've been asking myself these questions, but I haven't really found the answer yet. Maybe there's no single answer, after all. It's an _ensemble_, a whole range of reasons that make programming so enticing to me. For example...
 
