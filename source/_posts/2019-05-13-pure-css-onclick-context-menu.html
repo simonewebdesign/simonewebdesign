@@ -82,9 +82,9 @@ button:focus + .menu {
 
 <p>That's the trick: we hide the menu in CSS initially, then show it when the button gets focused <em>and</em> while we're clicking on the menu itself. This is necessary so that the click actually gets registered. That's it! <strong>No JS trickery involved.</strong></p>
 
-<p>You can attach event listeners to the menu items, e.g. using <code>onclick</code> or <code>document.addEventListener</code> and they'll work as usual.</p>
+<p>You can attach event listeners to the menu items, e.g. using <code>onclick</code> or <code>document.addEventListener</code> and they'll work as usual. You may also just use <code>&lt;a&gt;</code> tags instead of buttons, depending on your use case.</a></p>
 
-<p>Naturally the menu can be opened only by elements that can receive focus, such as buttons. So what about other non-interactive elements? Can we make them focusable too? <strong>The answer is yes!</strong></p>
+<p>Naturally the menu can be opened only by elements that can receive focus, such as buttons and anchors. So what about other non-interactive elements? Can we make them focusable too? <strong>The answer is yes!</strong></p>
 
 <h2>A more complicated example</h2>
 
