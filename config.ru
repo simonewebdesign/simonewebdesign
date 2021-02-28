@@ -30,7 +30,7 @@ class SinatraStaticServer < Sinatra::Base
     new_email = params['email']
     unless new_email =~ URI::MailTo::EMAIL_REGEXP
       Thread.new do
-        send_mail_to_yourself("[swd] /sub 400 (invalid email=#{new_email})")
+        send_mail_to_yourself("[swd] /sub 400 (invalid email=#{new_email})", "Ref: #{request.env['HTTP_REFERER']}")
       end
       halt 400
     end
@@ -51,7 +51,7 @@ class SinatraStaticServer < Sinatra::Base
     email = params['email']
     unless email =~ URI::MailTo::EMAIL_REGEXP
       Thread.new do
-        send_mail_to_yourself("[swd] /unsub 400 (invalid email=#{email})")
+        send_mail_to_yourself("[swd] /unsub 400 (invalid email=#{email})", "Ref: #{request.env['HTTP_REFERER']}")
       end
       halt 400
     end
@@ -61,7 +61,7 @@ class SinatraStaticServer < Sinatra::Base
       statement.execute(email)
 
       # TODO: log referrer from unsub email as query param
-      send_mail_to_yourself("[swd] Unsub (email=#{email})")
+      send_mail_to_yourself("[swd] Unsub (email=#{email})", "Ref: #{request.env['HTTP_REFERER']}")
     end
 
     send_sinatra_file(request.path)
