@@ -27,6 +27,7 @@ tags:
   - wget
   - wheezy
 article_cta: false
+related: 2014-09-01-install-sublime-text-3-on-linux
 ---
 
 <img src="/images/Sublime_Text_Logo.png" alt="Sublime Text 3" width="200" height="200" class="basic-alignment left" />

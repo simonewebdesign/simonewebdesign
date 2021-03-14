@@ -6,6 +6,8 @@ date: 2018-02-21
 comments: true
 categories:
   - Ruby
+article_cta: false
+related: 2014-04-30-ruby-is-magic
 ---
 
 <p>Back in the days, when I got serious about becoming a "real programmer", I decided I wanted to learn Java.</p>

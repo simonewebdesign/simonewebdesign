@@ -18,6 +18,7 @@ tags:
   - script
   - sublime text
 article_cta: false
+related: 2014-09-01-install-sublime-text-3-on-linux
 ---
 
 **The following script is obsolete. Find the latest Sublime Text builds for Linux <a href="https://www.sublimetext.com/docs/3/linux_repositories.html" rel="external">here</a>.**

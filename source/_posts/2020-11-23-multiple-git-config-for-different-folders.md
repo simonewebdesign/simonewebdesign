@@ -6,6 +6,7 @@ date: 2020-11-23
 comments: true
 categories: Git
 article_cta: false
+related: 2013-12-03-git-show-latest-file-changes-in-command-line
 ---
 
 I wanted to have a clean separation between work-related repositories and my personal projects, as I often need to use a different email: for example, I’d like to sign git commits in the work repo with my work email, but keep using my personal email for the rest. How do you achieve this?

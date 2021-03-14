@@ -14,6 +14,7 @@ tags:
   - play
   - programming
 article_cta: false
+related: 2014-12-01-making-a-game-from-scratch-in-html5
 ---
 
 <p>

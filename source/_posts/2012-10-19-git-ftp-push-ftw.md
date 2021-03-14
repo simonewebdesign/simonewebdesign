@@ -18,6 +18,8 @@ tags:
   - repo
   - ssh
   - sync
+article_cta: false
+related: 2013-12-03-git-show-latest-file-changes-in-command-line
 ---
 
 <p>

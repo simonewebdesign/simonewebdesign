@@ -5,6 +5,8 @@ description: Journey through finding the perfect way of logging a value between 
 date: 2017-04-03
 comments: true
 categories: Elixir
+article_cta: false
+related: 2015-11-14-how-to-get-the-ast-of-an-elixir-program
 ---
 
 The Elixir Logger is pretty good. You can easily log anything with it, just call one of `debug`, `info`, `warn` or `error`. For example:

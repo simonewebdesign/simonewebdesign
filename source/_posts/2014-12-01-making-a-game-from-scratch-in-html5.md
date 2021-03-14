@@ -3,8 +3,10 @@ layout: post
 title: "Making a game from scratch in HTML5"
 description: How to build Pong using plain JS and the HTML5 Canvas. No game engine.
 date: 2014-12-01 17:06:53 +0100
+updated: 2020-03-14
 comments: true
 categories: JavaScript
+related: 2012-08-22-playing-around-with-javascript
 ---
 
 > "Pong is one of the earliest arcade video games; it is a tennis sports game featuring simple two-dimensional graphics." - Wikipedia
@@ -335,7 +337,9 @@ This is how I've implemented it by using a vector library I found on the Web (fi
 
 ## Conclusion
 
-I hope you enjoyed this article. Who's following my blog since the beginning will probably remember [my first blog post](/playing-around-with-javascript/). It was more than 2 years ago, and at that time I was really excited by the idea to build a game with JavaScript. I finally did it, and it has been fun indeed! However, I learned a big lesson: although it was fun, it wasn't really worth reinventing the wheel. So, if you got through all this tutorial, first of all congratulations! Secondly, consider using a game engine. Thirdly, maybe consider *not* using JavaScript... just use whatever you feel comfortable with. For instance, if you like the Ruby language (I do!) you could use <a rel="external" href="//opalrb.org/">Opal</a>, a Ruby to JavaScript compiler.
+I hope you enjoyed this article. Who's following my blog since the beginning will probably remember [my first blog post](/playing-around-with-javascript/). It was more than 2 years ago, and at that time I was really excited by the idea to build a game with JavaScript. I finally did it, and it has been fun indeed! However, I learned a big lesson: although it was fun, it wasn't really worth reinventing the wheel.
+
+So, if you got through all this tutorial, first of all congratulations! Secondly, consider using a game engine. Thirdly, maybe consider *not* using JavaScript... just use whatever you feel comfortable with. For instance, if you like the Ruby language ([I do!]({% post_url 2014-04-30-ruby-is-magic %})), you could use <a rel="external" href="//opalrb.org/">Opal</a>, a Ruby to JavaScript compiler.
 
 
 ## Demo and source code

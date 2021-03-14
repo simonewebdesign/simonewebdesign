@@ -11,6 +11,10 @@ single: true
       {% include post/author.html %}
       {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
     </p>
+
+    {% if page.related %}
+    {% include post/related_post.html %}
+    {% endif %}
   </footer>
 </article>
 
