@@ -1,15 +1,13 @@
 // The Logo
 [role="banner"] {
-    color: rgba(0,0,0, .333);
-    font-size: 3em;
-    font-weight: inherit;
-    letter-spacing: -1px;
+    color: $border-color;
+    font-weight: normal;
     text-align: center;
-    margin-top: 1em;
-    text-shadow: 1px 2px 2px #fff,
-                0 0 0 rgba(0,0,0,.666),
-                -1px 1px 0 #fff,
-                1px 1px 0 white;
+
+    // h1 {
+    //     margin-top: 1em; // exception for the global 1.6em
+    //     font-weight: inherit;
+    // }
 
     a,
     a:hover,
