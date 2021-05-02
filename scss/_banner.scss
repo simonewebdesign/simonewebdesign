@@ -1,13 +1,9 @@
 // The Logo
 [role="banner"] {
     color: $border-color;
-    font-weight: normal;
+    font-weight: normal; // inherit;
     text-align: center;
-
-    // h1 {
-    //     margin-top: 1em; // exception for the global 1.6em
-    //     font-weight: inherit;
-    // }
+    // margin-top: 1em; // exception for the global 1.6em
 
     a,
     a:hover,
