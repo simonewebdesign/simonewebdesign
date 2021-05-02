@@ -3,7 +3,7 @@
     pre,
     p code,
     li code {
-        background: #181a1b url('/images/noise.png') !important;
+        background: #181a1b !important;
         color: #e8e6e3;
     }
 
@@ -22,7 +22,7 @@
     }
 
     header + nav {
-        background: rgba(24, 26, 27, .95)/* #181a1b */ url('/images/noise.png');
+        background: rgba(24, 26, 27, .95)/* #181a1b */;
     }
 
     [role="banner"] a,
