@@ -26,6 +26,10 @@ html {
     border-top: 3px solid $border-color;
 }
 
+body {
+    margin: 0 1em;
+}
+
 time,
 .projects li {
     font-family: "PT Sans", "Helvetica Neue", Arial, sans-serif;
@@ -86,21 +90,18 @@ abbr[title] {
     border-bottom: 1px dotted #aaa;
 }
 
-@media (min-width: 640px) {
-    .entry-title {
-        width: 115%;
-        transform: translateX(-6.5%);
-    }
-}
-
 @media (min-width: 48rem) {
     html {
         font-size: 115%;
     }
 
+    $entry-title-width: 82vw;
+
+    article header { position: relative }
     .entry-title {
-        width: 125%;
-        transform: translateX(-10%);
+        width: $entry-title-width;
+        position: relative;
+        left: calc(50% - (#{$entry-title-width} / 2));
     }
 }
 
