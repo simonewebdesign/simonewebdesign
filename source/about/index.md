@@ -11,12 +11,14 @@ footer: true
     <img src="/images/simonewebdesign.png" width="168" alt="simonewebdesign's avatar" />
 </picture>
 <p>
-<strong>Simone Vittori</strong> is a software engineer originally from <a rel="external" href="https://en.wikipedia.org/wiki/Perugia">Perugia</a>, Italy, but now living in London, England. He's obsessed about code: if he's not writing it, he's probably reading, speaking or dreaming about it. He enjoys coding in many different programming languages, such as <a rel="external" href="https://elixir-lang.org/">Elixir</a>, <a rel="external" href="https://elm-lang.org/">Elm</a>, <a rel="external" href="https://www.ruby-lang.org/">Ruby</a> and <a rel="external" href="https://www.rust-lang.org/">Rust</a>, just to name a few.</p>
+<strong>Simone Vittori</strong> is a software engineer originally from <a rel="external" href="https://en.wikipedia.org/wiki/Perugia">Perugia</a>, Italy, but now living in London, England.<br>He's obsessed about code: if he's not writing it, he's probably reading, speaking or dreaming about it.<br>He enjoys coding in many different programming languages, such as <a rel="external" href="https://elixir-lang.org/">Elixir</a>, <a rel="external" href="https://elm-lang.org/">Elm</a>, <a rel="external" href="https://www.ruby-lang.org/">Ruby</a> and <a rel="external" href="https://www.rust-lang.org/">Rust</a>, just to name a few.</p>
 </div>
 
 ## simonewebdesign.it
 
 This is my personal website, founded in 2010. Became also a blog in 2012.
+
+<!--It went through a bit of a journey since then: it started as a humble personal space, made in Adobe Flash(!). A couple of years later I decided to make it a Wordpress blog, only to migrate it to Octopress in 2014. Eventually I settled with Jekyll, though who knows what the next iteration will bring?-->
 
 Some facts:
 
