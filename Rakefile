@@ -40,10 +40,15 @@ end
 
 desc 'Generate jekyll site'
 task :generate do
-  puts 'Generating Site with Jekyll...'
+  puts '---> Generating Site with Jekyll...'
   system "compass compile --css-dir #{source_dir}/stylesheets"
   system 'jekyll build --trace'
-  puts 'Minifying html/css/js with html-minifier...'
+  puts '---> Inlining stylesheets...'
+  Dir["public/**/*.html"].each do |f|
+    puts "     Processing #{f}..."
+    system "node_modules/.bin/inline-stylesheets #{f} #{f}"
+  end
+  puts '---> Minifying html/css/js with html-minifier...'
   system "node_modules/.bin/html-minifier --file-ext html --case-sensitive --collapse-boolean-attributes --collapse-whitespace --minify-css true --minify-js true --remove-attribute-quotes --remove-comments --remove-empty-attributes --remove-empty-elements --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-style-link-type-attributes --remove-tag-whitespace --sort-attributes --sort-class-name --trim-custom-fragments --use-short-doctype --input-dir public --output-dir public"
 end
 
