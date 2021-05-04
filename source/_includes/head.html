@@ -14,8 +14,12 @@
   <link href="{{ root_url }}/stylesheets/style.css" rel=stylesheet media=screen>
   {% assign uri = page.url | remove:'index.html' | remove:'/' %}
 
-  {% if uri == 'projects' or uri == 'archives' or uri == 'about' or uri contains 'categories' %}
+  {% if uri == 'projects' or uri == 'archives' or uri == 'about' %}
   <link href="{{ root_url }}/stylesheets/{{ uri }}.css" rel=stylesheet media=screen>
+  {% endif %}
+
+  {% if uri contains 'categories' %}
+  <link href="{{ root_url }}/stylesheets/categories.css" rel=stylesheet media=screen>
   {% endif %}
 
   <link href="{{ site.subscribe_rss }}" rel=alternate title="{{site.title}}" type="application/atom+xml">
