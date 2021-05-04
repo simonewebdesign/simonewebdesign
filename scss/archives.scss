@@ -19,7 +19,7 @@
     padding: 1em 0 1em;
     margin-bottom: 0;
     position: relative;
-    background: url('/images/dotted-border.png') bottom left repeat-x;
+    border-bottom: 1px dotted #ccc;
     &:last-child {
       background: none;
     }
