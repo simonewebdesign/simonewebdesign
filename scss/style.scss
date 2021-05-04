@@ -101,14 +101,14 @@ abbr[title] {
     .entry-title {
         width: $entry-title-width;
         position: relative;
-        left: calc(50% - (#{$entry-title-width} / 2));
+        left: calc(50% - #{$entry-title-width} / 2);
     }
 }
 
 @media (min-width: 60rem) {
     .entry-title {
-        width: 58rem;
-        left: calc(50% - (58rem / 2));
+        width: 54rem;
+        left: calc(50% - 54rem / 2);
     }
 }
 
