@@ -134,19 +134,19 @@ $ rails s
 ...
 ```
 
-<img src="/images/1-listing-children.png" alt="listing children empty" />
+<img src="/images/1-listing-children.png" loading="lazy" alt="listing children empty" />
 
 <p>
   It looks fine, except for one thing: there's no data displayed! Let's add some entries manually.
 </p>
 
-<img src="/images/2-listing-children.png" alt="listing children" />
+<img src="/images/2-listing-children.png" loading="lazy" alt="listing children" />
 
 <p>
   Good. Now let's give some toys to our boys:
 </p>
 
-<img src="/images/3-toy-created.png" alt="toy successfully created" />
+<img src="/images/3-toy-created.png" loading="lazy" alt="toy successfully created" />
 
 <p>
   Done. But wait a minute: this view looks a bit... crappy, doesn't it? We don't want to see a reference to a child... just his/her name. Even the prices don't look right.
