@@ -4,6 +4,8 @@ title: How to Install Global npm Packages on Heroku
 description:
 date: 2021-05-29
 comments: true
+categories:
+  - JavaScript
 ---
 
 If you need to install an [npm] package _globally_, rather than _locally_, but don't know how to do this on [Heroku], you can follow this how-to guide.

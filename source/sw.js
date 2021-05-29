@@ -23,9 +23,9 @@ self.addEventListener('fetch', e => {
         })
 
         return response
-      }).catch(() => {
-        return caches.match('/offline/')
-      })
+      }).catch(() =>
+        caches.match('/offline/')
+      )
     })
   )
 })
