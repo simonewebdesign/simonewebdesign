@@ -8,3 +8,8 @@
         margin-top: 6rem;
     }
 }
+
+.about-intro ~ h2:last-of-type,
+.about-intro ~ h2:last-of-type + p {
+    text-align: center;
+}
