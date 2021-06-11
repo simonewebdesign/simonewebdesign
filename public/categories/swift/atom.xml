@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Articles about Swift | Simone Web Design]]></title>
+  <link href="https://www.simonewebdesign.it/categories/swift/atom.xml" rel="self"/>
+  <link href="https://www.simonewebdesign.it/"/>
+  <updated>2021-06-11T20:24:10+01:00</updated>
+  <id>https://www.simonewebdesign.it/</id>
+  <author>
+    <name><![CDATA[Simone Vittori]]></name>
+    
+  </author>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Blending together two lists in Elm and Swift]]></title>
+    <link href="https://www.simonewebdesign.it/blend-together-two-lists-in-elm-and-swift/"/>
+    <updated>2016-07-03T20:30:00+01:00</updated>
+    <id>https://www.simonewebdesign.it/blend-together-two-lists-in-elm-and-swift</id>
+    <content type="html"><![CDATA[<p>Here’s a fun kata:</p>
+
+<blockquote>
+  <p>Create a <code class="language-plaintext highlighter-rouge">blend</code> function that, given two lists of the same length, returns a new list with each element alternated. E.g.:</p>
+
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>blend [1, 2, 3] [4, 5, 6]
+=&gt; [1, 4, 2, 5, 3, 6]
+</code></pre></div>  </div>
+</blockquote>
+
+<p>As with all challenges, it can be solved in many different ways. However this particular one is easily solvable with functional programming techniques such as recursion.</p>
+
+<p>You can try implementing it on your own first or just look straight at the solutions below.</p>
+
+<h2 id="solution-in-elm">Solution in Elm</h2>
+
+<p>The one below is probably the most straightforward solution:</p>
+
+<div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">blend</span> <span class="o">:</span> <span class="kt">List</span> <span class="n">a</span> <span class="o">-&gt;</span> <span class="kt">List</span> <span class="n">a</span> <span class="o">-&gt;</span> <span class="kt">List</span> <span class="n">a</span>
+<span class="n">blend</span> <span class="n">xs</span> <span class="n">ys</span> <span class="o">=</span>
+    <span class="kr">case</span> <span class="n">xs</span> <span class="kr">of</span>
+        <span class="n">x</span> <span class="o">::</span> <span class="n">xs'</span> <span class="o">-&gt;</span> <span class="n">x</span> <span class="o">::</span> <span class="n">blend</span> <span class="n">ys</span> <span class="n">xs'</span>
+        <span class="kr">_</span> <span class="o">-&gt;</span> <span class="kt">[]</span>
+</code></pre></div></div>
+
+<p>Notice how I exchanged the arguments in the recursion call. That did the trick!</p>
+
+<p>Let’s try it in the REPL – I added slashes so you can copy-paste the function:</p>
+
+<div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">$</span> <span class="n">elm</span><span class="o">-</span><span class="n">repl</span>
+
+<span class="o">&gt;</span> <span class="n">blend</span> <span class="n">xs</span> <span class="n">ys</span> <span class="o">=</span> <span class="nf">\</span>
+    <span class="kr">case</span> <span class="n">xs</span> <span class="kr">of</span> <span class="nf">\</span>
+        <span class="n">x</span> <span class="o">::</span> <span class="n">xs'</span> <span class="o">-&gt;</span> <span class="n">x</span> <span class="o">::</span> <span class="n">blend</span> <span class="n">ys</span> <span class="n">xs'</span> <span class="nf">\</span>
+        <span class="kr">_</span> <span class="o">-&gt;</span> <span class="kt">[]</span>
+
+<span class="o">&lt;</span><span class="n">function</span><span class="o">&gt;</span> <span class="o">:</span> <span class="kt">List</span> <span class="n">a</span> <span class="o">-&gt;</span> <span class="kt">List</span> <span class="n">a</span> <span class="o">-&gt;</span> <span class="kt">List</span> <span class="n">a</span>
+
+<span class="o">&gt;</span> <span class="n">blend</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span> <span class="o">:</span> <span class="kt">List</span> <span class="n">number</span>
+</code></pre></div></div>
+
+<h2 id="solution-in-swift">Solution in Swift</h2>
+
+<p>We can achieve the same in Swift by using an extension that splits up an Array into head and tail (credits to <a href="http://chris.eidhof.nl/post/swift-tricks/">Chris Eidhof</a>):</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">extension</span> <span class="kt">Array</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">match</span> <span class="p">:</span> <span class="p">(</span><span class="nv">head</span><span class="p">:</span> <span class="kt">T</span><span class="p">,</span> <span class="nv">tail</span><span class="p">:</span> <span class="p">[</span><span class="kt">T</span><span class="p">])?</span> <span class="p">{</span>
+      <span class="nf">return</span> <span class="p">(</span><span class="n">count</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">?</span> <span class="p">(</span><span class="k">self</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="kt">Array</span><span class="p">(</span><span class="k">self</span><span class="p">[</span><span class="mi">1</span><span class="o">..&lt;</span><span class="n">count</span><span class="p">]))</span> <span class="p">:</span> <span class="kc">nil</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>And here’s the solution:</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">blend</span><span class="p">(</span><span class="nv">firstArray</span><span class="p">:</span> <span class="kt">Array</span><span class="o">&lt;</span><span class="kt">AnyObject</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">secondArray</span><span class="p">:</span> <span class="kt">Array</span><span class="o">&lt;</span><span class="kt">AnyObject</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Array</span><span class="o">&lt;</span><span class="kt">AnyObject</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="k">let</span> <span class="p">(</span><span class="nv">head</span><span class="p">,</span> <span class="nv">tail</span><span class="p">)</span> <span class="o">=</span> <span class="n">firstArray</span><span class="o">.</span><span class="n">match</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">head</span><span class="p">]</span> <span class="o">+</span> <span class="nf">blend</span><span class="p">(</span><span class="n">secondArray</span><span class="p">,</span> <span class="nv">secondArray</span><span class="p">:</span> <span class="n">tail</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">[]</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>If you know of a better way, please let me know! Also feel free to leave a comment with any other alternative solution, even in other languages.</p>
+]]></content>
+  </entry>
+  
+</feed>

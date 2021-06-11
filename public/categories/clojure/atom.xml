@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Articles about Clojure | Simone Web Design]]></title>
+  <link href="https://www.simonewebdesign.it/categories/clojure/atom.xml" rel="self"/>
+  <link href="https://www.simonewebdesign.it/"/>
+  <updated>2021-06-11T20:24:10+01:00</updated>
+  <id>https://www.simonewebdesign.it/</id>
+  <author>
+    <name><![CDATA[Simone Vittori]]></name>
+    
+  </author>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Recursive Reduce in JavaScript and Clojure]]></title>
+    <link href="https://www.simonewebdesign.it/recursive-reduce-in-javascript-and-clojure/"/>
+    <updated>2016-07-26T14:00:00+01:00</updated>
+    <id>https://www.simonewebdesign.it/recursive-reduce-in-javascript-and-clojure</id>
+    <content type="html"><![CDATA[<p>Another fun kata:</p>
+
+<blockquote>
+  <p>Given an array of arbitrarily nested objects, return a flat array with all the objects marked as “good”.</p>
+</blockquote>
+
+<p>The definition above is quite generic, so I’ll provide examples to show
+exactly what I mean.</p>
+
+<p>The array in JavaScript looks like this:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">items</span> <span class="o">=</span> <span class="p">[{</span>
+    <span class="na">id</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="na">good</span><span class="p">:</span> <span class="kc">true</span>
+<span class="p">},</span> <span class="p">{</span>
+    <span class="na">id</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="na">children</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="na">id</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="na">good</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">},</span> <span class="p">{</span>
+        <span class="na">id</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="na">good</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">},</span> <span class="p">{</span>
+        <span class="na">id</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="na">children</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="na">id</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+                <span class="na">good</span><span class="p">:</span> <span class="kc">true</span>
+            <span class="p">}</span>
+            <span class="p">...</span>
+        <span class="p">]</span>
+    <span class="p">},</span> <span class="p">{</span>
+        <span class="na">id</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+        <span class="na">children</span><span class="p">:</span> <span class="p">[...]</span>
+    <span class="p">},</span> <span class="p">...]</span>
+<span class="p">},</span> <span class="p">...]</span>
+</code></pre></div></div>
+
+<p>We want the IDs of the good ones.</p>
+
+<p>You might have noticed not all objects are “good”. Number 2 for example
+is not good. So the result in this case should be:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>The only thing to notice here is that <strong>you know it’s not good because
+it’s not marked as such.</strong> In other words, when some object is “bad”,
+there’s no <code class="language-plaintext highlighter-rouge">good: false</code> nor <code class="language-plaintext highlighter-rouge">bad: true</code> that tells you that.</p>
+
+<p>So how do we solve this challenge?</p>
+
+<p>Since there’s an arbitrary nesting depth, we can once again leverage the
+power and simplicity of recursion.</p>
+
+<h2 id="solution-in-javascript">Solution in JavaScript</h2>
+
+<p>I’ve created the function <code class="language-plaintext highlighter-rouge">goodOnes(items)</code> that takes the input and
+returns what we expect. I’m also using <a href="https://github.com/ramda/ramda">Ramda.js</a>, just because I wanted a clean functional solution and I didn’t want to mess around
+object mutation.</p>
+
+<p>Here it is:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">goodOnes</span><span class="p">(</span><span class="nx">items</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">R</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="nx">theGoodOne</span><span class="p">,</span> <span class="p">[],</span> <span class="nx">items</span><span class="p">);</span>
+
+  <span class="kd">function</span> <span class="nx">theGoodOne</span><span class="p">(</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">good</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nx">acc</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">children</span> <span class="o">&amp;&amp;</span> <span class="nx">item</span><span class="p">.</span><span class="nx">children</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nx">R</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="nx">theGoodOne</span><span class="p">,</span> <span class="nx">acc</span><span class="p">,</span> <span class="nx">item</span><span class="p">.</span><span class="nx">children</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">acc</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>As a side note, you don’t really have to use Ramda.js.
+<code class="language-plaintext highlighter-rouge">Array.prototype.reduce</code> does the same, although in a less elegant way.</p>
+
+<h3 id="explanation">Explanation</h3>
+
+<p>What this function does is basically just <strong>collecting values</strong>. The
+starting point is an empty array, you can see that as the second
+argument in the first line. <code class="language-plaintext highlighter-rouge">theGoodOne</code> is another function (a closure,
+to be specific) that is implicitly taking two arguments: <code class="language-plaintext highlighter-rouge">acc</code> (the
+<em>accumulator</em>, the empty array) and <code class="language-plaintext highlighter-rouge">item</code> (the current item in the loop).</p>
+
+<p>If the item is good, we return a <strong>new array</strong> with the item’s ID.
+Otherwise, we return the accumulator. However, if the item happens to
+have some children, we start over doing the same thing (i.e. looping
+over its children), also keeping track of the accumulator we already
+have this time. It might be still empty, but we don’t care yet. We just
+return it at the very end.</p>
+
+<p>Now, you might have noticed a bug: what happens if the item is good, but also
+has children? … Yes, that item will be discarded! I did it on purpose
+by the way. When I made this function, the original array of items never
+had any good item <em>with</em> children. Only good items, or items with children.
+The algorithm is reflecting this, so it’s technically not a bug.</p>
+
+<p>If you’re curious about what’s the original intent behind this function, it is to
+collect values from an <strong>infinitely nestable architecture of UI components</strong>.
+There are <em>text</em> components, <em>number</em> components, <em>datepickers</em> etc…
+those are all part of a category called <em>fields</em>. There are also
+<em>wrappers</em>, that could be for example a <em>fieldset</em> or a <em>grid</em>. Wrappers can
+contain fields, but also other wrappers.</p>
+
+<p>So what if you have such data structure with so many components and all
+you need is just an array of fields? Simple, just <strong>reduce recursively</strong>
+on it! ;)</p>
+
+<p>More in general, you can use the <strong>recursive reduce</strong> whenever you have
+a nested data structure (such as an array of arrays) and you want to get something out of it.</p>
+
+<h2 id="solution-in-clojure">Solution in Clojure</h2>
+
+<p>This <strong>recursive solution</strong> follows the same logic as the JavaScript
+one, but somehow it feels superior. It could probably be rewritten in a
+more elegant way I guess, but I’m not very experienced with Clojure so
+here we go:</p>
+
+<div class="language-clojure highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="k">defn</span><span class="w"> </span><span class="n">good-one</span><span class="w"> </span><span class="p">[</span><span class="n">acc</span><span class="w"> </span><span class="n">item</span><span class="p">]</span><span class="w">
+  </span><span class="p">(</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nf">item</span><span class="w"> </span><span class="no">:good</span><span class="p">)</span><span class="w">
+    </span><span class="p">(</span><span class="nb">conj</span><span class="w"> </span><span class="n">acc</span><span class="w"> </span><span class="p">(</span><span class="nf">item</span><span class="w"> </span><span class="no">:id</span><span class="p">))</span><span class="w">
+    </span><span class="p">(</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">seq</span><span class="w"> </span><span class="p">(</span><span class="nf">item</span><span class="w"> </span><span class="no">:children</span><span class="p">))</span><span class="w">
+      </span><span class="p">(</span><span class="nb">reduce</span><span class="w"> </span><span class="n">good-one</span><span class="w"> </span><span class="n">acc</span><span class="w"> </span><span class="p">(</span><span class="nf">item</span><span class="w"> </span><span class="no">:children</span><span class="p">))</span><span class="w">
+      </span><span class="n">acc</span><span class="p">)))</span><span class="w">
+
+</span><span class="p">(</span><span class="k">defn</span><span class="w"> </span><span class="n">good-ones</span><span class="w"> </span><span class="p">[</span><span class="n">collection</span><span class="p">]</span><span class="w">
+  </span><span class="p">(</span><span class="nb">reduce</span><span class="w"> </span><span class="n">good-one</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="n">collection</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="demo--download">Demo &amp; Download</h2>
+
+<p>Everything is on GitHub if you want to fiddle around – just follow the instructions to get the demos up and running on your computer.</p>
+
+<ul>
+  <li>JavaScript <a href="https://github.com/simonewebdesign/es2015-recursive-reduce/blob/master/main.js">GitHub source</a> - <a href="https://github.com/simonewebdesign/es2015-recursive-reduce#readme">Readme instructions</a></li>
+  <li>Clojure <a href="https://github.com/simonewebdesign/clojure-recursive-reduce/blob/master/test/clojure_recursive_reduce/core_test.clj">GitHub source</a> - <a href="https://github.com/simonewebdesign/clojure-recursive-reduce#readme">Readme instructions</a></li>
+</ul>
+]]></content>
+  </entry>
+  
+</feed>

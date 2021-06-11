@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Articles about Rust | Simone Web Design]]></title>
+  <link href="https://www.simonewebdesign.it/categories/rust/atom.xml" rel="self"/>
+  <link href="https://www.simonewebdesign.it/"/>
+  <updated>2021-06-11T20:24:10+01:00</updated>
+  <id>https://www.simonewebdesign.it/</id>
+  <author>
+    <name><![CDATA[Simone Vittori]]></name>
+    
+  </author>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Inserting values of multiple types in Rust's HashMap]]></title>
+    <link href="https://www.simonewebdesign.it/rust-hashmap-insert-values-multiple-types/"/>
+    <updated>2020-07-06T00:00:00+01:00</updated>
+    <id>https://www.simonewebdesign.it/rust-hashmap-insert-values-multiple-types</id>
+    <content type="html"><![CDATA[<p>I was building a generic data store with Rust and I needed to implement a <strong>heterogeneous collection</strong> of keys and values. Essentially what I needed was a dictionary, but with values of dynamic type, like both strings and integers at the same time.</p>
+
+<p>Rust is a statically typed language and, due to the memory safety guarantees we are given, all values of some type must have a known, fixed size at compile time, therefore we are not allowed to create a collection of multiple types. However, <a href="https://doc.rust-lang.org/reference/dynamically-sized-types.html" rel="external">dynamically sized types</a> also exist, and in this article I’ll show how to use them.</p>
+
+<!--more-->
+
+<p>Say we have a <a href="https://doc.rust-lang.org/std/collections/struct.HashMap.html" rel="external"><code class="language-plaintext highlighter-rouge">HashMap</code></a> and we want to add more than one value type to it.</p>
+
+<p>For example:</p>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">use</span> <span class="nn">std</span><span class="p">::</span><span class="nn">collections</span><span class="p">::</span><span class="n">HashMap</span><span class="p">;</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="k">mut</span> <span class="n">map</span> <span class="o">=</span> <span class="nn">HashMap</span><span class="p">::</span><span class="nf">new</span><span class="p">();</span>
+
+    <span class="n">map</span><span class="nf">.insert</span><span class="p">(</span><span class="s">"a"</span><span class="p">,</span> <span class="s">"1"</span><span class="p">);</span>
+    <span class="n">map</span><span class="nf">.insert</span><span class="p">(</span><span class="s">"b"</span><span class="p">,</span> <span class="s">"2"</span><span class="p">);</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="n">in</span> <span class="o">&amp;</span><span class="n">map</span> <span class="p">{</span>
+        <span class="nd">println!</span><span class="p">(</span><span class="s">"{}: {}"</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>This prints:</p>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span><span class="p">:</span> <span class="mi">1</span>
+<span class="n">b</span><span class="p">:</span> <span class="mi">2</span>
+</code></pre></div></div>
+
+<p>In the example above, the type of <code class="language-plaintext highlighter-rouge">map</code> is <code class="language-plaintext highlighter-rouge">HashMap&lt;&amp;str, &amp;str&gt;</code>. In other words, both keys and values are of type <code class="language-plaintext highlighter-rouge">&amp;str</code>.
+What if we want the values to be of type <code class="language-plaintext highlighter-rouge">&amp;str</code> <em>and</em>, say, <code class="language-plaintext highlighter-rouge">i32</code>?</p>
+
+<p>This won’t work:</p>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">use</span> <span class="nn">std</span><span class="p">::</span><span class="nn">collections</span><span class="p">::</span><span class="n">HashMap</span><span class="p">;</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="k">mut</span> <span class="n">map</span> <span class="o">=</span> <span class="nn">HashMap</span><span class="p">::</span><span class="nf">new</span><span class="p">();</span>
+
+    <span class="n">map</span><span class="nf">.insert</span><span class="p">(</span><span class="s">"a"</span><span class="p">,</span> <span class="s">"1"</span><span class="p">);</span>
+    <span class="n">map</span><span class="nf">.insert</span><span class="p">(</span><span class="s">"b"</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="n">in</span> <span class="o">&amp;</span><span class="n">map</span> <span class="p">{</span>
+        <span class="nd">println!</span><span class="p">(</span><span class="s">"{}: {}"</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>If we try it, we get this compile time error:</p>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">error</span><span class="p">[</span><span class="n">E0308</span><span class="p">]:</span> <span class="n">mismatched</span> <span class="n">types</span>
+  <span class="o">-</span><span class="k">-&gt;</span> <span class="n">src</span><span class="o">/</span><span class="n">main</span><span class="py">.rs</span>
+
+     <span class="n">map</span><span class="nf">.insert</span><span class="p">(</span><span class="s">"b"</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+                     <span class="o">^</span> <span class="n">expected</span> <span class="err">`</span><span class="o">&amp;</span><span class="nb">str</span><span class="err">`</span><span class="p">,</span> <span class="n">found</span> <span class="n">integer</span>
+</code></pre></div></div>
+
+<p>So how do we <strong>insert multiple value types</strong> in a <code class="language-plaintext highlighter-rouge">HashMap</code>? We have several options, each of them with its own trade-offs.</p>
+
+<h2 id="option-1-use-an-enum">Option #1: Use an <code class="language-plaintext highlighter-rouge">enum</code></h2>
+
+<p>We can define our own <a href="https://doc.rust-lang.org/std/keyword.enum.html" rel="external"><code class="language-plaintext highlighter-rouge">enum</code></a> to model our value type, and insert that into the hashmap:</p>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">use</span> <span class="nn">std</span><span class="p">::</span><span class="nn">collections</span><span class="p">::</span><span class="n">HashMap</span><span class="p">;</span>
+
+<span class="nd">#[derive(Debug)]</span>
+<span class="k">enum</span> <span class="n">Value</span> <span class="p">{</span>
+    <span class="nf">Str</span><span class="p">(</span><span class="o">&amp;</span><span class="nv">'static</span> <span class="nb">str</span><span class="p">),</span>
+    <span class="nf">Int</span><span class="p">(</span><span class="nb">i32</span><span class="p">),</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="k">mut</span> <span class="n">map</span> <span class="o">=</span> <span class="nn">HashMap</span><span class="p">::</span><span class="nf">new</span><span class="p">();</span>
+
+    <span class="n">map</span><span class="nf">.insert</span><span class="p">(</span><span class="s">"a"</span><span class="p">,</span> <span class="nn">Value</span><span class="p">::</span><span class="nf">Str</span><span class="p">(</span><span class="s">"1"</span><span class="p">));</span>
+    <span class="n">map</span><span class="nf">.insert</span><span class="p">(</span><span class="s">"b"</span><span class="p">,</span> <span class="nn">Value</span><span class="p">::</span><span class="nf">Int</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="n">in</span> <span class="o">&amp;</span><span class="n">map</span> <span class="p">{</span>
+        <span class="nd">println!</span><span class="p">(</span><span class="s">"{}: {:?}"</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>This prints:</p>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span><span class="p">:</span> <span class="nf">Str</span><span class="p">(</span><span class="s">"1"</span><span class="p">)</span>
+<span class="n">b</span><span class="p">:</span> <span class="nf">Int</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>This is similar to a <a href="https://doc.rust-lang.org/reference/items/unions.html" rel="external">union type</a>. By inserting values of type <code class="language-plaintext highlighter-rouge">Value::*</code>, we are effectively saying that the map can accept types that are either string, integer, or any other composite type we wish to add.</p>
+
+<h2 id="option-2-use-a-box">Option #2: Use a <code class="language-plaintext highlighter-rouge">Box</code></h2>
+
+<p>We can wrap our types in the <a href="https://doc.rust-lang.org/std/boxed/struct.Box.html" rel="external" title="std::boxed::Box"><code class="language-plaintext highlighter-rouge">Box</code></a> struct:</p>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">use</span> <span class="nn">std</span><span class="p">::</span><span class="nn">collections</span><span class="p">::</span><span class="n">HashMap</span><span class="p">;</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="k">mut</span> <span class="n">map</span> <span class="o">=</span> <span class="nn">HashMap</span><span class="p">::</span><span class="nf">new</span><span class="p">();</span>
+
+    <span class="n">map</span><span class="nf">.insert</span><span class="p">(</span><span class="s">"a"</span><span class="p">,</span> <span class="nn">Box</span><span class="p">::</span><span class="nf">new</span><span class="p">(</span><span class="s">"1"</span><span class="p">));</span>
+    <span class="n">map</span><span class="nf">.insert</span><span class="p">(</span><span class="s">"b"</span><span class="p">,</span> <span class="nn">Box</span><span class="p">::</span><span class="nf">new</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="n">in</span> <span class="o">&amp;</span><span class="n">map</span> <span class="p">{</span>
+        <span class="nd">println!</span><span class="p">(</span><span class="s">"{}: {}"</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>This doesn’t compile right away. If we try to run this, we get a “mismatched types” error:</p>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">error</span><span class="p">[</span><span class="n">E0308</span><span class="p">]:</span> <span class="n">mismatched</span> <span class="n">types</span>
+<span class="o">-</span><span class="k">-&gt;</span> <span class="n">src</span><span class="o">/</span><span class="n">main</span><span class="py">.rs</span>
+
+    <span class="n">map</span><span class="nf">.insert</span><span class="p">(</span><span class="s">"b"</span><span class="p">,</span> <span class="nn">Box</span><span class="p">::</span><span class="nf">new</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span>
+                             <span class="o">^</span> <span class="n">expected</span> <span class="err">`</span><span class="o">&amp;</span><span class="nb">str</span><span class="err">`</span><span class="p">,</span> <span class="n">found</span> <span class="n">integer</span>
+</code></pre></div></div>
+
+<p>Luckily we can fix this by explicitly declaring the type of our map:</p>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="k">mut</span> <span class="n">map</span><span class="p">:</span> <span class="n">HashMap</span><span class="o">&lt;&amp;</span><span class="nb">str</span><span class="p">,</span> <span class="nb">Box</span><span class="o">&lt;</span><span class="n">dyn</span> <span class="n">Display</span> <span class="o">+</span> <span class="nv">'static</span><span class="o">&gt;&gt;</span> <span class="o">=</span> <span class="nn">HashMap</span><span class="p">::</span><span class="nf">new</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p>This works because we are actually storing instances of <code class="language-plaintext highlighter-rouge">Box</code>, not primitive types; <code class="language-plaintext highlighter-rouge">dyn Display</code> means the type of the <em>trait object</em> <code class="language-plaintext highlighter-rouge">Display</code>. In this case, <code class="language-plaintext highlighter-rouge">Display</code> happens to be a common trait between <code class="language-plaintext highlighter-rouge">&amp;str</code> and <code class="language-plaintext highlighter-rouge">i32</code>.</p>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">use</span> <span class="nn">std</span><span class="p">::</span><span class="nn">collections</span><span class="p">::</span><span class="n">HashMap</span><span class="p">;</span>
+<span class="k">use</span> <span class="nn">std</span><span class="p">::</span><span class="nn">fmt</span><span class="p">::</span><span class="n">Display</span><span class="p">;</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="k">mut</span> <span class="n">map</span><span class="p">:</span> <span class="n">HashMap</span><span class="o">&lt;&amp;</span><span class="nb">str</span><span class="p">,</span> <span class="nb">Box</span><span class="o">&lt;</span><span class="n">dyn</span> <span class="n">Display</span> <span class="o">+</span> <span class="nv">'static</span><span class="o">&gt;&gt;</span> <span class="o">=</span> <span class="nn">HashMap</span><span class="p">::</span><span class="nf">new</span><span class="p">();</span>
+
+    <span class="n">map</span><span class="nf">.insert</span><span class="p">(</span><span class="s">"a"</span><span class="p">,</span> <span class="nn">Box</span><span class="p">::</span><span class="nf">new</span><span class="p">(</span><span class="s">"1"</span><span class="nf">.to_string</span><span class="p">()));</span>
+    <span class="n">map</span><span class="nf">.insert</span><span class="p">(</span><span class="s">"b"</span><span class="p">,</span> <span class="nn">Box</span><span class="p">::</span><span class="nf">new</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="n">in</span> <span class="o">&amp;</span><span class="n">map</span> <span class="p">{</span>
+        <span class="nd">println!</span><span class="p">(</span><span class="s">"{}: {}"</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>You may wonder what would happen if we were to use the type <code class="language-plaintext highlighter-rouge">dyn Display</code> without the <code class="language-plaintext highlighter-rouge">Box</code> wrapper. If we try that, we’d get this nasty error:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>error[E0277]: the size for values of type `(dyn std::fmt::Display + 'static)` cannot be known at compilation time
+   --&gt; src/main.rs
+
+     let mut map: HashMap&lt;&amp;str, (dyn Display + 'static)&gt; = HashMap::new();
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ doesn't have a size known at compile-time
+
+    = help: the trait `std::marker::Sized` is not implemented for `(dyn std::fmt::Display + 'static)`
+    = note: to learn more, visit &lt;https://doc.rust-lang.org/book/ch19-04-advanced-types.html#dynamically-sized-types-and-the-sized-trait&gt;
+    = note: required by `std::collections::HashMap
+</code></pre></div></div>
+
+<p>This error may be confusing at first, but it actually makes sense. <a href="https://doc.rust-lang.org/book/" rel="external">The Rust Programming Language book</a> explains this very well in the <a href="https://doc.rust-lang.org/book/ch19-04-advanced-types.html" rel="external">Advanced Types</a> chapter:</p>
+
+<blockquote>
+  <p>“Rust needs to know how much memory to allocate for any value of a particular type, and all values of a type must use the same amount of memory.”</p>
+</blockquote>
+
+<p>The <code class="language-plaintext highlighter-rouge">Box&lt;T&gt;</code> type is a <a href="https://doc.rust-lang.org/reference/types/pointer.html" rel="external"><em>pointer type</em></a>. It lets us allocate data on the heap rather than the stack, and keeps a reference to the data in the stack in the form of a pointer, which is of fixed size.</p>
+
+<h2 id="not-an-option-3-use-separate-maps-for-each-type">(Not an) Option #3: Use separate maps for each type</h2>
+
+<p>Here we’re not actually using a <code class="language-plaintext highlighter-rouge">HashMap</code> with separate types, but rather two maps, each with its own type. It’s a bit more verbose and perhaps not the solution you’re looking for, but it’s worth keeping in mind that this works too:</p>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">use</span> <span class="nn">std</span><span class="p">::</span><span class="nn">collections</span><span class="p">::</span><span class="n">HashMap</span><span class="p">;</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="k">mut</span> <span class="n">strings_map</span> <span class="o">=</span> <span class="nn">HashMap</span><span class="p">::</span><span class="nf">new</span><span class="p">();</span>
+    <span class="k">let</span> <span class="k">mut</span> <span class="n">integers_map</span> <span class="o">=</span> <span class="nn">HashMap</span><span class="p">::</span><span class="nf">new</span><span class="p">();</span>
+
+    <span class="n">strings_map</span><span class="nf">.insert</span><span class="p">(</span><span class="s">"a"</span><span class="p">,</span> <span class="s">"1"</span><span class="p">);</span>
+    <span class="n">integers_map</span><span class="nf">.insert</span><span class="p">(</span><span class="s">"b"</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="n">in</span> <span class="o">&amp;</span><span class="n">strings_map</span> <span class="p">{</span>
+        <span class="nd">println!</span><span class="p">(</span><span class="s">"{}: {}"</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="n">in</span> <span class="o">&amp;</span><span class="n">integers_map</span> <span class="p">{</span>
+        <span class="nd">println!</span><span class="p">(</span><span class="s">"{}: {}"</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>It feels much simpler! And the output is naturally the same:</p>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span><span class="p">:</span> <span class="mi">1</span>
+<span class="n">b</span><span class="p">:</span> <span class="mi">2</span>
+</code></pre></div></div>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Rust is very strict when it comes to polymorphic types. As you’ve seen, there are ways to achieve it, but they don’t feel as straightforward as with other dynamic languages such as Ruby or Python. Sometimes though it’s useful to make one step back and look at the actual problem we’re trying to solve. Once I did that, I realized that I didn’t necessarily have to limit myself to a single data structure, so I went for the last option.</p>
+
+<p>I’m still a beginner with Rust, so I might have missed on a better solution. <a href="https://doc.rust-lang.org/book/ch17-02-trait-objects.html" rel="external">Trait Objects</a> could be one: I’ve experimented with them, but they weren’t quite was I was looking for. If you have any suggestions or know of other possible solutions, feel free to comment below!</p>
+
+<hr />
+
+<p><strong>Update</strong>: <a href="https://twitter.com/alilleybrinker/status/1280185393258926088" rel="external">@alilleybrinker</a> on Twitter pointed out two caveats to be aware of. One is about the meaning of the <code class="language-plaintext highlighter-rouge">'static</code> <em>bound</em>: when used on a generic type, any references inside the type must live as long as <code class="language-plaintext highlighter-rouge">'static</code>. However, by adding <code class="language-plaintext highlighter-rouge">'static</code> we are also effectively saying that the values inside the <code class="language-plaintext highlighter-rouge">Box</code> won’t contain references. The other caveat is that, when using <code class="language-plaintext highlighter-rouge">dyn Display</code>, the original types are erased, so the available methods are only those known from the <code class="language-plaintext highlighter-rouge">Display</code> trait.</p>
+]]></content>
+  </entry>
+  
+</feed>

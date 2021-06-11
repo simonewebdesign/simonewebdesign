@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Articles about Git | Simone Web Design]]></title>
+  <link href="https://www.simonewebdesign.it/categories/git/atom.xml" rel="self"/>
+  <link href="https://www.simonewebdesign.it/"/>
+  <updated>2021-06-11T20:24:10+01:00</updated>
+  <id>https://www.simonewebdesign.it/</id>
+  <author>
+    <name><![CDATA[Simone Vittori]]></name>
+    
+  </author>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Multiple Git Config For Different Folders]]></title>
+    <link href="https://www.simonewebdesign.it/multiple-git-config-for-different-folders/"/>
+    <updated>2020-11-23T00:00:00+00:00</updated>
+    <id>https://www.simonewebdesign.it/multiple-git-config-for-different-folders</id>
+    <content type="html"><![CDATA[<p>I wanted to have a clean separation between work-related repositories and my personal projects, as I often need to use a different email: for example, I’d like to sign git commits in the work repo with my work email, but keep using my personal email for the rest. How do you achieve this?</p>
+
+<p>It’s actually pretty simple: I’ll show you how.</p>
+
+<!--more-->
+
+<h2 id="two-folders--one-for-your-projects-one-for-work">Two folders — one for your projects, one for work</h2>
+
+<p>I like the idea of having two folders, each containing <em>many</em> git repositories: I’ll call them <code class="language-plaintext highlighter-rouge">Work</code> and <code class="language-plaintext highlighter-rouge">Projects</code>, but you’re naturally free to name them the way you prefer.</p>
+
+<p>The first step is to <strong>create a file</strong> in your home directory, named <code class="language-plaintext highlighter-rouge">.gitconfig</code>. You probably have it already, and that’s fine. Just <strong>open it and paste this</strong>:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="n">includeIf</span> <span class="s">"gitdir:~/Work/"</span><span class="p">]</span>
+  <span class="n">path</span> <span class="o">=</span> <span class="o">~/</span><span class="n">Work</span><span class="o">/</span><span class="p">.</span><span class="n">gitconfig</span>
+<span class="p">[</span><span class="n">includeIf</span> <span class="s">"gitdir:~/Projects/"</span><span class="p">]</span>
+  <span class="n">path</span> <span class="o">=</span> <span class="o">~/</span><span class="n">Projects</span><span class="o">/</span><span class="p">.</span><span class="n">gitconfig</span>
+</code></pre></div></div>
+
+<p>It’s pretty self-explanatory, right? We’re essentially saying:</p>
+
+<ul>
+  <li>If the dir matches <code class="language-plaintext highlighter-rouge">~/Work/</code>, include the config located at path <code class="language-plaintext highlighter-rouge">~/Work/.gitconfig</code>;</li>
+  <li>If the dir matches <code class="language-plaintext highlighter-rouge">~/Projects/</code>, include the config located at path <code class="language-plaintext highlighter-rouge">~/Projects/.gitconfig</code> .</li>
+</ul>
+
+<p>Note you don’t even need to create these files — just use <code class="language-plaintext highlighter-rouge">git config</code> to write in them. For example, to use your work email on all work-related repos, you might do:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--file</span> ~/Work/.gitconfig user.email john@example.work
+</code></pre></div></div>
+
+<p>This is great, because we can now have <strong>completely separate configurations</strong>, each living in their own separate folder, and the right configuration will be applied depending on the location. Awesome!</p>
+
+<h3 id="caveats">Caveats</h3>
+
+<p>There are a few little caveats to be aware of, just in case you run into issues. If you do, you may want to read the <em>Includes</em> section in the <a href="https://git-scm.com/docs/git-config#_includes">official docs</a> — for example, you know the trailing slash in <code class="language-plaintext highlighter-rouge">gitdir:~/Work/</code>? You’d think it wouldn’t matter, but it does: if the path ends with <code class="language-plaintext highlighter-rouge">/</code>, it matches <code class="language-plaintext highlighter-rouge">Work</code> and <strong>everything inside, recursively</strong>. Also, don’t add a space between <code class="language-plaintext highlighter-rouge">gitdir:</code> and the path, or it won’t work.</p>
+
+<h3 id="sharing-common-configuration">Sharing common configuration</h3>
+
+<p>You’ll likely want to avoid repeating yourself and share the common bits of configuration, such as <a href="https://www.git-scm.com/book/en/v2/Git-Basics-Git-Aliases">git aliases</a>, if you have any.</p>
+
+<p>If that’s the case, just keep those in the global config. You can do so by using the <code class="language-plaintext highlighter-rouge">--global</code> flag, for example:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span> alias.st status
+</code></pre></div></div>
+
+<hr />
+
+<p>I hope you found this useful. If you run into trouble, feel free to leave me a comment below and I’ll try to help. <a href="https://hades.github.io/2010/01/git-your-friend-not-foe/">Remember, git is your friend</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to fix “Untracked working tree would be overwritten by merge” error]]></title>
+    <link href="https://www.simonewebdesign.it/how-to-fix-untracked-working-tree-would-be-overwritten-by-merge-error/"/>
+    <updated>2020-06-25T00:00:00+01:00</updated>
+    <id>https://www.simonewebdesign.it/how-to-fix-untracked-working-tree-would-be-overwritten-by-merge-error</id>
+    <content type="html"><![CDATA[<p>Let’s say you have two Git repositories: one on GitHub, and one on your computer.<br />They contain <strong>identical</strong> (or very similar) files, and what you want to do is “synchronize” them (i.e. make them look exactly the same). Maybe all you need is to download a few missing files from GitHub to your computer, or simply push some changes from your machine to GitHub.</p>
+
+<p>You have tried <code class="language-plaintext highlighter-rouge">git pull</code>, but you’re getting this error:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>error: Untracked working tree file * would be overwritten by merge.
+fatal: read-tree failed
+</code></pre></div></div>
+
+<p>You need the changes, but obviously you don’t want to overwrite or lose any files. Don’t worry, the fix is actually straightforward!</p>
+
+<!--more-->
+
+<h2 id="why-am-i-seeing-this-error">Why am I seeing this error?</h2>
+
+<p>The reason is probably because you didn’t <strong>clone</strong> the repository. In my case, I already had some local files, so instead of running <code class="language-plaintext highlighter-rouge">git clone</code>, here’s what I did:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git init
+git remote add origin git@github.com:&lt;username&gt;/&lt;reponame&gt;.git
+</code></pre></div></div>
+
+<p>If you try to <code class="language-plaintext highlighter-rouge">git pull origin &lt;branch-name&gt;</code>, you might get the “untracked working tree” error.</p>
+
+<h2 id="how-do-i-fix-it">How do I fix it?</h2>
+
+<p>If you have already tried pulling from the remote and it didn’t work, <strong>here’s the fix</strong>:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git branch <span class="nt">--track</span> &lt;branch-name&gt; origin/&lt;branch-name&gt;
+</code></pre></div></div>
+
+<p>For example, if your branch is named <code class="language-plaintext highlighter-rouge">main</code>:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git branch <span class="nt">--track</span> main origin/main
+</code></pre></div></div>
+
+<p>What this does is simply tell Git that these two branches, <code class="language-plaintext highlighter-rouge">main</code> and <code class="language-plaintext highlighter-rouge">origin/main</code>, are related to each other, and that it should keep track of the changes between them. Turns out it also fixes the error, since Git can now <em>see</em> that nothing would be overwritten.</p>
+
+<h2 id="wait--thats-it">Wait — that’s it?</h2>
+
+<p>Yes! After running the command above, <code class="language-plaintext highlighter-rouge">git status</code> will indeed reveal the differences between the two repositories: your untracked files (i.e. extra files that you only have on your PC) will still be there, and some other files may have been automatically staged for deletion: these are files that are present in the remote repo, but you don’t have locally.</p>
+
+<p>At this point you’ll want to double-check that everything is the way it should be. You may also want to run:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git reset
+</code></pre></div></div>
+
+<p>To get a clean state. Don’t worry, this won’t delete anything at all, it will simply unstage any modification that was applied automatically by Git. You can stage back the changes you care about using <code class="language-plaintext highlighter-rouge">git add .</code> — once you are happy, you can finally make a commit and run:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push
+</code></pre></div></div>
+
+<p>Note there’s no need to specify the origin and the branch name anymore, since the two branches (the local and the remote) are now tracked.</p>
+
+<hr />
+
+<p>Hopefully this article helped you fix your issue; either way, feel free to ask for help by leaving a comment below.</p>
+
+<p>Happy hacking!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[View latest file changes in command line using Git]]></title>
+    <link href="https://www.simonewebdesign.it/git-show-latest-file-changes-in-command-line/"/>
+    <updated>2013-12-03T00:00:00+00:00</updated>
+    <id>https://www.simonewebdesign.it/git-show-latest-file-changes-in-command-line</id>
+    <content type="html"><![CDATA[<p>
+  Let&#8217;s say you did some changes to several files, but you don&#8217;t remember which ones. How do you proceed?
+</p>
+
+<p>
+  A <code>git status</code> will be enough in most cases, but it just shows which files changed &#8211; what if you want to see the actual changes you made?
+</p>
+
+<p>
+  The answer is:
+</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git diff
+</code></pre></div></div>
+
+<p>
+  It shows every line of code you changed and that you haven&#8217;t committed yet. Useful, isn&#8217;t it?
+</p>
+
+<p>
+  If you have already committed some code, but not pushed yet, don&#8217;t be afraid: you&#8217;re still in time to check if everything is good, and a <code>git log</code> will come handy:
+</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git log <span class="nt">-p</span>
+</code></pre></div></div>
+
+<p>
+  You probably already know the power of <code>git log</code>, but <code>-p</code> makes it even more powerful, because it will also show a patch of what changed in each commit.
+</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Git cheat sheet]]></title>
+    <link href="https://www.simonewebdesign.it/git-cheat-sheet/"/>
+    <updated>2013-03-04T14:47:22+00:00</updated>
+    <id>https://www.simonewebdesign.it/git-cheat-sheet</id>
+    <content type="html"><![CDATA[<p>
+  Git is an awesome tool for developers, but can be a bit hard to grasp at a first glance. Fortunately, the concepts you need to learn to be <strong>immediately productive</strong> are very few: I&#8217;ll briefly illustrate them in this <strong>Git cheat sheet</strong>.
+</p>
+
+<h2>
+  1. Basics
+</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># start a Git repository from scratch</span>
+<span class="nv">$ </span>git init
+
+<span class="c"># copy an existing repository into the current directory</span>
+<span class="nv">$ </span>git clone https://github.com/username/repository.git
+
+<span class="nv">$ </span>git status  <span class="c"># check current status</span>
+</code></pre></div></div>
+
+<h2>
+  2. Snapshotting
+</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Add files to staging area</span>
+<span class="nv">$ </span>git add filename  <span class="c"># add a single file</span>
+<span class="nv">$ </span>git add <span class="nb">.</span>         <span class="c"># add all files, but not deleted ones</span>
+<span class="nv">$ </span>git add <span class="nt">--all</span>     <span class="c"># add everything</span>
+
+<span class="c"># Stashing takes the current state of the working directory and</span>
+<span class="c"># puts it on a stack for later</span>
+<span class="nv">$ </span>git stash        <span class="c"># add current changes to the stack</span>
+<span class="nv">$ </span>git stash list   <span class="c"># see what's in the stack</span>
+<span class="nv">$ </span>git stash apply  <span class="c"># bring back the saved changes</span>
+</code></pre></div></div>
+
+<h2>
+  3. Committing
+</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git commit            <span class="c"># open the text editor (usually vi)</span>
+<span class="nv">$ </span>git commit <span class="nt">-a</span>         <span class="c"># automatically stage modified files</span>
+<span class="nv">$ </span>git commit <span class="nt">-m</span> <span class="s2">"foo"</span>   <span class="c"># commit with message "foo"</span>
+<span class="nv">$ </span>git commit <span class="nt">-am</span> <span class="s2">"foo"</span>  <span class="c"># both stage files and commit with message "foo"</span>
+
+<span class="c"># View commits log (in a pretty way)</span>
+<span class="nv">$ </span>git log <span class="nt">--oneline</span> <span class="nt">--decorate</span> <span class="nt">--graph</span>
+</code></pre></div></div>
+
+<h2>
+  4. Managing remotes
+</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git remote add origin https://github.com/user/repo.git
+<span class="c"># You can also add your GitHub username and password on the remote URL:</span>
+<span class="nv">$ </span>git remote add origin https://user:password@github.com/user/repo.git
+<span class="nv">$ </span>git remote <span class="nb">rm </span>origin  <span class="c"># removes the `origin` remote</span>
+</code></pre></div></div>
+
+<h2>
+  5. Pushing
+</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git push <span class="nt">-u</span> origin master
+<span class="c"># -u here tells git to remember the parameters</span>
+<span class="c"># so that next time we can simply run:</span>
+<span class="nv">$ </span>git push
+</code></pre></div></div>
+
+<h2>
+  6. Branching
+</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git checkout <span class="nt">-b</span> new_branch
+<span class="c"># -b is to checkout and create a branch at the same time.</span>
+<span class="c"># This is the same thing as doing:</span>
+<span class="nv">$ </span>git branch new_branch
+<span class="nv">$ </span>git checkout new_branch
+</code></pre></div></div>
+
+<h2>
+  7. Merging
+</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git checkout master       <span class="c"># return to master branch</span>
+<span class="nv">$ </span>git merge <span class="nt">--no-ff</span> foobar  <span class="c"># merge `master` branch with `foobar` branch</span>
+<span class="nv">$ </span>git branch <span class="nt">-d</span> foobar      <span class="c"># delete branch locally</span>
+<span class="nv">$ </span>git push origin :foobar   <span class="c"># delete branch on the origin remote</span>
+</code></pre></div></div>
+
+<h2>
+  8. Tagging
+</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git tag <span class="nt">-a</span> v1.3.37               <span class="c"># tag the HEAD (most recent commit)</span>
+<span class="nv">$ </span>git tag <span class="nt">-a</span> v0.6b f49a23c         <span class="c"># tag the commit with SHA `f49a23c`</span>
+<span class="nv">$ </span>git tag <span class="nt">-a</span> v4.2 <span class="nt">-m</span> <span class="s2">"jelly bean"</span>  <span class="c"># append a message</span>
+</code></pre></div></div>
+
+<hr />
+
+<p>
+  That&#8217;s all, folks. I know I could have explained much more every single command, but that&#8217;s not the point of this article. I just wanted to give you a <strong>quick-start pragmatic reference</strong>; in fact, these are the commands I personally use more frequently.
+</p>
+
+<p>
+  Do you think some very useful commands are missing in this <strong>cheat sheet</strong>? Leave a reply.
+</p>
+
+<ul>
+  <li>
+    <em>Update March 5th: added tagging.</em>
+  </li>
+  <li>
+    <em>Update April 23rd: just made some &#8220;refactoring&#8221; and added <code>git stash</code>.</em>
+  </li>
+  <li>
+    <em>Update Dec 3rd: I&#8217;ve updated the &#8220;merging&#8221; section with the command for deleting the remote branch as well. I&#8217;ve also added the <code>--no-ff</code> option, that disables fast-forwarding (reason explained <a href="http://nvie.com/posts/a-successful-git-branching-model/" title="A successful Git branching model">here</a>).</em>
+  </li>
+</ul>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Git FTP Push FTW!]]></title>
+    <link href="https://www.simonewebdesign.it/git-ftp-push-ftw/"/>
+    <updated>2012-10-19T17:11:51+01:00</updated>
+    <id>https://www.simonewebdesign.it/git-ftp-push-ftw</id>
+    <content type="html"><![CDATA[<p>
+  <a href="http://git-scm.com/" title="Git official website">Git</a> is a wonderful tool that makes possible having your local repo and your <a href="https://github.com/" title="GitHub" rel="external">GitHub</a> repo <strong>always perfectly synchronized</strong>. This is cool and all, but — what about the production server?
+</p>
+
+<p>
+  If you are in a shared hosting that doesn&#8217;t have git or <abbr title="Secure Shell">SSH</abbr> support, you&#8217;ll probably find stressful to manually update your application via <abbr title="File Transfer Protocol">FTP</abbr> each time, even for the tiniest of the edits.
+</p>
+
+<p>
+  Well, if that&#8217;s your case you <em>really</em> should check out <a href="https://github.com/git-ftp/git-ftp" title="git-ftp on GitHub" rel="external">git-ftp</a> by <a href="https://github.com/resmo" title="René Moser's profile on GitHub" rel="external">René Moser</a>.
+</p>
+
+<p>
+  <a href="https://github.com/git-ftp/git-ftp" title="git-ftp on GitHub" rel="external">Git-ftp</a> is a straightforward way to connect to your <abbr title="File Transfer Protocol">FTP</abbr> and automagically transfer <strong>only the files that changed since the last commit</strong>.
+</p>
+
+<p>
+  The usage is fairly simple:
+</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git ftp push <span class="nt">--user</span> &lt;user&gt; <span class="nt">--passwd</span> &lt;password&gt; ftp://example.com/public
+</code></pre></div></div>
+
+<p>
+  And you can make it even simpler by just setting defaults in your project&#8217;s <code>.git/config</code> file:
+</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config git-ftp.user john
+git config git-ftp.url ftp.example.com
+git config git-ftp.password secr3t
+</code></pre></div></div>
+
+<p>
+  Now you can just do:
+</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git ftp push
+</code></pre></div></div>
+
+<p>
+  <em>Et voilà!</em> Your production server is up-to-date.
+</p>
+]]></content>
+  </entry>
+  
+</feed>

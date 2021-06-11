@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Articles about CSS | Simone Web Design]]></title>
+  <link href="https://www.simonewebdesign.it/categories/css/atom.xml" rel="self"/>
+  <link href="https://www.simonewebdesign.it/"/>
+  <updated>2021-06-11T20:24:10+01:00</updated>
+  <id>https://www.simonewebdesign.it/</id>
+  <author>
+    <name><![CDATA[Simone Vittori]]></name>
+    
+  </author>
+
+  
+  <entry>
+    <title type="html"><![CDATA[A pure CSS onclick context menu]]></title>
+    <link href="https://www.simonewebdesign.it/pure-css-onclick-context-menu/"/>
+    <updated>2019-05-13T00:00:00+01:00</updated>
+    <id>https://www.simonewebdesign.it/pure-css-onclick-context-menu</id>
+    <content type="html"><![CDATA[<p>
+  Context menus are one of those very useful UI widgets that still haven't reached the HTML spec.
+  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/contextmenu" rel="external">There have been attempts</a>,
+  but for now everyone tends to make their own custom implementation.
+</p>
+
+<p>Especially with the advent of React, the tendency is to write a custom menu component that uses JavaScript to open/close itself, perhaps by using an invisible overlay to detect clicks outside the menu and close it accordingly. This works fine in practice, however it doesn't have to be so complicated. If you need a simple <strong>dropdown menu</strong> that:</p>
+
+<ul>
+<li>Has no dependencies;
+<li>Can be triggered with a click/tap on any element;
+<li>Is fully cross-browser;
+<li>Doesn't need JavaScript!
+&lt;/ul&gt;
+
+<p>Then look no further. It's much simpler than you think!</p>
+
+<!--more-->
+
+<h2>An example</h2>
+
+Try clicking this button: <button>☰</button><nav class="menu">
+        <ul>
+            <li>
+                <button onclick="alert('Hello there!')">Display Greeting</button>
+            </li>
+            <li>
+                <button onclick="print()">Print This Page</button>
+            </li>
+        </ul>
+    </nav>
+
+<p>This is done in <strong>pure HTML and CSS</strong>; the JavaScript is there just to add functionality. Source code below.</p>
+
+<h3>The HTML</h3>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button&gt;</span>☰<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"menu"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ul&gt;</span>
+    <span class="nt">&lt;li&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">onclick=</span><span class="s">"alert('Hello there!')"</span><span class="nt">&gt;</span>
+        Display Greeting
+      <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">onclick=</span><span class="s">"print()"</span><span class="nt">&gt;</span>
+        Print This Page
+      <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/nav&gt;</span></code></pre></figure>
+
+<h3>The CSS</h3>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.menu</span> <span class="p">{</span>
+    <span class="nl">visibility</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">button</span> <span class="o">+</span> <span class="nc">.menu</span><span class="nd">:active</span><span class="o">,</span>
+<span class="nt">button</span><span class="nd">:focus</span> <span class="o">+</span> <span class="nc">.menu</span> <span class="p">{</span>
+    <span class="nl">visibility</span><span class="p">:</span> <span class="nb">visible</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>That's the trick: we hide the menu in CSS initially, then show it when the button gets focused <em>and</em> while we're clicking on the menu itself. This is necessary so that the click actually gets registered. That's it! <strong>No JS trickery involved.</strong></p>
+
+<p>You can attach event listeners to the menu items, e.g. using <code>onclick</code> or <code>document.addEventListener</code> and they'll work as usual. You may also just use <code>&lt;a&gt;</code> tags instead of buttons, depending on your use case.&lt;/a&gt;</p>
+
+<p>Naturally the menu can be opened only by elements that can receive focus, such as buttons and anchors. So what about other non-interactive elements? Can we make them focusable too? <strong>The answer is yes!</strong></p>
+
+<h2>A more complicated example</h2>
+
+<p>We want to <strong>display a context menu</strong> when clicking on the following image: <figure class="doge-demo" tabindex="-1">
+  <picture class="doge">
+    <source type="image/webp" srcset="/images/doge.webp" />
+    <img src="/images/doge.png" loading="lazy" width="300" height="300" alt="doge meme" title="Click me to open the menu..." />
+  </picture>
+  <figcaption>wow, this image is clickable!</figcaption>
+  <nav class="menu">
+    <ul>
+      <li>
+        <button onclick="alert('Button clicked!')">Open Image in New Tab</button>
+      </li>
+      <li>
+        <button onclick="console.log(1)">Save Image As...</button>
+      </li>
+      <li>
+        <button>Copy Image Address</button>
+      </li>
+    </ul>
+  </nav>
+</figure>
+
+<h3>The HTML</h3>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;figure</span> <span class="na">tabindex=</span><span class="s">"-1"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/images/doge.png"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"menu"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul&gt;</span>
+      <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;button&gt;</span>Open Image in New Tab<span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;button&gt;</span>Save Image As...<span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;button&gt;</span>Copy Image Address<span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/nav&gt;</span>
+<span class="nt">&lt;/figure&gt;</span></code></pre></figure>
+
+<p>The trick here was to add <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex" rel="external"><code>tabindex</code></a>. This makes the element focusable, so that it can open the menu on click. Note that if the clickable element is a <code>&lt;button&gt;</code> or other <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories#Interactive_content" rel="external">interactive content</a> (i.e. any focusable element), then you don't even need this!</p>
+
+<p>I've used a <code>&lt;figure&gt;</code>, but you can use any element you like. Just add <code>tabindex="-1"</code> to make it focusable, if it isn't already. You can place the menu anywhere you want in the HTML, as long as you're able to target it with a CSS selector. Just try not to put a button in a button as that's invalid HTML, although technically it will still work.</p>
+
+<h3>The CSS</h3>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.menu</span> <span class="p">{</span>
+    <span class="nl">visibility</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">figure</span><span class="nd">:active</span> <span class="nc">.menu</span><span class="o">,</span>
+<span class="nt">figure</span><span class="nd">:focus</span> <span class="nc">.menu</span> <span class="p">{</span>
+    <span class="nl">visibility</span><span class="p">:</span> <span class="nb">visible</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<h3>How do I make the menu appear next to the mouse cursor?</h3>
+
+<p>You'll need JavaScript, but it's entirely up to you whether you want to do this. Alternatively you could add <code>position: absolute</code> to the menu and <strong>just make it appear below (or next to) the element you clicked</strong> — no need for JS in this case! Anyway, this did the trick for me:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">const</span> <span class="nx">img</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">.doge</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">menu</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">.menu</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="nx">img</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">mousedown</span><span class="dl">'</span><span class="p">,</span> <span class="p">({</span> <span class="nx">offsetX</span><span class="p">,</span> <span class="nx">offsetY</span> <span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">menu</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">top</span> <span class="o">=</span> <span class="nx">offsetY</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">px</span><span class="dl">'</span><span class="p">;</span>
+    <span class="nx">menu</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">left</span> <span class="o">=</span> <span class="nx">offsetX</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">px</span><span class="dl">'</span><span class="p">;</span>
+<span class="p">});</span></code></pre></figure>
+
+<h3>I want the menu to close when I click the button again!</h3>
+
+<p>If that's the case, you'll probably be better off using the old <a href="https://css-tricks.com/the-checkbox-hack/" rel="external">checkbox hack</a>.</p>
+
+<h3>A note about accessibility</h3>
+
+<p>Accessibility isn't the main focus of this article, but an important topic nonetheless. Menu items <strong>should be navigatable with a keyboard</strong>: this requires JS, but it's not hard to achieve. The <abbr title="World Wide Web Consortium">W3C</abbr> has done a lot of work around accessibility and there's plenty of examples you can refer to on their site: for instance, I think the <a href="https://www.w3.org/TR/2017/NOTE-wai-aria-practices-1.1-20171214/examples/menu-button/menu-button-links.html" rel="external">menu button example</a> is particularly relevant.</p>
+
+<h3>What about browser support?</h3>
+
+<p>It may not work in some very old browsers, so make sure to test it in the browsers you need to support. <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#Clicking_and_focus" rel="external">This MDN page</a> has some info about what happens to the focus of a button when being clicked/tapped on different platforms. I did some tests myself and it seems to work well everywhere, including IE and mobile browsers.</p>
+
+<p><b>Update:</b> this blog post received a lot of attention and a few folks reached out to me about an issue, specifically with Safari and Firefox, on both iOS and macOS: the button won't focus. No worries though, it only affects buttons; other tags will work just fine. You may consider using <code>&lt;span tabindex=0&gt;</code> — the semantic meaning is lost entirely here, so if you really want to use a button, you can always focus it programmatically via JS, but <em>only</em> on Apple devices — for example:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">if</span> <span class="p">(</span>
+  <span class="sr">/apple/i</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nb">navigator</span><span class="p">.</span><span class="nx">vendor</span><span class="p">)</span> <span class="o">||</span>
+  <span class="sr">/Mac.*Firefox/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nb">navigator</span><span class="p">.</span><span class="nx">userAgent</span><span class="p">)</span>
+<span class="p">)</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">button</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">button</span><span class="dl">'</span><span class="p">);</span>
+
+  <span class="nx">button</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">click</span><span class="dl">'</span><span class="p">,</span> <span class="nx">event</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">focus</span><span class="p">();</span>
+  <span class="p">});</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Another issue you may find specific to Apple is that the menu won't close when tapping outside of it. There's an easy fix: simply add <code>tabindex="-1"</code> to the container or the body tag.</p>
+
+<hr />
+
+<p>And that's it! I hope you found this useful. If you spot any issues, please do let me know!</p>
+
+<script>
+const img = document.querySelector('.doge');
+const menu = document.querySelector('.doge-demo .menu');
+
+img.addEventListener('mousedown', function (event) {
+    const { offsetX, offsetY } = event;
+    menu.style.top = offsetY + 'px';
+    menu.style.left = offsetX + 'px';
+});
+
+if (
+    /apple/i.test(navigator.vendor) ||
+    /Mac.*Firefox/.test(navigator.userAgent)
+) {
+    document.querySelector('h2 + button').addEventListener('click', function (event) {
+        event.target.focus();
+    });
+}
+
+</script>
+
+
+<style>
+.entry-content h2 code { background: rgba(0, 0, 0, 0.05); padding: 0.1rem 0.2rem; border-radius: 4px; }
+
+.entry-content .doge-demo { position: relative; width: 306px; margin: 0 auto; outline: none; }
+
+.entry-content .doge-demo:active .menu, .entry-content .doge-demo:focus .menu { visibility: visible; }
+
+.entry-content .doge-demo img { margin-bottom: 0.5rem !important; border: 2px solid transparent; outline: 1px solid rgba(0, 0, 0, 0.5); cursor: pointer; }
+
+.entry-content .doge-demo img:active, .entry-content .doge-demo img:focus { border: 2px solid green; }
+
+.entry-content .doge-demo figcaption { text-align: center; background: rgba(0, 0, 0, 0.05); width: 306px; margin: 0 auto; margin-top: -11px; margin-left: -1px; font-size: 0.9rem; color: rgba(255, 255, 255, 0.96); background-color: rgba(0, 0, 0, 0.7); }
+
+.entry-content .doge-demo .menu { position: absolute; top: 0; left: 0; min-width: 14rem; }
+
+.entry-content .menu { visibility: hidden; background: white; border-radius: 4px; border: 1px solid #dedede; }
+
+.entry-content .menu > ul { list-style: none; margin: 0.4rem 0; }
+
+.entry-content .menu > ul > li { padding: 0; }
+
+.entry-content .menu > ul > li > button { padding: 0.2rem 0.8rem; width: 100%; font-size: 1rem; -webkit-appearance: button; -moz-appearance: button; text-transform: none; font-family: inherit; font-size: 100%; line-height: 1.15; margin: 0; overflow: visible; border: 0; text-align: left; font-family: Arial, Verdana, sans-serif; outline: none; cursor: pointer; background: transparent; }
+
+.entry-content .menu > ul > li > button:hover { background: rgba(0, 0, 0, 0.04); }
+
+.entry-content .menu > ul > li > button:active, .entry-content .menu > ul > li > button:focus { background: rgba(0, 0, 0, 0.08); }
+
+.entry-content button + .menu { display: inline-block; position: absolute; }
+
+.entry-content button + .menu:active { visibility: visible; }
+
+.entry-content button:focus + .menu { visibility: visible; }
+
+</style>
+</p></li></li></li></li></ul>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to change Bootstrap grid to 960px]]></title>
+    <link href="https://www.simonewebdesign.it/how-to-change-bootstrap-grid-to-960px/"/>
+    <updated>2014-08-18T21:13:06+01:00</updated>
+    <id>https://www.simonewebdesign.it/how-to-change-bootstrap-grid-to-960px</id>
+    <content type="html"><![CDATA[<p>Many people think that changing <code class="language-plaintext highlighter-rouge">.container</code>’s width to <code class="language-plaintext highlighter-rouge">960px</code> is sufficient; well, it’s not quite true.</p>
+
+<p>As per Bootstrap’s docs, you can <strong>disable responsiveness by forcing a fixed width to the container</strong>:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.container</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">960px</span> <span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="but-is-it-what-you-really-want">But is it what you <em>really</em> want?</h2>
+
+<p>I love Bootstrap, but personally if I had to build a <strong>fixed-width 960px site</strong>, which is quite old school nowadays, I wouldn’t use Bootstrap at all. And you know what? In most cases I wouldn’t even use a <strong>grid system</strong>! I’d use plain-old CSS (or Sass), and I’m pretty confident it would be fine. But that’s me. Of course you are free to do anything you want. But remember, Bootstrap’s focus is on <strong>mobile and responsive design</strong>.</p>
+
+<p>If you need a 960px grid system, you may not want all the stuff that comes with Bootstrap. Also, you may want to think again about what you are going to build; this is way more important than the <a href="https://usablica.github.io/front-end-frameworks/compare.html">front end framework</a> you will choose.</p>
+
+<p><strong>Now, this tutorial is for who wants a 960px site, but still preserving responsiveness</strong>.</p>
+
+<h2 id="show-me-the-light">Show me the light!</h2>
+
+<p>What I’m going to explain is not a hack, it’s the way Bootstrap works.</p>
+
+<p>When you need to <strong>change Bootstrap’s default width</strong>, the best way is to recompile its source code. Yeah, that sounds hard and time consuming, but don’t panic.</p>
+
+<p>If you are using Sass or LESS will be very easy to customize the grid system. However it really depends on what framework you are using.</p>
+
+<p>E.g.: if you are using Ruby on Rails, chances are you are using the <a href="https://github.com/twbs/bootstrap-sass">bootstrap-sass</a> gem. On the README in GitHub there’s already everything you need to know in order to customize Bootstrap. The only thing you have to be aware is that you should <strong>redefine variables before importing Bootstrap</strong>, otherwise Bootstrap will use the old ones.</p>
+
+<h3 id="the-960px-grid-system-values">The 960px grid system values</h3>
+
+<p>These are the correct values for a 960px grid (in Sass):</p>
+
+<div class="language-sass highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// default is 1140px + $grid-gutter-width</span>
+<span class="nv">$container-large-desktop</span><span class="p">:</span> <span class="m">940px</span> <span class="o">+</span> <span class="nv">$grid-gutter-width</span><span class="err">;</span>
+
+<span class="c1">// default is 30px</span>
+<span class="nv">$grid-gutter-width</span><span class="p">:</span> <span class="m">20px</span><span class="err">;</span>
+</code></pre></div></div>
+
+<h3 id="what-about-the-media-queries">What about the media queries?</h3>
+
+<p>You may want to disable the media query for large desktops, you don’t need it anymore.</p>
+
+<p>Changing <code class="language-plaintext highlighter-rouge">$screen-lg</code> to be <code class="language-plaintext highlighter-rouge">$screen-md</code> should do it.</p>
+
+<hr />
+
+<p>I believe this is the best solution so far. It’s far better than removing all stuff related to large desktops, because:</p>
+
+<ul>
+  <li>it’s definitely easier;</li>
+  <li>you’ll be able to upgrade your custom Bootstrap when you’ll want to;</li>
+  <li>you won’t run into any issues.</li>
+</ul>
+
+<h2 id="what-if-im-using-plain-css">What if I’m using plain CSS?</h2>
+
+<p>If you are using CSS you can use the online build customizer. However I recommend you to switch to Sass or LESS.</p>
+
+<h3 id="3-simple-steps">3 simple steps</h3>
+
+<ol>
+  <li>Go to: <a href="http://getbootstrap.com/customize/">http://getbootstrap.com/customize/</a></li>
+  <li>Customize the <a href="http://getbootstrap.com/customize/#grid-system">Grid system’s variables</a>;</li>
+  <li>Download your custom version of Bootstrap.</li>
+</ol>
+
+<p>That’s it!</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Fuzzy matching with CSS3]]></title>
+    <link href="https://www.simonewebdesign.it/fuzzy-matching-with-css3/"/>
+    <updated>2012-11-30T00:56:56+00:00</updated>
+    <id>https://www.simonewebdesign.it/fuzzy-matching-with-css3</id>
+    <content type="html"><![CDATA[<p>
+  There are special cases where a simple <abbr title="Cascading Style Sheets">CSS</abbr> selector is not enough. Like yesterday, when I wanted to match all the uploaded images in my blog, regardless of the container and the content.<br /><br />Let&#8217;s see an example markup:
+</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/blog/wp-content/uploads/2012/11/cat-eat.gif"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/blog/wp-content/uploads/2012/11/cat-eat-300x225.gif"</span>
+         <span class="na">alt=</span><span class="s">""</span> <span class="na">title=</span><span class="s">"Cat Eat"</span> <span class="na">width=</span><span class="s">"300"</span> <span class="na">height=</span><span class="s">"225"</span>
+         <span class="na">class=</span><span class="s">"alignnone size-medium wp-image-361"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/blog/wp-content/uploads/2012/11/cat-help.jpg"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/blog/wp-content/uploads/2012/11/cat-help.jpg"</span>
+         <span class="na">alt=</span><span class="s">""</span> <span class="na">title=</span><span class="s">"Cat Help"</span> <span class="na">width=</span><span class="s">"500"</span> <span class="na">height=</span><span class="s">"457"</span>
+         <span class="na">class=</span><span class="s">"aligncenter size-full wp-image-367"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+</code></pre></div></div>
+
+<h3>
+  How do we match only the images?
+</h3>
+
+<p>
+  Well, there are many solutions. The simplest is certainly to use the <code>img</code> selector; but this way we&#8217;d match <em>all</em> the images, which isn&#8217;t our goal. We just want to match the <em>uploaded</em> ones.
+</p>
+
+<p>
+  Let&#8217;s examine the markup above. See, WordPress uses some classes in order to apply the correct size or alignment, and finally applies a <em>unique</em> class with a progressive number (<code>wp-image-*</code>), just in case we want to match a single element. So we could do this:
+</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.wp-image-361</span><span class="o">,</span>
+<span class="nc">.wp-image-367</span> <span class="p">{</span>
+  <span class="c">/* some fancy CSS code here */</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>
+  The solution above works, but it is not handy because &#8211; as you may have guessed &#8211; we should update the selector each time we upload a new image.
+</p>
+
+<h3>
+  Hey, are we supposed to hard-code all the classes?
+</h3>
+
+<p>
+  No, absolutely! That&#8217;s an absurd solution. Let&#8217;s explore other options.
+</p>
+
+<p>
+  The official <a href="http://www.w3.org/TR/css3-selectors/" title="W3C Selectors Level 3 specification" rel="external"><abbr title="World Wide Web Consortium">W3C</abbr> Selectors Level 3 specification</a> offers a freaky <a href="http://www.w3.org/TR/css3-selectors/#selectors" title="CSS3 Selectors" rel="external">set of selectors</a>, for the joy of the craziest web designers!
+</p>
+
+<p>
+  In our specific case, this would do the trick:
+</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">img</span><span class="o">[</span><span class="nt">class</span><span class="o">^=</span><span class="s1">"wp-image-"</span><span class="o">]</span> <span class="p">{</span>
+  <span class="c">/* matches an img element whose "class" attribute value
+  begins exactly with the string "wp-image-" */</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>
+  Note that I&#8217;m talking about CSS3, so if you need to support older browsers, don&#8217;t lean on it.
+</p>
+
+<h3>
+  Cool. What else?
+</h3>
+
+<p>
+  The <a href="http://www.w3.org/TR/css3-selectors/#selectors" title="CSS3 Selectors" rel="external">table of selectors</a> presents a whole bunch of possibilities, even though the usefulness isn&#8217;t always evident. But I&#8217;m sure you can find an example for every selector listed there. So, whether you are a <abbr title="Cascading Style Sheets">CSS</abbr> wizard or not, my final advice is: <strong>go create cool stuff</strong>, because practice makes perfect.
+</p>
+]]></content>
+  </entry>
+  
+</feed>
