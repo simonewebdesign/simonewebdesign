@@ -15,16 +15,11 @@ main + footer {
         transition: transform 0.15s, opacity 0.15s;
         opacity: 0.95;
         height: 3.5rem;
+        padding: 0 1.5rem;
     }
 }
 
 .footer-social {
     max-width: 720px;
     margin: 3rem auto 0 auto;
-}
-
-@media (min-width: 48rem) { /* 720p */
-    svg {
-        padding: 0 1.5rem;
-    }
 }
