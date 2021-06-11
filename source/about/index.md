@@ -22,7 +22,7 @@ This is my personal website, founded in 2010. Became also a blog in 2012.
 
 Fun facts:
 
-- **It has been made with <a rel="external" href="http://octopress.org/">Octopress</a>**, a static site generator based on <a rel="external" href="https://jekyllrb.com/">Jekyll</a>.
+- **It's been made with <a rel="external" href="http://octopress.org/">Octopress</a>**, a static site generator based on <a rel="external" href="https://jekyllrb.com/">Jekyll</a>.
 
 - **There is no backend nor database.** All pages are actually just HTML & CSS, resulting in a super fast website that can't be hacked.
 
