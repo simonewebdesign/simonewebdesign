@@ -37,7 +37,11 @@ h2 code {
 
 #disqus_thread {
     min-height: 1px;
-    max-width: 870px;
+}
+
+#disqus_recommendations,
+#disqus_thread {
+    max-width: 616px;
     margin: 0 auto;
 }
 
