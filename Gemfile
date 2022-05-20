@@ -16,6 +16,6 @@ group :plugins do
 end
 
 # only these will get bundled in production
-gem 'mysql2'
+# gem 'mysql2'
 gem 'puma'
 gem 'sinatra'
