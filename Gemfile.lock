@@ -73,7 +73,7 @@ GEM
       jekyll (>= 3.7, < 5.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
-    kramdown (2.3.2)
+    kramdown (2.4.0)
       rexml
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
@@ -86,14 +86,13 @@ GEM
     multipart-post (2.1.1)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
-    mysql2 (0.5.3)
     nio4r (2.5.8)
     octokit (4.22.0)
       faraday (>= 0.9)
       sawyer (~> 0.8.0, >= 0.5.3)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
-    public_suffix (4.0.6)
+    public_suffix (4.0.7)
     puma (5.6.4)
       nio4r (~> 2.0)
     rack (2.2.3)
@@ -134,7 +133,6 @@ DEPENDENCIES
   jekyll (~> 4.2)
   jekyll-gist (~> 1.5)
   jekyll-sitemap (~> 1.4)
-  mysql2
   puma
   rake (~> 13.0)
   sass-globbing (~> 1.1)
