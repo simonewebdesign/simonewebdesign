@@ -23,11 +23,6 @@ A lot of sites are built as a single page (can we have more of those?), and no, 
 
 First of all, _why?_ You may ask. Well, many reasons. I did this to my blog (which you're reading now). I mostly did it just to prove it possible, but it turned out to be a fun challenge that kept me busy for months and resulted in a much faster, more maintainable website, with a pretty small [carbon footprint](https://www.websitecarbon.com/website/simonewebdesign-it/).
 
-I collected a few articles explaining why this matters:
-
-- The world's fastest website<br>[https://dev.to/tigt/making-the-worlds-fastest-website-and-other-mistakes-56na](https://dev.to/tigt/making-the-worlds-fastest-website-and-other-mistakes-56na)
-- 17 ways to make your website more energy efficient<br>[https://www.wholegraindigital.com/blog/website-energy-efficiency/](https://www.wholegraindigital.com/blog/website-energy-efficiency/)
-
 <abbr title="too long; didn't read">TL;DR</abbr>: Our planet matters. User experience matters. Speed matters.
 
 ## The secret sauce: inline _all the things_
@@ -117,7 +112,7 @@ Lots of formats have actually been superseded by more efficient ones: <abbr titl
 
 ### The favicon
 
-I went from <abbr title="Portable Network Graphics">PNG</abbr> to <abbr title="Scalable Vector Graphics">SVG</abbr> for the favicon, which I blatantly stole from Peter Selinger, the guy behind [Potrace](https://potrace.sourceforge.net/) (it was public domain, technically). What I did on my part was optimizing it even further, using Jake Archibald's wonderful [SVGOMG](https://jakearchibald.github.io/svgomg/), powered by [SVGO](https://github.com/svg/svgo).
+I went from <abbr title="Portable Network Graphics">PNG</abbr> to <abbr title="Scalable Vector Graphics">SVG</abbr> for the favicon, which I blatantly stole from Peter Selinger, the guy behind [Potrace](https://potrace.sourceforge.net/) <small>(it was public domain, technically)</small>. What I did on my part was optimizing it even further, using Jake Archibald's wonderful [SVGOMG](https://jakearchibald.github.io/svgomg/), powered by [SVGO](https://github.com/svg/svgo).
 
 As for inlining it, I had to serialize it into a data URI using [mini-svg-data-uri](https://github.com/tigt/mini-svg-data-uri). I even ended up making a <abbr title="Command-line interface">CLI</abbr> out of it — it's something I had to do anyway, and [contributing back](https://github.com/tigt/mini-svg-data-uri/pull/19) was the least I could have done.
 
@@ -144,7 +139,7 @@ I waited until the end to say this, because you probably wouldn't have believed 
 </script>
 ```
 
-[The ServiceWorker is actually a separate JS file](https://simonewebdesign.it/sw.js), because I couldn't find a way to inline that (if you do know of a way, please let me know). But, other than that (and Disqus, which I'm planning to remove soon), I don't use no JS. <span role="img" aria-label="shrugs">¯\\\_(ツ)\_/¯</span>
+[The ServiceWorker is actually a separate JS file](https://simonewebdesign.it/sw.js), because I couldn't find a way to inline that (if you do know of a way, please let me know). But, other than that (and Disqus, which I'm planning to remove soon), I don't need JS at all. <span role="img" aria-label="shrugs">¯\\\_(ツ)\_/¯</span>
 
 ## Conclusion
 
