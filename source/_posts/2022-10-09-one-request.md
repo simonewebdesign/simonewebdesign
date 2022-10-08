@@ -136,7 +136,7 @@ I don't actually provide PT Serif, however. If your machine happens to have that
 
 ### The JavaScript
 
-I waited until the end to say this, because you probably wouldn't have believed me, but **this site doesn't have any JavaScript**, the only exception being made for the ServiceWorker:
+I waited until the end to say this, because you probably wouldn't have believed me, but **this site doesn't have any JavaScript**, the only exception being made for the [ServiceWorker](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API):
 
 ```js
 <script>
@@ -144,7 +144,7 @@ I waited until the end to say this, because you probably wouldn't have believed 
 </script>
 ```
 
-[The ServiceWorker is actually a separate JS file](https://www.simonewebdesign.it/sw.js), because I couldn't find a way to inline that (if you do know of a way, please let me know). But, other than that (and Disqus, which I'm planning to remove soon), I don't use no JS. <span role="img" aria-label="shrugs">¯\\\_(ツ)\_/¯</span>
+[The ServiceWorker is actually a separate JS file](https://simonewebdesign.it/sw.js), because I couldn't find a way to inline that (if you do know of a way, please let me know). But, other than that (and Disqus, which I'm planning to remove soon), I don't use no JS. <span role="img" aria-label="shrugs">¯\\\_(ツ)\_/¯</span>
 
 ## Conclusion
 
