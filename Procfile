@@ -1,1 +1,0 @@
-web: bundle exec puma --threads 8:32 --workers 3 -p $PORT
