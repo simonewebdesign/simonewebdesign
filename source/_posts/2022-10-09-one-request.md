@@ -21,7 +21,7 @@ A lot of sites are built as a single page (can we have more of those?), and no, 
 
 > Can I reduce the home page down to a single file?
 
-First of all, _why?_ You may ask. Well, many reasons. I mostly did it just to prove it possible, but it turned out to be a fun challenge that kept me busy for months and resulted in a much faster, more maintainable website, with a pretty small [carbon footprint](https://www.websitecarbon.com/website/simonewebdesign-it/).
+First of all, _why?_ You may ask. Well, many reasons. I did this to my blog (which you're reading now). I mostly did it just to prove it possible, but it turned out to be a fun challenge that kept me busy for months and resulted in a much faster, more maintainable website, with a pretty small [carbon footprint](https://www.websitecarbon.com/website/simonewebdesign-it/).
 
 I collected a few articles explaining why this matters:
 
@@ -36,9 +36,9 @@ This is essentially how I've done it. I've inlined everything that could've poss
 
 ### Inline styles
 
-This is where the journey started. The CSS for the whole site is so small that I thought, why not just inline it? So I did that.
+This is where the journey started. I refactored some CSS, got rid of a few superfluous HTML tags, and the stylesheet got so small that I thought, why not just inline it? So I looked into that.
 
-I thought I should be able to *paste* the compiled `style.css`'s contents into a `<style>` tag, somehow. This turned out to be a challenge. I couldn't find a tool that did exactly this, so I wrote my own — or, to be more specific, I sent a pull request to [inline-scripts](https://github.com/mahhov/inline-scripts), which seemed like the closest thing I could find. At first, all it was doing was inlining `<script>` tags, so I only had to do the same, but for CSS — a simpler job, figuratively speaking.
+I thought I should be able to *inline* the compiled `style.css`'s contents into a `<style>` tag, somehow. This turned out to be a challenge. I couldn't find a tool that did exactly this, so I wrote my own — or, to be more specific, I sent a pull request to [inline-scripts](https://github.com/mahhov/inline-scripts), which seemed like the closest thing I could find. At first, all it was doing was inlining `<script>` tags, so I only had to do the same, but for CSS — a simpler job, figuratively speaking.
 
 Anyway, with some clever Ruby scripting I managed to minify all the HTML, CSS and JS in one go. I would first inline the CSS "on the spot" (i.e. without creating a new file):
 
@@ -121,7 +121,20 @@ I went from <abbr title="Portable Network Graphics">PNG</abbr> to <abbr title="S
 
 As for inlining it, I had to serialize it into a data URI using [mini-svg-data-uri](https://github.com/tigt/mini-svg-data-uri). I even ended up making a <abbr title="Command-line interface">CLI</abbr> out of it — it's something I had to do anyway, and [contributing back](https://github.com/tigt/mini-svg-data-uri/pull/19) was the least I could have done.
 
-## The JavaScript
+### The fonts
+
+I got rid of the custom Google font I was using and went for system fonts. This is what I have now:
+
+```css
+html {
+  font-family: "PT Serif", Georgia, Times, "Times New Roman", serif;
+}
+```
+
+I don't actually provide PT Serif, however. If your machine happens to have that, great — if not, it'll fall back to the next one. I might reconsider this choice in the future, but for now, this is good enough.
+
+
+### The JavaScript
 
 I waited until the end to say this, because you probably wouldn't have believed me, but **this site doesn't have any JavaScript**, the only exception being made for the ServiceWorker:
 
