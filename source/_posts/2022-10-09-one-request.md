@@ -112,9 +112,7 @@ These are loosely related to the "one request" thing, but still worth mentioning
 
 ### Moving to modern media formats
 
-Lots of formats have actually been superseded by more efficient ones: <abbr title="Portable Network Graphics">PNG</abbr> to WebP, <abbr title="Graphics Interchange Format">GIF</abbr> to MP4, <abbr title="Joint Photographic Experts Group">JPEG</abbr> to <abbr title="AV1 Image File Format">AVIF</abbr>... the list likely goes on — these are just the ones I'm aware of.
-
-I don't think these should be inlined, but new formats are definitely worth the effort, since they're much more performant.
+Lots of formats have actually been superseded by more efficient ones: <abbr title="Portable Network Graphics">PNG</abbr> to WebP, <abbr title="Graphics Interchange Format">GIF</abbr> to MP4, <abbr title="Joint Photographic Experts Group">JPEG</abbr> to <abbr title="AV1 Image File Format">AVIF</abbr>... [the list goes on](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types) — these are just the ones I'm aware of. I don't think these should be inlined, but new formats are definitely worth the effort, since they're much more performant.
 
 ### The favicon
 
