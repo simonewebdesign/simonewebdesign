@@ -192,7 +192,7 @@ task :deploy_heroku do
   system 'git push heroku main -f'
   system 'git reset HEAD^'
   puts 'Site deployed. Now do some manual testing!'
-  system 'open https://www.simonewebdesign.it/'
+  system 'open https://simonewebdesign.it/'
 end
 
 # Ideally this would be ran before deploying to prod,
@@ -202,7 +202,7 @@ end
 # But I found it much easier to hardcode the URL. Anything else is pointless.
 desc 'Smoke Test'
 task :smoke_test do
-  system 'tests/end-to-end.sh https://www.simonewebdesign.it'
+  system 'tests/end-to-end.sh https://simonewebdesign.it'
 end
 
 desc 'Generate website and deploy'
