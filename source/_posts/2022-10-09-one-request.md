@@ -4,7 +4,7 @@ title: One request
 description: A journey through painstakingly optimizing a blog's performance
 permalink: /1req/
 date: 2022-10-09
-comments: false
+comments: true
 ---
 
 > In an era where 95% of sites are bloated with cookie banners and behavioral tracking scripts, here's a refreshing approach to web development.
@@ -17,17 +17,19 @@ There is a better way.<!--more-->
 
 **What if you could make your entire website fit into a single page?**
 
-A lot of sites are built as a single page (can we have more of those?), and no, I don't mean a single page app. I'm talking about something radically different here. Essentially, the challenge boils down to this:
+A lot of sites are built as a single page (can we have more of those?)— and no, I don't mean a [SPA](https://en.wikipedia.org/wiki/Single-page_application). I'm talking about something radically different here. Essentially, the challenge boils down to this:
 
-> Can I reduce the home page down to a single file?
+> Can I reduce every page down to a single HTTP request?
 
-First of all, _why?_ You may ask. Well, many reasons. I did this to my blog (which you're reading now). I mostly did it just to prove it possible, but it turned out to be a fun challenge that kept me busy for months and resulted in a much faster, more maintainable website, with a pretty small [carbon footprint](https://www.websitecarbon.com/website/simonewebdesign-it/).
+First of all, _why?_ You may ask. Well, many reasons. I did this to my blog, [simonewebdesign.it](https://simonewebdesign.it). I mostly did it just to prove it possible, but it turned out to be a fun challenge that kept me busy for months and resulted in a much faster, more maintainable website, with a [very small carbon footprint](https://www.websitecarbon.com/website/simonewebdesign-it/).
 
-<abbr title="too long; didn't read">TL;DR</abbr>: Our planet matters. User experience matters. Speed matters.
+<!-- <abbr title="too long; didn't read">TL;DR</abbr>: Our planet matters. User experience matters. Speed matters. -->
 
-## The secret sauce: inline _all the things_
+But the real question is, _how_?
 
-This is essentially how I've done it. I've inlined everything that could've possibly been inlined. Keep reading if you're curious and want to know all the details on how I achieved this.
+## Inlining _all the things_
+
+This is essentially how I've done it. I've [inlined everything](https://gomakethings.com/inlining-literally-everything-for-better-performance/) that could've possibly been inlined. Keep reading if you're curious and want to know how I achieved this.
 
 ### Inline styles
 
@@ -84,7 +86,9 @@ As an interesting side note, when I check the analytics on Cloudflare, it also s
 
 I use [Puma](https://puma.io/). It is a fast server that provides [parallelism](https://en.wikipedia.org/wiki/Parallel_computing) out of the box. This is what my [Procfile](https://devcenter.heroku.com/articles/procfile) looks like:
 
-    web: bundle exec puma --threads 8:32 --workers 3 -p $PORT
+```sh
+web: bundle exec puma --threads 8:32 --workers 3 -p $PORT
+```
 
 Basically what this means is that, at any given time, there are 8 threads ready to serve you a request, over 3 separate clusters.
 
@@ -106,9 +110,11 @@ Last but not the least, I was able to remove a [CNAME record](https://en.wikiped
 
 These are loosely related to the "one request" thing, but still worth mentioning.
 
-### Move to modern media formats
+### Moving to modern media formats
 
 Lots of formats have actually been superseded by more efficient ones: <abbr title="Portable Network Graphics">PNG</abbr> to WebP, <abbr title="Graphics Interchange Format">GIF</abbr> to MP4, <abbr title="Joint Photographic Experts Group">JPEG</abbr> to <abbr title="AV1 Image File Format">AVIF</abbr>... the list likely goes on — these are just the ones I'm aware of.
+
+I don't think these should be inlined, but new formats are definitely worth the effort, since they're much more performant.
 
 ### The favicon
 
@@ -143,4 +149,4 @@ I waited until the end to say this, because you probably wouldn't have believed 
 
 ## Conclusion
 
-I hope you liked this article at least as much as I enjoyed writing it. I hope it tickled your curiosity, to the very least, and that - by shedding a light on the importance of performance - I've inspired you to take action and improve your own site. Either way, it's been a fun ride. For the records, I started writing this on September 20<sup>th</sup>, 2021. Glad I got round to finishing it.
+I hope you liked this article at least as much as I enjoyed writing it. I hope it tickled your curiosity, to the very least, and that - by shedding a light on the importance of performance - I've inspired you to take action and improve your own site. <!-- Either way, it's been a fun ride. For the records, I started writing this on September 20<sup>th</sup>, 2021. Glad I got round to finishing it. -->
