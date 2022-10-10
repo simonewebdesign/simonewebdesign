@@ -1,6 +1,6 @@
 self.addEventListener('install', e => {
   e.waitUntil(
-    caches.open('v1').then(cache =>
+    caches.open('v2').then(cache =>
       cache.addAll([
         '/archives/',
         '/projects/',
