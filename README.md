@@ -1,18 +1,3 @@
-# simonewebdesign
-
-A blog powered by Octopress.
-
-## What is Octopress?
-
-Octopress is [Jekyll](https://github.com/mojombo/jekyll) blogging at its finest.
-
-1. **Octopress sports a clean responsive theme** written in semantic HTML5, focused on readability and friendliness toward mobile devices.
-2. **Code blogging is easy and beautiful.** Embed code (with [Solarized](http://ethanschoonover.com/solarized) styling) in your posts from gists, jsFiddle or from your filesystem.
-3. **Third party integration is simple** with built-in support for Pinboard, Delicious, GitHub Repositories, Disqus Comments and Google Analytics.
-4. **It's easy to use.** A collection of rake tasks simplifies development and makes deploying a cinch.
-5. **Ships with great plug-ins** some original and others from the Jekyll community &mdash; tested and improved.
-
-
 ## Getting started
 
 ### Prerequisites
@@ -36,6 +21,7 @@ Then run:
 
 Hopefully that should be it. You should now be able to see the website on http://localhost:4000.
 
+
 ### Getting the submodules
 
 Run: `git submodule update --init --recursive --remote`
@@ -50,20 +36,17 @@ By the way, remember that you set up a `prod` branch on each of these remotes. T
 4. checkout prod
 5. `git rebase origin/main`
 
+
 ### Preparing for the first deploy
 
-- **Ensure that you have downloaded and initialised correctly all the git modules before proceeding!**
-- Install the Heroku toolbelt
-- `heroku login`
-- `git remote add heroku https://git.heroku.com/simo.git`
-- `rake gen_deploy_heroku`
+**Ensure that you have downloaded and initialised correctly all the git modules before proceeding!**
+
+Simply run:
+
+    bundle exec rake gen_deploy_fly
 
 
 ## Troubleshooting
-
-### Website down after deploy
-
-You have to redeploy from `main`.
 
 ### CSS changes work locally but not in production
 
