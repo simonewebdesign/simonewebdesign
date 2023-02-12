@@ -215,6 +215,13 @@ task :deploy_heroku do
   system 'open https://simonewebdesign.it/'
 end
 
+desc 'Deploy to Fly.io'
+task :deploy_fly do
+  puts 'Running rake deploy_fly...'
+
+  system 'flyctl deploy'
+end
+
 # Ideally this would be ran before deploying to prod,
 # but since I want to test real production
 # I need to actually run it after deployment.
@@ -235,6 +242,11 @@ end
 desc 'Generate website and deploy to Heroku'
 task gen_deploy_heroku: [:integrate, :generate, :deploy_heroku, :smoke_test] do
   puts 'Running gen_deploy_heroku...'
+end
+
+desc 'Generate website and deploy to Fly.io'
+task gen_deploy_fly: [:integrate, :generate, :deploy_fly, :smoke_test] do
+  puts 'Running gen_deploy_fly...'
 end
 
 desc 'copy dot files for deployment'
