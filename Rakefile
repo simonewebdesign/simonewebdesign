@@ -229,14 +229,12 @@ end
 
 desc 'Generate website and deploy'
 task gen_deploy: [:integrate, :generate, :deploy] do
-  puts 'Running ask gen_deploy...'
-
+  puts 'Running gen_deploy...'
 end
 
 desc 'Generate website and deploy to Heroku'
 task gen_deploy_heroku: [:integrate, :generate, :deploy_heroku, :smoke_test] do
-  puts 'Running ask gen_deploy_heroku...'
-
+  puts 'Running gen_deploy_heroku...'
 end
 
 desc 'copy dot files for deployment'
