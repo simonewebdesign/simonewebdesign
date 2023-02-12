@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Responsive images on mobile
-description: A smart technique for serving an optimized image size based on the client viewport width. ##Is it possible to inject CSS in an external browser?
+description: A smart technique for serving an optimized image size based on the client viewport width.
 permalink: /responsive-images-on-mobile/
-date: ##2022-10-09
+date: 2022-10-09
 comments: false
 categories:
   - JavaScript
