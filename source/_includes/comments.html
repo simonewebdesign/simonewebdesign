@@ -1,3 +1,20 @@
 {% comment %} Load comments if `page.comments` is either empty (index) or set to true {% endcomment %}
 {% if page.comments != false %}
+<script>
+  let o = new IntersectionObserver(function (entries) {
+    if (entries[0].isIntersecting) {
+      o.disconnect()
+      let d = document, s = d.createElement('script')
+      s.src = 'https://utteranc.es/client.js'
+      s.async = true
+      s.setAttribute('crossorigin', 'anonymous')
+      s.setAttribute('repo', 'simonewebdesign/simonewebdesign')
+      s.setAttribute('issue-term', 'pathname')
+      s.setAttribute('theme', 'preferred-color-scheme')
+      d.querySelector('noscript').after(s)
+    }
+  })
+  o.observe(document.querySelector('.vcard'))
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>
 {% endif %}
