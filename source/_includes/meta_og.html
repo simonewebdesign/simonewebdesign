@@ -1,0 +1,17 @@
+{% if page.title %}
+  <meta property="og:title" content="{{ page.title }}" />
+{% endif %}
+{% if page.url %}
+  <meta property="og:url" content="{{ canonical }}" />
+{% endif %}
+{% if page.description %}
+  <meta property="og:description" content="{{ page.description }}" />
+{% endif %}
+{% if page.date %}
+  <meta property="og:type" content="article" />
+{% endif %}
+{% if page.image %}
+  <meta property="og:image" content="{{ site.url }}{{ page.image }}" />
+{% endif %}
+
+<meta property="og:site_name" content="Simone Web Design" />

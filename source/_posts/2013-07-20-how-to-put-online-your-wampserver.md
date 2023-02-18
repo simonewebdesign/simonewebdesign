@@ -6,6 +6,7 @@ permalink: /how-to-put-online-your-wampserver/
 date: 2013-07-20
 updated: 2015-08-23
 comments: true
+image: /images/wampserver-logo.png
 dsq_thread_id:
   - 1513101928
 categories:
@@ -42,7 +43,7 @@ article_cta: false
 ---
 
 <p>
-  <img src="/images/wampserver-logo.png" alt="WampServer Logo" width="200" height="200" class="basic-alignment left" />On your Windows machine you run an <strong>Apache web server</strong> with some <abbr title="PHP: Hypertext Preprocessor (recursive acronym)">PHP</abbr> websites in there. What if you want to show all of them to your friends, or want to be <strong>reachable by the whole Internet</strong>? This may sound quite difficult to achieve, but actually it&#8217;s fairly straightforward to <strong>put online a web server</strong>: let&#8217;s see how.
+  <img src="{{ page.image }}" alt="WampServer Logo" width="200" height="200" class="basic-alignment left" />On your Windows machine you run an <strong>Apache web server</strong> with some <abbr title="PHP: Hypertext Preprocessor (recursive acronym)">PHP</abbr> websites in there. What if you want to show all of them to your friends, or want to be <strong>reachable by the whole Internet</strong>? This may sound quite difficult to achieve, but actually it&#8217;s fairly straightforward to <strong>put online a web server</strong>: let&#8217;s see how.
 </p>
 
 <h3>
