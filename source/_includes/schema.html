@@ -1,0 +1,79 @@
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "{{ canonical }}",
+        "url": "{{ canonical }}",
+        "name": "{{ page.title }}",
+        "isPartOf": {
+          "@id": "{{ site.url }}"
+        },
+{% if page.image %}
+        "primaryImageOfPage": {
+          "@id": "{{ page.image }}"
+        },
+        "image": {
+          "@id": "{{ page.image }}"
+        },
+{% endif %}
+{% if page.date %}
+        "datePublished": "{{ page.date | date_to_xmlschema }}",
+{% endif %}
+{% if page.updated %}
+        "dateModified": "{{ page.updated | date_to_xmlschema }}",
+{% endif %}
+        "author": {
+          "@id": "{{ site.url }}/about/"
+        },
+        "inLanguage": "en-GB"
+      },
+{% if page.image %}
+      {
+        "@type": "ImageObject",
+        "@id": "{{ page.image }}",
+        "url": "{{ page.image }}"
+      },
+{% endif %}
+      {
+        "@type": "CollectionPage",
+        "@id": "{{ site.url }}/archives/",
+        "url": "{{ site.url }}/archives/",
+        "name": "{{ site.title }} Blog",
+        "isPartOf": {
+          "@id": "{{ site.url }}"
+        },
+        "description": "{{ site.description }}",
+        "inLanguage": "en-GB"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "{{ site.url }}",
+        "url": "{{ site.url }}",
+        "name": "{{ site.title }}",
+        "description": "{{ site.description }}",
+        "inLanguage": "en-GB"
+      },
+      {
+        "@type": "Person",
+        "@id": "{{ site.url }}/about/",
+        "name": "{{ site.author }}",
+        "image": {
+          "@type": "ImageObject",
+          "inLanguage": "en-GB",
+          "@id": "https://simonewebdesign.it/images/simonewebdesign.webp",
+          "url": "https://simonewebdesign.it/images/simonewebdesign.webp",
+          "caption": "{{ site.author }}"
+        },
+        "sameAs": [
+          "https://codepen.io/simone",
+          "https://github.com/simonewebdesign",
+          "https://stackoverflow.com/users/801544/simone",
+          "https://twitter.com/simonewebdesign"
+        ],
+        "url": "{{ site.url }}/about/"
+      }
+    ]
+  }
+</script>
