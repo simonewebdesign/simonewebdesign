@@ -30,7 +30,7 @@ article_cta: false
 related: 2014-09-01-install-sublime-text-3-on-linux
 ---
 
-<img src="/images/Sublime_Text_Logo.png" alt="Sublime Text 3" width="200" height="200" class="basic-alignment left" />
+<img src="/images/Sublime_Text_Logo.webp" alt="Sublime Text 3" width="200" height="200" class="basic-alignment left" />
 
 There are many ways of **installing Sublime Text 3 on Linux**, and it's super easy if you are using **Debian** (or another distribution based on it, such as **Linux Mint** or **Kali Linux**).
 

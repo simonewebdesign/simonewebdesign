@@ -23,7 +23,7 @@ find . -name '*.png' | xargs optipng -nc -nb -o7 -full
 
 <blockquote>Properly formatting and compressing images can save many bytes of data.</blockquote>
 
-<p><img src="/images/optimize-all-the-images.png" alt="OPTIMIZE ALL THE IMAGES!" width="280" height="210" class="basic-alignment left" />The thing I did immediately next was reading the article that Google suggested: it's a nice reading on Google Developers about <a href="https://developers.google.com/speed/docs/insights/OptimizeImages" title="Optimizing images - Google Developers" rel="external">optimizing images</a>. The first recommendation is: <strong>Use an image compressor</strong>. OptiPNG is one of them.</p>
+<p><img src="/images/optimize-all-the-images.webp" alt="OPTIMIZE ALL THE IMAGES!" width="280" height="210" class="basic-alignment left" />The thing I did immediately next was reading the article that Google suggested: it's a nice reading on Google Developers about <a href="https://developers.google.com/speed/docs/insights/OptimizeImages" title="Optimizing images - Google Developers" rel="external">optimizing images</a>. The first recommendation is: <strong>Use an image compressor</strong>. OptiPNG is one of them.</p>
 
 <p>On the OptiPNG site I realized it works only for one image at a time, so I had the need to write a script that runs the optimizer for all images at the same time.</p>
 

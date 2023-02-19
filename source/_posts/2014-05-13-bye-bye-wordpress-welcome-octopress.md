@@ -7,7 +7,7 @@ comments: true
 article_cta: false
 ---
 
-<img src="/images/octopress_logo.png" alt="Octopress" class="basic-alignment left">
+<img src="/images/octopress_logo.webp" alt="Octopress" class="basic-alignment left">
 
 **I did it!** I've finally migrated my blog to Octopress. It was a bit of a PITA, and it took a lot more than what I expected, but I did it.
 
