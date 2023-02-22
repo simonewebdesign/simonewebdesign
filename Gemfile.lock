@@ -108,8 +108,8 @@ GEM
     webrick (1.8.1)
 
 PLATFORMS
-  x86_64-darwin-21
   x86_64-linux
+  x86_64-darwin-22
 
 DEPENDENCIES
   compass (~> 1.0)
@@ -122,7 +122,7 @@ DEPENDENCIES
   sinatra
 
 RUBY VERSION
-   ruby 3.1.2p20
+   ruby 3.2.1p31
 
 BUNDLED WITH
-   2.3.7
+   2.4.6
