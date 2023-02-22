@@ -10,7 +10,7 @@ $border-color: #555;
 
 @import "variables";
 // $blockquote: $type-border !default;
-// $sans: "PT Sans", "Helvetica Neue", Arial, sans-serif !default;
+$sans: "PT Sans", "Helvetica Neue", Arial, sans-serif;
 // $serif: "PT Serif", Georgia, Times, "Times New Roman", serif;
 // $mono: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace !default;
 // $heading-font-family: "PT Serif", "Georgia", "Helvetica Neue", Arial, sans-serif !default;
@@ -32,7 +32,7 @@ body {
 
 time,
 .projects li {
-    font-family: "PT Sans", "Helvetica Neue", Arial, sans-serif;
+    font-family: $sans;
     font-size: 85%;
     color: #aaa;
 }

@@ -4,6 +4,7 @@ description: "Learn how to install Ruby 2 in your Mac OS X for a Ruby on Rails d
 layout: post
 permalink: /how-to-setup-osx-for-ruby-on-rails/
 date: 2013-01-14 14:08:36 +0000
+updated: 2023-02-22
 comments: true
 dsq_thread_id:
   - 1026586953
@@ -34,7 +35,7 @@ article_cta: false
 </p>
 
 <h2>
-  Install <a href="https://mxcl.github.com/homebrew/" rel="external">Homebrew</a>
+  Install <a href="https://brew.sh/" rel="external">Homebrew</a>
 </h2>
 
 ``` bash

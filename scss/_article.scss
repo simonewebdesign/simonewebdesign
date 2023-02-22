@@ -35,10 +35,20 @@ h2 code {
     margin: 2rem 8px 3rem;
 }
 
-.github-icon {
+.related {
+    margin-top: 2rem;
+}
+
+.github-edit {
+    font-family: $sans;
+    display: block;
+    margin-top: 3rem;
+}
+
+.github-edit svg {
     width: 24px;
     height: 24px;
-    vertical-align: top;
+    vertical-align: bottom;
     padding-right: 5px;
 }
 

@@ -3,7 +3,7 @@ layout: post
 title: "Making a game from scratch in HTML5"
 description: How to build Pong using plain JS and the HTML5 Canvas. No game engine.
 date: 2014-12-01 17:06:53 +0100
-updated: 2020-03-14
+updated: 2023-02-22
 comments: true
 categories: JavaScript
 related: 2012-08-22-playing-around-with-javascript
@@ -283,7 +283,7 @@ Here are some useful resources on the Web:
 
 - Math lessons: <a href="//www.mathsisfun.com/" rel="external">www.mathsisfun.com</a>
 - Physics lessons: <a href="//www.physicsclassroom.com/" rel="external">www.physicsclassroom.com</a>
-- Vector math cheatsheet: <a href="//higherorderfun.com/blog/2012/06/03/math-for-game-programmers-05-vector-cheat-sheet/" rel="external">higherorderfun.com/blog/2012/06/03/math-for-game-programmers-05-vector-cheat-sheet/</a>
+- Vector math cheatsheet: <a href="http://higherorderfun.com/blog/2012/06/03/math-for-game-programmers-05-vector-cheat-sheet/" rel="external">higherorderfun.com/blog/2012/06/03/math-for-game-programmers-05-vector-cheat-sheet/</a>
 - Linear algebra for game developers: <a href="//blog.wolfire.com/2009/07/linear-algebra-for-game-developers-part-1/" rel="external">blog.wolfire.com/2009/07/linear-algebra-for-game-developers-part-1/</a>
 
 Let's explore together the potential of 2D vectors.
