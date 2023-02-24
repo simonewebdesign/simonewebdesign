@@ -16,7 +16,7 @@ article_cta: false
 ---
 
 <p>
-  <img src="/images/laravel4.webp" class="basic-alignment left" /> <em><strong>Laaadies and gentlemen!</strong></em> I&#8217;m proud to announce that <a href="https://laravel.com" title="Laravel official website" rel="external">Laravel 4</a> has been released today!
+  <img src="/images/laravel4.webp" alt="Laravel logo" class="basic-alignment left" /> <em><strong>Laaadies and gentlemen!</strong></em> I&#8217;m proud to announce that <a href="https://laravel.com" title="Laravel official website" rel="external">Laravel 4</a> has been released today!
 </p>
 
 <p>
