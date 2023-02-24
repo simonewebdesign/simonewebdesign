@@ -22,10 +22,6 @@ class SinatraStaticServer < Sinatra::Base
     redirect '/atom.xml', 301
   end
 
-  get '/simone-vittori/?' do
-    redirect '/about/', 301
-  end
-
   post '/sub' do
     new_email = params['email']
     unless new_email =~ URI::MailTo::EMAIL_REGEXP
