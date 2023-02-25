@@ -75,10 +75,6 @@ class SinatraStaticServer < Sinatra::Base
   end
 
   get(/.+/) do
-    if request.host.match?('www')
-      return redirect "https://simonewebdesign.it#{request.path}", 301
-    end
-
     send_sinatra_file(request.path) { 404 }
   end
 
