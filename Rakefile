@@ -40,8 +40,6 @@ end
 
 desc 'Generate jekyll site'
 task :generate do
-  puts 'Running rake generate...'
-
   puts '---> Generating Site with Jekyll...'
   system "compass compile --css-dir #{source_dir}/stylesheets"
   system 'jekyll build --trace'
@@ -56,8 +54,6 @@ end
 
 desc 'Watch the site and regenerate when it changes'
 task :watch do
-  puts 'Running rake watch...'
-
   puts 'Starting to watch source with Jekyll and Compass.'
   system "compass compile --css-dir #{source_dir}/stylesheets"
   jekyllPid = Process.spawn({ 'OCTOPRESS_ENV'=>'preview' }, 'jekyll build --watch')
@@ -73,8 +69,6 @@ end
 
 desc 'preview the site in a web browser'
 task :preview do
-  puts 'Running rake preview...'
-
   puts "Starting to watch source with Jekyll and Compass. Starting Rack on port #{server_port}"
   system "compass compile --css-dir #{source_dir}/stylesheets"
   jekyllPid = Process.spawn({ 'OCTOPRESS_ENV'=>'preview' }, 'jekyll build --watch')
@@ -94,8 +88,6 @@ end
 # usage rake new_post[my-new-post] or rake new_post['my new post'] or rake new_post (defaults to "new-post")
 desc "Begin a new post in #{source_dir}/#{posts_dir}"
 task :new_post, :title do |t, args|
-  puts 'Running rake new_post...'
-
   if args.title
     title = args.title
   else
@@ -121,8 +113,6 @@ end
 # usage rake new_page[my-new-page] or rake new_page[my-new-page.html] or rake new_page (defaults to "new-page.markdown")
 desc "Create a new page in #{source_dir}/(filename)/index.#{new_page_ext}"
 task :new_page, :filename do |t, args|
-  puts 'Running rake new_page...'
-
   args.with_defaults(filename: 'new-page')
   page_dir = [source_dir]
   if args.filename.downcase =~ /(^.+\/)?(.+)/
@@ -160,8 +150,6 @@ end
 # usage rake isolate[my-post]
 desc 'Move all other posts than the one currently being worked on to a temporary stash location (stash) so regenerating the site happens much more quickly.'
 task :isolate, :filename do |t, args|
-  puts 'Running rake isolate...'
-
   stash_dir = "#{source_dir}/#{stash_dir}"
   FileUtils.mkdir(stash_dir) unless File.exist?(stash_dir)
   Dir.glob("#{source_dir}/#{posts_dir}/*.*") do |post|
@@ -171,15 +159,11 @@ end
 
 desc 'Move all stashed posts back into the posts directory, ready for site generation.'
 task :integrate do
-  puts 'Running rake integrate...'
-
   FileUtils.mv Dir.glob("#{source_dir}/#{stash_dir}/*.*"), "#{source_dir}/#{posts_dir}/"
 end
 
 desc 'Clean out caches: .pygments-cache, .gist-cache, .sass-cache'
 task :clean do
-  puts 'Running rake clean...'
-
   rm_rf ['.pygments-cache/**', '.gist-cache/**', '.sass-cache/**', 'source/stylesheets/**']
 end
 
@@ -190,8 +174,6 @@ end
 
 desc 'Default deploy task'
 task :deploy do
-  puts 'Running rake deploy...'
-
   # Check if preview posts exist, which should not be published
   if File.exists?('.preview-mode')
     puts '## Found posts in preview mode, regenerating files ...'
@@ -205,8 +187,6 @@ end
 
 desc 'Deploy to Heroku'
 task :deploy_heroku do
-  puts 'Running rake deploy_heroku...'
-
   system 'git add public/ -f'
   system "git commit -m 'deploy'"
   system 'git push heroku main -f'
@@ -229,30 +209,23 @@ end
 # But I found it much easier to hardcode the URL. Anything else is pointless.
 desc 'Smoke Test'
 task :smoke_test do
-  puts 'Running rake smoke_test...'
-
   system 'tests/end-to-end.sh https://simonewebdesign.it'
 end
 
 desc 'Generate website and deploy'
 task gen_deploy: [:integrate, :generate, :deploy] do
-  puts 'Running gen_deploy...'
 end
 
 desc 'Generate website and deploy to Heroku'
 task gen_deploy_heroku: [:integrate, :generate, :deploy_heroku, :smoke_test] do
-  puts 'Running gen_deploy_heroku...'
 end
 
 desc 'Generate website and deploy to Fly.io'
 task gen_deploy_fly: [:integrate, :generate, :deploy_fly, :smoke_test] do
-  puts 'Running gen_deploy_fly...'
 end
 
 desc 'copy dot files for deployment'
 task :copydot, :source, :dest do |t, args|
-  puts 'Running rake copydot...'
-
   FileList["#{args.source}/**/.*"].exclude('**/.', '**/..', '**/.DS_Store', '**/._*').each do |file|
     cp_r file, file.gsub(/#{args.source}/, "#{args.dest}") unless File.directory?(file)
   end
@@ -260,8 +233,6 @@ end
 
 desc 'Deploy website via rsync'
 task :rsync do
-  puts 'Running rake rsync...'
-
   exclude = ''
   if File.exists?('./rsync-exclude')
     exclude = "--exclude-from '#{File.expand_path('./rsync-exclude')}'"
@@ -272,8 +243,6 @@ end
 
 desc 'deploy public directory to github pages'
 multitask :push do
-  puts 'Running rake push...'
-
   puts '## Deploying branch to Github Pages '
   puts '## Pulling any updates from Github Pages '
   cd "#{deploy_dir}" do
@@ -296,8 +265,6 @@ end
 
 desc 'Update configurations to support publishing to root or sub directory'
 task :set_root_dir, :dir do |t, args|
-  puts 'Running rake set_root_dir...'
-
   puts '>>> !! Please provide a directory, eg. rake config_dir[publishing/subdirectory]' unless args.dir
   if args.dir
     if args.dir == '/'
@@ -333,8 +300,6 @@ end
 
 desc 'Set up _deploy folder and deploy branch for Github Pages deployment'
 task :setup_github_pages, :repo do |t, args|
-  puts 'Running rake setup_github_pages...'
-
   if args.repo
     repo_url = args.repo
   else
@@ -427,8 +392,6 @@ end
 
 desc 'list tasks'
 task :list do
-  puts 'Running rake list...'
-
   puts "Tasks: #{(Rake::Task.tasks - [Rake::Task[:list]]).join(', ')}"
   puts "(type rake -T for more detail)\n\n"
 end
