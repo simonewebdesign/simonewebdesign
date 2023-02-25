@@ -24,6 +24,16 @@ function test {
     if [[ "$(call $1)" =~ $2 ]]; then ok; else fail; fi
 }
 
+# Redirects
+echo -n Redirects from http to https
+if [[ "$(curl http://simonewebdesign.it --silent -i)" =~ https://simonewebdesign.it ]]; then ok; else fail; fi
+
+echo -n Redirects from www to non-www
+if [[ "$(curl https://www.simonewebdesign.it --silent -i)" != *"www"* ]]; then ok; else fail; fi
+
+echo -n Redirects from http www to https non-www
+if [[ "$(curl http://www.simonewebdesign.it --silent -i)" =~ https://simonewebdesign.it ]]; then ok; else fail; fi
+
 # Home page and core assets
 test "" "Simone Web Design"
 test stylesheets/style.css "html\{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;background:#f6f6f6"
