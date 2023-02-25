@@ -185,16 +185,6 @@ task :deploy do
   Rake::Task["#{deploy_default}"].execute
 end
 
-desc 'Deploy to Heroku'
-task :deploy_heroku do
-  system 'git add public/ -f'
-  system "git commit -m 'deploy'"
-  system 'git push heroku main -f'
-  system 'git reset HEAD^'
-  puts 'Site deployed. Now do some manual testing!'
-  system 'open https://simonewebdesign.it/'
-end
-
 desc 'Deploy to Fly.io'
 task :deploy_fly do
   puts 'Running rake deploy_fly...'
@@ -214,10 +204,6 @@ end
 
 desc 'Generate website and deploy'
 task gen_deploy: [:integrate, :generate, :deploy] do
-end
-
-desc 'Generate website and deploy to Heroku'
-task gen_deploy_heroku: [:integrate, :generate, :deploy_heroku, :smoke_test] do
 end
 
 desc 'Generate website and deploy to Fly.io'
