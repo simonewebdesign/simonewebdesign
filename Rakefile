@@ -187,8 +187,6 @@ end
 
 desc 'Deploy to Fly.io'
 task :deploy_fly do
-  puts 'Running rake deploy_fly...'
-
   system 'flyctl deploy'
 end
 
