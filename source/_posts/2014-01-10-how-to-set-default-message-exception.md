@@ -6,8 +6,6 @@ permalink: /how-to-set-default-message-exception/
 date: 2014-01-10
 updated: 2020-02-09
 comments: true
-dsq_thread_id:
-  - 2102362575
 categories:
   - Ruby
 tags:

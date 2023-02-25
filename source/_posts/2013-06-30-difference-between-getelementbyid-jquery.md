@@ -5,8 +5,6 @@ layout: post
 permalink: /difference-between-getelementbyid-jquery/
 date: 2013-06-30
 comments: true
-dsq_thread_id:
-  - 1452080730
 categories:
   - JavaScript
 tags:

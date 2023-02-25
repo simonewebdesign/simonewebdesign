@@ -4,8 +4,6 @@ layout: post
 permalink: /how-to-load-jquery-plugins-with-requirejs/
 date: 2013-09-07
 comments: true
-dsq_thread_id:
-  - 1725854798
 categories:
   - JavaScript
 tags:

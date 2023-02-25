@@ -4,8 +4,6 @@ layout: post
 permalink: /ruby-on-rails-synchronize-views-database-after-migration/
 date: 2014-02-09
 comments: true
-dsq_thread_id:
-  - 2243561731
 categories:
   - Ruby
 tags:

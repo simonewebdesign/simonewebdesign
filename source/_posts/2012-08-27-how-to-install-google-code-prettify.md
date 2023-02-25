@@ -6,8 +6,6 @@ permalink: /how-to-install-google-code-prettify/
 date: 2012-08-27 00:33:16 +0000
 updated: 2014-10-28
 comments: true
-dsq_thread_id:
-  - 860649835
 tags:
   - code
   - google

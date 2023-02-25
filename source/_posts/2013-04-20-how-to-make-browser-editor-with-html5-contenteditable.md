@@ -4,8 +4,6 @@ layout: post
 permalink: /how-to-make-browser-editor-with-html5-contenteditable/
 date: 2013-04-20
 comments: true
-dsq_thread_id:
-  - 1223908930
 categories:
   - JavaScript
 tags:

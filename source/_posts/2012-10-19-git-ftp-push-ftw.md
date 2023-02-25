@@ -6,8 +6,6 @@ permalink: /git-ftp-push-ftw/
 date: 2012-10-19 16:11:51 +0000
 updated: 2020-02-09
 comments: true
-dsq_thread_id:
-  - 893919358
 categories:
   - Git
 tags:

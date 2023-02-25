@@ -5,8 +5,6 @@ permalink: /install-sublime-text-3-on-fedora-20/
 date: 2014-01-29
 updated: 2020-07-07
 comments: true
-dsq_thread_id:
-  - 2188121843
 categories:
   - Bash
 tags:

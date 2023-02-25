@@ -6,8 +6,6 @@ permalink: /how-to-create-web-bug-aka-beacon-image/
 date: 2012-09-23 15:22:30 +0000
 updated: 2020-09-19
 comments: true
-dsq_thread_id:
-  - 860147944
 categories:
   - PHP
 tags:

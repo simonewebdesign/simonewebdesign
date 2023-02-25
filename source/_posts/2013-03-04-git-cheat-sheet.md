@@ -5,8 +5,6 @@ layout: post
 permalink: /git-cheat-sheet/
 date: 2013-03-04 14:47:22 +0000
 comments: true
-dsq_thread_id:
-  - 1117190384
 categories:
   - Git
 tags:

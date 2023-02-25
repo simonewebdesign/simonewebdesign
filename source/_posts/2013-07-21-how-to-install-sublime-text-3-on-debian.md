@@ -6,8 +6,6 @@ permalink: /how-to-install-sublime-text-3-on-debian/
 date: 2013-07-21
 updated: 2015-04-16
 comments: true
-dsq_thread_id:
-  - 1518107300
 categories:
   - Bash
 tags:

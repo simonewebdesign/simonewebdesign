@@ -5,8 +5,6 @@ layout: post
 permalink: /fushi-php-boilerplate-released/
 date: 2012-10-07 18:23:26 +0000
 comments: true
-dsq_thread_id:
-  - 875549989
 categories:
   - PHP
 tags:

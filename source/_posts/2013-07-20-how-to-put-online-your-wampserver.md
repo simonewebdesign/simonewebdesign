@@ -8,8 +8,6 @@ updated: 2015-08-23
 comments: true
 image: /images/wampserver-logo.webp
 image_alt: WampServer logo
-dsq_thread_id:
-  - 1513101928
 categories:
   - PHP
 tags:

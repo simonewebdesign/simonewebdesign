@@ -5,8 +5,6 @@ layout: post
 permalink: /playing-around-with-javascript/
 date: 2012-08-22 12:50:46 +0000
 comments: true
-dsq_thread_id:
-  - 864271737
 categories:
   - JavaScript
 tags:

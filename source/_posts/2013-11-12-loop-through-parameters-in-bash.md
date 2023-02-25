@@ -5,8 +5,6 @@ layout: post
 permalink: /loop-through-parameters-in-bash/
 date: 2013-11-12
 comments: true
-dsq_thread_id:
-  - 1959590963
 categories:
   - Bash
 tags:

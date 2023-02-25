@@ -5,8 +5,6 @@ layout: post
 permalink: /laravel-4-is-out/
 date: 2013-05-29
 comments: true
-dsq_thread_id:
-  - 1334470166
 categories:
   - PHP
 tags:
