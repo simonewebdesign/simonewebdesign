@@ -1,6 +1,6 @@
 self.addEventListener('install', e => {
   e.waitUntil(
-    caches.open('v4').then(cache =>
+    caches.open('v5').then(cache =>
       cache.addAll([
         '/archives/',
         '/projects/',
@@ -17,7 +17,7 @@ self.addEventListener('fetch', e => {
     caches.match(e.request).then(resp => {
       return resp || fetch(e.request).then(response => {
         let responseClone = response.clone()
-        caches.open('v4').then((cache) => {
+        caches.open('v5').then((cache) => {
           cache.put(e.request, responseClone)
         })
 
