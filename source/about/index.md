@@ -11,7 +11,7 @@ footer: true
     <img src="/images/simonewebdesign.png" width="168" height="210" alt="simonewebdesign's avatar" />
 </picture>
 <p>
-<strong>Simone Vittori</strong> is a software engineer originally from <a rel="external" href="https://en.wikipedia.org/wiki/Perugia">Perugia</a>, Italy, but now living in London, England.<br>He's obsessed about code: if he's not writing it, he's probably reading, speaking or dreaming about it.<br>He enjoys coding in many different programming languages, such as <a rel="external" href="https://elixir-lang.org/">Elixir</a>, <a rel="external" href="https://elm-lang.org/">Elm</a>, <a rel="external" href="https://www.ruby-lang.org/">Ruby</a> and <a rel="external" href="https://www.rust-lang.org/">Rust</a>, just to name a few.</p>
+<strong>Simone Vittori</strong> is a software engineer originally from <a rel="external" href="https://en.wikipedia.org/wiki/Perugia">Perugia</a>, Italy, but now living in London, England. He's obsessed about code: if he's not writing it, he's probably reading, speaking or dreaming about it. He enjoys coding in many different programming languages, such as <a rel="external" href="https://elixir-lang.org/">Elixir</a>, <a rel="external" href="https://elm-lang.org/">Elm</a>, <a rel="external" href="https://www.ruby-lang.org/">Ruby</a> and <a rel="external" href="https://www.rust-lang.org/">Rust</a>, just to name a few.</p>
 </div>
 
 <h2>simonewebdesign.it</h2>
