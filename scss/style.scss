@@ -1,7 +1,4 @@
 @import "root";
-
-$border-color: #555;
-
 @import "variables";
 // $blockquote: $type-border !default;
 $sans: "PT Sans", "Helvetica Neue", Arial, sans-serif;
@@ -17,7 +14,6 @@ html {
     background: #f6f6f6;
     font-family: "PT Serif", Georgia, Times, "Times New Roman", serif;
     color: #333;
-    border-top: 3px solid $border-color;
 }
 
 body {
