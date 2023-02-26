@@ -35,6 +35,10 @@
         color: #c9c5be !important; /* important needed because pseudo-classes (:hover) have specificity of 10 */
     }
 
+    body > header a:hover {
+        color: #fff !important;
+    }
+
     #blog-archives article {
         border-bottom: 1px dotted #444 !important;
     }

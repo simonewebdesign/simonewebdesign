@@ -16,8 +16,8 @@ body > header {
         letter-spacing: -1px;
     }
 
-    &:hover {
-        color: #333;
+    a:hover {
+        color: #333 !important;
     }
 
     a:visited {
