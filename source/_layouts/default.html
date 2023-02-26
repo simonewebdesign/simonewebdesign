@@ -2,12 +2,9 @@
 {% include head.html %}
 <body{% if page.body_id %} id="{{ page.body_id }}"{% endif %}>
   <header>
-    <h1 role="banner">
-      <a href="{{ root_url }}/">{{ site.title }}</a>
-    </h1>
+    <a href="{{ root_url }}/" title="Home">{{ site.title }}</a>
+    <nav>{% include navigation.html %}</nav>
   </header>
-
-  <nav>{% include navigation.html %}</nav>
 
   <main>
     {{ content | expand_urls: root_url }}

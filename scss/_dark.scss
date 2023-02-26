@@ -25,12 +25,12 @@
         color: #aaa;
     }
 
-    header + nav {
+    header nav {
         background: rgba(24, 26, 27, .95)/* #181a1b */;
     }
 
-    [role="banner"] a,
-    header + nav a,
+    body > header a,
+    header nav a,
     #blog-archives article a {
         color: #c9c5be !important; /* important needed because pseudo-classes (:hover) have specificity of 10 */
     }
@@ -42,7 +42,6 @@
     pre,
     p code,
     li code,
-    header + nav,
     div.category-index article + article h1 {
         border-color: #3a3a3a;
     }

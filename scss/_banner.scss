@@ -1,12 +1,25 @@
 // The Logo
-[role="banner"] {
-    color: $border-color;
-    font-weight: normal; // inherit;
-    text-align: center;
-    // margin-top: 1em; // exception for the global 1.6em
+body > header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: $sans;
+    color: #555;
+    border-bottom: 2px solid rgba(170, 170, 170, 0.5);
+    max-width: 640px;
+    padding: 0.5rem 0;
+    margin: 2rem auto;
 
-    a,
-    a:hover,
+    > a {
+        font-weight: bold;
+        font-size: 1.4rem;
+        letter-spacing: -1px;
+    }
+
+    &:hover {
+        color: #333;
+    }
+
     a:visited {
         color: inherit;
     }

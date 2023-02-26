@@ -1,6 +1,4 @@
-header + nav {
-    text-align: center;
-    border-bottom: 1px solid rgba(170, 170, 170, 0.5);
+header nav {
     padding: 0.85rem 0;
     font-family: $sans;
 
@@ -20,10 +18,5 @@ header + nav {
     a {
         color: #666;
         text-decoration: none;
-    }
-
-    @media (min-width: 960px) {
-        width: 870px;
-        margin: 0 auto;
     }
 }
