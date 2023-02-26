@@ -9,6 +9,7 @@ published: false
 - Added Twitter, OpenGraph and Schema.org metadata
 - Added link to edit a post on GitHub
 - Added expanding mechanism on hover for code snippets that don't fit in the blog column
+- Revamped the Projects page
 
 
 ### Security and performance

@@ -1,31 +1,31 @@
 -
   title: cindy
   url: https://github.com/simonewebdesign/cindy
-  description: CLI tool for sending newsletters based on a RSS feed.
+  description: CLI tool for sending email newsletters based on a RSS feed.
   languages:
     - Go
--
-  title: carts
-  url: https://github.com/simonewebdesign/carts
-  description: Virtual game cartridges for PICO-8 fantasy console.
-  languages:
-    - Lua
--
-  title: minitalk
-  url: https://github.com/simonewebdesign/minitalk
-  description: The most minimalist presentation software ever made.
-  languages:
-    - JavaScript
--
-  title: elm new
-  url: https://github.com/simonewebdesign/elm-new
-  description: CLI tool, generates a project scaffolding for rapid prototyping of Elm apps.
-  languages:
-    - Elm
+# -
+#   title: carts
+#   url: https://github.com/simonewebdesign/carts
+#   description: Virtual game cartridges for PICO-8 fantasy console.
+#   languages:
+#     - Lua
+# -
+#   title: minitalk
+#   url: https://github.com/simonewebdesign/minitalk
+#   description: The most minimalist presentation software ever made.
+#   languages:
+#     - JavaScript
+# -
+#   title: elm new
+#   url: https://github.com/simonewebdesign/elm-new
+#   description: CLI tool, generates a project scaffolding for rapid prototyping of Elm apps.
+#   languages:
+#     - Elm
 -
   title: pubsub
   url: https://github.com/simonewebdesign/elixir_pubsub
-  description: Publish/Subscribe utility module.
+  description: Pub/Sub utility module, to ease the burden of communication between processes.
   languages:
     - Elixir
 -
@@ -40,87 +40,87 @@
   description: A simple load balancer written in Node.js.
   languages:
     - JavaScript
+# -
+#   title: elm timer
+#   url: https://github.com/simonewebdesign/elm-timer
+#   description: A clock UI component written in Elm.
+#   languages:
+#     - Elm
 -
-  title: elm timer
-  url: https://github.com/simonewebdesign/elm-timer
-  description: A clock UI component written in Elm.
-  languages:
-    - Elm
--
-  title: elm double folding pattern
+  title: credit card demo
   url: https://github.com/simonewebdesign/elm-double-folding-pattern
   description: A demo credit card form built using an innovative architectural pattern.
   languages:
     - Elm
--
-  title: elm maru
-  url: https://github.com/simonewebdesign/elm-maru
-  description: A web application with Elixir in the backend and Elm in the frontend.
-  languages:
-    - Elixir
-    - Elm
--
-  title: websocket
-  url: https://github.com/simonewebdesign/websocket-demo
-  description: An implementation of the official WebSocket API using Node.js.
-  languages:
-    - JavaScript
--
-  title: phoenix elm users
-  url: https://github.com/simonewebdesign/phoenix-elm-users
-  description: A classic CRUD user management application, written in Elixir and Elm.
-  languages:
-    - Elixir
-    - Elm
--
-  title: elm simon
-  url: https://github.com/simonewebdesign/elm-simon
-  description: Simon memory game in Elm.
-  languages:
-    - Elm
--
-  title: elm github api
-  url: https://github.com/simonewebdesign/elm-github-api
-  description: Get user information from GitHub's API.
-  languages:
-    - Elm
+# -
+#   title: elm maru
+#   url: https://github.com/simonewebdesign/elm-maru
+#   description: A web application with Elixir in the backend and Elm in the frontend.
+#   languages:
+#     - Elixir
+#     - Elm
+# -
+#   title: websocket
+#   url: https://github.com/simonewebdesign/websocket-demo
+#   description: An implementation of the official WebSocket API using Node.js.
+#   languages:
+#     - JavaScript
+# -
+#   title: phoenix elm users
+#   url: https://github.com/simonewebdesign/phoenix-elm-users
+#   description: A classic CRUD user management application, written in Elixir and Elm.
+#   languages:
+#     - Elixir
+#     - Elm
+# -
+#   title: elm simon
+#   url: https://github.com/simonewebdesign/elm-simon
+#   description: Simon memory game in Elm.
+#   languages:
+#     - Elm
+# -
+#   title: elm github api
+#   url: https://github.com/simonewebdesign/elm-github-api
+#   description: Get user information from GitHub's API.
+#   languages:
+#     - Elm
 -
   title: pong
   url: https://github.com/simonewebdesign/pong
   description: The classic Atari game, playable in the browser.
   languages:
     - JavaScript
--
-  title: npm strap
-  url: https://github.com/simonewebdesign/npm-strap
-  description: An npm frontend project starting template, using npm itself as a build tool.
-  languages:
-    - JavaScript
+# -
+#   title: npm strap
+#   url: https://github.com/simonewebdesign/npm-strap
+#   description: An npm frontend project starting template, using npm itself as a build tool.
+#   languages:
+#     - JavaScript
 -
   title: frontend env vars
   url: https://github.com/simonewebdesign/frontend-env-vars
-  description: Environment variables in the browser.
+  description: Environment variables in the browser, with a simple Bash script.
   languages:
     - Bash
     - JavaScript
--
-  title: fushi
-  url: https://github.com/simonewebdesign/Fushi
-  description: A framework for building snappy websites.
-  languages:
-    - PHP
--
-  title: expression parser
-  url: https://github.com/simonewebdesign/expression-parser
-  description: A command-line Ruby algebraic equation tokenizer / solver.
-  languages:
-    - Ruby
--
-  title: laravel rest
-  url: https://github.com/simonewebdesign/Laravel-REST
-  description: Sample implementation of Ruby on Rails's RESTful architecture, built in PHP.
-  languages:
-    - PHP
+# -
+#   title: fushi
+#   url: https://github.com/simonewebdesign/Fushi
+#   description: A framework for building snappy websites.
+#   languages:
+#     - PHP
+# -
+#   title: expression parser
+#   url: https://github.com/simonewebdesign/expression-parser
+#   description: A command-line Ruby algebraic equation tokenizer / solver.
+#   languages:
+#     - Ruby
+# -
+#   title: laravel rest
+#   url: https://github.com/simonewebdesign/Laravel-REST
+#   description: Sample implementation of Ruby on Rails's RESTful architecture, built in PHP.
+#   languages:
+#     - PHP
 -
   title: newsletter
   url: https://github.com/simonewebdesign/newsletter
@@ -133,30 +133,30 @@
   description: Chat server and client built with Node, Socket.io, Express and MongoDB.
   languages:
     - JavaScript
--
-  title: stackoverflow users search
-  url: https://github.com/simonewebdesign/stackoverflow-users-search
-  description: Rails app that uses StackOverflow's API to search for users.
-  languages:
-    - Ruby
+# -
+#   title: stackoverflow users search
+#   url: https://github.com/simonewebdesign/stackoverflow-users-search
+#   description: Rails app that uses StackOverflow's API to search for users.
+#   languages:
+#     - Ruby
 -
   title: game of life
   url: https://github.com/simonewebdesign/game-of-life
   description: John Conway's Game of Life, written in DOM JavaScript.
   languages:
     - JavaScript
--
-  title: rabbit amqp
-  url: https://github.com/simonewebdesign/rabbitmq-amqp-demo
-  description: Elixir Client that listens for RabbitMQ messages and saves them in OrientDB.
-  languages:
-    - Elixir
--
-  title: todolist
-  url: https://github.com/todolist/todolist
-  description: A simple To-Do list for Android, also on Google Play.
-  languages:
-    - Java
+# -
+#   title: rabbit amqp
+#   url: https://github.com/simonewebdesign/rabbitmq-amqp-demo
+#   description: Elixir Client that listens for RabbitMQ messages and saves them in OrientDB.
+#   languages:
+#     - Elixir
+# -
+#   title: todolist
+#   url: https://github.com/todolist/todolist
+#   description: A simple To-Do list for Android, also on Google Play.
+#   languages:
+#     - Java
 # -
 #   title: Mt2-CMS
 #   url: https://github.com/simonewebdesign/Mt2-CMS
