@@ -1,5 +1,5 @@
 $solarized: light !default;
-$pre-bg: default !default;
+$pre-bg: #fff !default;
 
 $base03:          #002b36 !default; //darkest blue
 $base02:          #073642 !default; //dark blue
@@ -19,17 +19,21 @@ $base3:           default !default;
   @if $base2 == default { $base2: #e5e5e5; } // light gray
   @if $base3 == default { $base3: #fbfbfb; } // white
 }
-$solar-yellow:    #b58900 !default;
-$solar-yellow-d:  #6d5200 !default;
-$solar-orange:    #cb4b16 !default;
-$solar-orange-d:  #9c3104 !default;
-$solar-red:       #dc322f !default;
-$solar-magenta:   #d33682 !default;
-$solar-violet:    #6c71c4 !default;
-$solar-blue:      #268bd2 !default;
-$solar-blue-d:    #195a88 !default;
-$solar-cyan:      #2aa198 !default;
-$solar-green:     #859900 !default;
+
+@media (prefers-color-scheme: dark) {
+  $solarized: dark !important;
+}
+
+// WCAG AAA compliant on a white background
+// These are still referenced in mix() function in _code.scss
+// $solar-yellow:  #6f5400 !default;
+// $solar-orange:  #9a3911 !default;
+$solar-red:     #9a3911 !default;
+// $solar-magenta: #9f2962 !default;
+// $solar-violet:  #4f538f !default;
+// $solar-blue:    #195c8c !default;
+// $solar-cyan:    #1a625d !default;
+$solar-green:   #525e00 !default;
 
 @if $solarized == light {
   // Flipping the colors, This is the magic of Solarized.

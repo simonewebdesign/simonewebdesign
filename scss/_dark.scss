@@ -21,6 +21,10 @@
         @include link-colors(#7abbeb, $hover: #40acfe, $focus: #40acfe, $visited: #d683ed, $active: #6dc0fe);
     }
 
+    time {
+        color: #aaa;
+    }
+
     header + nav {
         background: rgba(24, 26, 27, .95)/* #181a1b */;
     }
@@ -29,6 +33,10 @@
     header + nav a,
     #blog-archives article a {
         color: #c9c5be !important; /* important needed because pseudo-classes (:hover) have specificity of 10 */
+    }
+
+    #blog-archives article {
+        border-bottom: 1px dotted #444 !important;
     }
 
     pre,

@@ -1,0 +1,33 @@
+/*
+:root {
+    --bg: #f6f6f6;
+    --primary: #333;
+    --border: #555;
+}
+*/
+
+:root {
+  // WCAG AAA compliant on a white background
+  --solar-yellow:  #6f5400;
+  --solar-orange:  #9a3911;
+  --solar-red:     #9a3911;
+  --solar-magenta: #9f2962;
+  --solar-violet:  #4f538f;
+  --solar-blue:    #195c8c;
+  --solar-cyan:    #1a625d;
+  --solar-green:   #525e00;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    // Lighter colors, not WCAG AAA compliant
+    --solar-yellow:    #b58900;
+    --solar-orange:    #cb4b16;
+    --solar-red:       #dc322f;
+    --solar-magenta:   #d33682;
+    --solar-violet:    #6c71c4;
+    --solar-blue:      #268bd2;
+    --solar-cyan:      #2aa198;
+    --solar-green:     #859900;
+  }
+}
