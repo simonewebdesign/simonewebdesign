@@ -159,6 +159,14 @@ p, li {
   }
 }
 
+// The expanding mechanism
+@media (min-width: 768px) {
+  div.highlighter-rouge:hover {
+    width: min-content;
+    min-width: 100%;
+  }
+}
+
 $solar-scroll-bg: rgba(#fff, .15);
 $solar-scroll-thumb: rgba(#fff, .2);
 @if $solarized == light {
