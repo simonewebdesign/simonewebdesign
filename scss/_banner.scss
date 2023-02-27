@@ -12,7 +12,6 @@ body > header {
 
     > a {
         font-weight: bold;
-        font-size: 1.4rem;
         letter-spacing: -1px;
     }
 
@@ -26,5 +25,11 @@ body > header {
 
     @media (min-width: 680px) {
         margin: 2rem auto;
+    }
+}
+
+@media (min-width: 365px) {
+    body > header > a {
+        font-size: 1.4rem;
     }
 }
