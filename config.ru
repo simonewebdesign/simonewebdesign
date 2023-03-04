@@ -9,6 +9,11 @@ class SinatraStaticServer < Sinatra::Base
     redirect '/', 301
   end
 
+  # Redirect /blog/:path to /:path/ (with a trailing slash)
+  get '/blog/*' do
+    redirect "/#{params['splat'][0]}/", 301
+  end
+
   # Redirects /posts, posts/, posts/n, posts/n/ to home page
   # This is for legacy reasons, because those pages are
   # still indexed by Google to date, and ideally the bot

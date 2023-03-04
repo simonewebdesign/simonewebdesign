@@ -34,6 +34,10 @@ if [[ "$(curl https://www.simonewebdesign.it --silent -i)" != *"www"* ]]; then o
 echo -n Redirects from http www to https non-www
 if [[ "$(curl http://www.simonewebdesign.it --silent -i)" =~ https://simonewebdesign.it ]]; then ok; else fail; fi
 
+# Old redirects from /blog
+echo -n Redirects from /blog/:path to /:path/
+if [[ "$(curl -I --silent $host/blog/foo)" != *"blog"* ]]; then ok; else fail; fi
+
 # Home page and core assets
 test "" "Simone Web Design"
 test stylesheets/style.css "html\{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;background:#f6f6f6"
@@ -109,15 +113,6 @@ test unsub 301
 test unsub/ 301
 # Disabled because it sends me an actual email!
 # test 'unsub?email=test@example' "You have been unsubscribed successfully."
-
-# Old redirects from /blog
-# The actual redirect from /blog to / happens on Cloudflare so it's fine not to test it here.
-# There is also the redirect from http to https happening at that lavel.
-
-# This one tests the "redirect to slash" works correctly also for old /blog links.
-# Unfortunately I have to disable it because it doesn't work consistently between localhost and prod.
-# (again because the redirect happens at cloudflare level. But it's fine in prod, and not important anyway.)
-# test blog/playing-around-with-javascript "/blog/playing-around-with-javascript/"
 
 # More legacy redirects - ideally those should all redirect to the blog archives page
 test posts 301
