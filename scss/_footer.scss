@@ -5,15 +5,19 @@ main + footer {
     a {
         text-decoration: none;
 
+        &:nth-child(2) svg {
+            vertical-align: super;
+        }
+
         &:hover svg {
-            transform: scale(1.05);
+            transform: translateY(-3px);
             opacity: 1;
         }
     }
 
     svg {
-        transition: transform 0.15s, opacity 0.15s;
-        opacity: 0.95;
+        transition: transform .2s, opacity .2s;
+        opacity: .9;
         height: 3.5rem;
         padding: 0 1.5rem;
     }
