@@ -12,6 +12,12 @@ self.addEventListener('install', e => {
   )
 })
 
+self.addEventListener('activate', e => {
+  ['v1','v2','v3','v4','v5'].forEach(c => {
+    caches.delete(c)
+  })
+})
+
 self.addEventListener('fetch', e => {
   e.respondWith(
     caches.match(e.request).then(resp => {
