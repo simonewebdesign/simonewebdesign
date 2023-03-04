@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 source 'https://rubygems.org'
-ruby File.read(File.join(__dir__, '.ruby-version')).strip
+ruby "~> #{File.read(".ruby-version").strip}"
 
 group :development do
   gem 'compass', github: 'simonewebdesign/compass'
