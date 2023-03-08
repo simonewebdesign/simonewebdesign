@@ -138,4 +138,4 @@ sentence.split.reverse.join " "
 
 Now, can you see the beauty of Ruby? It's just... *magic*.
 
-<iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/NLQzSZmxJLQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe loading="lazy" width="100%" height="315" src="https://www.youtube-nocookie.com/embed/NLQzSZmxJLQ" title="Queen - A kind of Magic" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
