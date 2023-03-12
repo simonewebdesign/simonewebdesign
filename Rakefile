@@ -34,6 +34,30 @@ if (/cygwin|mswin|mingw|bccwin|wince|emx/ =~ RUBY_PLATFORM) != nil
   `chcp 65001`
 end
 
+minify_cmd = "node_modules/.bin/html-minifier \
+--case-sensitive \
+--collapse-boolean-attributes \
+--collapse-whitespace \
+--decode-entities \
+--file-ext html \
+--minify-css true \
+--minify-js true \
+--process-scripts application/ld+json \
+--remove-attribute-quotes \
+--remove-comments \
+--remove-empty-attributes \
+--remove-empty-elements \
+--remove-optional-tags \
+--remove-redundant-attributes \
+--remove-script-type-attributes \
+--remove-style-link-type-attributes \
+--sort-attributes \
+--sort-class-name \
+--trim-custom-fragments \
+--input-dir public \
+--output-dir public
+"
+
 #######################
 # Working with Jekyll #
 #######################
@@ -49,7 +73,7 @@ task :generate do
     system "node_modules/.bin/inline-stylesheets #{f} #{f}"
   end
   puts '---> Minifying html/css/js with html-minifier...'
-  system "node_modules/.bin/html-minifier --file-ext html --case-sensitive --collapse-boolean-attributes --collapse-whitespace --minify-css true --minify-js true --remove-attribute-quotes --remove-comments --remove-empty-attributes --remove-empty-elements --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-style-link-type-attributes --remove-tag-whitespace --sort-attributes --sort-class-name --trim-custom-fragments --use-short-doctype --input-dir public --output-dir public"
+  system minify_cmd
 end
 
 desc 'Watch the site and regenerate when it changes'
