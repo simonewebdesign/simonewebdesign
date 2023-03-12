@@ -1,6 +1,6 @@
 {% capture date %}{{ page.date }}{{ post.date }}{% endcapture %}
 {% capture date_formatted %}
-  <time>
+  <time datetime="{{ date | datetime | date_to_xmlschema }}" pubdate>
     {{ date | date_to_string: site.date_format }}
   </time>
 {% endcapture %}
@@ -8,7 +8,7 @@
 
 {% capture updated %}{{ page.updated }}{{ post.updated }}{% endcapture %}
 {% capture updated_formatted %}
-  <time>
+  <time datetime="{{ updated | datetime | date_to_xmlschema }}">
     {{ updated | date_to_string: site.date_format }}
   </time>
 {% endcapture %}
