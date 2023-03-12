@@ -59,14 +59,18 @@
         background-color: #0e1010 !important;
     }
 
-    [name="subscribe"] input {
-        border-color: #2f2f2f;
-        background-color: rgba(44,44,44,.2);
-        color: white;
+    // [name="subscribe"] input {
+    //     border-color: #2f2f2f;
+    //     background-color: rgba(44,44,44,.2);
+    //     color: white;
 
-        &:focus {
-            background-color: white;
-            color: black;
-        }
+    //     &:focus {
+    //         background-color: white;
+    //         color: black;
+    //     }
+    // }
+
+    .about-intro picture {
+        background-color: rgba(145,145,145,.1) !important;
     }
 }
