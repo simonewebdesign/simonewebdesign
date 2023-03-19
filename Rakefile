@@ -51,6 +51,7 @@ minify_cmd = "node_modules/.bin/html-minifier \
 --remove-redundant-attributes \
 --remove-script-type-attributes \
 --remove-style-link-type-attributes \
+--remove-tag-whitespace \
 --sort-attributes \
 --sort-class-name \
 --trim-custom-fragments \
