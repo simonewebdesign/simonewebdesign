@@ -212,7 +212,7 @@ end
 
 desc 'Deploy to Fly.io'
 task :deploy_fly do
-  system 'flyctl deploy'
+  system 'flyctl version update; flyctl deploy'
 end
 
 # Ideally this would be ran before deploying to prod,
