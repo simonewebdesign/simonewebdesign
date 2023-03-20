@@ -11,23 +11,22 @@ footer: true
     <img src="/images/simonewebdesign.png" width="168" height="210" alt="simonewebdesign's avatar" />
 </picture>
 <p>
-<strong>Simone Vittori</strong> is a software engineer originally from <a rel="external" href="https://en.wikipedia.org/wiki/Perugia">Perugia</a>, Italy, but now living in London, England. He's obsessed about code: if he's not writing it, he's probably reading, speaking or dreaming about it. He enjoys coding in many different programming languages, such as <a rel="external" href="https://elixir-lang.org/">Elixir</a>, <a rel="external" href="https://elm-lang.org/">Elm</a>, <a rel="external" href="https://www.ruby-lang.org/">Ruby</a> and <a rel="external" href="https://www.rust-lang.org/">Rust</a>, just to name a few.</p>
+<strong>Simone Vittori</strong> is a programmer originally from <a rel="external" href="https://en.wikipedia.org/wiki/Perugia">Perugia</a>, Italy, but now living in London, England. He's obsessed about code: if he's not writing it, he's probably reading, speaking or dreaming about it. He's a polyglot and enjoys coding in many different languages, such as <a rel="external" href="https://www.ruby-lang.org/">Ruby</a>, <a rel="external" href="https://elixir-lang.org/">Elixir</a>, <a rel="external" href="https://elm-lang.org/">Elm</a> and <a rel="external" href="https://gleam.run/">Gleam</a>, just to name a few. He loves pizza, too.</p>
 </div>
 
-<h2>simonewebdesign.it</h2>
+## {{ site.title }}.it
 
-This is my personal website, founded in 2010. Became also a blog in 2012.
-
-<!--It went through a bit of a journey since then: it started as a humble personal space, made in Adobe Flash(!). A couple of years later I decided to make it a Wordpress blog, only to migrate it to Octopress in 2014. Eventually I settled with Jekyll, though who knows what the next iteration will bring?-->
+This site was founded in 2010, back when Adobe Flash and Internet Explorer 6 were still a thing. It went through a few iterations since then, going from a humble personal space to a WordPress blog, until I settled with [Octopress]({% post_url 2014-05-13-bye-bye-wordpress-welcome-octopress %}), a static site generator based on <a rel="external" href="https://jekyllrb.com/">Jekyll</a>.
 
 Fun facts:
 
-- **It's been made with <a rel="external" href="http://octopress.org/">Octopress</a>**, a static site generator based on <a rel="external" href="https://jekyllrb.com/">Jekyll</a>.
+- **It is free and open source.** It's my way of giving back to the <a rel="external" href="https://indieweb.org/">indie web</a>. It feels good <a rel="external" href="https://github.com/simonewebdesign/simonewebdesign">to share</a>, and it's also <a rel="external" href="https://www.gnu.org/philosophy/fs-and-sustainable-development.html">the right thing to do</a>.
 
 - **There is no backend nor database.** All pages are actually just HTML & CSS, resulting in a super fast website that can't be hacked.
 
-- **No advertising either.**
+- **No advertising or tracking either.**
 I write blog posts so that I don't forget stuff I learn and because I enjoy sharing my work with others.
 
-<h2>Let's get in touch!</h2>
-<p>Find me on Twitter (<a href="https://twitter.com/simonewebdesign" title="simonewebdesign on Twitter" rel="external">@simonewebdesign</a>) and <a rel="external" href="https://github.com/simonewebdesign">GitHub</a>.<br>Also feel free to <a href="mailto:hello@simonewebdesign.it?subject=Hey Simone!">email me</a>. Here's my <a href="/public-key.asc">GPG key</a>.</p>
+## Let's get in touch!
+
+Find me on social media here below, or just [send me an email](mailto:hello@simonewebdesign.it?subject=Hey Simone!).
