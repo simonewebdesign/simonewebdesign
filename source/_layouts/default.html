@@ -11,11 +11,15 @@
   </main>
 
 {% unless page.footer == false %}
-  <footer>
+  <footer class="footer-default">
     {% include comments.html %}
     {% include footer.html %}
   </footer>
 {% endunless %}
+
+{% if page.footer_thin %}
+  {% include footer_thin.html %}
+{% endif %}
 
   <script>
     if (!navigator.serviceWorker.controller) {

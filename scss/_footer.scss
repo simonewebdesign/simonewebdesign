@@ -1,4 +1,4 @@
-main + footer {
+.footer-default {
     text-align: center;
     margin: 3rem 0;
 
@@ -39,4 +39,12 @@ main + footer {
     @media (min-width: 480px) {
         gap: 1.5rem;
     }
+}
+
+.footer-thin {
+    margin: 0 auto;
+}
+
+.footer-thin .footer-social {
+    clear: both; // clears floating Blog Archives link
 }
