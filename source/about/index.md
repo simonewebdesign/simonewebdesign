@@ -14,7 +14,7 @@ footer: true
 <strong>Simone Vittori</strong> is a programmer originally from <a rel="external" href="https://en.wikipedia.org/wiki/Perugia">Perugia</a>, Italy, but now living in London, England. He's obsessed about code: if he's not writing it, he's probably reading, speaking or dreaming about it. He enjoys coding in many different languages, such as <a rel="external" href="https://www.ruby-lang.org/">Ruby</a>, <a rel="external" href="https://elixir-lang.org/">Elixir</a>, <a rel="external" href="https://elm-lang.org/">Elm</a> and <a rel="external" href="https://gleam.run/">Gleam</a>, just to name a few. He loves pizza, too — without pineapple, though.</p>
 </div>
 
-## {{ site.title }}.it
+## {{ site.domain }}
 
 I founded this site in 2010, back when Adobe Flash and Internet Explorer 6 were still a thing. It went through a few iterations since then, going from a humble personal space to a WordPress blog, until I settled with [Octopress]({% post_url 2014-05-13-bye-bye-wordpress-welcome-octopress %}), a static site generator based on <a rel="external" href="https://jekyllrb.com/">Jekyll</a>.
 
