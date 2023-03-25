@@ -10,13 +10,17 @@
         border: 0;
         margin-left: 0;
         margin-right: 0;
-        margin-bottom: -35px;
+        margin-bottom: -1.5rem;
         padding: .9rem;
         line-height: 1.75;
         text-align: center;
         font-style: normal;
         background: rgba(0,0,0,0.04);
         border-radius: .5rem;
+
+        @media (min-width: 768px) {
+            margin-bottom: 0;
+        }
     }
 
     article + article {
