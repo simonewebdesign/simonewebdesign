@@ -1,36 +1,32 @@
 ---
 title: Loop through parameters in Bash
-description: "Iterating over the arguments in a Bash script is way simpler than you might expect: for WORD; do; echo $WORD; done"
+description: "Iterating over the arguments in a Bash script is simpler than you might expect: for WORD; do; echo $WORD; done"
 layout: post
 permalink: /loop-through-parameters-in-bash/
 date: 2013-11-12
+updated: 2023-03-25
 comments: true
 categories:
   - Bash
-tags:
-  - arguments
-  - bash
-  - each
-  - input
-  - iterate
-  - loop
-  - over
-  - parameters
-  - script
-  - shell
-  - through
 ---
 
-<p>
-  Iterating over the arguments in a Bash script is way simpler than you might expect.<br />See this gist:
-</p>
+Iterating over the arguments in a Bash script is simpler than you might expect:
 
-{% gist 5325630 %}
+```bash
+for WORD; do
+  echo $WORD
+done
+```
 
-<p>
-  In the snippet above, <code>"$@"</code> represents all the parameters. The <code>echo "$i"</code> shall obviously print each argument on a separate line.
-</p>
+Another way is:
 
-<p>
-  It&#8217;s always a good idea to wrap parameters within quotes, because you&#8217;d never know when a parameter might contain spaces or whatever.
-</p>
+```bash
+for i in "$@"
+do
+  echo "$i"
+done
+```
+
+In the snippet above, `"$@"` represents all the parameters. The `echo "$i"` prints each argument on a separate line.
+
+It's always a good idea to wrap variables within quotes, because they could contain spaces or whatever.
