@@ -3,6 +3,8 @@
 require 'bundler/setup'
 require 'sinatra/base'
 
+EXTENSIONS = /\.(mp4|gif|jpg|jpeg|png|webp|ico|css|js|json|xml|asc|txt|otf|eot|svg|ttf|html|htm|php|cgi)$/
+
 class SinatraStaticServer < Sinatra::Base
   # Redirect /blog to /
   get '/blog/?' do
@@ -13,6 +15,11 @@ class SinatraStaticServer < Sinatra::Base
   get '/blog/*' do
     slug = params['splat'][0]
     slug = slug.chomp('/') if slug.end_with?('/')
+
+    if slug =~ EXTENSIONS
+      return send_sinatra_file(request.path) { 404 }
+    end
+
     redirect "/#{slug}/", 301
   end
 
@@ -74,7 +81,7 @@ class SinatraStaticServer < Sinatra::Base
   # Except for some file extensions
   # https://stackoverflow.com/a/11927449
   get %r{(/.*[^\/])} do
-    if params[:captures].first =~ /\.(mp4|gif|jpg|jpeg|png|webp|ico|css|js|json|xml|asc|txt|otf|eot|svg|ttf|html|htm|php|cgi)$/
+    if params[:captures].first =~ EXTENSIONS
       return send_sinatra_file(request.path) { 404 }
     end
 
