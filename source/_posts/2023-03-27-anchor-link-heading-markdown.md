@@ -67,6 +67,6 @@ h3:hover > a::after {
 
 I'm unsure what's best practice here, but it just seems very convenient to be able to link to any section of a document in general. Ultimately I don't think it matters too much, but MDN makes the whole heading a link, and again, the symbol at the end of it is just presentational and should ideally be hidden for accessibility.
 
-## [A future optimization](a-future-optimization)
+## [A future optimization](#a-future-optimization)
 
 It would be cool to be able to keep writing regular headings - i.e. if `## My Heading` would automatically turn into a link. I think this could be done by configuring Kramdown, or maybe via a plugin. If you find a way to enable this, please let me know in the comments below!
