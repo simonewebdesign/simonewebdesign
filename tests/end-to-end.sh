@@ -38,6 +38,9 @@ if [[ "$(curl http://www.simonewebdesign.it --silent -i)" =~ https://simonewebde
 echo -n Redirects from /blog/:path to /:path/
 if [[ "$(curl -I --silent $host/blog/foo)" != *"blog"* ]]; then ok; else fail; fi
 
+echo -n Redirects from /blog/:path/ to /:path/ do not have an extra trailing slash
+if [[ "$(curl -I --silent $host/blog/foo/)" != *"foo//"* ]]; then ok; else fail; fi
+
 # Home page and core assets
 test "" "Simone Web Design"
 test stylesheets/style.css "html\{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;background:#f6f6f6"

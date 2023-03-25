@@ -11,7 +11,9 @@ class SinatraStaticServer < Sinatra::Base
 
   # Redirect /blog/:path to /:path/ (with a trailing slash)
   get '/blog/*' do
-    redirect "/#{params['splat'][0]}/", 301
+    slug = params['splat'][0]
+    slug = slug.chomp('/') if slug.end_with?('/')
+    redirect "/#{slug}/", 301
   end
 
   # Redirects /posts, posts/, posts/n, posts/n/ to home page
