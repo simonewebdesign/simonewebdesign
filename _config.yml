@@ -4,7 +4,7 @@ title: simonewebdesign
 author: Simone Vittori
 description: 'Blog about software development. Tips and tricks on JavaScript, Ruby, Elixir, Elm, and more. Simone Vittori is the author.'
 date_format: ordinal
-subscribe_rss: https://feeds.feedburner.com/simonewebdesign
+subscribe_rss: /atom.xml
 permalink: /:title/
 source: source
 destination: public
