@@ -4,7 +4,7 @@ title: "15 CSS Best Practices for Beginners"
 date: 2014-10-26 18:36:24 +0000
 comments: true
 categories: CSS
-published: true
+published: false
 ---
 
 Talk about maintainability. is the focus.
