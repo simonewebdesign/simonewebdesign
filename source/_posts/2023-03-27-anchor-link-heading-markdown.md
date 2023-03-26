@@ -20,6 +20,8 @@ In Markdown, it is equivalent to:
 ## [My Heading](#my-heading)
 ```
 
+<!--more-->
+
 This works because [Kramdown](https://jekyllrb.com/docs/configuration/markdown/#kramdown), the default Markdown renderer for Jekyll, automatically adds `id` attributes, using a _slugified_ version of your heading text. So, for example:
 
 ```md
