@@ -2,7 +2,7 @@
 ---
 self.addEventListener('install', e => {
   e.waitUntil(
-    caches.open('v8').then(cache =>
+    caches.open('20230401').then(cache =>
       cache.addAll([
 '/',
 '/archives/',
