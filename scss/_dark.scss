@@ -17,6 +17,13 @@
         color: inherit !important;
     }
 
+    .entry-content {
+        > h2 > a,
+        > h3 > a {
+            color: #c9c5be;
+        }
+    }
+
     a {
         @include link-colors(#7abbeb, $hover: #40acfe, $focus: #40acfe, $visited: #d683ed, $active: #6dc0fe);
     }

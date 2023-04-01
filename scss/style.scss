@@ -37,11 +37,6 @@ main,
     margin-top: 1.6em;
 }
 
-h2:hover > a::after,
-h3:hover > a::after {
-    content: ' #';
-}
-
 header {
     text-align: center;
 }

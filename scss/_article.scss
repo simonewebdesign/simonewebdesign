@@ -28,11 +28,28 @@ h2 code {
 
 .entry-content {
     margin: 2rem 8px 3rem;
+
+    > h2 > a,
+    > h3 > a {
+        text-decoration: none;
+        color: #333;
+    }
+
+    > h2:hover > a::after,
+    > h3:hover > a::after {
+        content: ' #';
+    }
 }
 
 .related {
     margin-top: 2rem;
+
+    + h2 a {
+        text-decoration: none;
+    }
 }
+
+
 
 .github-edit {
     font-family: $sans;
