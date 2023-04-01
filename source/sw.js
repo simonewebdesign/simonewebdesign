@@ -12,19 +12,11 @@ self.addEventListener('install', e => {
   )
 })
 
-self.addEventListener('fetch', e => {
-  e.respondWith(
-    caches.match(e.request).then(resp => {
-      return resp || fetch(e.request).then(response => {
-        let responseClone = response.clone()
-        caches.open('v8').then((cache) => {
-          cache.put(e.request, responseClone)
-        })
-
-        return response
-      }).catch(() =>
-        caches.match('/offline/')
-      )
-    })
+self.addEventListener('fetch', event => {
+  event.respondWith(
+    caches.match(event.request)
+    .then(res =>
+      res || fetch(event.request)
+    )
   )
 })
