@@ -8,6 +8,7 @@ self.addEventListener('install', e => {
 '/archives/',
 '/projects/',
 '/about/',
+'/offline/',
 '/images/simonewebdesign.webp',
 '/categories/javascript/',
 '/categories/ruby/',
@@ -30,6 +31,8 @@ self.addEventListener('install', e => {
 self.addEventListener('fetch', event => {
   event.respondWith(
     caches.match(event.request)
-    .then(res => res || fetch(event.request))
+    .then(res =>
+      res || fetch(event.request).catch(() => caches.match('/offline/'))
+    )
   )
 })
