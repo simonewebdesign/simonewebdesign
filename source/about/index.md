@@ -10,7 +10,7 @@ footer: true
     <img src="/images/simonewebdesign.png" width="168" height="210" alt="simonewebdesign's avatar" />
 </picture>
 <p>
-<strong>Simone Vittori</strong> is a programmer originally from <a rel="external" href="https://en.wikipedia.org/wiki/Perugia">Perugia</a>, Italy, but now living in London, England. He's obsessed about code: if he's not writing it, he's probably reading, speaking or dreaming about it. He enjoys coding in many different languages, such as <a rel="external" href="https://www.ruby-lang.org/">Ruby</a>, <a rel="external" href="https://elixir-lang.org/">Elixir</a>, <a rel="external" href="https://elm-lang.org/">Elm</a> and <a rel="external" href="https://gleam.run/">Gleam</a>, just to name a few. He loves pizza, too — without pineapple, though.</p>
+<strong>Simone Vittori</strong> is a programmer originally from <a rel="external" href="https://en.wikipedia.org/wiki/Perugia">Perugia</a>, Italy, but now living in London, England. He's obsessed about code: if he's not writing it, he's probably reading, speaking or dreaming about it. He enjoys coding in many different languages, such as <a rel="external" href="https://www.ruby-lang.org/">Ruby</a>, <a rel="external" href="https://elixir-lang.org/">Elixir</a>, <a rel="external" href="https://elm-lang.org/">Elm</a> and <a rel="external" href="https://gleam.run/">Gleam</a>, just to name a few. He loves pizza, just not with pineapple.</p>
 </div>
 
 ## {{ site.domain }}
