@@ -187,9 +187,9 @@ task :integrate do
   FileUtils.mv Dir.glob("#{source_dir}/#{stash_dir}/*.*"), "#{source_dir}/#{posts_dir}/"
 end
 
-desc 'Clean out caches: .pygments-cache, .gist-cache, .sass-cache'
+desc 'Clean out build and caches'
 task :clean do
-  rm_rf ['.pygments-cache/**', '.gist-cache/**', '.sass-cache/**', 'source/stylesheets/**']
+  rm_rf ['public', '.pygments-cache/**', '.gist-cache/**', '.sass-cache/**', 'source/stylesheets/**']
 end
 
 
