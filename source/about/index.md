@@ -19,7 +19,7 @@ I founded this site in 2010, back when Adobe Flash and Internet Explorer 6 were 
 
 Fun facts:
 
-- **It is free and open source.** It's my way of giving back to the <a rel="external" href="https://indieweb.org/">indie web</a>. It feels good <a rel="external" href="https://github.com/simonewebdesign/simonewebdesign">to share</a>, and it's also <a rel="external" href="https://www.gnu.org/philosophy/fs-and-sustainable-development.html">the right thing to do</a>.
+- **It is free and open source.** It's my way of giving back to the <a rel="external" href="https://indieweb.org/">indie web</a>. It feels good <a rel="external" href="https://github.com/simonewebdesign/simonewebdesign">to share</a>, and it's <a rel="external" href="https://www.gnu.org/philosophy/fs-and-sustainable-development.html">the right thing to do</a>.
 
 - **There is no backend nor database.** All pages are actually just HTML & CSS, resulting in a super fast website that can't be hacked.
 
