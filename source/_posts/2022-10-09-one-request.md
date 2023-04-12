@@ -4,6 +4,7 @@ title: One request
 description: A journey through painstakingly optimizing a blog's performance
 permalink: /1req/
 date: 2022-10-09
+updated: 2023-04-12
 ---
 
 > In an era where 95% of sites are bloated with cookie banners and behavioral tracking scripts, here's a refreshing approach to web development.
@@ -134,11 +135,11 @@ I don't actually provide PT Serif, however. If your machine happens to have that
 
 ### The JavaScript
 
-I waited until the end to say this, because you probably wouldn't have believed me, but **this site doesn't have any JavaScript**, the only exception being made for the [ServiceWorker](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API):
+I waited until the end to say this, because you probably wouldn't have believed me, but **this site doesn't have any JavaScript**, the only exception being made for the [ServiceWorker](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API) registration:
 
 ```js
 <script>
-  navigator.serviceWorker.controller || navigator.serviceWorker.register("/sw.js")
+  navigator.serviceWorker.register("/sw.js")
 </script>
 ```
 
