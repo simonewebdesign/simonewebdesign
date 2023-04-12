@@ -1,38 +1,16 @@
----
----
 self.addEventListener('install', e => {
   e.waitUntil(
-    caches.open('20230401').then(cache =>
-      cache.addAll([
-'/',
-'/archives/',
-'/projects/',
-'/about/',
-'/offline/',
-'/images/simonewebdesign.webp',
-'/categories/javascript/',
-'/categories/ruby/',
-'/categories/bash/',
-'/categories/git/',
-'/categories/css/',
-'/categories/elixir/',
-'/categories/swift/',
-'/categories/php/',
-'/categories/elm/',
-'/categories/clojure/',
-'/categories/rust/',
-{% for post in site.posts %}'{{ post.url }}'{% if forloop.last %}{% else %},
-{% endif %}{% endfor %}
-      ])
+    caches.open('20230412').then(cache =>
+      cache.addAll(['/archives/', '/projects/', '/about/', '/images/simonewebdesign.webp', '/offline/'])
     )
   )
 })
 
-self.addEventListener('fetch', event => {
-  event.respondWith(
-    caches.match(event.request)
+self.addEventListener('fetch', e => {
+  e.respondWith(
+    caches.match(e.request)
     .then(res =>
-      res || fetch(event.request).catch(() => caches.match('/offline/'))
+      res || fetch(e.request).catch(() => caches.match('/offline/'))
     )
   )
 })
