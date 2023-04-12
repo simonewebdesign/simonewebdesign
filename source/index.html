@@ -17,11 +17,12 @@ introduction: true
   </blockquote>
   {% endif %}
 
-  {% for post in site.posts limit: site.homepage_posts %}
-  {% assign content = post.content %}
-    <article>
-      {% include article.html %}
-    </article>
-  {% endfor %}
+  <p class="featured-article">Featured article</p>
+  {% assign post = site.posts | find: "title", "One request" %}
+
+  <article>
+    {% include article.html %}
+  </article>
+
   {% comment %}<a href="/archives/" class="link-btn basic-alignment right">Blog Archives &rarr;</a> {% endcomment %}
 </div>

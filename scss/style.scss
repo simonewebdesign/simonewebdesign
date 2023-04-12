@@ -21,10 +21,18 @@ body {
 }
 
 time,
-.projects li {
+.projects li,
+.featured-article {
     font-family: $sans;
     font-size: 85%;
     color: #545454;
+}
+
+.featured-article {
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: -3rem;
 }
 
 main,
