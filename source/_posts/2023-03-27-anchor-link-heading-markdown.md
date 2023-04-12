@@ -2,6 +2,7 @@
 layout: post
 title: How to Link to Headings in Markdown
 categories: CSS
+comments: yes
 ---
 
 I use [Jekyll](https://jekyllrb.com/) and I wanted to make all of my headings linkable.
