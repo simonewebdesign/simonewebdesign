@@ -5,9 +5,6 @@ layout: post
 permalink: /how-to-remove-element-from-array/
 date: 2013-08-30
 updated: 2020-10-25
-comments: true
-dsq_thread_id:
-- 1672169047
 categories:
 - JavaScript
 tags:

@@ -3,7 +3,6 @@ layout: post
 title: "Bash script for batch running OptiPNG"
 description: "OptiPNG is a PNG optimizer that recompresses image files to a smaller size, without losing any information."
 date: 2014-03-08 16:54:15 +0200
-comments: true
 categories: Bash
 ---
 

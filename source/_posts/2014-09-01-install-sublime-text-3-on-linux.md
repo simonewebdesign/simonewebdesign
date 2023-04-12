@@ -4,7 +4,6 @@ title: "Install Sublime Text 3 on Linux"
 description: "Install Sublime Text 3 on Fedora or other Linux distros with this shell script: curl -L git.io/sublimetext | sh"
 date: 2014-09-01 13:35:34 +0100
 updated: 2020-07-07
-comments: true
 categories: Bash
 tags:
   - linux

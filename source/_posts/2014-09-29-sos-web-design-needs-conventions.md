@@ -2,8 +2,7 @@
 layout: post
 title: "SOS: Web Design Needs Conventions"
 date: 2014-09-29 08:35:34 +0100
-comments: true
-categories: 
+categories:
 published: false
 ---
 

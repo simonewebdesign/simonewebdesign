@@ -3,7 +3,6 @@ layout: post
 title: How to fix “Untracked working tree would be overwritten by merge” error
 description: A common Git error, the fix is explained in this blog post. It happens because files aren't tracked locally, but the same files are present remotely.
 date: 2020-06-25
-comments: true
 published: true
 categories:
   - Git

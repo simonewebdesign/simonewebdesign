@@ -4,7 +4,6 @@ description: "To view latest file changes in Git, use git diff. Use git log -p i
 layout: post
 permalink: /git-show-latest-file-changes-in-command-line/
 date: 2013-12-03
-comments: true
 categories:
   - Git
 tags:

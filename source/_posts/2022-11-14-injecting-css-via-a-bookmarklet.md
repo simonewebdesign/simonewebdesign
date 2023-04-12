@@ -4,7 +4,6 @@ title: A CSS debugger
 description: Is it possible to inject CSS in an external browser?
 permalink: /injecting-css-via-bookmarklet/
 date: 2022-10-09
-comments: false
 categories:
   - CSS
 published: false

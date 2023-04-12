@@ -1,7 +1,6 @@
 ---
 layout: post
 title: How I Ran My Website For 10 Years And Less Than $100
-comments: true
 published: false
 ---
 

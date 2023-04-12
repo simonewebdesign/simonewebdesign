@@ -5,7 +5,6 @@ layout: post
 permalink: /loop-through-parameters-in-bash/
 date: 2013-11-12
 updated: 2023-03-25
-comments: true
 categories:
   - Bash
 ---

@@ -4,7 +4,6 @@ title: One request
 description: A journey through painstakingly optimizing a blog's performance
 permalink: /1req/
 date: 2022-10-09
-comments: true
 ---
 
 > In an era where 95% of sites are bloated with cookie banners and behavioral tracking scripts, here's a refreshing approach to web development.

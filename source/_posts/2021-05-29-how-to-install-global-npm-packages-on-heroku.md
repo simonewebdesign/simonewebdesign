@@ -3,7 +3,6 @@ layout: post
 title: How to Install Global npm Packages on Heroku
 description:
 date: 2021-05-29
-comments: true
 categories:
   - JavaScript
 ---

@@ -4,7 +4,6 @@ description: "Laravel 4 was released on May 29, 2013."
 layout: post
 permalink: /laravel-4-is-out/
 date: 2013-05-29
-comments: true
 categories:
   - PHP
 tags:

@@ -2,7 +2,6 @@
 layout: post
 title: "Ruby is Magic"
 date: 2014-04-30 00:07:00 +0000
-comments: true
 categories: Ruby
 ---
 <p>Have you ever heard about <a href="https://ruby-lang.org/" rel="external">Ruby</a>? It's my favourite programming language. It was invented in Japan, which is probably the most amazing country in the world, and I think no language can beat Ruby when it comes to magic. Yes: Ruby is Magic.</p>

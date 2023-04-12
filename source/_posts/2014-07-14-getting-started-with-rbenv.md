@@ -2,7 +2,6 @@
 layout: post
 title: "Getting started with rbenv"
 date: 2014-07-14 11:10:14 +0100
-comments: true
 categories: Ruby
 ---
 

@@ -4,7 +4,6 @@ title: Inserting values of multiple types in Rust's HashMap
 description: How to build a heterogeneous collection in Rust, using values of different types.
 date: 2020-07-06
 updated: 2020-07-07
-comments: true
 published: true
 categories: Rust
 ---

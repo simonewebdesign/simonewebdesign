@@ -5,7 +5,6 @@ layout: post
 permalink: /101-web-socket-protocol-handshake/
 date: 2012-12-18 17:21:54 +0000
 updated: 2020-02-09
-comments: true
 categories:
   - JavaScript
 tags:

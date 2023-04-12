@@ -5,7 +5,6 @@ layout: post
 permalink: /how-to-put-online-your-wampserver/
 date: 2013-07-20
 updated: 2015-08-23
-comments: true
 image: /images/wampserver-logo.webp
 image_alt: WampServer logo
 categories:

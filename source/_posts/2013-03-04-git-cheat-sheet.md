@@ -4,7 +4,6 @@ description: "Quick-start reference for GitHub. Learn Git quickly and be immedia
 layout: post
 permalink: /git-cheat-sheet/
 date: 2013-03-04 14:47:22 +0000
-comments: true
 categories:
   - Git
 tags:

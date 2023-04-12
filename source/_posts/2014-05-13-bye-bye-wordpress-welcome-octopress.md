@@ -3,7 +3,6 @@ layout: post
 title: "Bye bye Wordpress. Welcome Octopress!"
 description: "This blog migrated to Octopress, which is a Jekyll-based framework, written in Ruby. Blogging is fun!"
 date: 2014-05-13 17:55:37 +0100
-comments: true
 article_cta: false
 ---
 

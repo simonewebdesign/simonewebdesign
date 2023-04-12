@@ -2,7 +2,6 @@
 layout: page
 title: "bookmarks"
 date: 2014-11-09 21:22
-comments: false
 footer: true
 published: false
 ---

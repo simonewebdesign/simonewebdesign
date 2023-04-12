@@ -4,7 +4,6 @@ description: "Have you ever played a videogame on the JavaScript console? No? We
 layout: post
 permalink: /playing-around-with-javascript/
 date: 2012-08-22 12:50:46 +0000
-comments: true
 categories:
   - JavaScript
 tags:

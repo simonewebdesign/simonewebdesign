@@ -4,7 +4,6 @@ description: "A very simple and lightweight PHP boilerplate. Source code hosted 
 layout: post
 permalink: /fushi-php-boilerplate-released/
 date: 2012-10-07 18:23:26 +0000
-comments: true
 categories:
   - PHP
 tags:

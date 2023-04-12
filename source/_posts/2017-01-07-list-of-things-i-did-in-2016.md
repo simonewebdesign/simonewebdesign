@@ -2,7 +2,6 @@
 layout: post
 title: List of things I did in 2016
 date: 2017-01-07 00:00:00 +0000
-comments: true
 published: false
 ---
 

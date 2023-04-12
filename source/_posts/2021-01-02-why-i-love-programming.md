@@ -3,7 +3,6 @@ layout: post
 title: Why I Love Programming
 description: A short essay about computer programming. Why do you program?
 date: 2021-01-02
-comments: true
 published: false
 ---
 

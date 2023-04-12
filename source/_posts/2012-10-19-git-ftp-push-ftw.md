@@ -5,7 +5,6 @@ layout: post
 permalink: /git-ftp-push-ftw/
 date: 2012-10-19 16:11:51 +0000
 updated: 2020-02-09
-comments: true
 categories:
   - Git
 tags:

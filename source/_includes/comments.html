@@ -1,5 +1,5 @@
 {% comment %} Load comments if `page.comments` is either empty (index) or set to true {% endcomment %}
-{% if page.comments != false %}
+{% if page.comments %}
 <script>
   let o = new IntersectionObserver(function (entries) {
     if (entries[0].isIntersecting) {

@@ -4,7 +4,6 @@ title: Responsive images on mobile
 description: A smart technique for serving an optimized image size based on the client viewport width.
 permalink: /responsive-images-on-mobile/
 date: 2022-10-09
-comments: false
 categories:
   - JavaScript
   - CSS

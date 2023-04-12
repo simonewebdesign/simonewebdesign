@@ -3,7 +3,6 @@ title: 'How to make a real-time in-browser editor with HTML5&#8242;s contentedit
 layout: post
 permalink: /how-to-make-browser-editor-with-html5-contenteditable/
 date: 2013-04-20
-comments: true
 categories:
   - JavaScript
 tags:

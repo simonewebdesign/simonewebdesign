@@ -3,7 +3,6 @@ layout: post
 title: Multiple Git Config For Different Folders
 description: How to separate 'work' and 'personal' git repos using a directory-level git config.
 date: 2020-11-23
-comments: true
 categories: Git
 article_cta: false
 related: 2013-12-03-git-show-latest-file-changes-in-command-line

@@ -3,7 +3,6 @@ layout: post
 title: The Dawn of the URL Apps
 description: !!!ADD SOMETHING HERE FOR SEO!!!! Also dont forget to update date in file name.
 date: 2020-12-12
-comments: true
 published: false
 categories: JavaScript
 ---

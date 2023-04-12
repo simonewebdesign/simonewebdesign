@@ -4,7 +4,6 @@ description: "The difference is that the jQuery object is just a wrapper around 
 layout: post
 permalink: /difference-between-getelementbyid-jquery/
 date: 2013-06-30
-comments: true
 categories:
   - JavaScript
 tags:

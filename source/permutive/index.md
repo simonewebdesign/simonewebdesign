@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Hi, I'm Simone.
-comments: false
 footer: false
 published: false
 ---
