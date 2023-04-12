@@ -29,7 +29,8 @@ First of all, _why?_ You may ask. Well, many reasons. I did this to my blog, [si
 
 But the real question is, _how_?
 
-## Inlining _all the things_
+
+## [Inlining _all the things_](#inlining-all-the-things)
 
 This is essentially how I've done it. I've [inlined everything](https://gomakethings.com/inlining-literally-everything-for-better-performance/) that could've possibly been inlined. Keep reading if you're curious and want to know how I achieved this.
 
@@ -78,13 +79,15 @@ How did I do this? It was actually pretty simple: I made it into a data URI of t
 
 The only catch was that I had to [encodeURIComponent](https://stackoverflow.com/a/67244614/801544).
 
-## Analytics
+
+## [Analytics](#analytics)
 
 I got rid of client-side analytics. [Cloudflare](https://www.cloudflare.com/) already gives me enough stats, such as the number of requests, unique visits and page views, grouped by visiting country. I don't really need any more than that.
 
 As an interesting side note, when I check the analytics on Cloudflare, it also shows a Carbon Impact Report, which claims to have saved me 836 grams of carbon (in 2020 vs average data centers) — this is equivalent to turning off one lightbulb for 20 hours, apparently. It sounds an awful lot like [greenwashing](https://en.wikipedia.org/wiki/Greenwashing), if you ask me, but to be fair they do seem to have put effort on reducing the [Internet's environmental impact](https://blog.cloudflare.com/helping-build-a-green-internet/).
 
-## The server
+
+## [The server](#the-server)
 
 I use [Puma](https://puma.io/). It is a fast server that provides [parallelism](https://en.wikipedia.org/wiki/Parallel_computing) out of the box. This is what my [Procfile](https://devcenter.heroku.com/articles/procfile) looks like:
 
@@ -96,7 +99,8 @@ Basically what this means is that, at any given time, there are 8 threads ready 
 
 This may be a little overkill, since I also use Cloudflare as a caching layer on top of this server, which is load balanced and globally distributed. I also don't usually get much traffic, so this definitely achieves the goal of speed.
 
-## Hosting and DNS
+
+## [Hosting and DNS](#hosting-and-dns)
 
 I recently switched to a new hosting provider, [Fly.io](https://fly.io/). I had to do that since Heroku, my old provider, unfortunately [discontinued their free plan](https://blog.heroku.com/next-chapter). Sad news, I've used it for 10 years, but it was time to move on.
 
@@ -108,7 +112,8 @@ Fly has a pretty sound infrastructure with modern features:
 
 Last but not the least, I was able to remove a [CNAME record](https://en.wikipedia.org/wiki/CNAME_record) and use an [A record](https://en.wikipedia.org/wiki/List_of_DNS_record_types#A) instead. This resulted in **one less server roundtrip**.
 
-## Other minor optimizations
+
+## [Other minor optimizations](#other-minor-optimizations)
 
 These are loosely related to the "one request" thing, but still worth mentioning.
 
@@ -147,6 +152,7 @@ I waited until the end to say this, because you probably wouldn't have believed 
 
 [The ServiceWorker is actually a separate JS file](https://simonewebdesign.it/sw.js), because I couldn't find a way to inline that (if you do know of a way, please let me know). But, other than that (and Disqus, which I'm planning to remove soon), I don't need JS at all. <span role="img" aria-label="shrugs">¯\\\_(ツ)\_/¯</span>
 
-## Conclusion
+
+## [Conclusion](#conclusion)
 
 I hope you liked this article at least as much as I enjoyed writing it. I hope it tickled your curiosity, to the very least, and that - by shedding a light on the importance of performance - I've inspired you to take action and improve your own site. <!-- Either way, it's been a fun ride. For the records, I started writing this on September 20<sup>th</sup>, 2021. Glad I got round to finishing it. -->
