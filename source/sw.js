@@ -1,6 +1,6 @@
 self.addEventListener('install', e => {
   e.waitUntil(
-    caches.open('20230412').then(cache =>
+    caches.open('23430').then(cache =>
       cache.addAll(['/archives/', '/projects/', '/about/', '/images/simonewebdesign.webp', '/offline/'])
     )
   )
