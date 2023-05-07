@@ -8,6 +8,8 @@ group :development do
   gem 'jekyll', '~> 4.2'
   gem 'rake', '~> 13.0'
   gem 'sass-globbing', '~> 1.1'
+  gem 'puma'
+  gem 'sinatra'
 end
 
 group :plugins do
@@ -17,5 +19,3 @@ end
 
 # only these will get bundled in production
 # gem 'mysql2'
-gem 'puma'
-gem 'sinatra'
