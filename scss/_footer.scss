@@ -4,23 +4,6 @@
 
     a {
         text-decoration: none;
-
-        &:nth-child(1) svg {
-            transform: scale(.8);
-        }
-
-        &:nth-child(4) svg {
-            vertical-align: super;
-        }
-
-        &:hover svg {
-            transform: translateY(-3px) scale(1.2);
-            opacity: 1;
-        }
-
-        &:nth-child(1):hover svg {
-            transform: translateY(-3px);
-        }
     }
 
     svg {
@@ -28,16 +11,33 @@
         opacity: .9;
         height: 3rem;
     }
+
+    :hover svg {
+        transform: translateY(-3px) scale(1.2);
+        opacity: 1;
+    }
+
+    :hover svg:hover {
+        transform: translateY(-3px) scale(1.4);
+    }
+}
+
+.mastodon-link:hover svg {
+    transform: translateY(-3px);
+}
+
+.github-link svg {
+    vertical-align: super;
 }
 
 .footer-social {
     max-width: 720px;
-    margin: 3rem auto 5rem auto;
+    margin: 3rem auto 4rem auto;
     display: flex;
     justify-content: center;
 
     @media (min-width: 480px) {
-        gap: 1.5rem;
+        gap: 1.25rem;
     }
 }
 
