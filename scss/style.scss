@@ -1,12 +1,8 @@
 @import "root";
 @import "variables";
-// $blockquote: $type-border !default;
-$sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PT Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$sans: "PT Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; // -apple-system, BlinkMacSystemFont, "Segoe UI"
 $serif: "PT Serif", Georgia, Times, "Times New Roman", serif;
 // $mono: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace !default;
-// $heading-font-family: "PT Serif", "Georgia", "Helvetica Neue", Arial, sans-serif !default;
-// $header-title-font-family: $heading-font-family !default;
-// $header-subtitle-font-family: $heading-font-family !default;
 
 html {
     -moz-osx-font-smoothing: grayscale;
@@ -19,6 +15,7 @@ html {
 
 body {
     margin: 0 1em;
+    font-size: 1.125rem;
 }
 
 time,
@@ -37,7 +34,7 @@ time,
 
 main,
 .footer-thin {
-    max-width: 55ch;
+    max-width: 640px;
     margin: 0 auto;
 }
 
