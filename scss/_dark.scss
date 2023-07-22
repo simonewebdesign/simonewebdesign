@@ -47,8 +47,10 @@
     }
 
     [title="Home"] {
-        background-image: linear-gradient(90deg, #7abbeb, #d683ed);
+        background: linear-gradient(90deg, #7abbeb, #d683ed) 0 0 / 100% 100%;
         -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
     }
 
     #blog-archives article {
