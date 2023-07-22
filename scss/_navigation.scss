@@ -7,6 +7,7 @@ header nav {
         margin: 0;
         padding-left: 0;
     }
+
     li {
         display: inline-block;
 
@@ -15,8 +16,17 @@ header nav {
             margin-left: 1rem;
         }
     }
+
     a {
         color: #666;
         text-decoration: none;
     }
+
+    a:hover {
+        color: #000;
+    }
+}
+
+[aria-current="page"] {
+    font-weight: bold;
 }
