@@ -24,7 +24,7 @@ Fun facts:
 - **There is no backend nor database.** All pages are actually just HTML & CSS, resulting in a super fast website that can't be hacked.
 
 - **No advertising or tracking either.**
-I write blog posts so that I don't forget stuff I learn and because I enjoy sharing my work with others.
+I write blog posts so that I don't forget stuff I learn and because I enjoy sharing my work.
 
 ## Let's get in touch!
 
