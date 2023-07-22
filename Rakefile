@@ -215,6 +215,11 @@ task :deploy_fly do
   system 'flyctl version update; flyctl deploy'
 end
 
+desc 'Purge cache'
+task :purge_cloudflare_cache do
+  system "curl -X POST https://api.cloudflare.com/client/v4/zones/#{ENV['SWD_CF_ZONE_ID']}/purge_cache -H 'Content-Type: application/json' -H 'Authorization: Bearer #{ENV['SWD_CF_API_TOK']}' --data '{\"purge_everything\":true}'"
+end
+
 # Ideally this would be ran before deploying to prod,
 # but since I want to test real production
 # I need to actually run it after deployment.
@@ -230,7 +235,7 @@ task gen_deploy: [:integrate, :generate, :deploy] do
 end
 
 desc 'Generate website and deploy to Fly.io'
-task gen_deploy_fly: [:integrate, :generate, :deploy_fly, :smoke_test] do
+task gen_deploy_fly: [:integrate, :generate, :deploy_fly, :purge_cloudflare_cache, :smoke_test] do
 end
 
 desc 'copy dot files for deployment'
