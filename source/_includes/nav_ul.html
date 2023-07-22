@@ -1,5 +1,5 @@
 <ul>
-  <li><a href="{{ root_url }}/archives/">Blog</a>
-  <li><a href="{{ root_url }}/projects/">Projects</a>
-  <li><a href="{{ root_url }}/about/">About</a>
+  <li><a href="{{ root_url }}/archives/"{% if page.url == '/archives/' %} aria-current="page"{% endif %}>Blog</a>
+  <li><a href="{{ root_url }}/projects/"{% if page.url == '/projects/' %} aria-current="page"{% endif %}>Projects</a>
+  <li><a href="{{ root_url }}/about/"{% if page.url == '/about/' %} aria-current="page"{% endif %}>About</a>
 </ul>
