@@ -37,7 +37,7 @@
 -
   title: lila
   url: https://github.com/simonewebdesign/lila
-  description: A simple load balancer written in Node.js.
+  description: A simple load balancer, written in Node.js and fully end-to-end tested.
   languages:
     - JavaScript
 # -
