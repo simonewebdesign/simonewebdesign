@@ -14,6 +14,7 @@ html {
     background: #f6f6f6;
     font-family: "PT Serif", Georgia, Times, "Times New Roman", serif;
     color: #333;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -43,6 +44,7 @@ main,
 
 #{headings()} {
     margin-top: 1.6em;
+    scroll-margin-top: 1.6em;
 }
 
 header {
