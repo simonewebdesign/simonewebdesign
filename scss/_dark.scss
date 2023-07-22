@@ -46,6 +46,11 @@
         color: #fff !important;
     }
 
+    [title="Home"] {
+        background-image: linear-gradient(90deg, #7abbeb, #d683ed);
+        -webkit-text-fill-color: transparent;
+    }
+
     #blog-archives article {
         border-bottom: 1px dotted #444 !important;
     }

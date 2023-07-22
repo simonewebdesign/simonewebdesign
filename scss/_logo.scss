@@ -1,0 +1,12 @@
+[title="Home"] {
+  font-weight: bold;
+  letter-spacing: -1px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #555;
+
+  &:hover,
+  &:focus {
+    background-image: linear-gradient(90deg, #40acfe, #f140fe);
+    -webkit-text-fill-color: transparent;
+  }
+}
