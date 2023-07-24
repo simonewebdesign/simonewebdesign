@@ -22,16 +22,16 @@
 }
 
 @media (min-width: 396px) {
-    .about-intro {
-        picture {
-            margin: 0;
-            margin-right: 1rem;
-            transform: none;
-        }
+    .about-intro picture {
+        margin: 0;
+        margin-right: 1rem;
+        transform: none;
+    }
+}
 
-        picture + p {
-            margin-left: 8rem;
-        }
+@media (min-width: 500px) {
+    .about-intro picture + p {
+        margin-left: 8rem;
     }
 }
 
