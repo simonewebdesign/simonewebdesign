@@ -7,16 +7,16 @@
 
   &:hover,
   &:focus {
-    background: linear-gradient(90deg, #40acfe, #f140fe) 0 0 / 200% 100%;
+    background: linear-gradient(90deg, #40acfe, #f140fe) 0 0 / 200%;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
-    animation: move-bg 2s linear infinite;
+    animation: move-bg 6s linear alternate infinite;
   }
 }
 
 @keyframes move-bg {
   to {
-    background-position: 200% 0;
+    background-position: 100%;
   }
 }
