@@ -1,12 +1,13 @@
 article {
     header h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
         color: #555;
-        margin-bottom: 0.32em;
+        // margin-bottom: 0.32em;
     }
 
     .meta {
         margin-top: 0;
+        margin-bottom: 0.75rem;
     }
 
     a {
@@ -18,11 +19,11 @@ article {
     }
 
     p {
-        line-height: 1.75;
+        // line-height: 1.5;
     }
 
     li {
-        line-height: 1.7;
+        // line-height: 1.7;
     }
 }
 

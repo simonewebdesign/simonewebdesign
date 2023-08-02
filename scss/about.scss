@@ -17,7 +17,8 @@
     }
 
     + h2 {
-        margin-top: 6rem;
+        margin-top: 5rem;
+        margin-bottom: 0.25rem;
     }
 }
 
@@ -25,15 +26,16 @@
     .about-intro picture {
         margin: 0;
         margin-right: 1rem;
+        margin-top: 0.1rem;
         transform: none;
     }
 }
 
-@media (min-width: 500px) {
-    .about-intro picture + p {
-        margin-left: 8rem;
-    }
-}
+// @media (min-width: 500px) {
+//     .about-intro picture + p {
+//         margin-left: 8rem;
+//     }
+// }
 
 .about-intro ~ h2:last-of-type,
 .about-intro ~ h2:last-of-type + p {

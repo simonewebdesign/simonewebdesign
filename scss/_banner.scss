@@ -5,7 +5,7 @@ body > header {
     font-family: $sans;
     border-bottom: 2px solid rgba(170, 170, 170, 0.5);
     max-width: 640px;
-    padding: 0.5rem 0;
+    padding: 0.6rem 0;
     margin: auto;
 
     a:visited {
@@ -13,7 +13,7 @@ body > header {
     }
 
     @media (min-width: 680px) {
-        margin: 2rem auto;
+        padding-top: 2.1rem;
     }
 }
 
