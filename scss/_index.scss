@@ -11,12 +11,13 @@
         margin-left: 0;
         margin-right: 0;
         margin-bottom: -1.5rem;
-        padding: .9rem;
+        padding: .75rem;
         // line-height: 1.75;
         text-align: center;
         font-style: normal;
         background: rgba(0,0,0,0.04);
         border-radius: .5rem;
+        letter-spacing: -0.03px; // hack to prevent fall to next line in Chromium
 
         @media (min-width: 768px) {
             margin-bottom: 0;
