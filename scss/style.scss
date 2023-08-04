@@ -12,8 +12,13 @@ html {
     color: #333;
     scroll-behavior: smooth;
     // line-height: 1.75rem;
-    font-size: 22px;
     line-height: 1.5;
+}
+
+@media (min-width: 640px) {
+    html {
+        font-size: 22px;
+    }
 }
 
 body {
@@ -24,6 +29,7 @@ body {
 time,
 .projects li,
 .featured-article {
+    font-family: $sans;
     font-size: 0.75rem;
     color: #545454;
 }
@@ -41,11 +47,11 @@ main,
     margin: 0 auto;
 }
 
-#{headings()} {
+// #{headings()} {
     // margin-top: 1.6em;
     // scroll-margin-top: 1.6em;
-    font-family: $serif;
-}
+    // font-family: $serif;
+// }
 
 h1 {
     margin-top: 3rem;
