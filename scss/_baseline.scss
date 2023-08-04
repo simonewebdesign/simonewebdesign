@@ -1,8 +1,10 @@
-body {
+$baseline: 33px;
+
+.baseline {
   position: relative
 }
 
-body:after {
+.baseline:after {
   position: absolute;
   width: auto;
   height: auto;
@@ -15,9 +17,9 @@ body:after {
   bottom: 0;
   left: 0;
   background: linear-gradient(to bottom, rgba(9,9,9,.2) 1px, transparent 1px);
-  background-size: auto 33px; // baseline
+  background-size: auto $baseline;
 }
 
-body:active:after {
+.baseline:active:after {
   background: none
 }
