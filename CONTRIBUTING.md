@@ -78,3 +78,7 @@ Fix:
     CXX=clang++ \
     GYPFLAGS=-Dmac_deployment_target=10.9 \
     gem install libv8 --version 3.16.14.19
+
+### SSL issues - Cloudflare 525 error
+
+If you're getting this error, it might be that fly.io is unable to issue a new SSL cert because Cloudflare is getting in the way somehow. What seems to work is to disable Cloudflare proxy and then `flyctl certs create simonewebdesign.it -a simonewebdesignit`. This should hopefully say that "The certificate for simonewebdesign.it has been issued.". If that's the case you can probably safely re-enable the proxy. You can also double check from this page https://fly.io/apps/simonewebdesignit/certificates/simonewebdesign.it to see that the cert has been issued correctly.
