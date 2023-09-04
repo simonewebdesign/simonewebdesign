@@ -9,6 +9,7 @@ published: false
 Baseline Perfect
 Vertical Rhythm Perfect
 Perfectly Aligned Typography
+Achieving Vertical Rhythm in Pure CSS
 
 Magic things happen when you apply rules and constraints.
 You don't even need that many. Less is more.
