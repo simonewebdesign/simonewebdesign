@@ -3,6 +3,7 @@ layout: post
 title: Multiple Git Config For Different Folders
 description: How to separate 'work' and 'personal' git repos using a directory-level git config.
 date: 2020-11-23
+updated: 2023-10-07
 categories: Git
 article_cta: false
 related: 2013-12-03-git-show-latest-file-changes-in-command-line
@@ -56,4 +57,4 @@ git config --global alias.st status
 
 ---
 
-I hope you found this useful. If you run into trouble, feel free to leave me a comment below and I’ll try to help. [Remember, git is your friend](https://hades.github.io/2010/01/git-your-friend-not-foe/).
+I hope you found this useful. If you run into trouble, feel free to leave me a comment below and I’ll try to help. [Remember, git is your friend](https://hades.github.io/2010/01/git-your-friend-not-foe).
