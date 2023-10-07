@@ -52,7 +52,7 @@ test stylesheets/atom.css "feed{"
 
 # Main pages
 test archives/ "Blog Archives"
-test projects/ "Open Source Projects"
+test projects/ "Projects"
 test about/ "About Simone"
 test 404/ "NOT FOUND"
 test contribs/ "Notable Contributions on GitHub"
