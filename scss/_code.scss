@@ -6,6 +6,23 @@
 
 $mono: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
 
+code {
+  // font-size: 16.5px;
+  // line-height: 22px;
+  // font-size: .9rem; /* 3/5 of the baseline. the other 1/5 go as padding */
+  // line-height: 19.8px;
+  // font-size: .9rem // 19.8px = 3/5 of the baseline
+}
+
+p code {
+  font-size: .75rem; // 16.5px = half of the baseline
+}
+
+code span {
+  font-size: .75rem; // 16.5px = half of the baseline
+  line-height: 1rem; // 22px = 2/3 of the baseline
+}
+
 .applescript {
   white-space: pre-wrap;
 }

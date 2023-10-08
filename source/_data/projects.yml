@@ -130,7 +130,7 @@
 -
   title: real time web chat
   url: https://github.com/simonewebdesign/real-time-web-chat
-  description: Chat server and client built with Node, Socket.io, Express and MongoDB.
+  description: Chat application built with Node, Socket.io, Express and MongoDB.
   languages:
     - JavaScript
 # -

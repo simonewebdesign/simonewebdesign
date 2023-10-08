@@ -34,7 +34,9 @@ https://pxtorem.w3schools.in/
 14px  0.7777rem
 15px  0.8333rem
 16.5px  0.75rem (half of the baseline)
-17.6px  0.8rem
+18.8571428571px 0.8571428571409091rem (4/7 of the baseline)
+19.8px  0.9rem (3/5 of the baseline)
+20.625px  0.9375rem (5/8 of the baseline)
 22px  1rem (two thirds of the baseline)
 23px  1.0454rem
 24px  1.0909rem
@@ -58,3 +60,8 @@ https://pxtorem.w3schools.in/
 
 
 for some reason, 1rem = actually 33px, same as the baseline. I think it's because of line-height: 1.5; but I think this is only true in the context of font size.
+
+
+22 : 1.5 = 19.8 : x
+
+x = 1.5*19.8/22

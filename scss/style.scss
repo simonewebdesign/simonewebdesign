@@ -76,6 +76,7 @@ h2 {
 
 h2 code {
     line-height: 2rem; /* 2rem = 44px (4/3 of the baseline). Fixes an idiosincracy of the monospace font, since I had an issue with an extra 1px when dealing with h2 that had <code> in it */
+    font-size: inherit;
 }
 
 
@@ -99,10 +100,11 @@ li + li {
 blockquote {
     font-style: italic;
     font-size: 1.125rem;
-    // line-height: 1.5em;
+    line-height: 1.5rem; /* 4/3 of the font size */
+
     padding-left: 1rem;
     border-left: 4px solid rgba(170, 170, 170, 0.5);
-    margin: 1.5rem 0;
+    margin: 3rem 0;
 }
 
 hr {

@@ -161,7 +161,7 @@ fn main() {
 
 You may wonder what would happen if we were to use the type `dyn Display` without the `Box` wrapper. If we try that, we'd get this nasty error:
 
-```
+```rust
 error[E0277]: the size for values of type `(dyn std::fmt::Display + 'static)` cannot be known at compilation time
    --> src/main.rs
 
