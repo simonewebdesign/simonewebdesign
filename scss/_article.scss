@@ -6,7 +6,7 @@ article {
     }
 
     .meta {
-        margin-top: 0;
+        // margin-top: 0;
         margin-bottom: 0.75rem;
     }
 
@@ -20,6 +20,9 @@ article {
 
     p {
         // line-height: 1.5;
+        // These margins are different from the default of 1em, but give the "right" breathing between paragraphs such that text actually sits on the baseline
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
     }
 
     li {
@@ -27,16 +30,16 @@ article {
     }
 }
 
-h2 code {
-    font-size: 1.4em; // For the rust article
-}
+// h2 code {
+//     font-size: 1.4em; // For the rust article
+// }
 
 .author {
     display: block;
 }
 
 .entry-content {
-    margin: 2rem 8px 3rem;
+    margin: 1.5rem 0 3rem;
 
     > h2 > a,
     > h3 > a {

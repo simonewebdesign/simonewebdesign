@@ -58,6 +58,27 @@ h1 {
     margin-bottom: 1.5rem;
 }
 
+/* for h2, I want font-size to = 33px.
+ * This is achieved by font-size: 1.5rem;
+ * because 1.5rem is the same as the baseline,
+ * which, again, is 33px.
+ * Line height is 1.5 and therefore the expected
+ * total height is 33 * 1.5 = 49.5px (2.75rem).
+ * When it's two lines, the expected total height
+ * is 33 * 3 = 99px (4.5rem).
+ */
+h2 {
+    font-size: 1.5rem;
+    // max-height: 100cqh;
+    margin-top: 3.25rem;
+    margin-bottom: 2rem;
+}
+
+h2 code {
+    line-height: 2rem; /* 2rem = 44px (4/3 of the baseline). Fixes an idiosincracy of the monospace font, since I had an issue with an extra 1px when dealing with h2 that had <code> in it */
+}
+
+
 header {
     text-align: center;
 }
@@ -79,7 +100,7 @@ blockquote {
     font-style: italic;
     font-size: 1.125rem;
     // line-height: 1.5em;
-    padding-left: 1em;
+    padding-left: 1rem;
     border-left: 4px solid rgba(170, 170, 170, 0.5);
     margin: 1.5rem 0;
 }
