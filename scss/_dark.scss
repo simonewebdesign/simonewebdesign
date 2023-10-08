@@ -46,6 +46,11 @@
         color: #fff !important;
     }
 
+    p code,
+    li code {
+        box-shadow: 0 0 1px 1px #444;
+    }
+
     [title="Home"] {
         background: linear-gradient(90deg, #7abbeb, #d683ed) 0 0 / 100% 100%;
         -webkit-text-fill-color: transparent;
