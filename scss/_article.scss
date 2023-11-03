@@ -63,6 +63,7 @@ article {
         color: #333;
     }
 
+    // the heading symbol
     > h2 > a::before,
     > h3 > a::before {
         content: '§';
@@ -76,7 +77,11 @@ article {
     > h3 > a:hover::before {
         opacity: 1;
         color: inherit;
-        margin-left: -1.5rem;
+        margin-left: -1rem;
+
+        @media (min-width: 768px) {
+            margin-left: -1.5rem;
+        }
     }
 }
 
