@@ -18,6 +18,14 @@ article {
         }
     }
 
+    a[href*="//"]:not([href*="simonewebdesign.it"])::after {
+        content: '➹';
+        vertical-align: super;
+        font-size: 12px; // no more than 14px or it'll affect line-height
+        // padding-left: 1px; // give a bit of breathing space from the font
+        text-decoration: none;
+    }
+
     p {
         // line-height: 1.5;
         // These margins are different from the default of 1em, but give the "right" breathing between paragraphs such that text actually sits on the baseline
