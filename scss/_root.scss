@@ -16,6 +16,8 @@
   --solar-blue:    #195c8c;
   --solar-cyan:    #1a625d;
   --solar-green:   #525e00;
+
+  --text-primary: #333; // changes in dark mode
 }
 
 @media (prefers-color-scheme: dark) {
