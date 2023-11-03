@@ -47,9 +47,20 @@ article {
         color: #333;
     }
 
-    > h2:hover > a::after,
-    > h3:hover > a::after {
-        content: ' #';
+    > h2 > a::before,
+    > h3 > a::before {
+        content: '§';
+        position: absolute;
+        margin-left: -0.5rem;
+        opacity: 0;
+        transition: all .3s;
+    }
+
+    > h2 > a:hover::before,
+    > h3 > a:hover::before {
+        opacity: 1;
+        color: inherit;
+        margin-left: -1.5rem;
     }
 }
 
