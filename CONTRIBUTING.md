@@ -81,4 +81,28 @@ Fix:
 
 ### SSL issues - Cloudflare 525 error
 
-If you're getting this error, it might be that fly.io is unable to issue a new SSL cert because Cloudflare is getting in the way somehow. What seems to work is to disable Cloudflare proxy and then `flyctl certs create simonewebdesign.it -a simonewebdesignit`. This should hopefully say that "The certificate for simonewebdesign.it has been issued.". If that's the case you can probably safely re-enable the proxy. You can also double check from this page https://fly.io/apps/simonewebdesignit/certificates/simonewebdesign.it to see that the cert has been issued correctly.
+If you're getting this error, it might be that fly.io is unable to issue a new SSL cert because Cloudflare is getting in the way somehow. What seems to work is to disable Cloudflare proxy and then `flyctl certs create simonewebdesign.it -a simonewebdesignit`. This should hopefully say that "The certificate for simonewebdesign.it has been issued.". If that's the case you can probably safely re-enable the proxy. You can also double check from this page https://fly.io/apps/simonewebdesignit/certificates/simonewebdesign.it to see that the cert has been issued correctly. Note that if you get `Error: Hostname already exists on app`, you may have to `flyctl certs remove simonewebdesign.it` first.
+
+Step-by-step instructions (might have to do this every 3 months):
+
+1. Log onto dash.cloudflare.com
+2. Go to DNS > Records
+3. Disable proxies (should be DNS only)
+4. flyctl certs remove simonewebdesign.it
+5. flyctl certs create simonewebdesign.it
+6. flyctl certs check simonewebdesign.it
+7. It should say:
+
+The certificate for simonewebdesign.it has been issued.
+
+Hostname                  = simonewebdesign.it
+DNS Provider              = cloudflare
+Certificate Authority     = Let's Encrypt
+Issued                    = rsa,ecdsa
+Added to App              = 7 seconds ago
+Source                    = fly
+
+8. Re-enable Cloudflare proxies
+9. curl -I https://simonewebdesign.it/
+
+curl should return 200 from Cloudflare, not a SSL error.
