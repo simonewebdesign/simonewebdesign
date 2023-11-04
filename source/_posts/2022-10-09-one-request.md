@@ -150,7 +150,7 @@ I waited until the end to say this, because you probably wouldn't have believed 
 </script>
 ```
 
-[The ServiceWorker is actually a separate JS file](https://simonewebdesign.it/sw.js), because I couldn't find a way to inline that (if you do know of a way, please let me know). But, other than that (and Disqus, which I'm planning to remove soon), I don't need JS at all. <span role="img" aria-label="shrugs">¯\\\_(ツ)\_/¯</span>
+[The ServiceWorker](https://simonewebdesign.it/sw.js) is actually a separate JS file, because I couldn't find a way to inline that (if you do know of a way, please let me know). But, other than that (and Disqus, which I'm planning to remove soon), I don't need JS at all. <span role="img" aria-label="shrugs">¯\\\_(ツ)\_/¯</span>
 
 
 ## [Conclusion](#conclusion)
