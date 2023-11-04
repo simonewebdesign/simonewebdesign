@@ -21,7 +21,7 @@ There is a better way.<!--more-->
 
 A lot of sites are built as a single page (can we have more of those?)— and no, I don't mean a [SPA](https://en.wikipedia.org/wiki/Single-page_application). I'm talking about something radically different here. Essentially, the challenge boils down to this:
 
-> Can I reduce every page down to a single HTTP request?
+**Can I reduce every page down to a single HTTP request?**
 
 First of all, _why?_ You may ask. Well, many reasons. I did this to my blog, [simonewebdesign.it](https://simonewebdesign.it). I mostly did it just to prove it possible, but it turned out to be a fun challenge that kept me busy for months and resulted in a much faster, more maintainable website, with a [very small carbon footprint](https://www.websitecarbon.com/website/simonewebdesign-it/).
 
