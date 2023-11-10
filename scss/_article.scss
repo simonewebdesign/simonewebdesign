@@ -17,12 +17,12 @@ article {
     // external links
     a[href*="//"]:not([href*="simonewebdesign.it"])::after {
         $icon: "data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.5 3.5v11h11V10H14v5c0 .5523-.4477 1-1 1H1c-.552284 0-1-.4477-1-1V3c0-.55228.447715-1 1-1h5v1.5H1.5Z' fill='%23FBFBFE'/%3e%3cpath d='M15.9217 1.17828 7.01473 10.0853 5.95407 9.02462 14.8611.117624l1.0606 1.060656Z' fill='%23FBFBFE'/%3e%3cpath d='M7.5 0H16v1.5H7.5V0Z' fill='%23FBFBFE'/%3e%3cpath d='M16 0v8.5h-1.5V-7e-8L16 0Z' fill='%23FBFBFE'/%3e%3c/svg%3e";
-        vertical-align: super;
+        // vertical-align: super;
         background-color: var(--text-primary);
         content: '';
         display: inline-flex;
         height: 10px;
-        margin-left: 4px;
+        margin-left: 0.15rem;
         -webkit-mask-image: url($icon);
         mask-image: url($icon);
         -webkit-mask-size: cover;
