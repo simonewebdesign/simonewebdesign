@@ -4,13 +4,14 @@ title: About Simone
 footer: true
 ---
 
+<style>a::after{width:0 !important;margin-left:0 !important}</style>
 <div class="about-intro">
 <picture>
     <source type="image/webp" srcset="/images/simonewebdesign.webp">
     <img src="/images/simonewebdesign.png" width="168" height="210" alt="simonewebdesign's avatar" />
 </picture>
 <p>
-<strong>Simone Vittori</strong> is a programmer originally from <a rel="external" href="https://en.wikipedia.org/wiki/Perugia">Perugia</a>, Italy, but now living in London, England. He's obsessed about code: if he's not writing it, he's probably reading, speaking or dreaming about it. He enjoys coding in many different languages, such as <a rel="external" href="https://www.ruby-lang.org/">Ruby</a>, <a rel="external" href="https://elixir-lang.org/">Elixir</a>, <a rel="external" href="https://elm-lang.org/">Elm</a> and <a rel="external" href="https://gleam.run/">Gleam</a>, just to name a few. He loves travelling, games and pizza — just not with pineapple, please.</p>
+<strong>Simone Vittori</strong> is a programmer originally from <a rel="external" href="https://en.wikipedia.org/wiki/Perugia">Perugia</a>, Italy, but now living in London, England. He's obsessed about code: if he's not writing it, he's probably reading, speaking or dreaming about it. He enjoys coding in many different languages, such as <a rel="external" href="https://www.ruby-lang.org/">Ruby</a>, <a rel="external" href="https://elixir-lang.org/">Elixir</a>, <a rel="external" href="https://elm-lang.org/">Elm</a> and <a rel="external" href="https://gleam.run/">Gleam</a>, just to name a few. In his free time, he loves walking in nature, eating pasta and playing video games.</p>
 </div>
 
 ## {{ site.domain }}
@@ -19,7 +20,7 @@ I founded this site in 2010, back when Adobe Flash and Internet Explorer 6 were 
 
 Fun facts:
 
-- **It is free and open source.** It's my way of giving back to the <a rel="external" href="https://indieweb.org/">indie web</a>. It feels good <a rel="external" href="https://github.com/simonewebdesign/simonewebdesign">to share</a>, and it's <a rel="external" href="https://www.gnu.org/philosophy/fs-and-sustainable-development.html">the right thing to do</a>.
+- **It is free and open source.** It's my way of giving back to the <a rel="external" href="https://indieweb.org/">indie web</a>. It feels good <a rel="external" href="https://github.com/simonewebdesign/simonewebdesign">to share</a>, and it's <a rel="external" href="https://www.gnu.org/philosophy/fs-and-sustainable-development.html">the right thing.</a>
 
 - **There is no backend nor database.** All pages are actually just HTML & CSS, resulting in a super fast website that can't be hacked.
 
