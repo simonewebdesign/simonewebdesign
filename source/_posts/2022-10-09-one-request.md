@@ -11,7 +11,7 @@ related: 2018-02-21-dont-stop-learning
 
 > In an era where 95% of sites are bloated with cookie banners and behavioral tracking scripts, here's a refreshing approach to web development.
 
-Nowadays, loading a website on your device of choice can be painful — both for the browser, which has to parse and render all that stuff, and for you, the user, which has to wait for it (and pay for that data plan).
+Nowadays, loading a website on your device of choice can be painful — both for the browser, which has to parse and render all that stuff, and for you, the user, who has to wait for it (and pay for that data plan).
 
 The issue is only exacerbated by the fact that mobile devices can be slow, the network can be slow, and there's simply too much [cruft](https://en.wikipedia.org/wiki/Cruft) to download.
 
