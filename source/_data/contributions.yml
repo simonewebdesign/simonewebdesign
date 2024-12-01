@@ -73,3 +73,8 @@
   url: https://github.com/mahhov/inline-scripts/pull/2/files
   repo_url: https://github.com/mahhov/inline-scripts
   published: true
+-
+  title: kangax/html-minifier
+  url: https://github.com/kangax/html-minifier/pull/1157
+  repo_url: https://github.com/kangax/html-minifier
+  published: true
