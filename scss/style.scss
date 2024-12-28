@@ -89,6 +89,14 @@ a {
     text-decoration: none;
 }
 
+/* Baseline for default links */
+/* https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/#css-reset-additions */
+a:not([class]) {
+    /* Relatively sized thickness and offset */
+    // text-decoration-thickness: max(0.08em, 1px);
+    text-underline-offset: 0.15em;
+}
+
 nav ul {
     padding-left: 0;
 }
