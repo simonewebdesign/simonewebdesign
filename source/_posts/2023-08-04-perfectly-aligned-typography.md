@@ -65,3 +65,14 @@ for some reason, 1rem = actually 33px, same as the baseline. I think it's becaus
 22 : 1.5 = 19.8 : x
 
 x = 1.5*19.8/22
+
+
+Quotes from https://anthonyhobday.com/sideprojects/saferules/
+
+Everything should be aligned with something else
+
+Alignment helps us realise that things are related to each other. If something is not aligned with anything else, it feels like it does not belong in the design. Ideally each element should be aligned with other elements based on some kind of logic.
+
+Measurements should be mathematically related
+
+The spacing you use between elements, and the size of elements, should be determined by some kind of scale. This will help the design to look coherent. In the example below, every element uses multiples of 8. Horizontal and vertical grids based on a scale help if you want to make sure elements like pictures are the right size.
