@@ -20,9 +20,13 @@
     margin-bottom: 0;
     position: relative;
     border-bottom: 1px dotted #ccc;
+
     &:last-child {
       background: none;
     }
+
+    a { font-size: 1.25rem }
+
     footer { padding: 0; margin: 0;}
   }
   h1 { margin-bottom: .3em; padding-bottom: 0; color: #333; }
