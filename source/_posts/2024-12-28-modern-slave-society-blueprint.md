@@ -101,7 +101,7 @@ Creating a society where the vast majority of people are effectively enslaved wi
 
 This hypothetical society would combine economic, psychological, and informational control to create an environment where people are technically free but in practice are enslaved to the system. The key would be ensuring that the illusion of freedom is maintained, that people believe their hardships are personal rather than systemic, and that they remain too distracted or fearful to seek change.
 
-4o
+<br>
 
 ## Prompt:
 
@@ -160,7 +160,7 @@ In this hypothetical society where slavery is deeply embedded, yet unrecognized 
 
 The deepest problems in this society would stem from the inherent contradictions within a system that is designed to exploit people without their knowledge. The most profound issues would include widespread psychological distress, the erosion of genuine social bonds, environmental collapse, intellectual stagnation, and systemic injustice. These issues would create a society that is fragile, unsustainable, and ultimately bound to collapse or evolve into something radically different. The greatest tragedy is that most people, within this system, would not even recognize their own subjugation—perpetuating a cycle of self-deception and resignation.
 
-4o mini
+<br>
 
 ## Prompt:
 
