@@ -13,3 +13,8 @@
   title: AppSignal’s Top 5 Elixir Posts in 2023
   url: https://blog.appsignal.com/2023/12/20/appsignals-top-5-elixir-posts-in-2023.html
   category: Elixir
+-
+  title: Self-Hosting Elixir Applications: A Personal Approach
+  url: https://andrielfn.com/posts/self-hosting-elixir-applications-a-personal-approach/
+  category: Elixir
+  description: My personal approach to self-hosting Elixir apps using Hetzner, GitHub Actions, Ansible, and Traefik.
