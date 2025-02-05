@@ -237,9 +237,3 @@ Fixing the deep, systemic problems in a society where the majority of people are
 ### Conclusion
 
 To address the deep problems in this hypothetical society, an individual must start by breaking free from the system’s grip on their own mind and lifestyle. From there, they can begin to connect with others, disrupt the economic and political systems, challenge the media narratives, and advocate for a new model of education and social organization. It’s a journey of personal awakening and collective action, where the goal is not only to liberate oneself but to help create a world where true freedom, justice, and equality can thrive. While the challenge is immense, history has shown that even the most entrenched systems of control can be dismantled through sustained and strategic resistance.
-
-<style>
-  article blockquote { font-style:normal }
-  article small { opacity:.8 }
-  article cite { opacity:.6; font-size:60% }
-</style>

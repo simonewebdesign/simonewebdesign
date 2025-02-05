@@ -1,3 +1,8 @@
+article blockquote { font-style:normal }
+article small { opacity:.8 }
+article cite, article figcaption { opacity:.6; font-size:60% }
+article figcaption { text-align: center; }
+
 article {
     header h1 {
         font-size: 2rem;
