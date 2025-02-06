@@ -1,10 +1,44 @@
 ---
 layout: post
-title: Perfectly Aligned Typography
+title: Achieving Vertical Rhythm
 categories: CSS
 comments: yes
-published: false
 ---
+
+I was probably just randomly browsing the web when I stumbled across [wicky.nillia.ms](https://wicky.nillia.ms/).
+
+![](wickynilliams.webp)
+
+I liked the simple design, very neat. However, my attention was immediately drawn to the top right corner. What's that "baseline" thing? Obviously I click it and I get rewarded with a grid, which reveals that the design is perfectly balanced: the vertical spacing between the title, the subtitle and the paragraph just feels right. "How was this achieved?", I wondered.
+
+I went down the rabbit hole and discovered this Smashing Magazine article from 2012, titled [CSS Baseline: The Good, The Bad And The Ugly](https://www.smashingmagazine.com/2012/12/css-baseline-the-good-the-bad-and-the-ugly/). A great article that goes deep into the theory of "pattern recognition" (the *why*), and some of the challenges you might face while trying to get your web design vertically aligned.
+
+The article is definitely worth a read, but with my article I want to share my own approach to achieving what feels like a solid baseline, and hopefully inspire you to make your websites perfectly balanced as well—it's easier than you think.
+
+Let's dive in.
+
+*[insert Thanos's "perfectly balanced" meme here :]*
+
+## [Perfectly Aligned Typography](#perfectly-aligned-typography)
+
+Magic things happen when you apply rules and constraints.
+
+### What's a *baseline*?
+
+A *baseline* is really a typography concept:
+
+> **baseline** _/bās′līn″/_
+> <br><small>noun</small><br>
+> The line upon which most letters "sit" and below which descenders extend.
+> <br><cite>—**Baseline** on Wikipedia (disambiguation page)</cite>
+
+If that went over your head, you're not alone. However, you don't need to understand typography to understand the concept of baseline.
+
+<figure>
+    <img src="/images/svg/baseline.svg" alt="">
+    <figcaption>A diagram showing terms to do with letter height and positioning on the baseline. Alternative terms are italicised.</figcaption>
+</figure>
+
 
 Baseline Perfect
 Vertical Rhythm Perfect
@@ -13,7 +47,6 @@ Achieving Vertical Rhythm in Pure CSS
 
 Magic things happen when you apply rules and constraints.
 You don't even need that many. Less is more.
-It's easier than you think.
 You may have noticed
 
 https://wicky.nillia.ms/
