@@ -133,7 +133,10 @@ abbr[title] {
 
     $entry-title-width: 95vw;
 
-    article header { position: relative }
+    article header {
+        position: relative
+    }
+
     .entry-title {
         width: $entry-title-width;
         position: relative;
@@ -143,7 +146,7 @@ abbr[title] {
 
 @media (min-width: 60rem) {
     .entry-title {
-        width: 50rem;
+        width: 48.5rem;
         left: calc(50% - 50rem / 2);
     }
 }
@@ -155,6 +158,7 @@ abbr[title] {
 // }
 
 @import "compass/typography/links/link-colors";
+
 a {
     @include link-colors($link-color, $hover: $link-color-hover, $focus: $link-color-hover, $visited: $link-color-visited, $active: $link-color-active);
 }
