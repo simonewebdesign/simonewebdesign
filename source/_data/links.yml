@@ -18,3 +18,8 @@
   url: https://andrielfn.com/posts/self-hosting-elixir-applications-a-personal-approach/
   category: Elixir
   description: My personal approach to self-hosting Elixir apps using Hetzner, GitHub Actions, Ansible, and Traefik.
+-
+  title: Things You Can Do With Ecto
+  url: https://andyleclair.dev/posts/2025/01-21-things-you-can-do-with-ecto.html
+  category: Elixir
+  description: Andy Leclair shares clever tricks for getting more out of Ecto, especially when working with Clickhouse. He covers using fragment for custom queries, creating reusable macros, leveraging CTEs, and even some sneaky ways to work around Ecto’s compile-time constraints.
