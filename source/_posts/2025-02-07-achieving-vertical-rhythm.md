@@ -42,12 +42,21 @@ If that went over your head, you're not alone. However, you don't need to unders
 
 Try this out:
 
-<input type="checkbox" id="toggle-lines" /> <label for="toggle-lines">Toggle baseline</label>
+<div class="text-center" style="display: flex; width: 10rem; justify-content: space-between; margin: 2rem auto">
+    <input type="checkbox" id="toggle-lines" style="transform:scale(3); margin:0 1rem; text-align: center" /><label for="toggle-lines" style="font-weight: bold; vertical-align: middle">Show baseline</label>
+</div>
+<noscript>This feature needs JavaScript. Please enable JavaScript in your browser.</noscript>
 <script>
-    document.getElementById('toggle-lines').addEventListener('click', function () {
+    var toggle = document.getElementById('toggle-lines')
+    var label = document.querySelector('[for="toggle-lines"]')
+    toggle.checked = false
+    toggle.addEventListener('click', function () {
         document.body.classList.toggle('baseline')
+        label.innerText = document.body.classList.contains('baseline') ? 'Hide baseline' : 'Show baseline'
     })
 </script>
+
+With baseline enabled, you should see the baseline. Press and hold anywhere to hide it temporarily.
 
 Baseline Perfect
 Vertical Rhythm Perfect
