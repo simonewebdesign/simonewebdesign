@@ -40,6 +40,14 @@ If that went over your head, you're not alone. However, you don't need to unders
     <figcaption>A diagram showing terms to do with letter height and positioning on the baseline. Alternative terms are italicised.</figcaption>
 </figure>
 
+Try this out:
+
+<input type="checkbox" id="toggle-lines" /> <label for="toggle-lines">Toggle baseline</label>
+<script>
+    document.getElementById('toggle-lines').addEventListener('click', function () {
+        document.body.classList.toggle('baseline')
+    })
+</script>
 
 Baseline Perfect
 Vertical Rhythm Perfect
