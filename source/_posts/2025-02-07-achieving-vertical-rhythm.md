@@ -14,7 +14,7 @@ I liked the simple design, very neat. However, my attention was immediately draw
 
 I went down the rabbit hole and discovered this Smashing Magazine article from 2012, titled [CSS Baseline: The Good, The Bad And The Ugly](https://www.smashingmagazine.com/2012/12/css-baseline-the-good-the-bad-and-the-ugly/). A great article that goes deep into the theory of "pattern recognition" (the *why*), and some of the challenges you might face while trying to get your web design vertically aligned.
 
-The article is definitely worth a read, but with my article I want to share my own approach to achieving what feels like a solid baseline, and hopefully inspire you to make your websites perfectly balanced as well—it's easier than you think.
+The article is definitely worth a read, but here I'll share my approach to achieving what feels like a solid baseline, and hopefully inspire you to make your websites perfectly balanced as well—it's easier than you think.
 
 Let's dive in.
 
