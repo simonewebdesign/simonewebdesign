@@ -146,7 +146,7 @@ abbr[title] {
 
 @media (min-width: 60rem) {
     .entry-title {
-        width: 48.5rem;
+        width: 46.5rem; // used to be 50rem but, was reduced slightly to prevent horizontal scrollbar
         left: calc(50% - 50rem / 2);
     }
 }
