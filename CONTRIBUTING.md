@@ -106,3 +106,12 @@ Source                    = fly
 9. curl -I https://simonewebdesign.it/
 
 curl should return 200 from Cloudflare, not a SSL error.
+
+## Inline-scripts is returning ENOENT error
+
+Open node_modules/inline-scripts/src/inlineStylesheets.js and patch this line:
+
+```diff
+- path.resolve(path.dirname(htmlPath), relPath);
++ path.resolve('public', relPath);
+```
