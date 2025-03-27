@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "html-minifier": "^4.0.0",
+    "html-minifier": "github:simonewebdesign/html-minifier",
     "inline-scripts": "github:simonewebdesign/inline-scripts"
   }
 }
