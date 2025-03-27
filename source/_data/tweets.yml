@@ -1,5 +1,5 @@
 -
-  text: "Zero JS was written" using Phoenix LiveView for a large internal application. Elixir at Spotify
+  text: '"Zero JS was written" using Phoenix LiveView for a large internal application. Elixir at Spotify'
   url: https://medium.com/elixir-learnings/learnings-using-phoenix-liveview-for-internal-web-applications-38711193ca13
 -
   text: How to create the best index for complex queries in PostgreSQL
@@ -32,7 +32,7 @@
   text: Speed matters
   url: https://jsomers.net/blog/speed-matters
 -
-  text: Sometimes, programming feels like magic: you chant some arcane incantation and a fleet of robots do your bidding. But sometimes, magic is mundane. If you’re willing to embrace the grind, you can pull off the impossible.
+  text: "Sometimes, programming feels like magic: you chant some arcane incantation and a fleet of robots do your bidding. But sometimes, magic is mundane. If you’re willing to embrace the grind, you can pull off the impossible."
   url: https://jacobian.org/2021/apr/7/embrace-the-grind/
 -
   text: The self-documenting code myth is a form of gatekeeping. Good documentation doesn’t just describe what’s happening, but why you’re doing it. That’s the kind of stuff you’ll forget a year from now when you go to look at code you haven’t touched in a while.
@@ -53,58 +53,14 @@
   text: Fizz Buzz in Tensorflow
   url: https://joelgrus.com/2016/05/23/fizz-buzz-in-tensorflow/
 -
-  text: 1LOC: A Collection of One-Line JS Snippets
+  text: "1LOC: A Collection of One-Line JS Snippets"
   url: https://web.archive.org/web/20230104120302/https://1loc.dev/
 -
   text: In Defense of a Fussy Website - "If something is meaningful to you, the audience you’ll gather will likely be the folks that find it meaningful, too."
   url: https://css-tricks.com/in-defense-of-a-fussy-website/
-  -
+-
   text: If you are used to Java or C, consider these. Idiomatic Rust
   url: https://cheats.rs/#idiomatic-rust
-  -
+-
   text: Regex trick
   url: https://www.rexegg.com/regex-best-trick.php#thetrick
-  -
-  text:
-  url:
-  -
-  text:
-  url:
-  -
-  text:
-  url:
-  -
-  text:
-  url:
-  -
-  text:
-  url:
-  -
-  text:
-  url:
-  -
-  text:
-  url:
-  -
-  text:
-  url:
-  -
-  text:
-  url:
-  -
-  text:
-  url:
-  -
-  text:
-  url:
-  -
-  text:
-  url:
-  -
-  text:
-  url:
-  -
-  text:
-  url:
-
-
