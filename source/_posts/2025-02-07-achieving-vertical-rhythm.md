@@ -36,7 +36,7 @@ A *baseline* is really a typography concept:
 If that went over your head, you're not alone. However, you don't need to understand typography to understand the concept of baseline.
 
 <figure>
-    <img src="/images/svg/baseline.svg" alt="">
+    <img src="/images/svg/baseline.svg" alt="" width="100%">
     <figcaption>A diagram showing terms to do with letter height and positioning on the baseline. Alternative terms are italicised.</figcaption>
 </figure>
 
