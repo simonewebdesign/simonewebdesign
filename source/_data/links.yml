@@ -23,3 +23,7 @@
   url: https://andyleclair.dev/posts/2025/01-21-things-you-can-do-with-ecto.html
   category: Elixir
   description: Andy Leclair shares clever tricks for getting more out of Ecto, especially when working with Clickhouse. He covers using fragment for custom queries, creating reusable macros, leveraging CTEs, and even some sneaky ways to work around Ecto’s compile-time constraints.
+- title: Good and bad Elixir
+  url: https://keathley.io/blog/good-and-bad-elixir.html
+  category: Elixir
+  description: I’ve seen a lot of elixir at this point, both good and bad. Through all of that code, I’ve seen similar patterns that tend to lead to worse code. So I thought I would document some of them as well as better alternatives to these patterns.
