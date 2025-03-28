@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A Programming Love Letter
-date: 2025-03-28
+date: 2025-03-27
 categories: Inspirational
 comments: yes
 published: yes

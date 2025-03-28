@@ -67,7 +67,7 @@ desc 'Generate jekyll site'
 task :generate do
   puts '---> Generating Site with Jekyll...'
   system "compass compile --css-dir #{source_dir}/stylesheets"
-  system 'jekyll build --future --trace'
+  system 'jekyll build --trace'
   puts '---> Inlining stylesheets...'
   Dir["public/**/*.html"].each do |f|
     puts "     Processing #{f}..."
@@ -96,7 +96,7 @@ desc 'preview the site in a web browser'
 task :preview do
   puts "Starting to watch source with Jekyll and Compass. Starting Rack on port #{server_port}"
   system "compass compile --css-dir #{source_dir}/stylesheets"
-  jekyllPid = Process.spawn({ 'OCTOPRESS_ENV'=>'preview' }, 'jekyll build --future --watch')
+  jekyllPid = Process.spawn({ 'OCTOPRESS_ENV'=>'preview' }, 'jekyll build --watch')
   compassPid = Process.spawn('compass watch')
   rackupPid = Process.spawn("rackup --host #{server_host} --port #{server_port}")
 
