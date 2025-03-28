@@ -10,7 +10,7 @@ comments: yes
 
 Think a little about why you enjoy what you enjoy.
 
-Why do you code? What do you like about it? I've been asking myself these questions, but I haven't quite found the answer yet. Maybe there's no single answer, after all. For me, it's an _ensemble_; there's a whole range of reasons that make programming so enticing to me. For example, I feel like...
+Why do you code? What do you like about it? I've been asking myself these questions, but I haven't quite found the answer yet. Maybe there's no single answer, after all. For me, it's an _ensemble_; there's a whole range of reasons that make programming so enticing to me. For example, I feel like...<!--more-->
 
 - **Programming is like writing a poem.** A beautiful set of words that fit well together; ideally short &amp; sweet. Finding the right balance is tricky, but very rewarding once you do.
 

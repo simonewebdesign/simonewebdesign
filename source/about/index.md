@@ -22,7 +22,7 @@ Fun facts:
 
 - **It is free and open source.** It's my way of giving back to the <a rel="external" href="https://indieweb.org/">indie web</a>. It feels good <a rel="external" href="https://github.com/simonewebdesign/simonewebdesign">to share</a>, and it's <a rel="external" href="https://www.gnu.org/philosophy/fs-and-sustainable-development.html">the right thing.</a>
 
-- **There is no backend nor database.** All pages are actually just HTML & CSS, resulting in a super fast website that can't be hacked.
+- **There is no backend nor database.** All pages are actually [just HTML & CSS]({% post_url 2022-10-09-one-request %}), resulting in a super fast website that can't be hacked.
 
 - **No advertising or tracking either.**
 I write blog posts so that I don't forget stuff I learn and because I enjoy sharing my work.
