@@ -4,7 +4,6 @@ title: A Programming Love Letter
 date: 2025-03-28
 categories: Inspirational
 comments: yes
-published: yes
 ---
 
 <!-- I tried writing this post before, but felt it was a bit too corny. Regardless, I decided to revamp it and share it anyway. Some of you may find it inspiring, perhaps. -->
