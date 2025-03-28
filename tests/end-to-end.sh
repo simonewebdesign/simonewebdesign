@@ -48,7 +48,7 @@ if [[ "$(curl http://www.simonewebdesign.it --silent -i)" =~ https://simonewebde
 
 echo
 echo "## Core assets"
-test stylesheets/style.css "html\{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;background:#f6f6f6"
+test stylesheets/style.css ":root{--solar-yellow:#6f5400;"
 test sw.js "self.addEventListener\('install'"
 test stylesheets/about.css ".about-intro picture{float:left;"
 test stylesheets/projects.css ".projects section\+section{margin-top:"
@@ -110,12 +110,13 @@ test categories/rust/ "Articles about Rust"
 # test categories/inspirational/ "Articles about Inspirational"
 
 echo
-echo "## Metadata: RSS feed and sitemap"
+echo "## Metadata"
 # test rss 301
 # test rss/ 301
 # test feed/ 301
 test atom.xml '<feed xmlns="http://www.w3.org/2005/Atom">'
 test sitemap.xml 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"'
+test public-key.asc '-----BEGIN PGP PUBLIC KEY BLOCK-----'
 
 # Subscribe
 # without the email param it should redirect to the home page
