@@ -10,6 +10,10 @@ article {
         // margin-bottom: 0.32em;
     }
 
+    h1 a:not(:hover) {
+        text-decoration: underline transparent;
+    }
+
     .meta {
         // margin-top: 0;
         margin-bottom: 0.75rem;
@@ -17,6 +21,11 @@ article {
 
     a {
         text-decoration: underline;
+        transition: text-decoration .3s, text-underline-offset .3s;
+
+        &:not(:hover) {
+            text-underline-offset: .3em;
+        }
     }
 
     // external links
