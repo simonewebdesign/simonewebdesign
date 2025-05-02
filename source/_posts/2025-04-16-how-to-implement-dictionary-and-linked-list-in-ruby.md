@@ -4,6 +4,7 @@ title: How to implement Dictionary and LinkedList in Ruby
 date: 2025-04-16
 categories: Ruby
 comments: yes
+published: no
 ---
 
 Dictionaries and linked lists are very much two ubiquitous data structures. There's probably almost no programming language that doesn't already implement their own version of them, and Ruby is no exception. Well, _sort of_: while there's `Hash` that functions as a key-value store, there's no built-in `LinkedList` class—though there are arrays.
