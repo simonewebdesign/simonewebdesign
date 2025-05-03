@@ -6,8 +6,10 @@
   -webkit-text-fill-color: #555;
 
   &:hover,
-  &:focus {
-    background: linear-gradient(90deg, #40acfe, #f140fe) 0 0 / 200%;
+  &:active {
+    background: linear-gradient(90deg, rgb(0, 151, 255),
+                                       rgb(119, 44, 196),
+                                       rgb(212, 32, 42)) 0 0 / 300%;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
