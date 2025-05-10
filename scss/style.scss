@@ -157,10 +157,24 @@ abbr[title] {
 //     }
 // }
 
-@import "compass/typography/links/link-colors";
-
 a {
-    @include link-colors($link-color, $hover: $link-color-hover, $focus: $link-color-hover, $visited: $link-color-visited, $active: $link-color-active);
+    color: $link-color;
+
+    &:visited {
+        color: $link-color-visited;
+    }
+
+    &:focus {
+        color: $link-color-hover;
+    }
+
+    &:hover {
+        color: $link-color-hover;
+    }
+
+    &:active {
+        color: $link-color-active;
+    }
 }
 
 /* TODO temporary. Remember to also remove tabindex=-1 from post.html */

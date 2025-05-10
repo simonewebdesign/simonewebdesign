@@ -1,20 +1,3 @@
-GIT
-  remote: https://github.com/simonewebdesign/compass.git
-  revision: ed4b0e8d4d1e32eda1419a2e64e9b2bbddda738d
-  specs:
-    compass (1.0.3)
-      chunky_png (~> 1.2)
-      compass-core (~> 1.0.2)
-      compass-import-once (~> 1.0.5)
-      rb-fsevent (>= 0.9.3)
-      rb-inotify (>= 0.9)
-      sass (>= 3.3.13, < 3.5)
-    compass-core (1.0.2)
-      multi_json (~> 1.0)
-      sass (>= 3.3.0, < 3.5)
-    compass-import-once (1.0.5)
-      sass (>= 3.2, < 3.5)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -22,7 +5,6 @@ GEM
       public_suffix (>= 2.0.2, < 7.0)
     base64 (0.2.0)
     bigdecimal (3.1.9)
-    chunky_png (1.4.0)
     colorator (1.1.0)
     concurrent-ruby (1.3.5)
     csv (3.3.4)
@@ -107,7 +89,6 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.10)
     logger (1.7.0)
     mercenary (0.4.0)
-    multi_json (1.15.0)
     mustermann (3.0.3)
       ruby2_keywords (~> 0.0.1)
     net-http (0.6.0)
@@ -222,7 +203,6 @@ PLATFORMS
 
 DEPENDENCIES
   bigdecimal
-  compass!
   csv
   jekyll (~> 4.3)
   jekyll-gist (~> 1.5)

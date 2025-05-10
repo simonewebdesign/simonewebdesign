@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 ruby ">= #{File.read(".ruby-version").strip}"
 
 group :development do
-  gem 'compass', github: 'simonewebdesign/compass'
+  # gem 'compass', github: 'simonewebdesign/compass'
   gem 'jekyll', '~> 4.3'
   gem 'rake', '~> 13.0'
   gem 'sass-globbing', '~> 1.1'

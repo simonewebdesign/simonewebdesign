@@ -6,8 +6,6 @@
 // You probably don't even need hacks if you think about it:
 // try to include the <link> tag in both layouts, or even better,
 // use a single layout, named archives or something, that uses the categories.scss.
-@import "compass/typography/links/hover-link";
-@import "compass/typography/links/link-colors";
 @import "variables";
 @import "categories-list";
 
