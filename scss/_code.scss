@@ -85,11 +85,11 @@ p, li {
 
 .pre-code {
   font-family: $mono;
-  overflow: scroll;
-  overflow-y: hidden;
+  // overflow: scroll;
+  // overflow-y: hidden;
   display: block;
   padding: .75rem;
-  overflow-x: auto;
+  // overflow-x: auto;
   // line-height: 1.45em;
   background: $base03 !important;
   color: $base1 !important;
@@ -184,6 +184,11 @@ p, li {
 
 // The expanding mechanism
 @media (min-width: 768px) {
+  code,
+  .highlight code {
+    overflow: hidden;
+  }
+
   div.highlighter-rouge:hover {
     width: min-content;
     min-width: 100%;
