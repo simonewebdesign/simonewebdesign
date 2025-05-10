@@ -29,7 +29,23 @@
     }
 
     a {
-        @include link-colors(#7abbeb, $hover: #40acfe, $focus: #40acfe, $visited: #d683ed, $active: #6dc0fe);
+        color: #7abbeb;
+
+        &:visited {
+            color: #d683ed;
+        }
+
+        &:focus {
+            color: #40acfe;
+        }
+
+        &:hover {
+            color: #40acfe;
+        }
+
+        &:active {
+            color: #6dc0fe;
+        }
     }
 
     time {

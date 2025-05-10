@@ -66,7 +66,8 @@ minify_cmd = "node_modules/.bin/html-minifier \
 desc 'Generate jekyll site'
 task :generate do
   puts '---> Generating Site with Jekyll...'
-  system "compass compile --css-dir #{source_dir}/stylesheets"
+  # system "compass compile --css-dir #{source_dir}/stylesheets"
+  system "node_modules/.bin/sass scss/:source/stylesheets/"
   system 'jekyll build --trace'
   puts '---> Inlining stylesheets...'
   Dir["public/**/*.html"].each do |f|
@@ -80,9 +81,11 @@ end
 desc 'Watch the site and regenerate when it changes'
 task :watch do
   puts 'Starting to watch source with Jekyll and Compass.'
-  system "compass compile --css-dir #{source_dir}/stylesheets"
+  # system "compass compile --css-dir #{source_dir}/stylesheets"
+  system "node_modules/.bin/sass scss/:source/stylesheets/"
   jekyllPid = Process.spawn({ 'OCTOPRESS_ENV'=>'preview' }, 'jekyll build --watch')
-  compassPid = Process.spawn('compass watch')
+  # compassPid = Process.spawn('compass watch')
+  compassPid = Process.spawn('node_modules/.bin/sass scss/:source/stylesheets/ --watch')
 
   trap('INT') {
     [jekyllPid, compassPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
@@ -95,9 +98,11 @@ end
 desc 'preview the site in a web browser'
 task :preview do
   puts "Starting to watch source with Jekyll and Compass. Starting Rack on port #{server_port}"
-  system "compass compile --css-dir #{source_dir}/stylesheets"
+  # system "compass compile --css-dir #{source_dir}/stylesheets"
+  system "node_modules/.bin/sass scss/:source/stylesheets/"
   jekyllPid = Process.spawn({ 'OCTOPRESS_ENV'=>'preview' }, 'jekyll build --watch')
-  compassPid = Process.spawn('compass watch')
+  # compassPid = Process.spawn('compass watch')
+  compassPid = Process.spawn('node_modules/.bin/sass scss/:source/stylesheets/ --watch')
   rackupPid = Process.spawn("rackup --host #{server_host} --port #{server_port}")
 
   trap('INT') {

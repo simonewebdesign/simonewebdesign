@@ -33,7 +33,7 @@
     font-size: 1.5em;
     margin-top: 0;
     a {
-      @include hover-link;
+      // @include hover-link;
       color: inherit;
       &:hover { color: $link-color-hover; }
       font-weight: normal;

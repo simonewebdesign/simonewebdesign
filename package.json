@@ -1,6 +1,7 @@
 {
   "devDependencies": {
     "html-minifier": "github:simonewebdesign/html-minifier",
-    "inline-scripts": "github:simonewebdesign/inline-scripts"
+    "inline-scripts": "github:simonewebdesign/inline-scripts",
+    "sass": "^1.87.0"
   }
 }
