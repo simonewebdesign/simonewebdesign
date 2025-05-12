@@ -26,6 +26,10 @@ body {
     // font-size: 1.125rem;
 }
 
+p {
+    text-wrap: pretty;
+}
+
 time,
 .projects li,
 .featured-article {
