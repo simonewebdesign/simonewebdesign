@@ -16,16 +16,16 @@ footer: true
 
 ## {{ site.domain }}
 
-I founded this site in 2010, back when Adobe Flash and Internet Explorer 6 were still a thing. It went through a few iterations since then, going from a humble personal space to a WordPress blog, until I settled with [Octopress]({% post_url 2014-05-13-bye-bye-wordpress-welcome-octopress %}), a static site generator based on <a rel="external" href="https://jekyllrb.com/">Jekyll</a>.
+I founded this site in February 2010, back when Flash games and IE6 (🪦) were still a thing. It went through a few iterations since then, going from a humble personal space to a tech blog. I started with WordPress before moving to [Octopress]({% post_url 2014-05-13-bye-bye-wordpress-welcome-octopress %}) and finally Jekyll. It's also my playground: I like to tinker with it, experiment with ideas, and sometimes just mess around for the sake of learning.
 
-Fun facts:
+Some fun facts:
 
 - **It is free and open source.** It's my way of giving back to the <a rel="external" href="https://indieweb.org/">indie web</a>. It feels good <a rel="external" href="https://github.com/simonewebdesign/simonewebdesign">to share</a>, and it's <a rel="external" href="https://www.gnu.org/philosophy/fs-and-sustainable-development.html">the right thing.</a>
 
 - **There is no backend nor database.** All pages are actually [just HTML & CSS]({% post_url 2022-10-09-one-request %}), resulting in a super fast website that can't be hacked.
 
 - **No advertising or tracking either.**
-I write blog posts so that I don't forget stuff I learn and because I enjoy sharing my work.
+I write blog posts so that I don't forget stuff I learn and because I enjoy sharing my work with others.
 
 ## Let's get in touch!
 
