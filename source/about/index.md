@@ -16,7 +16,7 @@ footer: true
 
 ## {{ site.domain }}
 
-I founded this site in February 2010, back when Flash games and IE6 (🪦) were still a thing. It went through a few iterations since then, going from a humble personal space to a tech blog. I started with WordPress before moving to [Octopress]({% post_url 2014-05-13-bye-bye-wordpress-welcome-octopress %}) and finally Jekyll. It's also my playground: I like to tinker with it, experiment with ideas, and sometimes just mess around for the sake of learning.
+I founded this site in February 2010, back when Flash games and IE6 (<span title="Press F to pay respects" tabindex="-1">🪦</span>) were still a thing. It went through a few iterations since then, going from a humble personal space to a tech blog. I started with WordPress before moving to [Octopress]({% post_url 2014-05-13-bye-bye-wordpress-welcome-octopress %}) and finally Jekyll. It's also my playground: I like to tinker with it, experiment with ideas, and sometimes just mess around for the sake of learning.
 
 Some fun facts:
 
@@ -30,3 +30,17 @@ I write blog posts so that I don't forget stuff I learn and because I enjoy shar
 ## Let's get in touch!
 
 Find me on social media here below, or just [send me an email](mailto:hello@simonewebdesign.it?subject=Hey Simone!).
+
+<script>
+ let grave = document.querySelector('[title="Press F to pay respects"]')
+
+  grave.addEventListener('mousedown', e => {
+    e.preventDefault() // prevent focus on click, but not other pointer events
+  })
+
+  document.body.addEventListener('keydown', e => {
+    if (e.key.toLowerCase() === 'f') {
+      grave.focus()
+    }
+  })
+</script>

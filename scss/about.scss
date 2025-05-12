@@ -41,3 +41,43 @@
 .about-intro ~ h2:last-of-type + p {
     text-align: center;
 }
+
+[title="Press F to pay respects"] {
+    // outline: 1px solid red;
+    transition: transform .5s;
+    // transform: scale(1) translateX(0) perspective(0) rotateX(0) rotateY(0) rotateZ(0);
+    // pointer-events: none;
+
+    &:hover {
+        cursor: help
+    }
+
+    &:focus {
+        outline: none;
+        // outline: 1px solid green;
+        display: inline-block;
+        // position: fixed;
+        // transform: scale(6,6)
+        // transform:scale3d(6,6,6), scaleX(2), scaleY(3)
+        transform: scale(15) translateX(-.65rem);
+        // box-shadow: -10px -10px 10px rgba(0,0,0,.4);
+        line-height: 0; // to prevent parent line from getting taller
+
+        &::after {
+            display: block;
+            content: 'RIP IE6';
+            font-size: 3.2px;
+            text-align: center;
+            position: relative;
+            top: 2px;
+            // bottom: 17px;
+            // top: 15px;
+            // left: 50%;
+        }
+
+        &:hover {
+            transform: scale(15) translateX(-.6rem) perspective(9rem) rotateX(-15deg) rotateY(15deg) rotateZ(0deg);
+
+        }
+    }
+}
