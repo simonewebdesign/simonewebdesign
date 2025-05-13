@@ -11,9 +11,9 @@ If you have an HTML element that you want to make interactive, but **only via th
 
 ## [`tabindex="0"`](#tabindex0)
 
-[Tabindex](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) is an HTML attribute that makes HTML elements _tabbable_, as in, focusable by pressing <kbd>Tab</kbd>.
+[Tabindex](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) is an HTML attribute that makes HTML elements _tabbable_—as in, focusable by pressing <kbd>Tab</kbd>.
 
-It's mainly an accessibility feature that, if you find yourself reaching for it, chances are there might be a better, more semantic element you could use instead. Take a minute to think if your content should instead be semantically described as maybe a `<button>` or an `<a>`: those are considered **interactive elements** and are already focusable by default.
+It's primarily intended to enhance accessibility. However, if you find yourself needing to use it, consider whether a more semantic, inherently **interactive element**—like a `<button>` or an `<a>`—might be more appropriate. These elements are **naturally focusable** and better communicate intent to users and assistive technologies.
 
 ## [`tabindex="-1"`](#tabindex-1)
 
@@ -71,7 +71,7 @@ The example above has a `<div>` that is:
 - ❌ Not clickable;
 - ✅ Focusable (via key press).
 
-Feel free to check out [this pen](https://codepen.io/simone/pen/WbbLYEX).
+Feel free to check out [this pen](https://codepen.io/simone/pen/WbbLYEX) for a live example.
 
 ---
 
