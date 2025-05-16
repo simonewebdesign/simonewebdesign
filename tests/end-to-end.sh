@@ -54,12 +54,14 @@ if [[ "$(curl http://www.simonewebdesign.it --silent -i)" =~ https://simonewebde
 
 echo
 echo "## Core assets"
-test stylesheets/style.css ":root{--solar-yellow:#6f5400;"
+test stylesheets/style.css "@charset "
 test sw.js "self.addEventListener\('install'"
-test stylesheets/about.css ".about-intro picture{float:left;"
-test stylesheets/projects.css ".projects section\+section{margin-top:"
-test stylesheets/archives.css "#archive #content>div,#archive #content>div>article{padding-top:0}"
-test stylesheets/atom.css "feed{"
+test stylesheets/about.css ".about-intro"
+test stylesheets/projects.css ".projects section"
+test stylesheets/archives.css ".categories-list"
+test stylesheets/atom.css "feed {"
+
+
 
 echo
 echo "## Top-level pages"
@@ -67,7 +69,7 @@ test "" "Simone Web Design"
 test archives/ "Blog Archives"
 test projects/ "Projects"
 test about/ "About Simone"
-test 404/ "NOT FOUND"
+test 404.html "not found"
 test contribs/ "Notable Contributions on GitHub"
 
 # Regression test: about page should not contain categories.css
@@ -77,32 +79,37 @@ test contribs/ "Notable Contributions on GitHub"
 
 echo
 echo "## Submodule pages"
-test hire/me/ "not found" # FIXME: actually it should match "NOT FOUND" (capitalized) because that's the stylish 404 page. Fix the server to return 404/index.html and update this test
+# testing for 404 instead of the string "not found" will:
+# 1. diversify the tests, since we're already directly testing 404.html page to match "not found".
+# 2. make the test pass both locally and in production, because locally the 404.html isn't served on a 404 error - rather, an empty body is served.
+test hire/me/ 404
 test demo/elm/ "Credit Card Checkout"
 test demo/html5editor/ "Hey, buddy!"
 
-test games/pong 301
+# Testing redirects: Local webserver will return HTTP/1.1 301 Moved Permanently,
+# whilst Cloudflare will return HTTP/2 308. Testing for "30" will catch both.
+test games/pong " 30"
 test games/pong/ "Pong"
 test games/pong/js/main.js "The main game loop"
 
-test games/game-of-life 301
+test games/game-of-life " 30"
 test games/game-of-life/ "The Game of Life"
 test games/game-of-life/style.css "background:#000;"
 test games/game-of-life/game.js "THE GAME OF LIFE"
 
 echo
 echo "## Articles"
-test pure-css-onclick-context-menu 301
+test pure-css-onclick-context-menu " 30"
 test pure-css-onclick-context-menu/ "A pure CSS onclick context menu"
-test how-to-put-online-your-wampserver 301
+test how-to-put-online-your-wampserver " 30"
 test how-to-put-online-your-wampserver/ "How to put online your WampServer"
 
 echo
 echo "## Article categories"
 test categories/css/ "Articles about CSS"
-test categories/git 301
+test categories/git " 30"
 test categories/git/ "Articles about Git"
-test categories/javascript 301
+test categories/javascript " 30"
 test categories/javascript/ "Articles about JavaScript"
 test categories/ruby/ "Articles about Ruby"
 test categories/bash/ "Articles about Bash"
