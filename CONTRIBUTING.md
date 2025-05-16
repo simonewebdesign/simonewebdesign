@@ -37,15 +37,6 @@ By the way, remember that you set up a `prod` branch on each of these remotes. T
 5. `git rebase origin/main`
 
 
-### Preparing for the first deploy
-
-**Ensure that you have downloaded and initialised correctly all the git modules before proceeding!**
-
-Simply run:
-
-    bundle exec rake gen_deploy_fly
-
-
 ## Troubleshooting
 
 ### CSS changes work locally but not in production
