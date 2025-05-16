@@ -6,9 +6,9 @@ require 'sinatra/base'
 EXTENSIONS = /\.(mp4|gif|jpg|jpeg|png|webp|ico|css|js|json|xml|asc|txt|otf|eot|svg|ttf|html|htm|php|cgi)$/
 
 class SinatraStaticServer < Sinatra::Base
-  # Redirect /blog to /
+  # Redirect /blog/? to /archives/ — the ? is wildcard for presence/absence of a forward slash
   get '/blog/?' do
-    redirect '/', 301
+    redirect '/archives/', 301
   end
 
   # Redirect /blog/:path to /:path/ (with a trailing slash)

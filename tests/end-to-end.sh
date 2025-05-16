@@ -45,12 +45,12 @@ if [[ "$(curl https://www.simonewebdesign.it --silent -i)" != *"www"* ]]; then o
 echo -n Redirects from http www to https non-www
 if [[ "$(curl http://www.simonewebdesign.it --silent -i)" =~ https://simonewebdesign.it ]]; then ok; else fail; fi
 
-# Old redirects from /blog
-# echo -n Redirects from /blog/:path to /:path/
-# if [[ "$(curl -I --silent $host/blog/foo)" != *"blog"* ]]; then ok; else fail; fi
+# Legacy redirects from /blog
+echo -n Redirects from /blog/:path to /:path/
+if [[ "$(curl -I --silent $host/blog/foo)" != *"blog"* ]]; then ok; else fail; fi
 
-# echo -n Redirects from /blog/:path/ to /:path/ do not have an extra trailing slash
-# if [[ "$(curl -I --silent $host/blog/foo/)" != *"foo//"* ]]; then ok; else fail; fi
+echo -n Redirects from /blog/:path/ to /:path/ do not have an extra trailing slash
+if [[ "$(curl -I --silent $host/blog/foo/)" != *"foo//"* ]]; then ok; else fail; fi
 
 echo
 echo "## Core assets"
@@ -60,8 +60,6 @@ test stylesheets/about.css ".about-intro"
 test stylesheets/projects.css ".projects section"
 test stylesheets/archives.css ".categories-list"
 test stylesheets/atom.css "feed {"
-
-
 
 echo
 echo "## Top-level pages"
@@ -86,7 +84,7 @@ test hire/me/ 404
 test demo/elm/ "Credit Card Checkout"
 test demo/html5editor/ "Hey, buddy!"
 
-# Testing redirects: Local webserver will return HTTP/1.1 301 Moved Permanently,
+# Testing redirects: Local webserver (config.ru) will return HTTP/1.1 301 Moved Permanently,
 # whilst Cloudflare will return HTTP/2 308. Testing for "30" will catch both.
 test games/pong " 30"
 test games/pong/ "Pong"
@@ -124,9 +122,12 @@ test categories/rust/ "Articles about Rust"
 
 echo
 echo "## Metadata"
-# test rss 301
-# test rss/ 301
-# test feed/ 301
+
+# These are redirects
+test rss "location: $host/atom.xml"
+test rss/ "location: $host/atom.xml"
+test feed/ "location: $host/atom.xml"
+
 test atom.xml '<feed xmlns="http://www.w3.org/2005/Atom">'
 test sitemap.xml 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"'
 test public-key.asc '-----BEGIN PGP PUBLIC KEY BLOCK-----'
@@ -141,10 +142,11 @@ test public-key.asc '-----BEGIN PGP PUBLIC KEY BLOCK-----'
 # test 'unsub?email=test@example' "You have been unsubscribed successfully."
 
 # More legacy redirects - ideally those should all redirect to the blog archives page
-# test posts 301
-# test posts/ 301
-# test posts/7 301
-# test posts/7/ 301
+test blog "location: $host/archives/"
+test posts "location: $host/archives/"
+test posts/ "location: $host/archives/"
+test posts/7 "location: $host/archives/"
+test posts/4/ "location: $host/archives/"
 
 echo
 echo "## Miscellaneous assets"
