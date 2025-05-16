@@ -17,7 +17,7 @@ function ok {
 
 function fail {
     echo -e ' \033[31m✗\033[0m'
-    # exit_status is a counter of failures
+    # exit_status is a counter of failures (but will also be used as the exit status)
     exit_status=$(($exit_status+1))
 }
 
@@ -30,12 +30,13 @@ function test {
     if [[ "$(call $1)" =~ $2 ]]; then ok; else fail; fi
 }
 
+echo
 echo "###################"
 echo "# END-TO-END TEST #"
 echo "###################"
 echo
+
 echo "## Redirects"
-echo
 echo -n Redirects from http to https
 if [[ "$(curl http://simonewebdesign.it --silent -i)" =~ https://simonewebdesign.it ]]; then ok; else fail; fi
 
@@ -142,9 +143,9 @@ test public-key.asc '-----BEGIN PGP PUBLIC KEY BLOCK-----'
 # test 'unsub?email=test@example' "You have been unsubscribed successfully."
 
 # More legacy redirects - ideally those should all redirect to the blog archives page
-test blog "location: $host/archives/"
+# test blog "location: $host/archives/"
 # test posts "location: $host/archives/"
-# test posts/ "location: $host/archives/"
+test posts/ "location: $host/archives/"
 test posts/7 "location: $host/archives/"
 test posts/4/ "location: $host/archives/"
 # test blog/1req "location: $host/1req/" # duplicate of :path one, but needed
@@ -153,7 +154,19 @@ echo
 echo "## Miscellaneous assets"
 test videos/omg-cat.mp4 200
 
+echo
+echo "## Caching rules"
 
+echo -n Cache pages for a month
+if [[ "$(curl -Is $host/1req/)" =~ "cache-control: public, max-age=2678400" ]]; then ok; else fail; fi
+
+echo -n Cache assets for a year
+if [[ "$(curl -Is $host/images/doge.webp)" =~ "cache-control: public, max-age=31536000" ]]; then ok; else fail; fi
+
+echo -n Dont cache xml
+if [[ "$(curl -Is $host/atom.xml)" =~ "cache-control: public, max-age=0" ]]; then ok; else fail; fi
+
+echo
 if [ $exit_status -eq 0 ]
 then
   echo -e "\033[32mSUCCESS\033[0m"
