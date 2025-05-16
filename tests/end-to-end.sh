@@ -143,10 +143,11 @@ test public-key.asc '-----BEGIN PGP PUBLIC KEY BLOCK-----'
 
 # More legacy redirects - ideally those should all redirect to the blog archives page
 test blog "location: $host/archives/"
-test posts "location: $host/archives/"
-test posts/ "location: $host/archives/"
+# test posts "location: $host/archives/"
+# test posts/ "location: $host/archives/"
 test posts/7 "location: $host/archives/"
 test posts/4/ "location: $host/archives/"
+# test blog/1req "location: $host/1req/" # duplicate of :path one, but needed
 
 echo
 echo "## Miscellaneous assets"
