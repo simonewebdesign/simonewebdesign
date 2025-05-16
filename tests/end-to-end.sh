@@ -67,7 +67,7 @@ test "" "Simone Web Design"
 test archives/ "Blog Archives"
 test projects/ "Projects"
 test about/ "About Simone"
-test 404.html "not found"
+test fubar "not found"
 test contribs/ "Notable Contributions on GitHub"
 
 # Regression test: about page should not contain categories.css
