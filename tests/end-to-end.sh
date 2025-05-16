@@ -3,6 +3,12 @@
 host=$1
 exit_status=0
 
+if [ $# -eq 0 ]
+  then
+    echo "Error: No arguments supplied. Please provide host name as the first and only argument."
+    exit 1
+fi
+
 echo "Starting end-to-end test on host: $host"
 
 function ok {
