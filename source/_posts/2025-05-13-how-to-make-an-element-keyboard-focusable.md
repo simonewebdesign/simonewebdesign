@@ -5,23 +5,24 @@ date: 2025-05-13
 categories: JavaScript
 comments: yes
 related: 2019-05-13
+updated: 2025-05-16
 ---
 
 If you have an HTML element that you want to make interactive, but **only via the keyboard**, there might be a few ways to achieve it, depending on your objective.
 
-## [`tabindex="0"`](#tabindex0)
+## [Using `tabindex="0"`](#using-tabindex0)
 
 [Tabindex](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) is an HTML attribute that makes HTML elements _tabbable_—as in, focusable by pressing <kbd>Tab</kbd>.
 
-It's primarily intended to enhance accessibility. However, if you find yourself needing to use it, consider whether a more semantic, inherently **interactive element**—like a `<button>` or an `<a>`—might be more appropriate. These elements are **naturally focusable** and better communicate intent to users and assistive technologies.
+It's primarily intended to [enhance accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Keyboard). However, if you find yourself needing to use it, consider whether a more semantic, inherently **interactive element**—like a `<button>` or an `<a>`—might be more appropriate. These elements are **naturally focusable** and better communicate intent to users and assistive technologies.
 
-## [`tabindex="-1"`](#tabindex-1)
+## [Using `tabindex="-1"`](#using-tabindex-1)
 
 This is the other allowed value of `tabindex` (anything other than `0` and `-1` is discouraged), and it's used to make an element focusable, but only programmatically (i.e. via JavaScript).
 
 In practice this makes the element no longer tabbable, but actually it **can still be focused via a mouse click**, in some browsers.
 
-## [`pointer-events: none;`](#pointer-events-none)
+## [Using `pointer-events: none;`](#using-pointer-events-none)
 
 This CSS rule will disable any kind of interactivity via _pointers_ (e.g. a mouse click, or a tap on mobile), but will retain the ability to focus the interactive element via the keyboard.
 
