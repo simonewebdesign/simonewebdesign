@@ -133,6 +133,11 @@ test atom.xml '<feed xmlns="http://www.w3.org/2005/Atom">'
 test sitemap.xml 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"'
 test public-key.asc '-----BEGIN PGP PUBLIC KEY BLOCK-----'
 
+test humans.txt "___ _                  __      __   _    ___         _"
+test robots.txt "Sitemap: https"
+test security.txt "hello at"
+
+
 # Subscribe
 # without the email param it should redirect to the home page
 # Functionality disabled
