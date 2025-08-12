@@ -222,14 +222,13 @@ end
 
 desc 'Purge cache'
 task :purge_cloudflare_cache do
-  if !ENV["SWD_CF_ZONE_ID"] || !ENV["SWD_CF_API_TOK"]
+  if ENV["SWD_CF_ZONE_ID"] && ENV["SWD_CF_API_TOK"]
+    system "curl -X POST https://api.cloudflare.com/client/v4/zones/#{ENV['SWD_CF_ZONE_ID']}/purge_cache -H 'Content-Type: application/json' -H 'Authorization: Bearer #{ENV['SWD_CF_API_TOK']}' --data '{\"purge_everything\":true}'"
+  else
     puts "#######################################################################"
     puts "# WARNING: Cloudflare ENV VARS are NOT SET. Cache WILL NOT be purged! #"
     puts "#######################################################################"
-    return
   end
-
-  system "curl -X POST https://api.cloudflare.com/client/v4/zones/#{ENV['SWD_CF_ZONE_ID']}/purge_cache -H 'Content-Type: application/json' -H 'Authorization: Bearer #{ENV['SWD_CF_API_TOK']}' --data '{\"purge_everything\":true}'"
 end
 
 # Ideally this would be ran before deploying to prod,
