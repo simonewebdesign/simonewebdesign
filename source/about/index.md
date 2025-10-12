@@ -29,9 +29,13 @@ I write blog posts so that I don't forget stuff I learn and because I enjoy shar
 
 ## Let's get in touch!
 
-Find me on social media here below, or just [send me an email](mailto:hello@simonewebdesign.it?subject=Hey Simone!).
+Find me on social media here below, or just [send me an email](javascript:decryptEmail(&#39;aGVsbG9Ac2ltb25ld2ViZGVzaWduLml0&#39;)).
 
 <script>
+  function decryptEmail(addr) {
+    window.location.href = "mailto:" + atob(addr) + '?subject=Hey Simone!'
+  } // credits: bananacurvingmachine.com
+
  let grave = document.querySelector('[title="Press F to pay respects"]')
 
   grave.addEventListener('mousedown', e => {
